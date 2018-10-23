@@ -1,0 +1,39 @@
+FileAST: 
+  Typedef: t_node, [], ['typedef']
+    TypeDecl: t_node, []
+      Struct: None
+        Decl: Header, [], [], []
+          TypeDecl: Header, []
+            IdentifierType: ['int']
+        Decl: data, [], [], []
+          ArrayDecl: []
+            TypeDecl: data, []
+              IdentifierType: ['char']
+            Constant: int, 4092
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rid, [], [], []
+            TypeDecl: rid, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: record_length, [], [], []
+            TypeDecl: record_length, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tnode, [], [], []
+        TypeDecl: tnode, []
+          IdentifierType: ['t_node']
+      FuncCall: 
+        ID: g
+        ExprList: 
+          ID: rid
+          BinaryOp: +
+            StructRef: .
+              ID: tnode
+              ID: data
+            BinaryOp: *
+              ID: rid
+              ID: record_length

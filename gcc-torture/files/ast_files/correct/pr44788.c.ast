@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: joint_decode, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mlt_buffer1, [], [], []
+            PtrDecl: []
+              TypeDecl: mlt_buffer1, []
+                IdentifierType: ['float']
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+        TypeDecl: joint_decode, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: decode_buffer, [], [], []
+        ArrayDecl: []
+          TypeDecl: decode_buffer, []
+            IdentifierType: ['float']
+          Constant: int, 1060
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: decode_buffer
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: mlt_buffer1
+              ID: i
+            BinaryOp: *
+              ID: i
+              ArrayRef: 
+                ID: decode_buffer
+                ID: t

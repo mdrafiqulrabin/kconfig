@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['char']
+          Decl: cmp, [], [], []
+            PtrDecl: []
+              TypeDecl: cmp, []
+                IdentifierType: ['char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned']
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: foo, []
+              IdentifierType: ['char']
+    Compound: 
+      For: 
+        UnaryOp: *
+          ID: p
+        UnaryOp: p++
+          ID: p
+        If: 
+          FuncCall: 
+            ID: __builtin_strncmp
+            ExprList: 
+              UnaryOp: *
+                ID: p
+              ID: cmp
+              ID: i
+          If: 
+            BinaryOp: ==
+              ID: i
+              FuncCall: 
+                ID: __builtin_strlen
+                ExprList: 
+                  UnaryOp: *
+                    ID: p
+            Break: 
+      Return: 
+        ID: p

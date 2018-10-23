@@ -1,0 +1,47 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      DoWhile: 
+        Constant: int, 1
+        Compound: 
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['long']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['long']
+            UnaryOp: &
+              ID: l
+          Assignment: =
+            UnaryOp: *
+              ID: p
+            Constant: int, 0x0000000070000000L
+          Assignment: +=
+            ID: p
+            Constant: int, 2
+          Compound: 
+            Decl: addr, [], [], []
+              PtrDecl: []
+                TypeDecl: addr, []
+                  IdentifierType: ['unsigned', 'int']
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'int']
+                Constant: int, 0x70000000
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "%d, %d\n"
+                ArrayRef: 
+                  ID: addr
+                  Constant: int, 1
+                ArrayRef: 
+                  ID: addr
+                  Constant: int, 0

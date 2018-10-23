@@ -1,0 +1,112 @@
+FileAST: 
+  Decl: heap, [], [], []
+    TypeDecl: heap, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i1, [], [], []
+            TypeDecl: i1, []
+              IdentifierType: ['int']
+          Decl: i2, [], [], []
+            TypeDecl: i2, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: i1
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            BinaryOp: +
+              ID: i1
+              Constant: int, 4
+      If: 
+        BinaryOp: ==
+          ID: i1
+          Constant: int, 0
+        Goto: L4
+        Goto: L9
+      Label: L3
+        Assignment: =
+          ID: i2
+          BinaryOp: -
+            ID: heap
+            Constant: int, 8
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            ID: i2
+        Constant: int, 3
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            BinaryOp: +
+              ID: i2
+              Constant: int, 4
+        ID: i1
+      Assignment: -=
+        ID: heap
+        Constant: int, 8
+      Return: 
+        ID: i2
+      Label: L4
+        Assignment: =
+          ID: i1
+          FuncCall: 
+            ID: g
+            ExprList: 
+              ID: i2
+      Goto: L5
+      Label: L5
+        Assignment: =
+          ID: i1
+          UnaryOp: *
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              BinaryOp: +
+                ID: i1
+                Constant: int, 4
+      If: 
+        BinaryOp: ==
+          ID: i1
+          Constant: int, 0
+        Goto: L7
+        Goto: L8
+      Label: L7
+        Assignment: =
+          ID: i1
+          Constant: int, 0
+      Goto: L3
+      Label: L8
+        Assignment: =
+          ID: i1
+          Constant: int, 1
+      Goto: L3
+      Label: L9
+        Assignment: =
+          ID: i1
+          Constant: int, 1
+      Goto: L3

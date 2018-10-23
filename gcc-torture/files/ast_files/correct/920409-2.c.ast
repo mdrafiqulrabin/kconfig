@@ -1,0 +1,57 @@
+FileAST: 
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        TypeDecl: x, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['int']
+      Decl: x2, [], [], []
+        TypeDecl: x2, []
+          IdentifierType: ['int']
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['double']
+      If: 
+        BinaryOp: <
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+            BinaryOp: -
+              ID: x1
+              ID: x2
+          Constant: int, 1
+        Return: 
+          UnaryOp: -
+            Constant: float, 1.0
+      Assignment: =
+        ID: v
+        FuncCall: 
+          ID: t
+          ExprList: 
+            ID: v
+      Assignment: =
+        ID: v
+        FuncCall: 
+          ID: y
+          ExprList: 
+            Constant: int, 1
+            TernaryOp: 
+              BinaryOp: >
+                ID: v
+                Constant: float, 0.0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: v
+              BinaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  ID: v
+                Constant: int, 1

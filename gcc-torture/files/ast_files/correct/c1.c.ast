@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: rec, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: rec, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: a
+          FuncCall: 
+            ID: rec
+            ExprList: 
+              BinaryOp: -
+                ID: a
+                Constant: int, 1
+              BinaryOp: +
+                ID: b
+                Constant: int, 1
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['unsigned']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['unsigned']

@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: trivial_regexp_p, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['int']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: trivial_regexp_p, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: --
+          ID: len
+        Compound: 
+          Switch: 
+            UnaryOp: *
+              UnaryOp: p++
+                ID: s
+            Compound: 
+              Case: 
+                Constant: char, '\\'
+                Switch: 
+                  UnaryOp: *
+                    UnaryOp: p++
+                      ID: s
+                  Compound: 
+                    Case: 
+                      Constant: char, '|'
+                      EmptyStatement: 

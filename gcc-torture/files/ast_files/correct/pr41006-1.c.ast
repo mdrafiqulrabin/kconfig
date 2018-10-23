@@ -1,0 +1,69 @@
+FileAST: 
+  Typedef: FARPROC, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        TypeDecl: FARPROC, []
+          IdentifierType: ['int']
+  Typedef: LPFN_ACCEPTEX, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+        TypeDecl: LPFN_ACCEPTEX, []
+          IdentifierType: ['int']
+  Decl: acceptex_fn, [], ['static'], []
+    TypeDecl: acceptex_fn, []
+      IdentifierType: ['LPFN_ACCEPTEX']
+  Decl: xWSAIoctl, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: xWSAIoctl, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: get_fn, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fn, [], [], []
+            PtrDecl: []
+              TypeDecl: fn, []
+                IdentifierType: ['FARPROC']
+        TypeDecl: get_fn, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: func, [], [], []
+        TypeDecl: func, []
+          IdentifierType: ['FARPROC']
+      If: 
+        UnaryOp: !
+          FuncCall: 
+            ID: xWSAIoctl
+            ExprList: 
+              UnaryOp: &
+                ID: func
+        Assignment: =
+          UnaryOp: *
+            ID: fn
+          ID: func
+  FuncDef: 
+    Decl: get_fn_pointers, [], [], []
+      FuncDecl: 
+        TypeDecl: get_fn_pointers, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: get_fn
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['FARPROC']
+            UnaryOp: &
+              ID: acceptex_fn

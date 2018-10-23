@@ -1,0 +1,52 @@
+FileAST: 
+  Typedef: __pmPDUInfo, [], ['typedef']
+    TypeDecl: __pmPDUInfo, []
+      Struct: None
+        Decl: licensed, [], [], []
+          TypeDecl: licensed, []
+            IdentifierType: ['int']
+  Decl: __pmDecodeXtendError, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: __pmDecodeXtendError, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: do_handshake, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: do_handshake, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: pduinfo, [], [], []
+        PtrDecl: []
+          TypeDecl: pduinfo, []
+            IdentifierType: ['__pmPDUInfo']
+      Decl: challenge, [], [], []
+        TypeDecl: challenge, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: __pmDecodeXtendError
+        ExprList: 
+          UnaryOp: &
+            ID: challenge
+      Assignment: =
+        ID: pduinfo
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['__pmPDUInfo']
+          UnaryOp: &
+            ID: challenge
+      Assignment: =
+        UnaryOp: *
+          ID: pduinfo
+        UnaryOp: *
+          ID: pduinfo

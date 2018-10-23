@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ptr1, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr1, []
+            Struct: imcomplete1
+      Decl: ptr2, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr2, []
+            Union: incomplete2
+      Decl: ptr3, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr3, []
+            Enum: incomplete3
+      Return: 
+        Constant: int, 1

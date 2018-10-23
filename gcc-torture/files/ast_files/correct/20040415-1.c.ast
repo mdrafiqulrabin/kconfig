@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: isdigit, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: isdigit, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: type, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: isdigit
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: type

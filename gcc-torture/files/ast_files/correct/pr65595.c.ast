@@ -1,0 +1,87 @@
+FileAST: 
+  Decl: memcpy, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long']
+      PtrDecl: []
+        TypeDecl: memcpy, []
+          IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: in6_addr
+      Decl: None, [], [], []
+        Struct: None
+          Decl: u6_addr32, [], [], []
+            ArrayDecl: []
+              TypeDecl: u6_addr32, []
+                IdentifierType: ['int']
+              Constant: int, 4
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Struct: foo
+        Decl: daddr, [], [], []
+          TypeDecl: daddr, []
+            Struct: in6_addr
+        Decl: saddr, [], [], []
+          TypeDecl: saddr, []
+            Struct: in6_addr
+  Decl: ip6_route_output, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            Struct: foo
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: ip6_route_output, []
+        IdentifierType: ['void']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: find_route_ipv6, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                Struct: in6_addr
+        TypeDecl: find_route_ipv6, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p1
+        FuncCall: 
+          ID: memcpy
+          ExprList: 
+            Constant: int, 0
+            ID: p1
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  Struct: in6_addr
+      FuncCall: 
+        ID: ip6_route_output
+        ExprList: 
+          ID: a
+          ID: b
+  FuncDef: 
+    Decl: cxgbi_ep_connect, [], [], []
+      FuncDecl: 
+        TypeDecl: cxgbi_ep_connect, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: find_route_ipv6
+        ExprList: 
+          Constant: int, 0

@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: foo
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['long']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['char']
+      Decl: boom, [], [], []
+        ArrayDecl: []
+          TypeDecl: boom, []
+            IdentifierType: ['long']
+          Constant: int, 0

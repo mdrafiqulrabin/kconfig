@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: foo, []
+        IdentifierType: ['double']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            PtrDecl: []
+              TypeDecl: arg, []
+                IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tmp, [], [], []
+        TypeDecl: tmp, []
+          IdentifierType: ['float']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: float, 2.0
+              Constant: float, 1.0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned']
+      Decl: junk, [], [], []
+        ArrayDecl: []
+          TypeDecl: junk, []
+            IdentifierType: ['short']
+          Constant: int, 64
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        ExprList: 
+          UnaryOp: p++
+            ID: i
+          UnaryOp: p++
+            ID: arg
+        Compound: 
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              UnaryOp: &
+                ID: tmp
+              ID: arg

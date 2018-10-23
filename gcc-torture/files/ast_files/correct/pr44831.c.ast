@@ -1,0 +1,80 @@
+FileAST: 
+  Typedef: UCHAR, [], ['typedef']
+    TypeDecl: UCHAR, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: PUCHAR, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: PUCHAR, []
+        IdentifierType: ['unsigned', 'char']
+  Typedef: HANDLE, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: HANDLE, []
+        IdentifierType: ['void']
+  Typedef: NCB, [], ['typedef']
+    TypeDecl: NCB, []
+      Struct: _NCB
+        Decl: ncb_reserve, [], [], []
+          ArrayDecl: []
+            TypeDecl: ncb_reserve, []
+              IdentifierType: ['UCHAR']
+            Constant: int, 10
+  Typedef: PNCB, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: PNCB, []
+        Struct: _NCB
+          Decl: ncb_reserve, [], [], []
+            ArrayDecl: []
+              TypeDecl: ncb_reserve, []
+                IdentifierType: ['UCHAR']
+              Constant: int, 10
+  Decl: None, [], [], []
+    Struct: NBCmdQueue
+      Decl: head, [], [], []
+        TypeDecl: head, []
+          IdentifierType: ['PNCB']
+  FuncDef: 
+    Decl: NBCmdQueueFindNBC, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: queue, [], [], []
+            PtrDecl: []
+              TypeDecl: queue, []
+                Struct: NBCmdQueue
+          Decl: ncb, [], [], []
+            TypeDecl: ncb, []
+              IdentifierType: ['PNCB']
+        PtrDecl: []
+          TypeDecl: NBCmdQueueFindNBC, []
+            IdentifierType: ['PNCB']
+    Compound: 
+      Decl: ret, [], [], []
+        PtrDecl: []
+          TypeDecl: ret, []
+            IdentifierType: ['PNCB']
+        UnaryOp: &
+          StructRef: ->
+            ID: queue
+            ID: head
+      While: 
+        BinaryOp: &&
+          ID: ret
+          BinaryOp: !=
+            UnaryOp: *
+              ID: ret
+            ID: ncb
+        Assignment: =
+          ID: ret
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['PNCB']
+            BinaryOp: +
+              StructRef: ->
+                UnaryOp: *
+                  ID: ret
+                ID: ncb_reserve
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['HANDLE']

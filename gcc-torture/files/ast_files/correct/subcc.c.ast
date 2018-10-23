@@ -1,0 +1,104 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: c
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: >=
+          BinaryOp: +
+            ID: a
+            ID: c
+          Constant: int, 0
+        Return: 
+          BinaryOp: |
+            ID: a
+            Constant: int, 0x80000000
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: a
+              Constant: int, 10
+          Constant: int, 0x80000000
+        FuncCall: 
+          ID: printf
+          ExprList: 
+            Constant: string, "y"
+        FuncCall: 
+          ID: printf
+          ExprList: 
+            Constant: string, "n"
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 1
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 10
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 10
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 11
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 11
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 0x7fffffff
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: -
+            Constant: int, 0x7fffffff
+      FuncCall: 
+        ID: puts
+        ExprList: 
+          Constant: string, ""
+      Return: 
+        Constant: int, 0

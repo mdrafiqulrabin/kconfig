@@ -1,0 +1,72 @@
+FileAST: 
+  FuncDef: 
+    Decl: fun, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: nb
+        TypeDecl: fun, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: th, [], [], []
+        TypeDecl: th, []
+          IdentifierType: ['int']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      Decl: em, [], [], []
+        TypeDecl: em, []
+          IdentifierType: ['int']
+      Decl: nlwm, [], [], []
+        TypeDecl: nlwm, []
+          IdentifierType: ['int']
+      Decl: nlwS, [], [], []
+        TypeDecl: nlwS, []
+          IdentifierType: ['int']
+      Decl: nlw, [], [], []
+        TypeDecl: nlw, []
+          IdentifierType: ['int']
+      Decl: sy, [], [], []
+        TypeDecl: sy, []
+          IdentifierType: ['int']
+      While: 
+        UnaryOp: p--
+          ID: nb
+        While: 
+          UnaryOp: p--
+            ID: h
+          Compound: 
+            Assignment: =
+              ID: nlw
+              ID: nlwm
+            While: 
+              ID: nlw
+              Compound: 
+                If: 
+                  BinaryOp: ==
+                    ID: nlwS
+                    Constant: int, 1
+                  Compound: 
+                  If: 
+                    BinaryOp: ==
+                      ID: nlwS
+                      Constant: int, 1
+                    Compound: 
+                UnaryOp: p--
+                  ID: nlwS
+                UnaryOp: p--
+                  ID: nlw
+            If: 
+              ID: em
+              UnaryOp: p--
+                ID: nlwS
+            If: 
+              BinaryOp: ==
+                UnaryOp: ++
+                  ID: sy
+                ID: th
+              Assignment: =
+                ID: sy
+                Constant: int, 0
+    Decl: nb, [], [], []
+      TypeDecl: nb, []
+        IdentifierType: ['int']

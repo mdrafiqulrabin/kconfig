@@ -1,0 +1,78 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: list_head
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: list_head
+      Decl: prev, [], [], []
+        PtrDecl: []
+          TypeDecl: prev, []
+            Struct: list_head
+  Decl: None, [], [], []
+    Struct: dm_exception
+      Decl: hash_list, [], [], []
+        TypeDecl: hash_list, []
+          Struct: list_head
+      Decl: old_chunk, [], [], []
+        TypeDecl: old_chunk, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      Decl: new_chunk, [], [], []
+        TypeDecl: new_chunk, []
+          IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: dm_lookup_exception, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: table, [], [], []
+            PtrDecl: []
+              TypeDecl: table, []
+                Struct: list_head
+          Decl: chunk, [], [], []
+            TypeDecl: chunk, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        PtrDecl: []
+          TypeDecl: dm_lookup_exception, []
+            Struct: dm_exception
+    Compound: 
+      Decl: slot, [], [], []
+        PtrDecl: []
+          TypeDecl: slot, []
+            Struct: list_head
+      Decl: e, [], [], []
+        PtrDecl: []
+          TypeDecl: e, []
+            Struct: dm_exception
+      Assignment: =
+        ID: slot
+        UnaryOp: &
+          ArrayRef: 
+            ID: table
+            Constant: int, 0
+      Assignment: =
+        ID: e
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: dm_exception
+          StructRef: ->
+            ID: slot
+            ID: next
+      For: 
+        BinaryOp: !=
+          UnaryOp: &
+            StructRef: ->
+              ID: e
+              ID: hash_list
+          ID: slot
+        If: 
+          BinaryOp: <=
+            ID: chunk
+            BinaryOp: >>
+              StructRef: ->
+                ID: e
+                ID: new_chunk
+              Constant: int, 56
+          Return: 
+            ID: e

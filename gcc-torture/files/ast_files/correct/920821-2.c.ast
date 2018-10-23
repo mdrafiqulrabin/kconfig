@@ -1,0 +1,41 @@
+FileAST: 
+  Typedef: t1, [], ['typedef']
+    TypeDecl: t1, []
+      Struct: None
+        Decl: p, [], [], []
+          ArrayDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+            Constant: int, 25
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['t1']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['t1']
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['t1']
+      Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: y
+          ID: x
+        UnaryOp: *
+          ID: x
+      Assignment: =
+        StructRef: .
+          ID: y
+          ID: y
+        UnaryOp: *
+          ID: x

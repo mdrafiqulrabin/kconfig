@@ -1,0 +1,74 @@
+FileAST: 
+  Typedef: tux_req_t, [], ['typedef']
+    TypeDecl: tux_req_t, []
+      Struct: tux_req_struct
+  Decl: None, [], [], []
+    Struct: tux_req_struct
+      Decl: sock, [], [], []
+        PtrDecl: []
+          TypeDecl: sock, []
+            Struct: socket
+      Decl: usermode, [], [], []
+        TypeDecl: usermode, []
+          IdentifierType: ['char']
+      Decl: userbuf, [], [], []
+        PtrDecl: []
+          TypeDecl: userbuf, []
+            IdentifierType: ['char']
+      Decl: userlen, [], [], []
+        TypeDecl: userlen, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: error, [], [], []
+        TypeDecl: error, []
+          IdentifierType: ['char']
+      Decl: private, [], [], []
+        PtrDecl: []
+          TypeDecl: private, []
+            IdentifierType: ['void']
+  FuncDef: 
+    Decl: user_send_buffer, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: req, [], [], []
+            PtrDecl: []
+              TypeDecl: req, []
+                IdentifierType: ['tux_req_t']
+          Decl: cachemiss, [], [], []
+            TypeDecl: cachemiss, []
+              IdentifierType: ['int']
+        TypeDecl: user_send_buffer, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+      Label: repeat
+        Switch: 
+          ID: ret
+          Compound: 
+            Case: 
+              UnaryOp: -
+                Constant: int, 11
+              If: 
+                FuncCall: 
+                  ID: add_output_space_event
+                  ExprList: 
+                    ID: req
+                    StructRef: ->
+                      ID: req
+                      ID: sock
+                Compound: 
+                  FuncCall: 
+                    ID: del_tux_atom
+                    ExprList: 
+                      ID: req
+                  Goto: repeat
+              DoWhile: 
+                Constant: int, 0
+                Compound: 
+              Break: 
+            Default: 
+              FuncCall: 
+                ID: add_req_to_workqueue
+                ExprList: 
+                  ID: req

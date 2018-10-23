@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: dispstr, [], [], []
+    ArrayDecl: []
+      TypeDecl: dispstr, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: strcpy
+        ExprList: 
+          ID: dispstr
+          Constant: string, "xxxxxxxxxxx"

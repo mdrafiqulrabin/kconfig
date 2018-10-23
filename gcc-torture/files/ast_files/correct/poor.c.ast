@@ -1,0 +1,109 @@
+FileAST: 
+  Typedef: s510, [], ['typedef']
+    TypeDecl: s510, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+            Constant: int, 510
+  Typedef: s511, [], ['typedef']
+    TypeDecl: s511, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+            Constant: int, 511
+  Decl: G510, [], [], []
+    TypeDecl: G510, []
+      IdentifierType: ['s510']
+  Decl: s1, [], [], []
+    TypeDecl: s1, []
+      IdentifierType: ['s510']
+  Decl: G511, [], [], []
+    TypeDecl: G511, []
+      IdentifierType: ['s511']
+  Decl: I, [], [], []
+    TypeDecl: I, []
+      IdentifierType: ['int']
+  Decl: J, [], [], []
+    TypeDecl: J, []
+      IdentifierType: ['int']
+  Decl: D, [], [], []
+    TypeDecl: D, []
+      IdentifierType: ['double']
+  Decl: main, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: main, []
+        IdentifierType: ['void']
+  Decl: f0, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: D, [], [], []
+          TypeDecl: D, []
+            IdentifierType: ['double']
+        EllipsisParam: 
+      TypeDecl: f0, []
+        IdentifierType: ['void']
+  Decl: f1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: D, [], [], []
+          TypeDecl: D, []
+            IdentifierType: ['double']
+        EllipsisParam: 
+      TypeDecl: f1, []
+        IdentifierType: ['s510']
+  Decl: f2a, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: S, [], [], []
+          TypeDecl: S, []
+            IdentifierType: ['s510']
+      TypeDecl: f2a, []
+        IdentifierType: ['void']
+  Decl: f2b, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: S, [], [], []
+          TypeDecl: S, []
+            IdentifierType: ['s511']
+      TypeDecl: f2b, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f0
+        ExprList: 
+          ID: D
+          ID: I
+          ID: J
+      Assignment: =
+        ID: s1
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            ID: D
+            ID: I
+            ID: D
+      FuncCall: 
+        ID: f2a
+        ExprList: 
+          ID: G510
+      FuncCall: 
+        ID: f2b
+        ExprList: 
+          ID: G511

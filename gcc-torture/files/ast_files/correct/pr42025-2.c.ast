@@ -1,0 +1,102 @@
+FileAST: 
+  Typedef: Ptr, [], ['typedef']
+    TypeDecl: Ptr, []
+      Struct: None
+        Decl: p, [], [], []
+          PtrDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: A
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: p, [], [], []
+              TypeDecl: p, []
+                IdentifierType: ['Ptr']
+            Decl: q, [], [], []
+              PtrDecl: []
+                TypeDecl: q, []
+                  IdentifierType: ['char']
+  Decl: get_stuff, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: get_stuff, []
+        IdentifierType: ['Ptr']
+  Decl: use_stuff, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: use_stuff, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              Struct: A
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        StructRef: .
+          ID: p
+          ID: i
+        Assignment: =
+          StructRef: .
+            StructRef: .
+              ID: p
+              ID: u
+            ID: p
+          FuncCall: 
+            ID: get_stuff
+        Assignment: =
+          StructRef: .
+            StructRef: .
+              ID: p
+              ID: u
+            ID: q
+          ID: q
+      FuncCall: 
+        ID: use_stuff
+        ExprList: 
+          StructRef: .
+            StructRef: .
+              ID: p
+              ID: u
+            ID: q
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: A
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['char']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: *
+            ID: p
+          ID: q

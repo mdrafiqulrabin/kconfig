@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: __bb_init_prg, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: __bb_init_prg, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: p, ['const']
+            IdentifierType: ['char']
+      Compound: 
+        Decl: l, [], [], []
+          TypeDecl: l, []
+            IdentifierType: ['unsigned', 'long']
+        FuncCall: 
+          ID: __extension__
+          ExprList: 
+            TernaryOp: 
+              BinaryOp: &&
+                FuncCall: 
+                  ID: __builtin_constant_p
+                  ExprList: 
+                    ID: p
+                FuncCall: 
+                  ID: __builtin_constant_p
+                  ExprList: 
+                    ID: l
+              Constant: int, 5
+              Constant: int, 2

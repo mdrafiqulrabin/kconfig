@@ -1,0 +1,90 @@
+FileAST: 
+  Typedef: ieee_double_shape_type, [], ['typedef']
+    TypeDecl: ieee_double_shape_type, []
+      Union: None
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['double']
+        Decl: parts, [], [], []
+          TypeDecl: parts, []
+            Struct: None
+              Decl: msw, [], [], []
+                TypeDecl: msw, []
+                  IdentifierType: ['unsigned', 'long']
+              Decl: lsw, [], [], []
+                TypeDecl: lsw, []
+                  IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: iy, [], [], []
+            TypeDecl: iy, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['double']
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['double']
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['ieee_double_shape_type']
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['ieee_double_shape_type']
+      If: 
+        BinaryOp: ==
+          ID: iy
+          Constant: int, 1
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: parts
+          ID: msw
+        ID: iy
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: parts
+          ID: lsw
+        Constant: int, 0
+      Assignment: =
+        ID: z
+        StructRef: .
+          ID: u
+          ID: value
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: v
+            ID: parts
+          ID: msw
+        ID: iy
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: v
+            ID: parts
+          ID: lsw
+        Constant: int, 0
+      Assignment: =
+        ID: t
+        StructRef: .
+          ID: v
+          ID: value
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              Constant: float, 1.0
+              ID: z
+            ID: t
+          ID: t

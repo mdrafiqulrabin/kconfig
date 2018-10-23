@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['char']
+  Decl: c, [], [], []
+    PtrDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: d
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['short']
+      Decl: f, [], [], []
+        ArrayDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+  Decl: j, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: j, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        PtrDecl: []
+          TypeDecl: h, []
+            Struct: d
+      Decl: i, [], [], []
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['char']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      DoWhile: 
+        ID: a
+        Compound: 
+          Assignment: =
+            ID: i
+            BinaryOp: +
+              StructRef: ->
+                ID: h
+                ID: f
+              ID: d
+          TernaryOp: 
+            Constant: int, 20
+            FuncCall: 
+              ID: j
+            Constant: int, 0
+          Assignment: =
+            ID: i
+            ID: c
+          If: 
+            FuncCall: 
+              ID: __builtin_setjmp
+              ExprList: 
+                ID: h
+            Assignment: =
+              ID: b
+              BinaryOp: +
+                StructRef: ->
+                  ID: h
+                  ID: f
+                ID: d
+          Assignment: =
+            ID: d
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              UnaryOp: *
+                ID: i

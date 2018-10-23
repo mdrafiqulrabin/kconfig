@@ -1,0 +1,324 @@
+FileAST: 
+  Decl: windows, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: windows, []
+        Struct: win
+  Decl: wtab, [], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: wtab, []
+          Struct: win
+  Decl: None, [], [], []
+    Struct: win
+      Decl: w_next, [], [], []
+        PtrDecl: []
+          TypeDecl: w_next, []
+            Struct: win
+  Decl: None, [], [], []
+    Struct: auser
+  Decl: None, [], [], []
+    Struct: comm
+      Decl: name, [], [], []
+        PtrDecl: []
+          TypeDecl: name, []
+            IdentifierType: ['char']
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['int']
+  Decl: comms, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: comms, []
+        Struct: comm
+  Decl: WindowByNoN, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: WindowByNoN, []
+        IdentifierType: ['int']
+  Decl: FindCommnr, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: FindCommnr, []
+        IdentifierType: ['int']
+  Decl: AclSetPermCmd, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: auser
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: comm
+      TypeDecl: AclSetPermCmd, []
+        IdentifierType: ['int']
+  Decl: AclSetPermWin, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: auser
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: auser
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: win
+      TypeDecl: AclSetPermWin, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: AclSetPerm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: uu
+          ID: u
+          ID: mode
+          ID: s
+        TypeDecl: AclSetPerm, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: w, [], [], []
+        PtrDecl: []
+          TypeDecl: w, []
+            Struct: win
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['char']
+      DoWhile: 
+        Constant: int, 0
+        Compound: 
+      While: 
+        UnaryOp: *
+          ID: s
+        Compound: 
+          Switch: 
+            UnaryOp: *
+              ID: s
+            Compound: 
+              Case: 
+                Constant: char, '*'
+                Return: 
+                  FuncCall: 
+                    ID: AclSetPerm
+                    ExprList: 
+                      ID: uu
+                      ID: u
+                      ID: mode
+                      Constant: string, "#?"
+              Case: 
+                Constant: char, '#'
+                If: 
+                  ID: uu
+                  FuncCall: 
+                    ID: AclSetPermWin
+                    ExprList: 
+                      ID: uu
+                      ID: u
+                      ID: mode
+                      Cast: 
+                        Typename: None, []
+                          PtrDecl: []
+                            TypeDecl: None, []
+                              Struct: win
+                        Constant: int, 1
+                  For: 
+                    Assignment: =
+                      ID: w
+                      ID: windows
+                    ID: w
+                    Assignment: =
+                      ID: w
+                      StructRef: ->
+                        ID: w
+                        ID: w_next
+                    FuncCall: 
+                      ID: AclSetPermWin
+                      ExprList: 
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                Struct: auser
+                          Constant: int, 0
+                        ID: u
+                        ID: mode
+                        ID: w
+                UnaryOp: p++
+                  ID: s
+                Break: 
+              Case: 
+                Constant: char, '?'
+                If: 
+                  ID: uu
+                  FuncCall: 
+                    ID: AclSetPermWin
+                    ExprList: 
+                      ID: uu
+                      ID: u
+                      ID: mode
+                      Cast: 
+                        Typename: None, []
+                          PtrDecl: []
+                            TypeDecl: None, []
+                              Struct: win
+                        Constant: int, 0
+                  For: 
+                    Assignment: =
+                      ID: i
+                      Constant: int, 0
+                    BinaryOp: <=
+                      ID: i
+                      Constant: int, 174
+                    UnaryOp: p++
+                      ID: i
+                    FuncCall: 
+                      ID: AclSetPermCmd
+                      ExprList: 
+                        ID: u
+                        ID: mode
+                        UnaryOp: &
+                          ArrayRef: 
+                            ID: comms
+                            ID: i
+                UnaryOp: p++
+                  ID: s
+                Break: 
+              Default: 
+                For: 
+                  Assignment: =
+                    ID: p
+                    ID: s
+                  BinaryOp: &&
+                    BinaryOp: &&
+                      BinaryOp: &&
+                        UnaryOp: *
+                          ID: p
+                        BinaryOp: !=
+                          UnaryOp: *
+                            ID: p
+                          Constant: char, ' '
+                      BinaryOp: !=
+                        UnaryOp: *
+                          ID: p
+                        Constant: char, '\t'
+                    BinaryOp: !=
+                      UnaryOp: *
+                        ID: p
+                      Constant: char, ','
+                  UnaryOp: p++
+                    ID: p
+                  EmptyStatement: 
+                If: 
+                  Assignment: =
+                    ID: ch
+                    UnaryOp: *
+                      ID: p
+                  Assignment: =
+                    UnaryOp: *
+                      UnaryOp: p++
+                        ID: p
+                    Constant: char, '\0'
+                If: 
+                  BinaryOp: !=
+                    Assignment: =
+                      ID: i
+                      FuncCall: 
+                        ID: FindCommnr
+                        ExprList: 
+                          ID: s
+                    UnaryOp: -
+                      Constant: int, 1
+                  FuncCall: 
+                    ID: AclSetPermCmd
+                    ExprList: 
+                      ID: u
+                      ID: mode
+                      UnaryOp: &
+                        ArrayRef: 
+                          ID: comms
+                          ID: i
+                  If: 
+                    BinaryOp: &&
+                      BinaryOp: >=
+                        Assignment: =
+                          ID: i
+                          FuncCall: 
+                            ID: WindowByNoN
+                            ExprList: 
+                              ID: s
+                        Constant: int, 0
+                      ArrayRef: 
+                        ID: wtab
+                        ID: i
+                    FuncCall: 
+                      ID: AclSetPermWin
+                      ExprList: 
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                Struct: auser
+                          Constant: int, 0
+                        ID: u
+                        ID: mode
+                        ArrayRef: 
+                          ID: wtab
+                          ID: i
+                    Return: 
+                      UnaryOp: -
+                        Constant: int, 1
+                If: 
+                  ID: ch
+                  Assignment: =
+                    ArrayRef: 
+                      ID: p
+                      UnaryOp: -
+                        Constant: int, 1
+                    ID: ch
+                Assignment: =
+                  ID: s
+                  ID: p
+      Return: 
+        Constant: int, 0
+    Decl: uu, [], [], []
+      PtrDecl: []
+        TypeDecl: uu, []
+          Struct: auser
+    Decl: u, [], [], []
+      PtrDecl: []
+        TypeDecl: u, []
+          Struct: auser
+    Decl: mode, [], [], []
+      PtrDecl: []
+        TypeDecl: mode, []
+          IdentifierType: ['char']
+    Decl: s, [], [], []
+      PtrDecl: []
+        TypeDecl: s, []
+          IdentifierType: ['char']

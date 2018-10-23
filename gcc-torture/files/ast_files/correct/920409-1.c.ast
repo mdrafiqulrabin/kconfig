@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: >
+          ID: y
+          Constant: float, 0.0
+        ID: y
+        BinaryOp: -
+          ID: y
+          Constant: int, 1

@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: s, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: s, ['const']
+        IdentifierType: ['char']
+    Constant: string, "ab.cd.efghijk"
+  Decl: t, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: t, ['const']
+        IdentifierType: ['char']
+    Constant: string, "abcde"
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['long']
+    Compound: 
+      Decl: a, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: a, ['const']
+            IdentifierType: ['char']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['long']
+        Constant: int, 0
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __builtin_strchr
+          ExprList: 
+            ID: s
+            Constant: char, '.'
+      Return: 
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+            ID: a
+          BinaryOp: -
+            Constant: int, 1
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long']
+              ID: t

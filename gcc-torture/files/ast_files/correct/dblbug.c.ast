@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: real_extract
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+      Decl: i, [], [], []
+        ArrayDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+          BinaryOp: /
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['double']
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: None
+          Decl: zzzz, [], [], []
+            TypeDecl: zzzz, []
+              IdentifierType: ['int']
+  FuncDef: 
+    Decl: immed_real_const_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: d
+        TypeDecl: immed_real_const_1, []
+          IdentifierType: ['rtx']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: real_extract
+      Decl: r, [], ['register'], []
+        TypeDecl: r, []
+          IdentifierType: ['rtx']
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: d
+        ID: d
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            StructRef: ->
+              ID: r
+              ID: zzzz
+          UnaryOp: &
+            ID: u
+    Decl: d, [], [], []
+      TypeDecl: d, []
+        IdentifierType: ['double']

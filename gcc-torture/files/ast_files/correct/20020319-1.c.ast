@@ -1,0 +1,74 @@
+FileAST: 
+  Typedef: uch, [], ['typedef']
+    TypeDecl: uch, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: outbuf, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: outbuf, []
+        IdentifierType: ['uch']
+  Decl: outcnt, [], ['extern'], []
+    TypeDecl: outcnt, []
+      IdentifierType: ['unsigned']
+  Decl: flush_outbuf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: flush_outbuf, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: zip, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: zip, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: outcnt
+        Constant: int, 0
+      Compound: 
+        Assignment: =
+          ArrayRef: 
+            ID: outbuf
+            UnaryOp: p++
+              ID: outcnt
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['uch']
+            ArrayRef: 
+              Constant: string, "\037\213"
+              Constant: int, 0
+        If: 
+          BinaryOp: ==
+            ID: outcnt
+            Constant: int, 16384
+          FuncCall: 
+            ID: flush_outbuf
+      EmptyStatement: 
+      Compound: 
+        Assignment: =
+          ArrayRef: 
+            ID: outbuf
+            UnaryOp: p++
+              ID: outcnt
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['uch']
+            ArrayRef: 
+              Constant: string, "\037\213"
+              Constant: int, 1
+        If: 
+          BinaryOp: ==
+            ID: outcnt
+            Constant: int, 16384
+          FuncCall: 
+            ID: flush_outbuf
+      EmptyStatement: 
+      Return: 
+        Constant: int, 0

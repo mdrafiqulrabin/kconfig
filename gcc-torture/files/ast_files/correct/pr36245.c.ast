@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: buf1, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: buf1, []
+        IdentifierType: ['char']
+      Constant: int, 10
+  Decl: buf2, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: buf2, []
+        IdentifierType: ['char']
+      Constant: int, 10
+  Decl: b, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            IdentifierType: ['int']
+        Decl: w, [], [], []
+          TypeDecl: w, []
+            IdentifierType: ['int']
+      TypeDecl: b, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: a, [], [], []
+      FuncDecl: 
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: p
+        ID: buf1
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 10
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 10
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              Assignment: =
+                ID: w
+                UnaryOp: *
+                  ID: p
+              If: 
+                BinaryOp: !=
+                  ID: w
+                  Constant: int, 1
+                Compound: 
+                  Assignment: =
+                    ID: w
+                    ArrayRef: 
+                      ID: buf2
+                      BinaryOp: -
+                        ID: p
+                        ID: buf1
+                  FuncCall: 
+                    ID: b
+                    ExprList: 
+                      BinaryOp: +
+                        BinaryOp: *
+                          ID: i
+                          Constant: int, 2
+                        Constant: int, 1
+                      ID: j
+                      ID: w
+              UnaryOp: p++
+                ID: p

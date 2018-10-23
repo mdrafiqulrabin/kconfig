@@ -1,0 +1,80 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: t, [], [], []
+        ArrayDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 256
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                Struct: S
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                Struct: S
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: a, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: a, ['const']
+                Struct: S
+            UnaryOp: &
+              ArrayRef: 
+                ID: x
+                ID: i
+          FuncCall: 
+            ID: __builtin___memcpy_chk
+            ExprList: 
+              StructRef: ->
+                ID: y
+                ID: t
+              StructRef: ->
+                ID: a
+                ID: t
+              ID: z
+              FuncCall: 
+                ID: __builtin_object_size
+                ExprList: 
+                  StructRef: ->
+                    ID: y
+                    ID: t
+                  Constant: int, 0
+          Assignment: =
+            ID: y
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    Struct: S
+              UnaryOp: &
+                ArrayRef: 
+                  StructRef: ->
+                    ID: y
+                    ID: t
+                  ID: z

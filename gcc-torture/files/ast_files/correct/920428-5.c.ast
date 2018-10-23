@@ -1,0 +1,31 @@
+FileAST: 
+  Typedef: t, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: t, []
+        Struct: None
+          Decl: b0, [], [], []
+            TypeDecl: b0, []
+              IdentifierType: ['unsigned']
+            Constant: int, 1
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: b
+          ID: b0
+        StructRef: ->
+          ID: a
+          ID: b0
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['t']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['t']

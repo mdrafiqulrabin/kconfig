@@ -1,0 +1,81 @@
+FileAST: 
+  FuncDef: 
+    Decl: zzz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s1, [], [], []
+            PtrDecl: []
+              TypeDecl: s1, []
+                IdentifierType: ['char']
+          Decl: s2, [], [], []
+            PtrDecl: []
+              TypeDecl: s2, []
+                IdentifierType: ['char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['int']
+        TypeDecl: zzz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        Constant: int, 5
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Struct: None
+            Decl: a, [], [], []
+              ArrayDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['char']
+                ID: z
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: len
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: s1
+            ID: i
+          ArrayRef: 
+            ID: s2
+            ID: i
+      Assignment: =
+        ID: b
+        BinaryOp: &
+          ID: z
+          Constant: int, 0x3
+      Assignment: +=
+        ID: len
+        BinaryOp: +
+          TernaryOp: 
+            BinaryOp: ==
+              ID: b
+              Constant: int, 0
+            Constant: int, 0
+            Constant: int, 1
+          ID: z
+      Assignment: =
+        UnaryOp: *
+          ID: q
+        ID: len
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: x
+          ID: x

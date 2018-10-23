@@ -1,0 +1,168 @@
+FileAST: 
+  Decl: foo, [], [], []
+    TypeDecl: foo, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['double']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['double']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['double']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['double']
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['double']
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['double']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['double']
+        Decl: h, [], [], []
+          TypeDecl: h, []
+            IdentifierType: ['double']
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['double']
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            IdentifierType: ['double']
+        Decl: k, [], [], []
+          TypeDecl: k, []
+            IdentifierType: ['double']
+        Decl: l, [], [], []
+          TypeDecl: l, []
+            IdentifierType: ['double']
+        Decl: m, [], [], []
+          TypeDecl: m, []
+            IdentifierType: ['double']
+        Decl: n, [], [], []
+          TypeDecl: n, []
+            IdentifierType: ['double']
+        Decl: o, [], [], []
+          TypeDecl: o, []
+            IdentifierType: ['double']
+        Decl: p, [], [], []
+          TypeDecl: p, []
+            IdentifierType: ['double']
+        Decl: q, [], [], []
+          TypeDecl: q, []
+            IdentifierType: ['double']
+        Decl: r, [], [], []
+          TypeDecl: r, []
+            IdentifierType: ['double']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['double']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['double']
+  Decl: bar, [], [], []
+    TypeDecl: bar, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['double']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['double']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['double']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['double']
+        Decl: e, [], [], []
+          TypeDecl: e, []
+            IdentifierType: ['double']
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['double']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['double']
+        Decl: h, [], [], []
+          TypeDecl: h, []
+            IdentifierType: ['double']
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['double']
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            IdentifierType: ['double']
+        Decl: k, [], [], []
+          TypeDecl: k, []
+            IdentifierType: ['double']
+        Decl: l, [], [], []
+          TypeDecl: l, []
+            IdentifierType: ['double']
+        Decl: m, [], [], []
+          TypeDecl: m, []
+            IdentifierType: ['double']
+        Decl: n, [], [], []
+          TypeDecl: n, []
+            IdentifierType: ['double']
+        Decl: o, [], [], []
+          TypeDecl: o, []
+            IdentifierType: ['double']
+        Decl: p, [], [], []
+          TypeDecl: p, []
+            IdentifierType: ['double']
+        Decl: q, [], [], []
+          TypeDecl: q, []
+            IdentifierType: ['double']
+        Decl: r, [], [], []
+          TypeDecl: r, []
+            IdentifierType: ['double']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['double']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['double']
+  FuncDef: 
+    Decl: foobar, [], [], []
+      FuncDecl: 
+        TypeDecl: foobar, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: foo
+        ID: bar
+      FuncCall: 
+        ID: xxx
+        ExprList: 
+          UnaryOp: &
+            ID: foo
+          UnaryOp: &
+            ID: bar
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: bar
+          ID: g
+        Constant: float, 1.0
+      Assignment: =
+        StructRef: .
+          ID: foo
+          ID: g
+        Constant: float, 2.0
+      FuncCall: 
+        ID: foobar
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%lf\n"
+          StructRef: .
+            ID: foo
+            ID: g

@@ -1,0 +1,80 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'short']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: y
+          Constant: int, 0
+        Return: 
+          ID: x
+      Return: 
+        BinaryOp: /
+          ID: x
+          ID: y
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        Constant: int, 0x3D75D162
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            BinaryOp: >
+              ID: b
+              ID: d
+            FuncCall: 
+              ID: baz
+              ExprList: 
+                Constant: int, 0
+                Constant: int, 1
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        ID: c
+        Assignment: =
+          ID: c
+          Constant: int, 1
+        EmptyStatement: 

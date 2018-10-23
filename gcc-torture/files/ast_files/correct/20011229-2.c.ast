@@ -1,0 +1,32 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      DoWhile: 
+        BinaryOp: ==
+          ID: x
+          Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: ==
+              Assignment: =
+                ID: x
+                FuncCall: 
+                  ID: bar
+              Constant: int, 1
+            FuncCall: 
+              ID: baz

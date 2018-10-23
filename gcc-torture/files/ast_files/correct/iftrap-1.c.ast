@@ -1,0 +1,195 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+        FuncCall: 
+          ID: bar
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: bar
+        FuncCall: 
+          ID: __builtin_trap
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+          Decl: q, [], [], []
+            TypeDecl: q, []
+              IdentifierType: ['int']
+        TypeDecl: f4, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        Compound: 
+          FuncCall: 
+            ID: bar
+          If: 
+            ID: q
+            FuncCall: 
+              ID: bar
+        FuncCall: 
+          ID: __builtin_trap
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f5, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+        FuncCall: 
+          ID: abort
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f6, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: abort
+        FuncCall: 
+          ID: __builtin_trap
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f7, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+        FuncCall: 
+          ID: __builtin_trap
+  FuncDef: 
+    Decl: f8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f8, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+        Compound: 
+          FuncCall: 
+            ID: bar
+          FuncCall: 
+            ID: __builtin_trap
+  FuncDef: 
+    Decl: f9, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f9, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        Compound: 
+          FuncCall: 
+            ID: bar
+          FuncCall: 
+            ID: __builtin_trap
+        FuncCall: 
+          ID: __builtin_trap
+  FuncDef: 
+    Decl: f10, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f10, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+      While: 
+        Constant: int, 1
+        FuncCall: 
+          ID: bar
+  FuncDef: 
+    Decl: f11, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: f11, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: p
+        FuncCall: 
+          ID: __builtin_trap
+        FuncCall: 
+          ID: bar
+      While: 
+        Constant: int, 1
+        FuncCall: 
+          ID: baz

@@ -1,0 +1,53 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          BinaryOp: &
+            UnaryOp: *
+              ID: p
+            Constant: int, 255
+          Constant: int, 0
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ==
+          BinaryOp: &
+            ID: a
+            Constant: int, 0xfff00000
+          Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%d%d\n"
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              UnaryOp: -
+                Constant: int, 1
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              Constant: int, 0

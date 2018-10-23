@@ -1,0 +1,70 @@
+FileAST: 
+  Decl: gi, [], ['extern'], []
+    TypeDecl: gi, []
+      IdentifierType: ['int']
+  Decl: foo1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo1, []
+        IdentifierType: ['int']
+  Decl: foo2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo2, []
+        IdentifierType: ['void']
+  Decl: foo3, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo3, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i1, [], [], []
+            TypeDecl: i1, []
+              IdentifierType: ['int']
+          Decl: i2, [], [], []
+            TypeDecl: i2, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: i3, [], [], []
+        TypeDecl: i3, []
+          IdentifierType: ['int']
+      If: 
+        ID: i2
+        Compound: 
+          Assignment: =
+            ID: i3
+            FuncCall: 
+              ID: foo1
+              ExprList: 
+                ID: i1
+                ID: gi
+          FuncCall: 
+            ID: foo2
+            ExprList: 
+              ID: i1
+              ID: i3
+        Return: 
+          FuncCall: 
+            ID: foo3
+            ExprList: 
+              ID: i2

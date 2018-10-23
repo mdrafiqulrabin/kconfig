@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d1, [], [], []
+        TypeDecl: d1, []
+          IdentifierType: ['double']
+        Constant: float, 3.14159
+      Decl: d2, [], [], []
+        TypeDecl: d2, []
+          IdentifierType: ['double']
+      If: 
+        BinaryOp: ==
+          UnaryOp: &
+            ID: d2
+          UnaryOp: &
+            ID: d1
+        EmptyStatement: 

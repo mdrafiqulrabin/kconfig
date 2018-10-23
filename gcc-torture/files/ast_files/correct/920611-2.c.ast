@@ -1,0 +1,354 @@
+FileAST: 
+  Typedef: uchar, [], ['typedef']
+    TypeDecl: uchar, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: ushort, [], ['typedef']
+    TypeDecl: ushort, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: uint, [], ['typedef']
+    TypeDecl: uint, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: ulong, [], ['typedef']
+    TypeDecl: ulong, []
+      IdentifierType: ['unsigned', 'long']
+  Decl: S, [], ['static'], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: S, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 1
+      Constant: int, 1
+    InitList: 
+      Constant: int, 0x00820200
+  FuncDef: 
+    Decl: body, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: out0
+          ID: out1
+          ID: ks
+          ID: Eswap0
+          ID: Eswap1
+        TypeDecl: body, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l, [], ['register'], []
+        TypeDecl: l, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: r, [], ['register'], []
+        TypeDecl: r, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: t, [], ['register'], []
+        TypeDecl: t, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: u, [], ['register'], []
+        TypeDecl: u, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: v, [], ['register'], []
+        TypeDecl: v, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: s, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: i, [], ['register'], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], ['register'], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: E0, [], ['register'], []
+        TypeDecl: E0, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: E1, [], ['register'], []
+        TypeDecl: E1, []
+          IdentifierType: ['unsigned', 'long']
+      Assignment: =
+        ID: l
+        Constant: int, 0
+      Assignment: =
+        ID: r
+        Constant: int, 0
+      Assignment: =
+        ID: s
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['ulong']
+          ID: ks
+      Assignment: =
+        ID: E0
+        ID: Eswap0
+      Assignment: =
+        ID: E1
+        ID: Eswap1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          BinaryOp: *
+            Constant: int, 16
+            Constant: int, 2
+        Assignment: +=
+          ID: i
+          Constant: int, 4
+        Compound: 
+          Assignment: =
+            ID: v
+            BinaryOp: ^
+              ID: r
+              BinaryOp: >>
+                ID: r
+                Constant: int, 16
+          Assignment: =
+            ID: u
+            BinaryOp: &
+              ID: v
+              ID: E0
+          Assignment: =
+            ID: v
+            BinaryOp: &
+              ID: v
+              ID: E1
+          Assignment: =
+            ID: u
+            BinaryOp: ^
+              BinaryOp: ^
+                BinaryOp: ^
+                  ID: u
+                  BinaryOp: <<
+                    ID: u
+                    Constant: int, 16
+                ID: r
+              ArrayRef: 
+                ID: s
+                ID: i
+          Assignment: =
+            ID: t
+            BinaryOp: ^
+              BinaryOp: ^
+                BinaryOp: ^
+                  ID: v
+                  BinaryOp: <<
+                    ID: v
+                    Constant: int, 16
+                ID: r
+              ArrayRef: 
+                ID: s
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+          Assignment: =
+            ID: t
+            BinaryOp: |
+              BinaryOp: >>
+                ID: t
+                Constant: int, 4
+              BinaryOp: <<
+                ID: t
+                Constant: int, 28
+          Assignment: ^=
+            ID: l
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: |
+                    BinaryOp: |
+                      BinaryOp: |
+                        BinaryOp: |
+                          ArrayRef: 
+                            ArrayRef: 
+                              ID: S
+                              Constant: int, 1
+                            BinaryOp: &
+                              ID: t
+                              Constant: int, 0x3f
+                          ArrayRef: 
+                            ArrayRef: 
+                              ID: S
+                              Constant: int, 3
+                            BinaryOp: &
+                              BinaryOp: >>
+                                ID: t
+                                Constant: int, 8
+                              Constant: int, 0x3f
+                        ArrayRef: 
+                          ArrayRef: 
+                            ID: S
+                            Constant: int, 5
+                          BinaryOp: &
+                            BinaryOp: >>
+                              ID: t
+                              Constant: int, 16
+                            Constant: int, 0x3f
+                      ArrayRef: 
+                        ArrayRef: 
+                          ID: S
+                          Constant: int, 7
+                        BinaryOp: &
+                          BinaryOp: >>
+                            ID: t
+                            Constant: int, 24
+                          Constant: int, 0x3f
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: S
+                        Constant: int, 0
+                      BinaryOp: &
+                        ID: u
+                        Constant: int, 0x3f
+                  ArrayRef: 
+                    ArrayRef: 
+                      ID: S
+                      Constant: int, 2
+                    BinaryOp: &
+                      BinaryOp: >>
+                        ID: u
+                        Constant: int, 8
+                      Constant: int, 0x3f
+                ArrayRef: 
+                  ArrayRef: 
+                    ID: S
+                    Constant: int, 4
+                  BinaryOp: &
+                    BinaryOp: >>
+                      ID: u
+                      Constant: int, 16
+                    Constant: int, 0x3f
+              ArrayRef: 
+                ArrayRef: 
+                  ID: S
+                  Constant: int, 6
+                BinaryOp: &
+                  BinaryOp: >>
+                    ID: u
+                    Constant: int, 24
+                  Constant: int, 0x3f
+          Assignment: =
+            ID: v
+            BinaryOp: ^
+              ID: l
+              BinaryOp: >>
+                ID: l
+                Constant: int, 16
+          Assignment: =
+            ID: u
+            BinaryOp: &
+              ID: v
+              ID: E0
+          Assignment: =
+            ID: v
+            BinaryOp: &
+              ID: v
+              ID: E1
+          Assignment: =
+            ID: u
+            BinaryOp: ^
+              BinaryOp: ^
+                BinaryOp: ^
+                  ID: u
+                  BinaryOp: <<
+                    ID: u
+                    Constant: int, 16
+                ID: l
+              ArrayRef: 
+                ID: s
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 2
+          Assignment: =
+            ID: t
+            BinaryOp: ^
+              BinaryOp: ^
+                BinaryOp: ^
+                  ID: v
+                  BinaryOp: <<
+                    ID: v
+                    Constant: int, 16
+                ID: l
+              ArrayRef: 
+                ID: s
+                BinaryOp: +
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 2
+                  Constant: int, 1
+          Assignment: =
+            ID: t
+            BinaryOp: |
+              BinaryOp: >>
+                ID: t
+                Constant: int, 4
+              BinaryOp: <<
+                ID: t
+                Constant: int, 28
+          Assignment: ^=
+            ID: r
+            ArrayRef: 
+              ArrayRef: 
+                ID: S
+                Constant: int, 1
+              BinaryOp: &
+                ID: t
+                Constant: int, 0x3f
+      Assignment: =
+        ID: t
+        ID: l
+      Assignment: =
+        ID: l
+        ID: r
+      Assignment: =
+        ID: r
+        ID: t
+      Assignment: =
+        ID: t
+        ID: r
+      Assignment: =
+        ID: r
+        BinaryOp: |
+          BinaryOp: >>
+            ID: l
+            Constant: int, 1
+          BinaryOp: <<
+            ID: l
+            Constant: int, 31
+      Assignment: =
+        ID: l
+        BinaryOp: |
+          BinaryOp: >>
+            ID: t
+            Constant: int, 1
+          BinaryOp: <<
+            ID: t
+            Constant: int, 31
+      Assignment: =
+        UnaryOp: *
+          ID: out0
+        ID: l
+      Assignment: =
+        UnaryOp: *
+          ID: out1
+        ID: r
+      Return: 
+        Constant: int, 0
+    Decl: out0, [], [], []
+      PtrDecl: []
+        TypeDecl: out0, []
+          IdentifierType: ['ulong']
+    Decl: out1, [], [], []
+      PtrDecl: []
+        TypeDecl: out1, []
+          IdentifierType: ['ulong']
+    Decl: ks, [], [], []
+      PtrDecl: []
+        TypeDecl: ks, []
+          IdentifierType: ['int']
+    Decl: Eswap0, [], [], []
+      TypeDecl: Eswap0, []
+        IdentifierType: ['ulong']
+    Decl: Eswap1, [], [], []
+      TypeDecl: Eswap1, []
+        IdentifierType: ['ulong']

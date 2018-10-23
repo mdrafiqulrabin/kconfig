@@ -1,0 +1,55 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['_Complex', 'unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['_Complex', 'unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['_Complex', 'unsigned']
+        BinaryOp: /
+          ID: x
+          ID: y
+      Decl: t2, [], [], []
+        TypeDecl: t2, []
+          IdentifierType: ['int']
+        BinaryOp: !=
+          ID: t1
+          Constant: int, 0
+      Return: 
+        ID: t2
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['_Complex', 'unsigned']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['_Complex', 'unsigned']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['_Complex', 'unsigned']
+        BinaryOp: /
+          ID: x
+          ID: y
+      Decl: t2, [], [], []
+        TypeDecl: t2, []
+          IdentifierType: ['int']
+        BinaryOp: ==
+          ID: t1
+          Constant: int, 0
+      Return: 
+        ID: t2

@@ -1,0 +1,106 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        Compound: 
+          Decl: e, [], [], []
+            PtrDecl: []
+              TypeDecl: e, []
+                IdentifierType: ['int']
+          If: 
+            ID: d
+            Compound: 
+              For: 
+                ID: b
+                UnaryOp: p++
+                  ID: a
+                Label: lbl1
+                  Assignment: =
+                    ID: d
+                    Constant: int, 0
+              For: 
+                BinaryOp: <=
+                  ID: d
+                  Constant: int, 1
+                UnaryOp: p++
+                  ID: d
+                Compound: 
+                  Decl: q, [], [], []
+                    PtrDecl: []
+                      PtrDecl: []
+                        TypeDecl: q, []
+                          IdentifierType: ['int']
+                    UnaryOp: &
+                      ID: e
+                  For: 
+                    Assignment: =
+                      UnaryOp: *
+                        UnaryOp: *
+                          ID: q
+                      Constant: int, 0
+                    BinaryOp: <=
+                      UnaryOp: *
+                        UnaryOp: *
+                          ID: q
+                      Constant: int, 0
+                    UnaryOp: *
+                      UnaryOp: *
+                        UnaryOp: p++
+                          ID: q
+                    Assignment: =
+                      ID: d
+                      Constant: int, 0
+        Compound: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: c
+              Constant: int, 0
+            BinaryOp: <
+              ID: c
+              Constant: int, 77
+            UnaryOp: p++
+              ID: c
+            For: 
+              Assignment: =
+                ID: c
+                Constant: int, 0
+              BinaryOp: <
+                ID: c
+                Constant: int, 46
+              UnaryOp: p++
+                ID: c
+              EmptyStatement: 
+          For: 
+            BinaryOp: <=
+              ID: t
+              Constant: int, 0
+            UnaryOp: p++
+              ID: t
+            Label: lbl2
+              EmptyStatement: 
+          Goto: lbl1
+      Goto: lbl2

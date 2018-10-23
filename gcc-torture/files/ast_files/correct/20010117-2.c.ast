@@ -1,0 +1,124 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &
+          ID: b
+          Constant: int, 0x08
+        Compound: 
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+            BinaryOp: &
+              ID: b
+              Constant: int, 0x01
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              BinaryOp: -
+                ID: a
+                ID: g
+              ID: c
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              BinaryOp: &
+                ID: a
+                Constant: int, 0x0f
+              BinaryOp: &
+                ID: g
+                Constant: int, 0x0f
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              BinaryOp: &
+                ID: a
+                Constant: int, 0xf0
+              BinaryOp: &
+                ID: g
+                Constant: int, 0xf0
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              BinaryOp: &
+                ID: a
+                Constant: int, 0x0f
+              BinaryOp: &
+                ID: g
+                Constant: int, 0x0f
+          If: 
+            BinaryOp: &
+              BinaryOp: &
+                BinaryOp: ^
+                  ID: a
+                  ID: g
+                BinaryOp: ^
+                  ID: a
+                  ID: d
+              Constant: int, 0x80
+            Assignment: |=
+              ID: b
+              Constant: int, 0x40
+          If: 
+            BinaryOp: ==
+              BinaryOp: &
+                ID: d
+                Constant: int, 0xff00
+              Constant: int, 0
+            Assignment: |=
+              ID: b
+              Constant: int, 0x01
+          If: 
+            UnaryOp: !
+              BinaryOp: &
+                BinaryOp: -
+                  BinaryOp: -
+                    ID: a
+                    ID: h
+                  ID: c
+                Constant: int, 0xff
+            Assignment: |=
+              ID: b
+              Constant: int, 0x02
+          If: 
+            BinaryOp: &
+              BinaryOp: -
+                BinaryOp: -
+                  ID: a
+                  ID: g
+                ID: c
+              Constant: int, 0x80
+            Assignment: |=
+              ID: b
+              Constant: int, 0x80
+          Assignment: =
+            ID: a
+            BinaryOp: |
+              BinaryOp: &
+                ID: e
+                Constant: int, 0x0f
+              BinaryOp: &
+                ID: f
+                Constant: int, 0xf0

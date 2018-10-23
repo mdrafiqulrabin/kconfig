@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: L, [], [], []
+        TypeDecl: L, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: D, [], [], []
+        TypeDecl: D, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: D
+        Assignment: =
+          ID: L
+          UnaryOp: -
+            Constant: int, 3
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "L=%lu, D=%g\n"
+          ID: L
+          ID: D
+      Return: 
+        Constant: int, 0

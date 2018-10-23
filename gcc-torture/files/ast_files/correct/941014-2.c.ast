@@ -1,0 +1,172 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: n
+          ID: ppt
+          ID: xrot
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tileWidth, [], [], []
+        TypeDecl: tileWidth, []
+          IdentifierType: ['int']
+      Decl: nlwSrc, [], [], []
+        TypeDecl: nlwSrc, []
+          IdentifierType: ['int']
+      Decl: srcx, [], [], []
+        TypeDecl: srcx, []
+          IdentifierType: ['int']
+      Decl: v3, [], [], []
+        TypeDecl: v3, []
+          IdentifierType: ['int']
+      Decl: v4, [], [], []
+        TypeDecl: v4, []
+          IdentifierType: ['int']
+      Decl: ca1, [], ['register'], []
+        TypeDecl: ca1, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: cx1, [], ['register'], []
+        TypeDecl: cx1, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: ca2, [], ['register'], []
+        TypeDecl: ca2, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: cx2, [], ['register'], []
+        TypeDecl: cx2, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: pSrcLine, [], [], []
+        PtrDecl: []
+          TypeDecl: pSrcLine, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: pDst, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: pDst, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: pSrc, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: pSrc, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: b, [], ['register'], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: tmp, [], ['register'], []
+        TypeDecl: tmp, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: tileEndMask, [], [], []
+        TypeDecl: tileEndMask, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: v1, [], [], []
+        TypeDecl: v1, []
+          IdentifierType: ['int']
+      Decl: v2, [], [], []
+        TypeDecl: v2, []
+          IdentifierType: ['int']
+      Decl: tileEndPart, [], [], []
+        TypeDecl: tileEndPart, []
+          IdentifierType: ['int']
+      Decl: needFirst, [], [], []
+        TypeDecl: needFirst, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: tileEndPart
+        Constant: int, 0
+      Assignment: =
+        ID: v1
+        BinaryOp: <<
+          ID: tileEndPart
+          Constant: int, 5
+      Assignment: =
+        ID: v2
+        BinaryOp: -
+          Constant: int, 32
+          ID: v1
+      While: 
+        UnaryOp: p--
+          ID: n
+        Compound: 
+          If: 
+            BinaryOp: <
+              Assignment: =
+                ID: srcx
+                BinaryOp: %
+                  BinaryOp: -
+                    ID: ppt
+                    ID: xrot
+                  ID: tileWidth
+              Constant: int, 0
+            If: 
+              ID: needFirst
+              If: 
+                BinaryOp: ==
+                  ID: nlwSrc
+                  Constant: int, 1
+                Compound: 
+                  Assignment: =
+                    ID: tmp
+                    ID: b
+                  If: 
+                    ID: tileEndPart
+                    Assignment: =
+                      ID: b
+                      BinaryOp: |
+                        BinaryOp: &
+                          UnaryOp: *
+                            ID: pSrc
+                          ID: tileEndMask
+                        BinaryOp: >>
+                          UnaryOp: *
+                            ID: pSrcLine
+                          ID: v1
+          If: 
+            ID: tileEndPart
+            Assignment: =
+              ID: b
+              BinaryOp: |
+                BinaryOp: <<
+                  ID: tmp
+                  ID: v1
+                BinaryOp: >>
+                  ID: b
+                  ID: v2
+          If: 
+            BinaryOp: !=
+              ID: v4
+              Constant: int, 32
+            Assignment: =
+              UnaryOp: *
+                ID: pDst
+              BinaryOp: ^
+                BinaryOp: &
+                  UnaryOp: *
+                    ID: pDst
+                  BinaryOp: |
+                    BinaryOp: <<
+                      ID: tmp
+                      ID: v3
+                    BinaryOp: ^
+                      BinaryOp: &
+                        BinaryOp: >>
+                          ID: b
+                          ID: v4
+                        ID: ca1
+                      ID: cx1
+                BinaryOp: ^
+                  BinaryOp: &
+                    BinaryOp: |
+                      BinaryOp: <<
+                        ID: tmp
+                        ID: v3
+                      BinaryOp: >>
+                        ID: b
+                        ID: v4
+                    ID: ca2
+                  ID: cx2
+          Assignment: =
+            UnaryOp: *
+              ID: pDst
+            BinaryOp: &
+              UnaryOp: *
+                ID: pDst
+              ID: tmp

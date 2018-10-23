@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: banana, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: citron, [], [], []
+            TypeDecl: citron, []
+              IdentifierType: ['long']
+        TypeDecl: banana, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: citron
+        Compound: 
+          Case: 
+            Constant: int, 0x80000000
+          Case: 
+            Constant: int, 0x40000
+          Case: 
+            Constant: int, 0x40001
+            Return: 
+              Constant: int, 1
+            Break: 
+      Return: 
+        Constant: int, 0

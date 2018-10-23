@@ -1,0 +1,191 @@
+FileAST: 
+  Typedef: xdef, [], ['typedef']
+    TypeDecl: xdef, []
+      Struct: xdef
+  Decl: None, [], [], []
+    Struct: xdef
+      Decl: xtyp, [], [], []
+        TypeDecl: xtyp, []
+          IdentifierType: ['char']
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            IdentifierType: ['xdef']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+  Decl: b, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: b, []
+        IdentifierType: ['void']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: bar, [], [], []
+          PtrDecl: []
+            TypeDecl: bar, []
+              IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+  Decl: foo2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: bar1, [], [], []
+          PtrDecl: []
+            TypeDecl: bar1, []
+              IdentifierType: ['void']
+        Decl: bar2, [], [], []
+          PtrDecl: []
+            TypeDecl: bar2, []
+              IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: foo2, []
+          IdentifierType: ['void']
+  Decl: qwe, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: qwe, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: c, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: xp, [], [], []
+            PtrDecl: []
+              TypeDecl: xp, []
+                IdentifierType: ['xdef']
+        TypeDecl: c, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: b
+        ExprList: 
+          ID: xp
+  FuncDef: 
+    Decl: a, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: xpp, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: xpp, []
+                  IdentifierType: ['xdef']
+        TypeDecl: a, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xp, [], [], []
+        PtrDecl: []
+          TypeDecl: xp, []
+            IdentifierType: ['xdef']
+      Assignment: =
+        ID: xp
+        UnaryOp: *
+          ID: xpp
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: xp
+      Assignment: =
+        ID: xp
+        FuncCall: 
+          ID: foo2
+          ExprList: 
+            ID: xp
+            ID: qwe
+      FuncCall: 
+        ID: b
+        ExprList: 
+          StructRef: ->
+            ID: xp
+            ID: next
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: xp
+      If: 
+        StructRef: ->
+          ID: xp
+          ID: y
+        Compound: 
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ID: xp
+          If: 
+            ID: xp
+            Compound: 
+              Decl: p, [], [], []
+                PtrDecl: []
+                  TypeDecl: p, []
+                    IdentifierType: ['xdef']
+                FuncCall: 
+                  ID: foo2
+                  ExprList: 
+                    ID: xp
+                    ID: qwe
+              FuncCall: 
+                ID: foo2
+                ExprList: 
+                  ID: xp
+                  ID: p
+              Assignment: =
+                ID: xp
+                FuncCall: 
+                  ID: foo
+                  ExprList: 
+                    ID: p
+            Compound: 
+              FuncCall: 
+                ID: foo2
+                ExprList: 
+                  FuncCall: 
+                    ID: foo
+                    ExprList: 
+                      UnaryOp: *
+                        ID: xpp
+                  UnaryOp: *
+                    ID: xpp
+      Assignment: =
+        UnaryOp: *
+          ID: xpp
+        FuncCall: 
+          ID: foo2
+          ExprList: 
+            ID: xpp
+            ID: qwe
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: xpp, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: xpp, []
+                  IdentifierType: ['xdef']
+        TypeDecl: b, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xp, [], [], []
+        PtrDecl: []
+          TypeDecl: xp, []
+            IdentifierType: ['xdef']
+        UnaryOp: *
+          ID: xpp
+      If: 
+        UnaryOp: !
+          ID: xp
+        Return: 
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: xp
+            ID: xtyp
+          Constant: int, 0
+        FuncCall: 
+          ID: a
+          ExprList: 
+            ID: xpp
+      FuncCall: 
+        ID: c
+        ExprList: 
+          ID: xp

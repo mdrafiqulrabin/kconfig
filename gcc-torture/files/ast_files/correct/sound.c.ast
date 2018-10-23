@@ -1,0 +1,49 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: audio, [], [], []
+        ArrayDecl: []
+          TypeDecl: audio, []
+            IdentifierType: ['char']
+          Constant: int, 8192
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 4095
+        Assignment: +=
+          ID: i
+          Constant: int, 1
+        ExprList: 
+          Assignment: =
+            ArrayRef: 
+              ID: audio
+              ID: i
+            BinaryOp: /
+              ID: i
+              Constant: int, 8
+          Assignment: =
+            ArrayRef: 
+              ID: audio
+              BinaryOp: -
+                Constant: int, 8191
+                ID: i
+            BinaryOp: /
+              ID: i
+              Constant: int, 8
+      For: 
+        FuncCall: 
+          ID: write
+          ExprList: 
+            Constant: int, 1
+            ID: audio
+            Constant: int, 8192

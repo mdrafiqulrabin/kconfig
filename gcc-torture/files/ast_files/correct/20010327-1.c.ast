@@ -1,0 +1,17 @@
+FileAST: 
+  Decl: _text, [], ['extern'], []
+    TypeDecl: _text, []
+      IdentifierType: ['void']
+  Decl: x, [], ['static'], []
+    TypeDecl: x, []
+      IdentifierType: ['unsigned', 'long']
+    BinaryOp: -
+      BinaryOp: -
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'long']
+          UnaryOp: &
+            ID: _text
+        Constant: int, 0x10000000L
+      Constant: int, 1

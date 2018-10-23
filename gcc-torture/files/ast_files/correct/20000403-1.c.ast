@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: utsname
+      Decl: sysname, [], [], []
+        ArrayDecl: []
+          TypeDecl: sysname, []
+            IdentifierType: ['char']
+          Constant: int, 32
+      Decl: version, [], [], []
+        ArrayDecl: []
+          TypeDecl: version, []
+            IdentifierType: ['char']
+          Constant: int, 32
+  FuncDef: 
+    Decl: uname, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: name
+        TypeDecl: uname, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: mib, [], [], []
+        ArrayDecl: []
+          TypeDecl: mib, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: rval, [], [], []
+        TypeDecl: rval, []
+          IdentifierType: ['int']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['long']
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+      Decl: oerrno, [], [], []
+        TypeDecl: oerrno, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          FuncCall: 
+            ID: sysctl
+            ExprList: 
+              ID: mib
+              Constant: int, 2
+              UnaryOp: &
+                StructRef: ->
+                  ID: name
+                  ID: sysname
+              UnaryOp: &
+                ID: len
+              Constant: int, 0
+              Constant: int, 0
+          UnaryOp: -
+            Constant: int, 1
+        EmptyStatement: 
+      For: 
+        Assignment: =
+          ID: p
+          StructRef: ->
+            ID: name
+            ID: version
+        UnaryOp: p--
+          ID: len
+        UnaryOp: ++
+          ID: p
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: p
+            Constant: char, ' '
+    Decl: name, [], [], []
+      PtrDecl: []
+        TypeDecl: name, []
+          Struct: utsname

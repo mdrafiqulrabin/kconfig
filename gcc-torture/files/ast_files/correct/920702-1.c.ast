@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: somevar, [], [], []
+    TypeDecl: somevar, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: yylex, [], [], []
+      FuncDecl: 
+        TypeDecl: yylex, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: result, [], ['register'], []
+        TypeDecl: result, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: num_bits, [], [], []
+        TypeDecl: num_bits, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      If: 
+        BinaryOp: &
+          BinaryOp: >>
+            ID: result
+            UnaryOp: -
+              Constant: int, 1
+          Constant: int, 1
+        Assignment: =
+          ID: somevar
+          Constant: int, 99

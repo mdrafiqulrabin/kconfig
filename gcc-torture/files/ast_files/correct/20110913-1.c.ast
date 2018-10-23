@@ -1,0 +1,122 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: ieee754_double
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  Decl: __exp_deltatable, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: __exp_deltatable, ['const']
+        IdentifierType: ['float']
+      Constant: int, 178
+  FuncDef: 
+    Decl: __ieee754_expf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: __ieee754_expf, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: himark, ['const'], ['static'], []
+        TypeDecl: himark, ['const']
+          IdentifierType: ['float']
+        Constant: float, 88.72283935546875
+      Decl: lomark, ['const'], ['static'], []
+        TypeDecl: lomark, ['const']
+          IdentifierType: ['float']
+        UnaryOp: -
+          Constant: float, 103.972084045410
+      If: 
+        BinaryOp: &&
+          FuncCall: 
+            ID: __builtin_isless
+            ExprList: 
+              ID: x
+              ID: himark
+          FuncCall: 
+            ID: __builtin_isgreater
+            ExprList: 
+              ID: x
+              ID: lomark
+        Compound: 
+          Decl: tval, [], [], []
+            TypeDecl: tval, []
+              IdentifierType: ['int']
+          Decl: x22, [], [], []
+            TypeDecl: x22, []
+              IdentifierType: ['double']
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['double']
+          Decl: result, [], [], []
+            TypeDecl: result, []
+              IdentifierType: ['double']
+          Decl: dx, [], [], []
+            TypeDecl: dx, []
+              IdentifierType: ['double']
+          Decl: delta, [], [], []
+            TypeDecl: delta, []
+              IdentifierType: ['float']
+          Decl: ex2_u, [], [], []
+            TypeDecl: ex2_u, []
+              Struct: ieee754_double
+          Assignment: -=
+            ID: dx
+            ID: t
+          Assignment: =
+            ID: tval
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              BinaryOp: *
+                ID: t
+                Constant: float, 512.0
+          If: 
+            BinaryOp: >=
+              ID: t
+              Constant: int, 0
+            Assignment: =
+              ID: delta
+              UnaryOp: -
+                ArrayRef: 
+                  ID: __exp_deltatable
+                  ID: tval
+            Assignment: =
+              ID: delta
+              ArrayRef: 
+                ID: __exp_deltatable
+                UnaryOp: -
+                  ID: tval
+          Assignment: =
+            ID: x22
+            BinaryOp: +
+              BinaryOp: *
+                BinaryOp: +
+                  BinaryOp: *
+                    Constant: float, 0.5000000496709180453
+                    ID: dx
+                  Constant: float, 1.0000001192102037084
+                ID: dx
+              ID: delta
+          Assignment: =
+            ID: result
+            BinaryOp: +
+              BinaryOp: *
+                ID: x22
+                StructRef: .
+                  ID: ex2_u
+                  ID: d
+              StructRef: .
+                ID: ex2_u
+                ID: d
+          Return: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['float']
+              ID: result
+      Return: 
+        ID: x

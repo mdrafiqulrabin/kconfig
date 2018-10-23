@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: p, [], [], []
+    TypeDecl: p, []
+      Struct: None
+        Decl: n, [], [], []
+          TypeDecl: n, []
+            IdentifierType: ['int']
+          Constant: int, 1
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+          Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: p
+          ID: c
+        Assignment: =
+          StructRef: .
+            ID: p
+            ID: n
+          Constant: int, 0

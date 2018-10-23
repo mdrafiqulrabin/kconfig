@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: gdt
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['unsigned']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: gdt_table, [], [], []
+        ArrayDecl: []
+          TypeDecl: gdt_table, []
+            Struct: gdt
+          Constant: int, 2
+        InitList: 
+          InitList: 
+            Constant: int, 0
+            BinaryOp: &
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned']
+                  UnaryOp: &
+                    ID: x
+                Constant: int, 24
+              BinaryOp: <<
+                UnaryOp: -
+                  Constant: int, 1
+                Constant: int, 8

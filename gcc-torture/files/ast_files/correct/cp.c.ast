@@ -1,0 +1,156 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _obstack_chunk
+      Decl: limit, [], [], []
+        PtrDecl: []
+          TypeDecl: limit, []
+            IdentifierType: ['char']
+      Decl: prev, [], [], []
+        PtrDecl: []
+          TypeDecl: prev, []
+            Struct: _obstack_chunk
+      Decl: contents, [], [], []
+        ArrayDecl: []
+          TypeDecl: contents, []
+            IdentifierType: ['char']
+          Constant: int, 4
+  Decl: None, [], [], []
+    Struct: obstack
+      Decl: chunk_size, [], [], []
+        TypeDecl: chunk_size, []
+          IdentifierType: ['long']
+      Decl: chunk, [], [], []
+        PtrDecl: []
+          TypeDecl: chunk, []
+            Struct: _obstack_chunk
+      Decl: object_base, [], [], []
+        PtrDecl: []
+          TypeDecl: object_base, []
+            IdentifierType: ['char']
+      Decl: next_free, [], [], []
+        PtrDecl: []
+          TypeDecl: next_free, []
+            IdentifierType: ['char']
+      Decl: chunk_limit, [], [], []
+        PtrDecl: []
+          TypeDecl: chunk_limit, []
+            IdentifierType: ['char']
+      Decl: temp, [], [], []
+        TypeDecl: temp, []
+          IdentifierType: ['int']
+      Decl: alignment_mask, [], [], []
+        TypeDecl: alignment_mask, []
+          IdentifierType: ['int']
+      Decl: chunkfun, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            PtrDecl: []
+              TypeDecl: chunkfun, []
+                Struct: _obstack_chunk
+      Decl: freefun, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            TypeDecl: freefun, []
+              IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: fooalign
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  Decl: None, [], [], []
+    Union: fooround
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['long']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  FuncDef: 
+    Decl: _obstack_begin, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: h
+          ID: size
+          ID: alignment
+          ID: chunkfun
+          ID: freefun
+        TypeDecl: _obstack_begin, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: chunk, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: chunk, []
+            Struct: _obstack_chunk
+      If: 
+        BinaryOp: ==
+          ID: alignment
+          Constant: int, 0
+        Assignment: =
+          ID: alignment
+          BinaryOp: -
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              UnaryOp: &
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          Struct: fooalign
+                    Constant: int, 0
+                  ID: d
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: size
+          Constant: int, 0
+        Compound: 
+          Decl: extra, [], [], []
+            TypeDecl: extra, []
+              IdentifierType: ['int']
+            Constant: int, 4
+          If: 
+            BinaryOp: <
+              ID: extra
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    Union: fooround
+            Assignment: =
+              ID: extra
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    Union: fooround
+    Decl: h, [], [], []
+      PtrDecl: []
+        TypeDecl: h, []
+          Struct: obstack
+    Decl: size, [], [], []
+      TypeDecl: size, []
+        IdentifierType: ['int']
+    Decl: alignment, [], [], []
+      TypeDecl: alignment, []
+        IdentifierType: ['int']
+    Decl: chunkfun, [], [], []
+      PtrDecl: []
+        FuncDecl: 
+          PtrDecl: []
+            TypeDecl: chunkfun, []
+              IdentifierType: ['void']
+    Decl: freefun, [], [], []
+      PtrDecl: []
+        FuncDecl: 
+          TypeDecl: freefun, []
+            IdentifierType: ['void']

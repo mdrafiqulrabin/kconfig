@@ -1,0 +1,21 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  Decl: f, [], [], []
+    FuncDecl: 
+      TypeDecl: f, []
+        Struct: A
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          Struct: A
+        FuncCall: 
+          ID: f

@@ -1,0 +1,118 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: o_fsm_t
+  Decl: None, [], [], []
+    Struct: o_fsm_event_t
+  Typedef: fn_t, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                Struct: o_fsm_t
+          Typename: None, ['const']
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                Struct: o_fsm_event_t
+        TypeDecl: fn_t, []
+          IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: o_fsm_state_t
+      Decl: dispatch, [], [], []
+        TypeDecl: dispatch, []
+          IdentifierType: ['fn_t']
+  Decl: None, [], [], []
+    Struct: o_fsm_t
+      Decl: dispatch, [], [], []
+        TypeDecl: dispatch, []
+          IdentifierType: ['fn_t']
+  Decl: o_fsm_tran, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: fsm, [], [], []
+          PtrDecl: []
+            TypeDecl: fsm, []
+              Struct: o_fsm_t
+        Decl: next_state, [], [], []
+          TypeDecl: next_state, []
+            Struct: o_fsm_state_t
+      TypeDecl: o_fsm_tran, []
+        Struct: o_fsm_state_t
+  Decl: plist_parser_state_start, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: fsm, [], [], []
+          PtrDecl: []
+            TypeDecl: fsm, []
+              Struct: o_fsm_t
+        Decl: fsm_event, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: fsm_event, ['const']
+              Struct: o_fsm_event_t
+      TypeDecl: plist_parser_state_start, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: o_fsm_state, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dispatch_fcn, [], [], []
+            TypeDecl: dispatch_fcn, []
+              IdentifierType: ['fn_t']
+        TypeDecl: o_fsm_state, []
+          Struct: o_fsm_state_t
+    Compound: 
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  Struct: o_fsm_state_t
+            UnaryOp: &
+              ID: dispatch_fcn
+  Typedef: o_plist_parser_t, [], ['typedef']
+    TypeDecl: o_plist_parser_t, []
+      Struct: _o_plist_parser_t
+        Decl: fsm, [], [], []
+          TypeDecl: fsm, []
+            Struct: o_fsm_t
+  FuncDef: 
+    Decl: plist_parser_state_start, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fsm, [], [], []
+            PtrDecl: []
+              TypeDecl: fsm, []
+                Struct: o_fsm_t
+          Decl: fsm_event, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: fsm_event, ['const']
+                Struct: o_fsm_event_t
+        TypeDecl: plist_parser_state_start, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: o_plist_deserialize_xml, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fin, [], [], []
+            TypeDecl: fin, []
+              IdentifierType: ['int']
+        TypeDecl: o_plist_deserialize_xml, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: parser, [], [], []
+        TypeDecl: parser, []
+          IdentifierType: ['o_plist_parser_t']
+      FuncCall: 
+        ID: o_fsm_tran
+        ExprList: 
+          UnaryOp: &
+            StructRef: .
+              ID: parser
+              ID: fsm
+          FuncCall: 
+            ID: o_fsm_state
+            ExprList: 
+              ID: plist_parser_state_start

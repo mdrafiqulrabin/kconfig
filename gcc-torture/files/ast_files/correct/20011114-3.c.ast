@@ -1,0 +1,123 @@
+FileAST: 
+  Typedef: C, [], ['typedef']
+    TypeDecl: C, []
+      Struct: None
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+        Decl: t, [], [], []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['C']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['C']
+        UnaryOp: &
+          ID: x
+      While: 
+        Assignment: =
+          ID: c
+          FuncCall: 
+            ID: foo
+        Switch: 
+          ID: c
+          Compound: 
+            Case: 
+              Constant: int, 23
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  Constant: int, 1
+              Break: 
+            Default: 
+              Break: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: a
+            Constant: int, 0
+          BinaryOp: &
+            ID: a
+            Constant: int, 1
+        Compound: 
+          If: 
+            StructRef: ->
+              ID: b
+              ID: s
+            Compound: 
+              If: 
+                ID: a
+                FuncCall: 
+                  ID: bar
+                  ExprList: 
+                    Constant: int, 1
+                Assignment: =
+                  ID: a
+                  Constant: int, 16
+            If: 
+              StructRef: ->
+                ID: b
+                ID: t
+              Compound: 
+                If: 
+                  ID: a
+                  FuncCall: 
+                    ID: bar
+                    ExprList: 
+                      Constant: int, 1
+                  Assignment: =
+                    ID: a
+                    Constant: int, 32
+      If: 
+        BinaryOp: &&
+          ID: d
+          BinaryOp: &
+            ID: a
+            UnaryOp: ~
+              Constant: int, 127
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            Constant: int, 2
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,13 @@
+FileAST: 
+  Decl: foo, ['volatile'], ['extern'], []
+    TypeDecl: foo, ['volatile']
+      IdentifierType: ['unsigned', 'long']
+  Typedef: ulong, [], ['typedef']
+    TypeDecl: ulong, []
+      IdentifierType: ['unsigned', 'long']
+  Decl: foo, ['volatile'], ['extern'], []
+    TypeDecl: foo, ['volatile']
+      IdentifierType: ['ulong']
+  Decl: foo, ['volatile'], [], []
+    TypeDecl: foo, ['volatile']
+      IdentifierType: ['ulong']

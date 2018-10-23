@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: lop, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: lop, []
+          IdentifierType: ['int']
+    Compound: 
+      DoWhile: 
+        BinaryOp: >=
+          ID: a
+          UnaryOp: -
+            Constant: int, 1
+        UnaryOp: p--
+          ID: a

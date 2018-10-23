@@ -1,0 +1,32 @@
+FileAST: 
+  Typedef: Uchar, [], ['typedef']
+    TypeDecl: Uchar, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: None, [], [], []
+    Struct: scsi_mode_header
+      Decl: sense_data_len, [], [], []
+        TypeDecl: sense_data_len, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 8
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: md, [], [], []
+        TypeDecl: md, []
+          Struct: scsi_mode_header
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['Uchar']
+            UnaryOp: &
+              ID: md

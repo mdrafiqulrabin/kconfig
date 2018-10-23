@@ -1,0 +1,129 @@
+FileAST: 
+  FuncDef: 
+    Decl: p1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: p1, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+      Return: 
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+  FuncDef: 
+    Decl: p2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: p2, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+      Return: 
+        BinaryOp: ==
+          ArrayRef: 
+            ID: p
+            Constant: int, 0
+          Constant: int, 0
+  FuncDef: 
+    Decl: p3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: p3, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+      Assignment: =
+        ID: a
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+      If: 
+        ID: a
+        Return: 
+          Constant: int, 0
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: p4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: p4, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+      If: 
+        ID: a
+        Return: 
+          Constant: int, 0
+      Return: 
+        ID: a

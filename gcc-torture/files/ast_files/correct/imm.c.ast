@@ -1,0 +1,9 @@
+FileAST: 
+  FuncDef: 
+    Decl: imm, [], [], []
+      FuncDecl: 
+        TypeDecl: imm, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 11234

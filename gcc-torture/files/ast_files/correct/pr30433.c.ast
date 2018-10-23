@@ -1,0 +1,11 @@
+FileAST: 
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+    BinaryOp: ==
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['_Complex', 'float']
+        Constant: float, 0.5
+      Constant: float, 0.5

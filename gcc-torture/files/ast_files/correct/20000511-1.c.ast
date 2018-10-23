@@ -1,0 +1,111 @@
+FileAST: 
+  Typedef: X, [], ['typedef']
+    TypeDecl: X, []
+      Struct: None
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['char']
+        Decl: x, [], [], []
+          ArrayDecl: []
+            TypeDecl: x, []
+              IdentifierType: ['char']
+            Constant: int, 32
+  FuncDef: 
+    Decl: z, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: z, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: xxx, [], [], []
+        TypeDecl: xxx, []
+          IdentifierType: ['X']
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: xxx
+            ID: x
+          Constant: int, 0
+        Assignment: =
+          ArrayRef: 
+            StructRef: .
+              ID: xxx
+              ID: x
+            Constant: int, 31
+          Constant: char, '0'
+      Assignment: =
+        StructRef: .
+          ID: xxx
+          ID: y
+        Constant: int, 0xf
+      Return: 
+        FuncCall: 
+          ID: f
+          ExprList: 
+            ID: xxx
+            ID: xxx
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: val
+        FuncCall: 
+          ID: z
+      If: 
+        BinaryOp: !=
+          ID: val
+          Constant: int, 0x60
+        FuncCall: 
+          ID: abort
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['X']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['X']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: x
+            ID: y
+          StructRef: .
+            ID: y
+            ID: y
+        Return: 
+          Constant: char, 'F'
+      Return: 
+        BinaryOp: +
+          ArrayRef: 
+            StructRef: .
+              ID: x
+              ID: x
+            Constant: int, 0
+          ArrayRef: 
+            StructRef: .
+              ID: y
+              ID: x
+            Constant: int, 0

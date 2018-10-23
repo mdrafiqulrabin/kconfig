@@ -1,0 +1,60 @@
+FileAST: 
+  Typedef: A, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: A, []
+        Struct: None
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+  Decl: a, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, ['const']
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: b, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: b, ['const']
+        IdentifierType: ['int']
+      Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['A']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['A']
+      Decl: c, ['const'], ['static'], []
+        ArrayDecl: []
+          PtrDecl: ['const']
+            TypeDecl: c, ['const']
+              IdentifierType: ['int']
+        InitList: 
+          ID: b
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: p
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          ArrayRef: 
+            ID: c
+            Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: y
+          ID: p
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          ID: a

@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a1, [], [], []
+            TypeDecl: a1, []
+              IdentifierType: ['float']
+        TypeDecl: f, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: fl1, [], [], []
+        TypeDecl: fl1, []
+          Union: None
+            Decl: f, [], [], []
+              TypeDecl: f, []
+                IdentifierType: ['float']
+            Decl: l, [], [], []
+              TypeDecl: l, []
+                IdentifierType: ['int']
+      Assignment: =
+        StructRef: .
+          ID: fl1
+          ID: f
+        ID: a1
+      Return: 
+        TernaryOp: 
+          StructRef: .
+            ID: fl1
+            ID: l
+          Constant: float, 1.0
+          ID: a1

@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: struct_test, ['const'], [], []
+    ArrayDecl: []
+      TypeDecl: struct_test, ['const']
+        IdentifierType: ['int']
+      Constant: int, 1
+    InitList: 
+      Constant: int, 1
+  Decl: g, [], [], []
+    FuncDecl: 
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ArrayRef: 
+          ID: struct_test
+          Constant: int, 0
+        Compound: 
+          Case: 
+            Constant: int, 1
+            FuncCall: 
+              ID: g

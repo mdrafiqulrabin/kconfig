@@ -1,0 +1,452 @@
+FileAST: 
+  Decl: newshuffle, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: newshuffle, []
+        IdentifierType: ['char']
+      BinaryOp: +
+        Constant: int, 256
+        Constant: int, 16
+    InitList: 
+      Constant: int, 0x0f
+      Constant: int, 0x08
+      Constant: int, 0x05
+      Constant: int, 0x07
+      Constant: int, 0x0c
+      Constant: int, 0x02
+      Constant: int, 0x0e
+      Constant: int, 0x09
+      Constant: int, 0x00
+      Constant: int, 0x01
+      Constant: int, 0x06
+      Constant: int, 0x0d
+      Constant: int, 0x03
+      Constant: int, 0x04
+      Constant: int, 0x0b
+      Constant: int, 0x0a
+      Constant: int, 0x02
+      Constant: int, 0x0c
+      Constant: int, 0x0e
+      Constant: int, 0x06
+      Constant: int, 0x0f
+      Constant: int, 0x00
+      Constant: int, 0x01
+      Constant: int, 0x08
+      Constant: int, 0x0d
+      Constant: int, 0x03
+      Constant: int, 0x0a
+      Constant: int, 0x04
+      Constant: int, 0x09
+      Constant: int, 0x0b
+      Constant: int, 0x05
+      Constant: int, 0x07
+      Constant: int, 0x05
+      Constant: int, 0x02
+      Constant: int, 0x09
+      Constant: int, 0x0f
+      Constant: int, 0x0c
+      Constant: int, 0x04
+      Constant: int, 0x0d
+      Constant: int, 0x00
+      Constant: int, 0x0e
+      Constant: int, 0x0a
+      Constant: int, 0x06
+      Constant: int, 0x08
+      Constant: int, 0x0b
+      Constant: int, 0x01
+      Constant: int, 0x03
+      Constant: int, 0x07
+      Constant: int, 0x0f
+      Constant: int, 0x0d
+      Constant: int, 0x02
+      Constant: int, 0x06
+      Constant: int, 0x07
+      Constant: int, 0x08
+      Constant: int, 0x05
+      Constant: int, 0x09
+      Constant: int, 0x00
+      Constant: int, 0x04
+      Constant: int, 0x0c
+      Constant: int, 0x03
+      Constant: int, 0x01
+      Constant: int, 0x0a
+      Constant: int, 0x0b
+      Constant: int, 0x0e
+      Constant: int, 0x05
+      Constant: int, 0x0e
+      Constant: int, 0x02
+      Constant: int, 0x0b
+      Constant: int, 0x0d
+      Constant: int, 0x0a
+      Constant: int, 0x07
+      Constant: int, 0x00
+      Constant: int, 0x08
+      Constant: int, 0x06
+      Constant: int, 0x04
+      Constant: int, 0x01
+      Constant: int, 0x0f
+      Constant: int, 0x0c
+      Constant: int, 0x03
+      Constant: int, 0x09
+      Constant: int, 0x08
+      Constant: int, 0x02
+      Constant: int, 0x0f
+      Constant: int, 0x0a
+      Constant: int, 0x05
+      Constant: int, 0x09
+      Constant: int, 0x06
+      Constant: int, 0x0c
+      Constant: int, 0x00
+      Constant: int, 0x0b
+      Constant: int, 0x01
+      Constant: int, 0x0d
+      Constant: int, 0x07
+      Constant: int, 0x03
+      Constant: int, 0x04
+      Constant: int, 0x0e
+      Constant: int, 0x0e
+      Constant: int, 0x08
+      Constant: int, 0x00
+      Constant: int, 0x09
+      Constant: int, 0x04
+      Constant: int, 0x0b
+      Constant: int, 0x02
+      Constant: int, 0x07
+      Constant: int, 0x0c
+      Constant: int, 0x03
+      Constant: int, 0x0a
+      Constant: int, 0x05
+      Constant: int, 0x0d
+      Constant: int, 0x01
+      Constant: int, 0x06
+      Constant: int, 0x0f
+      Constant: int, 0x01
+      Constant: int, 0x04
+      Constant: int, 0x08
+      Constant: int, 0x0a
+      Constant: int, 0x0d
+      Constant: int, 0x0b
+      Constant: int, 0x07
+      Constant: int, 0x0e
+      Constant: int, 0x05
+      Constant: int, 0x0f
+      Constant: int, 0x03
+      Constant: int, 0x09
+      Constant: int, 0x00
+      Constant: int, 0x02
+      Constant: int, 0x06
+      Constant: int, 0x0c
+      Constant: int, 0x05
+      Constant: int, 0x03
+      Constant: int, 0x0c
+      Constant: int, 0x08
+      Constant: int, 0x0b
+      Constant: int, 0x02
+      Constant: int, 0x0e
+      Constant: int, 0x0a
+      Constant: int, 0x04
+      Constant: int, 0x01
+      Constant: int, 0x0d
+      Constant: int, 0x00
+      Constant: int, 0x06
+      Constant: int, 0x07
+      Constant: int, 0x0f
+      Constant: int, 0x09
+      Constant: int, 0x06
+      Constant: int, 0x00
+      Constant: int, 0x0b
+      Constant: int, 0x0e
+      Constant: int, 0x0d
+      Constant: int, 0x04
+      Constant: int, 0x0c
+      Constant: int, 0x0f
+      Constant: int, 0x07
+      Constant: int, 0x02
+      Constant: int, 0x08
+      Constant: int, 0x0a
+      Constant: int, 0x01
+      Constant: int, 0x05
+      Constant: int, 0x03
+      Constant: int, 0x09
+      Constant: int, 0x0b
+      Constant: int, 0x05
+      Constant: int, 0x0a
+      Constant: int, 0x0e
+      Constant: int, 0x0f
+      Constant: int, 0x01
+      Constant: int, 0x0c
+      Constant: int, 0x00
+      Constant: int, 0x06
+      Constant: int, 0x04
+      Constant: int, 0x02
+      Constant: int, 0x09
+      Constant: int, 0x03
+      Constant: int, 0x0d
+      Constant: int, 0x07
+      Constant: int, 0x08
+      Constant: int, 0x07
+      Constant: int, 0x02
+      Constant: int, 0x0a
+      Constant: int, 0x00
+      Constant: int, 0x0e
+      Constant: int, 0x08
+      Constant: int, 0x0f
+      Constant: int, 0x04
+      Constant: int, 0x0c
+      Constant: int, 0x0b
+      Constant: int, 0x09
+      Constant: int, 0x01
+      Constant: int, 0x05
+      Constant: int, 0x0d
+      Constant: int, 0x03
+      Constant: int, 0x06
+      Constant: int, 0x07
+      Constant: int, 0x04
+      Constant: int, 0x0f
+      Constant: int, 0x09
+      Constant: int, 0x05
+      Constant: int, 0x01
+      Constant: int, 0x0c
+      Constant: int, 0x0b
+      Constant: int, 0x00
+      Constant: int, 0x03
+      Constant: int, 0x08
+      Constant: int, 0x0e
+      Constant: int, 0x02
+      Constant: int, 0x0a
+      Constant: int, 0x06
+      Constant: int, 0x0d
+      Constant: int, 0x09
+      Constant: int, 0x04
+      Constant: int, 0x08
+      Constant: int, 0x00
+      Constant: int, 0x0a
+      Constant: int, 0x03
+      Constant: int, 0x01
+      Constant: int, 0x0c
+      Constant: int, 0x05
+      Constant: int, 0x0f
+      Constant: int, 0x07
+      Constant: int, 0x02
+      Constant: int, 0x0b
+      Constant: int, 0x0e
+      Constant: int, 0x06
+      Constant: int, 0x0d
+      Constant: int, 0x09
+      Constant: int, 0x05
+      Constant: int, 0x04
+      Constant: int, 0x07
+      Constant: int, 0x0e
+      Constant: int, 0x08
+      Constant: int, 0x03
+      Constant: int, 0x01
+      Constant: int, 0x0d
+      Constant: int, 0x0b
+      Constant: int, 0x0c
+      Constant: int, 0x02
+      Constant: int, 0x00
+      Constant: int, 0x0f
+      Constant: int, 0x06
+      Constant: int, 0x0a
+      Constant: int, 0x09
+      Constant: int, 0x0a
+      Constant: int, 0x0b
+      Constant: int, 0x0d
+      Constant: int, 0x05
+      Constant: int, 0x03
+      Constant: int, 0x0f
+      Constant: int, 0x00
+      Constant: int, 0x01
+      Constant: int, 0x0c
+      Constant: int, 0x08
+      Constant: int, 0x07
+      Constant: int, 0x06
+      Constant: int, 0x04
+      Constant: int, 0x0e
+      Constant: int, 0x02
+      Constant: int, 0x03
+      Constant: int, 0x0e
+      Constant: int, 0x0f
+      Constant: int, 0x02
+      Constant: int, 0x0d
+      Constant: int, 0x0c
+      Constant: int, 0x04
+      Constant: int, 0x05
+      Constant: int, 0x09
+      Constant: int, 0x06
+      Constant: int, 0x00
+      Constant: int, 0x01
+      Constant: int, 0x0b
+      Constant: int, 0x07
+      Constant: int, 0x0a
+      Constant: int, 0x08
+  Decl: newpassencrypt, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: newpassencrypt, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: newpassencrypt, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: old, [], [], []
+            PtrDecl: []
+              TypeDecl: old, []
+                IdentifierType: ['char']
+          Decl: new, [], [], []
+            PtrDecl: []
+              TypeDecl: new, []
+                IdentifierType: ['char']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['char']
+        TypeDecl: newpassencrypt, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+      Decl: bx, [], [], []
+        PtrDecl: []
+          TypeDecl: bx, []
+            IdentifierType: ['char']
+      Decl: copy, [], [], []
+        ArrayDecl: []
+          TypeDecl: copy, []
+            IdentifierType: ['char']
+          Constant: int, 8
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: di, [], [], []
+        TypeDecl: di, []
+          IdentifierType: ['int']
+      Decl: ax, [], [], []
+        TypeDecl: ax, []
+          IdentifierType: ['int']
+      Decl: cl, [], [], []
+        TypeDecl: cl, []
+          IdentifierType: ['char']
+      Decl: dl, [], [], []
+        TypeDecl: dl, []
+          IdentifierType: ['char']
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['char']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 16
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            Assignment: =
+              ID: bx
+              BinaryOp: +
+                ID: old
+                Constant: int, 7
+            BinaryOp: >
+              ID: bx
+              ID: old
+            UnaryOp: p--
+              ID: bx
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  ID: bx
+                BinaryOp: |
+                  BinaryOp: &
+                    BinaryOp: >>
+                      ArrayRef: 
+                        ID: bx
+                        UnaryOp: -
+                          Constant: int, 1
+                      Constant: int, 4
+                    Constant: int, 0x0f
+                  BinaryOp: <<
+                    UnaryOp: *
+                      ID: bx
+                    Constant: int, 4
+          For: 
+            Assignment: =
+              ID: di
+              Constant: int, 0
+            BinaryOp: <
+              ID: di
+              Constant: int, 16
+            UnaryOp: p++
+              ID: di
+            Compound: 
+              If: 
+                BinaryOp: &
+                  ArrayRef: 
+                    ID: newshuffle
+                    BinaryOp: +
+                      ID: di
+                      Constant: int, 0x100
+                  Constant: int, 1
+                Assignment: =
+                  ID: ch
+                  BinaryOp: &
+                    BinaryOp: >>
+                      ArrayRef: 
+                        ID: copy
+                        BinaryOp: /
+                          ArrayRef: 
+                            ID: newshuffle
+                            BinaryOp: +
+                              ID: di
+                              Constant: int, 0x100
+                          Constant: int, 2
+                      Constant: int, 4
+                    Constant: int, 0x0f
+                Assignment: =
+                  ID: ch
+                  BinaryOp: &
+                    ArrayRef: 
+                      ID: copy
+                      BinaryOp: /
+                        ArrayRef: 
+                          ID: newshuffle
+                          BinaryOp: +
+                            ID: di
+                            Constant: int, 0x100
+                        Constant: int, 2
+                    Constant: int, 0x0f
+              Assignment: |=
+                ArrayRef: 
+                  ID: out
+                  BinaryOp: /
+                    ID: di
+                    Constant: int, 2
+                TernaryOp: 
+                  BinaryOp: &
+                    ID: di
+                    Constant: int, 1
+                  BinaryOp: <<
+                    ID: ch
+                    Constant: int, 4
+                  ID: ch
+          FuncCall: 
+            ID: memcpy
+            ExprList: 
+              ID: copy
+              ID: out
+              Constant: int, 8

@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: f
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ip, [], [], []
+        PtrDecl: []
+          TypeDecl: ip, []
+            IdentifierType: ['long', 'long']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+          UnaryOp: &
+            ID: f
+      Return: 
+        BinaryOp: !=
+          BinaryOp: &
+            UnaryOp: *
+              ID: ip
+            Constant: int, 0x7ff0000000000000LL
+          Constant: int, 0x7ff0000000000000LL
+    Decl: f, [], [], []
+      TypeDecl: f, []
+        IdentifierType: ['float']

@@ -1,0 +1,59 @@
+FileAST: 
+  FuncDef: 
+    Decl: ssbgst, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: ssbgst, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: a
+        Constant: int, 0
+      Assignment: =
+        ID: i
+        Constant: int, 1
+      Assignment: =
+        ID: j
+        ID: k
+      While: 
+        ID: j
+        Compound: 
+          Assignment: +=
+            ID: a
+            BinaryOp: +
+              BinaryOp: *
+                BinaryOp: +
+                  ID: j
+                  ID: i
+                BinaryOp: +
+                  BinaryOp: +
+                    ID: k
+                    ID: i
+                  ID: c
+              BinaryOp: +
+                BinaryOp: +
+                  ID: j
+                  ID: i
+                ID: c
+          Assignment: =
+            ID: j
+            BinaryOp: -
+              ID: j
+              Constant: int, 1
+      Return: 
+        ID: a

@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: reg0indreg1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: r0
+          ID: p1
+        TypeDecl: reg0indreg1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: r0
+          UnaryOp: *
+            ID: p1
+    Decl: r0, [], [], []
+      TypeDecl: r0, []
+        IdentifierType: ['short']
+    Decl: p1, [], [], []
+      PtrDecl: []
+        TypeDecl: p1, []
+          IdentifierType: ['short']

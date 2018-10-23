@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: c
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: *
+            ID: a
+            ID: b
+          BinaryOp: *
+            ID: c
+            ID: a
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['double']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['double']
+    Decl: c, [], [], []
+      TypeDecl: c, []
+        IdentifierType: ['double']

@@ -1,0 +1,75 @@
+FileAST: 
+  Typedef: input_t, [], ['typedef']
+    TypeDecl: input_t, []
+      Struct: input
+        Decl: next, [], [], []
+          PtrDecl: []
+            TypeDecl: next, []
+              Struct: input
+  Decl: inputs, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: inputs, []
+        IdentifierType: ['input_t']
+    Cast: 
+      Typename: None, []
+        PtrDecl: []
+          TypeDecl: None, []
+            IdentifierType: ['input_t']
+      Cast: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Constant: int, 0
+  FuncDef: 
+    Decl: RemoveInput, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: id, [], [], []
+            TypeDecl: id, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: RemoveInput, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ip, [], [], []
+        PtrDecl: []
+          TypeDecl: ip, []
+            IdentifierType: ['input_t']
+      Decl: prev, [], [], []
+        PtrDecl: []
+          TypeDecl: prev, []
+            IdentifierType: ['input_t']
+      While: 
+        Constant: int, 1
+        If: 
+          BinaryOp: ==
+            ID: ip
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['input_t']
+              ID: id
+          Break: 
+      If: 
+        BinaryOp: ==
+          ID: ip
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['input_t']
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Constant: int, 0
+        Return: 
+      Assignment: =
+        StructRef: ->
+          ID: prev
+          ID: next
+        StructRef: ->
+          ID: ip
+          ID: next

@@ -1,0 +1,600 @@
+FileAST: 
+  Typedef: caddr_t, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: caddr_t, []
+        IdentifierType: ['char']
+  Typedef: Cursor, [], ['typedef']
+    TypeDecl: Cursor, []
+      IdentifierType: ['unsigned']
+  Typedef: String, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: String, []
+        IdentifierType: ['char']
+  Typedef: Widget, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: Widget, []
+        Struct: _WidgetRec
+  Typedef: Boolean, [], ['typedef']
+    TypeDecl: Boolean, []
+      IdentifierType: ['char']
+  Typedef: Cardinal, [], ['typedef']
+    TypeDecl: Cardinal, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: XedwListReturnStruct, [], ['typedef']
+    TypeDecl: XedwListReturnStruct, []
+      Struct: _XedwListReturnStruct
+        Decl: string, [], [], []
+          TypeDecl: string, []
+            IdentifierType: ['String']
+        Decl: xedwList_index, [], [], []
+          TypeDecl: xedwList_index, []
+            IdentifierType: ['int']
+        Decl: next, [], [], []
+          PtrDecl: []
+            TypeDecl: next, []
+              Struct: _XedwListReturnStruct
+  Decl: return_list, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: return_list, []
+        IdentifierType: ['XedwListReturnStruct']
+  Decl: srcdir, [], ['static'], []
+    TypeDecl: srcdir, []
+      IdentifierType: ['String']
+  Decl: dstdir, [], ['static'], []
+    TypeDecl: dstdir, []
+      IdentifierType: ['String']
+  Decl: strcpy, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: strcpy, []
+          IdentifierType: ['char']
+  Decl: setCursor, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['Cursor']
+      TypeDecl: setCursor, []
+        IdentifierType: ['void']
+  Decl: query_dialog, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['String']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['Boolean']
+      TypeDecl: query_dialog, []
+        IdentifierType: ['void']
+  Decl: directoryManagerNewDirectory, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['String']
+      TypeDecl: directoryManagerNewDirectory, []
+        IdentifierType: ['Boolean']
+  FuncDef: 
+    Decl: trashQueryResult, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['Widget']
+          Decl: delete, [], [], []
+            TypeDecl: delete, []
+              IdentifierType: ['Boolean']
+          Decl: call_data, [], [], []
+            TypeDecl: call_data, []
+              IdentifierType: ['caddr_t']
+        TypeDecl: trashQueryResult, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: execute, [], [], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['String']
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['String']
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['String']
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['Boolean']
+          TypeDecl: execute, []
+            IdentifierType: ['int']
+      Decl: destroy_button_dialog, [], ['extern'], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          TypeDecl: destroy_button_dialog, []
+            IdentifierType: ['void']
+      Decl: changestate, [], ['extern'], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['Boolean']
+          TypeDecl: changestate, []
+            IdentifierType: ['void']
+      Decl: busy, [], ['extern'], []
+        TypeDecl: busy, []
+          IdentifierType: ['Cursor']
+      Decl: left_ptr, [], ['extern'], []
+        TypeDecl: left_ptr, []
+          IdentifierType: ['Cursor']
+      Decl: cwd, [], ['extern'], []
+        TypeDecl: cwd, []
+          IdentifierType: ['String']
+      Decl: freeReturnStruct, [], ['extern'], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          TypeDecl: freeReturnStruct, []
+            IdentifierType: ['void']
+      Decl: rmstring, [], [], []
+        TypeDecl: rmstring, []
+          IdentifierType: ['String']
+      Decl: status, [], [], []
+        TypeDecl: status, []
+          IdentifierType: ['int']
+      Decl: tmp, [], [], []
+        PtrDecl: []
+          TypeDecl: tmp, []
+            IdentifierType: ['XedwListReturnStruct']
+      FuncCall: 
+        ID: setCursor
+        ExprList: 
+          ID: busy
+      FuncCall: 
+        ID: destroy_button_dialog
+      If: 
+        BinaryOp: ==
+          ID: delete
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: rmstring
+            TernaryOp: 
+              BinaryOp: !=
+                Constant: string, "rm -fr"
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  Constant: int, 0
+              FuncCall: 
+                ID: strcpy
+                ExprList: 
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['char']
+                    FuncCall: 
+                      ID: XtMalloc
+                      ExprList: 
+                        BinaryOp: +
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned']
+                            FuncCall: 
+                              ID: strlen
+                              ExprList: 
+                                Constant: string, "rm -fr"
+                          Constant: int, 1
+                  Constant: string, "rm -fr"
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+          Assignment: =
+            ID: tmp
+            ID: return_list
+          While: 
+            BinaryOp: !=
+              ID: tmp
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: rmstring
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['String']
+                  FuncCall: 
+                    ID: XtRealloc
+                    ExprList: 
+                      ID: rmstring
+                      BinaryOp: *
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['char']
+                        BinaryOp: +
+                          BinaryOp: +
+                            FuncCall: 
+                              ID: strlen
+                              ExprList: 
+                                ID: rmstring
+                            FuncCall: 
+                              ID: strlen
+                              ExprList: 
+                                StructRef: ->
+                                  ID: tmp
+                                  ID: string
+                          Constant: int, 5
+              FuncCall: 
+                ID: sprintf
+                ExprList: 
+                  ID: rmstring
+                  Constant: string, "%s '%s'"
+                  ID: rmstring
+                  StructRef: ->
+                    ID: tmp
+                    ID: string
+              Assignment: =
+                ID: tmp
+                StructRef: ->
+                  ID: tmp
+                  ID: next
+          If: 
+            BinaryOp: !=
+              Assignment: =
+                ID: status
+                FuncCall: 
+                  ID: execute
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['void']
+                      Constant: int, 0
+                    Constant: string, "rm"
+                    ID: rmstring
+                    Constant: int, 1
+              Constant: int, 0
+            Compound: 
+              FuncCall: 
+                ID: XBell
+                ExprList: 
+                  FuncCall: 
+                    ID: XtDisplay
+                    ExprList: 
+                      ID: w
+                  Constant: int, 100
+              FuncCall: 
+                ID: query_dialog
+                ExprList: 
+                  Constant: string, "Can't remove file"
+                  Constant: int, 0
+          FuncCall: 
+            ID: XtFree
+            ExprList: 
+              ID: rmstring
+          FuncCall: 
+            ID: directoryManagerNewDirectory
+            ExprList: 
+              ID: cwd
+        Compound: 
+          FuncCall: 
+            ID: changestate
+            ExprList: 
+              Constant: int, 1
+      FuncCall: 
+        ID: setCursor
+        ExprList: 
+          ID: left_ptr
+      FuncCall: 
+        ID: freeReturnStruct
+  FuncDef: 
+    Decl: copyQueryResult, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['Widget']
+          Decl: copy, [], [], []
+            TypeDecl: copy, []
+              IdentifierType: ['Boolean']
+          Decl: call_data, [], [], []
+            TypeDecl: call_data, []
+              IdentifierType: ['caddr_t']
+        TypeDecl: copyQueryResult, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: destroy_button_dialog, [], ['extern'], []
+        FuncDecl: 
+          TypeDecl: destroy_button_dialog, []
+            IdentifierType: ['void']
+      Decl: changestate, [], ['extern'], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['Boolean']
+          TypeDecl: changestate, []
+            IdentifierType: ['void']
+      Decl: busy, [], ['extern'], []
+        TypeDecl: busy, []
+          IdentifierType: ['Cursor']
+      Decl: left_ptr, [], ['extern'], []
+        TypeDecl: left_ptr, []
+          IdentifierType: ['Cursor']
+      Decl: freeReturnStruct, [], ['extern'], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          TypeDecl: freeReturnStruct, []
+            IdentifierType: ['void']
+      Decl: execute, [], [], []
+        FuncDecl: 
+          ParamList: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['String']
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['String']
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['String']
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['Boolean']
+          TypeDecl: execute, []
+            IdentifierType: ['int']
+      Decl: cwd, [], ['extern'], []
+        TypeDecl: cwd, []
+          IdentifierType: ['String']
+      Decl: copystring, [], [], []
+        TypeDecl: copystring, []
+          IdentifierType: ['String']
+      Decl: status, [], [], []
+        TypeDecl: status, []
+          IdentifierType: ['int']
+      Decl: srclen, [], [], []
+        TypeDecl: srclen, []
+          IdentifierType: ['Cardinal']
+      Decl: dstlen, [], [], []
+        TypeDecl: dstlen, []
+          IdentifierType: ['Cardinal']
+      Decl: tmp, [], [], []
+        PtrDecl: []
+          TypeDecl: tmp, []
+            IdentifierType: ['XedwListReturnStruct']
+      FuncCall: 
+        ID: destroy_button_dialog
+      FuncCall: 
+        ID: setCursor
+        ExprList: 
+          ID: busy
+      If: 
+        BinaryOp: ==
+          ID: copy
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: srclen
+            FuncCall: 
+              ID: strlen
+              ExprList: 
+                ID: srcdir
+          Assignment: =
+            ID: dstlen
+            FuncCall: 
+              ID: strlen
+              ExprList: 
+                ID: dstdir
+          Assignment: =
+            ID: copystring
+            TernaryOp: 
+              BinaryOp: !=
+                Constant: string, "cp -r"
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  Constant: int, 0
+              FuncCall: 
+                ID: strcpy
+                ExprList: 
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['char']
+                    FuncCall: 
+                      ID: XtMalloc
+                      ExprList: 
+                        BinaryOp: +
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned']
+                            FuncCall: 
+                              ID: strlen
+                              ExprList: 
+                                Constant: string, "cp -r"
+                          Constant: int, 1
+                  Constant: string, "cp -r"
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+          Assignment: =
+            ID: tmp
+            ID: return_list
+          While: 
+            BinaryOp: !=
+              ID: tmp
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: copystring
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['String']
+                  FuncCall: 
+                    ID: XtRealloc
+                    ExprList: 
+                      ID: copystring
+                      BinaryOp: *
+                        UnaryOp: sizeof
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['char']
+                        BinaryOp: +
+                          BinaryOp: +
+                            BinaryOp: +
+                              FuncCall: 
+                                ID: strlen
+                                ExprList: 
+                                  ID: copystring
+                              FuncCall: 
+                                ID: strlen
+                                ExprList: 
+                                  StructRef: ->
+                                    ID: tmp
+                                    ID: string
+                            ID: srclen
+                          Constant: int, 6
+              FuncCall: 
+                ID: sprintf
+                ExprList: 
+                  ID: copystring
+                  Constant: string, "%s '%s/%s'"
+                  ID: copystring
+                  ID: srcdir
+                  StructRef: ->
+                    ID: tmp
+                    ID: string
+              Assignment: =
+                ID: tmp
+                StructRef: ->
+                  ID: tmp
+                  ID: next
+          Assignment: =
+            ID: copystring
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['String']
+              FuncCall: 
+                ID: XtRealloc
+                ExprList: 
+                  ID: copystring
+                  BinaryOp: *
+                    UnaryOp: sizeof
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['char']
+                    BinaryOp: +
+                      BinaryOp: +
+                        FuncCall: 
+                          ID: strlen
+                          ExprList: 
+                            ID: copystring
+                        ID: dstlen
+                      Constant: int, 5
+          FuncCall: 
+            ID: sprintf
+            ExprList: 
+              ID: copystring
+              Constant: string, "%s '%s'"
+              ID: copystring
+              ID: dstdir
+          If: 
+            BinaryOp: !=
+              Assignment: =
+                ID: status
+                FuncCall: 
+                  ID: execute
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['void']
+                      Constant: int, 0
+                    Constant: string, "cp"
+                    ID: copystring
+                    Constant: int, 1
+              Constant: int, 0
+            Compound: 
+              FuncCall: 
+                ID: XBell
+                ExprList: 
+                  FuncCall: 
+                    ID: XtDisplay
+                    ExprList: 
+                      ID: w
+                  Constant: int, 100
+              FuncCall: 
+                ID: query_dialog
+                ExprList: 
+                  Constant: string, "Can't copy file!"
+                  Constant: int, 0
+          FuncCall: 
+            ID: XtFree
+            ExprList: 
+              ID: copystring
+          FuncCall: 
+            ID: directoryManagerNewDirectory
+            ExprList: 
+              ID: cwd
+        Compound: 
+          FuncCall: 
+            ID: changestate
+            ExprList: 
+              Constant: int, 1
+      FuncCall: 
+        ID: XtFree
+        ExprList: 
+          ID: srcdir
+      FuncCall: 
+        ID: XtFree
+        ExprList: 
+          ID: dstdir
+      FuncCall: 
+        ID: setCursor
+        ExprList: 
+          ID: left_ptr
+      FuncCall: 
+        ID: freeReturnStruct
+  FuncDef: 
+    Decl: freeReturnStruct, [], [], []
+      FuncDecl: 
+        TypeDecl: freeReturnStruct, []
+          IdentifierType: ['void']
+    Compound: 

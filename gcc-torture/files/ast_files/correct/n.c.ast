@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: char_autoincr, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: b1
+          ID: c
+        TypeDecl: char_autoincr, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: b1
+        ID: c
+    Decl: b1, [], [], []
+      PtrDecl: []
+        TypeDecl: b1, []
+          IdentifierType: ['short']
+    Decl: c, [], [], []
+      TypeDecl: c, []
+        IdentifierType: ['short']

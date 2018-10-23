@@ -1,0 +1,50 @@
+FileAST: 
+  Typedef: HARD_REG_ELT_TYPE, [], ['typedef']
+    TypeDecl: HARD_REG_ELT_TYPE, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: reload_reg_used_in_output_addr, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: reload_reg_used_in_output_addr, []
+        IdentifierType: ['HARD_REG_ELT_TYPE']
+      Constant: int, 30
+  FuncDef: 
+    Decl: reload_reg_reaches_end_p, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: regno, [], [], []
+            TypeDecl: regno, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: opnum, [], [], []
+            TypeDecl: opnum, []
+              IdentifierType: ['int']
+        TypeDecl: reload_reg_reaches_end_p, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          BinaryOp: +
+            ID: opnum
+            Constant: int, 1
+        BinaryOp: <
+          ID: i
+          ID: opnum
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: &
+            ArrayRef: 
+              ID: reload_reg_used_in_output_addr
+              ID: i
+            BinaryOp: <<
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['HARD_REG_ELT_TYPE']
+                Constant: int, 1
+              ID: regno
+          Return: 
+            Constant: int, 0

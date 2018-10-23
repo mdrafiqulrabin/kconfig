@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: foo, []
+        IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: sub1, [], [], []
+      FuncDecl: 
+        TypeDecl: sub1, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: junk, [], [], []
+        ArrayDecl: []
+          TypeDecl: junk, []
+            IdentifierType: ['char']
+          Constant: int, 10000
+      Decl: a, [], ['register'], []
+        TypeDecl: a, []
+          IdentifierType: ['long', 'long']
+      Decl: b, [], ['register'], []
+        TypeDecl: b, []
+          IdentifierType: ['long', 'long']
+      Decl: c, [], ['register'], []
+        TypeDecl: c, []
+          IdentifierType: ['long', 'long']
+      Assignment: =
+        ID: b
+        FuncCall: 
+          ID: foo
+      FuncCall: 
+        ID: setjmp
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: foo
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: a
+          ID: b
+      Return: 
+        ID: c

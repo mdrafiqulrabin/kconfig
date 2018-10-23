@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['int']
+  Decl: init_xy, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: init_xy, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test4, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: init_xy
+      Decl: iftemp0, [], [], []
+        TypeDecl: iftemp0, []
+          IdentifierType: ['_Bool']
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['int']
+        ID: x
+      Decl: iftemp1, [], [], []
+        TypeDecl: iftemp1, []
+          IdentifierType: ['_Bool']
+      UnaryOp: p++
+        ID: x1
+      If: 
+        BinaryOp: !=
+          ID: x1
+          Constant: int, 3
+        Compound: 
+          Assignment: =
+            ID: iftemp1
+            Constant: int, 1
+          Goto: endfirstif
+      Assignment: =
+        ID: iftemp1
+        Constant: int, 0
+      Label: endfirstif
+        Assignment: =
+          ID: iftemp0
+          ID: iftemp1
+      If: 
+        ID: iftemp0
+        FuncCall: 
+          ID: abort

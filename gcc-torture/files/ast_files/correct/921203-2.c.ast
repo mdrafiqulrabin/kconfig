@@ -1,0 +1,35 @@
+FileAST: 
+  Typedef: s1, [], ['typedef']
+    TypeDecl: s1, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg0, [], [], []
+            TypeDecl: arg0, []
+              IdentifierType: ['int']
+          EllipsisParam: 
+        TypeDecl: f, []
+          IdentifierType: ['s1']
+    Compound: 
+      Decl: args, [], [], []
+        TypeDecl: args, []
+          IdentifierType: ['int']
+      Decl: back, [], [], []
+        TypeDecl: back, []
+          IdentifierType: ['s1']
+      FuncCall: 
+        ID: va_start
+        ExprList: 
+          ID: args
+          ID: arg0
+      FuncCall: 
+        ID: va_end
+        ExprList: 
+          ID: args
+      Return: 
+        ID: back

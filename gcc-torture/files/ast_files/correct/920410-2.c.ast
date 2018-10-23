@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: joe, [], [], []
+      FuncDecl: 
+        TypeDecl: joe, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      While: 
+        Constant: int, 1
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 4
+            UnaryOp: p++
+              ID: j
+            EmptyStatement: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              Constant: int, 4
+            UnaryOp: p++
+              ID: j
+            EmptyStatement: 

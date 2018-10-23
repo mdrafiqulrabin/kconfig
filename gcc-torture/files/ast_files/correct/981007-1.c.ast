@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: fabs, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: fabs, []
+        IdentifierType: ['double']
+  Decl: sqrt, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: sqrt, []
+        IdentifierType: ['double']
+  Typedef: complex, [], ['typedef']
+    TypeDecl: complex, []
+      Struct: complexm
+        Decl: re, [], [], []
+          TypeDecl: re, []
+            IdentifierType: ['double']
+        Decl: im, [], [], []
+          TypeDecl: im, []
+            IdentifierType: ['double']
+  FuncDef: 
+    Decl: setCom, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: r, [], [], []
+            TypeDecl: r, []
+              IdentifierType: ['double']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['double']
+        TypeDecl: setCom, []
+          IdentifierType: ['complex']
+    Compound: 
+      Decl: ct, [], [], []
+        TypeDecl: ct, []
+          IdentifierType: ['complex']
+      Assignment: =
+        StructRef: .
+          ID: ct
+          ID: re
+        TernaryOp: 
+          BinaryOp: <
+            FuncCall: 
+              ID: fabs
+              ExprList: 
+                ID: r
+            Constant: float, 1E-300
+          Constant: float, 0.0
+          ID: r
+      Assignment: =
+        StructRef: .
+          ID: ct
+          ID: im
+        TernaryOp: 
+          BinaryOp: <
+            FuncCall: 
+              ID: fabs
+              ExprList: 
+                ID: i
+            Constant: float, 1E-300
+          Constant: float, 0.0
+          ID: i
+      Return: 
+        ID: ct
+  FuncDef: 
+    Decl: csqrt_crash, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: csqrt_crash, []
+          IdentifierType: ['complex']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >=
+            ID: x
+            Constant: int, 0
+          FuncCall: 
+            ID: setCom
+            ExprList: 
+              FuncCall: 
+                ID: sqrt
+                ExprList: 
+                  ID: x
+              Constant: int, 0
+          FuncCall: 
+            ID: setCom
+            ExprList: 
+              Constant: int, 0
+              FuncCall: 
+                ID: sqrt
+                ExprList: 
+                  UnaryOp: -
+                    ID: x

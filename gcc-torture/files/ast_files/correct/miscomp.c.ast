@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long']
+      TypeDecl: foo, []
+        IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: AChar, [], [], []
+        TypeDecl: AChar, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: ALong, [], [], []
+        TypeDecl: ALong, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 0x12345678
+      Assignment: =
+        ID: AChar
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: ALong
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "AChar = %x\n"
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ID: AChar
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: TheLong, [], [], []
+            TypeDecl: TheLong, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+          BinaryOp: &
+            ID: TheLong
+            Constant: int, 0xff

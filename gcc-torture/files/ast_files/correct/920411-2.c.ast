@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: n
+        TernaryOp: 
+          BinaryOp: <
+            ID: x
+            Constant: int, 1
+          ID: n
+          BinaryOp: +
+            ID: n
+            Constant: int, 1

@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      Struct: None
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+  Decl: i, [], ['static'], []
+    TypeDecl: i, []
+      IdentifierType: ['long']
+    BinaryOp: -
+      Cast: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        UnaryOp: &
+          StructRef: .
+            ID: v
+            ID: c
+      Cast: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        UnaryOp: &
+          ID: v

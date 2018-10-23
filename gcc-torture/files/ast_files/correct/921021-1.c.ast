@@ -1,0 +1,26 @@
+FileAST: 
+  Decl: g, [], [], []
+    FuncDecl: 
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      While: 
+        ID: x
+        Compound: 
+          Assignment: =
+            ID: x
+            FuncCall: 
+              ID: h
+          If: 
+            ID: x
+            FuncCall: 
+              ID: g

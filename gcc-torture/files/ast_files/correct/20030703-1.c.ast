@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: SAD_Block, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: SAD_Block, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: MBMotionEstimation, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: act_block, [], [], []
+            PtrDecl: []
+              TypeDecl: act_block, []
+                IdentifierType: ['int']
+          Decl: block, [], [], []
+            TypeDecl: block, []
+              IdentifierType: ['int']
+        TypeDecl: MBMotionEstimation, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: SAD_Block
+        ExprList: 
+          BinaryOp: +
+            ID: act_block
+            BinaryOp: +
+              BinaryOp: *
+                Constant: int, 8
+                BinaryOp: ||
+                  BinaryOp: ==
+                    ID: block
+                    Constant: int, 1
+                  BinaryOp: ==
+                    ID: block
+                    Constant: int, 3
+              BinaryOp: *
+                Constant: int, 8
+                BinaryOp: ||
+                  BinaryOp: ==
+                    ID: block
+                    Constant: int, 2
+                  BinaryOp: ==
+                    ID: block
+                    Constant: int, 3

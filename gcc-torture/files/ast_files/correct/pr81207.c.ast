@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: b, ['const'], ['static'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: b, ['const']
+          IdentifierType: ['char']
+      Constant: int, 2
+    InitList: 
+      Constant: string, "'"
+      Constant: string, ""
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: d, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: e
+          Constant: int, 0
+        ArrayRef: 
+          ID: b
+          ID: e
+        UnaryOp: p++
+          ID: e
+        If: 
+          FuncCall: 
+            ID: __builtin_strstr
+            ExprList: 
+              ID: d
+              ArrayRef: 
+                ID: b
+                ID: e
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0

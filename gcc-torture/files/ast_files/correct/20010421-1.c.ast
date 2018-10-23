@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: residual, [], [], []
+      FuncDecl: 
+        TypeDecl: residual, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['long', 'double']
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 3
+        BinaryOp: <
+          ID: j
+          Constant: int, 9
+        UnaryOp: p++
+          ID: j
+        Assignment: -=
+          ID: s
+          Constant: int, 3

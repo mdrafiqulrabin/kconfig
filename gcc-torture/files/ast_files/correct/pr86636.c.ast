@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: n2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ih, [], [], []
+            TypeDecl: ih, []
+              IdentifierType: ['int']
+        TypeDecl: n2, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: ih
+          Constant: int, 1
+        UnaryOp: ++
+          ID: ih

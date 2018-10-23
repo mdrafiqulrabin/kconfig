@@ -1,0 +1,73 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: x
+          Constant: int, 9
+        Return: 
+          BinaryOp: +
+            Constant: char, '0'
+            ID: x
+        If: 
+          BinaryOp: <=
+            ID: x
+            Constant: int, 15
+          Return: 
+            BinaryOp: +
+              Constant: char, 'a'
+              BinaryOp: -
+                ID: x
+                Constant: int, 10
+          Return: 
+            Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: y
+          Constant: int, 0
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              BinaryOp: >>
+                ID: x
+                Constant: int, 4
+      Assignment: =
+        ArrayRef: 
+          ID: y
+          Constant: int, 1
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              BinaryOp: &
+                ID: x
+                Constant: int, 0x0f

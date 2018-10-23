@@ -1,0 +1,63 @@
+FileAST: 
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: width, [], [], []
+            TypeDecl: width, []
+              IdentifierType: ['long']
+          Decl: byte, [], [], []
+            TypeDecl: byte, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: g, []
+          IdentifierType: ['long']
+    Compound: 
+      Decl: r_hi, [], [], []
+        TypeDecl: r_hi, []
+          IdentifierType: ['long']
+        Constant: int, 0
+      Decl: r_lo, [], [], []
+        TypeDecl: r_lo, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 0
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: s
+          Constant: int, 0
+        BinaryOp: <
+          ID: s
+          ID: width
+        Assignment: +=
+          ID: s
+          Constant: int, 8
+        Compound: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              BinaryOp: -
+                ID: width
+                ID: s
+              Constant: int, 8
+          If: 
+            BinaryOp: <
+              ID: s
+              BinaryOp: *
+                Constant: int, 8
+                Constant: int, 8
+            Assignment: |=
+              ID: r_hi
+              BinaryOp: <<
+                ID: byte
+                BinaryOp: -
+                  ID: d
+                  BinaryOp: *
+                    Constant: int, 8
+                    Constant: int, 8
+      Return: 
+        BinaryOp: +
+          ID: r_lo
+          ID: r_hi

@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: something_f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: something_f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: f, [], [], []
+              TypeDecl: f, []
+                IdentifierType: ['float']
+            Decl: d, [], [], []
+              TypeDecl: d, []
+                IdentifierType: ['double']
+      Decl: pu, [], [], []
+        PtrDecl: []
+          TypeDecl: pu, []
+            Union: None
+              Decl: f, [], [], []
+                TypeDecl: f, []
+                  IdentifierType: ['float']
+              Decl: d, [], [], []
+                TypeDecl: d, []
+                  IdentifierType: ['double']
+        UnaryOp: &
+          ID: u
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: f
+        Constant: float, 1.0
+      FuncCall: 
+        ID: something_f
+        ExprList: 
+          StructRef: .
+            ID: u
+            ID: f

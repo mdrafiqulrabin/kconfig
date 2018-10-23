@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: u
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            Union: u
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  Decl: s, [], [], []
+    PtrDecl: []
+      TypeDecl: s, []
+        Union: u
+  Decl: g, [], [], []
+    FuncDecl: 
+      TypeDecl: g, []
+        Union: u
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Union: u
+        FuncCall: 
+          ID: g
+      Assignment: =
+        ArrayRef: 
+          ID: s
+          Constant: int, 0
+        UnaryOp: *
+          StructRef: .
+            ID: x
+            ID: a
+      Assignment: =
+        ArrayRef: 
+          ID: s
+          Constant: int, 1
+        FuncCall: 
+          ID: g

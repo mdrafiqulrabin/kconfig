@@ -1,0 +1,70 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: static_char_array, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: static_char_array, []
+            IdentifierType: ['char']
+          Constant: int, 1
+      Decl: static_char_pointer, [], ['static'], []
+        PtrDecl: []
+          TypeDecl: static_char_pointer, []
+            IdentifierType: ['char']
+      Decl: static_char, [], ['static'], []
+        TypeDecl: static_char, []
+          IdentifierType: ['char']
+      Decl: char_array, [], [], []
+        ArrayDecl: []
+          TypeDecl: char_array, []
+            IdentifierType: ['char']
+          Constant: int, 1
+      Decl: char_pointer, [], [], []
+        PtrDecl: []
+          TypeDecl: char_pointer, []
+            IdentifierType: ['char']
+      Decl: character, [], [], []
+        TypeDecl: character, []
+          IdentifierType: ['char']
+      Decl: cp, [], [], []
+        PtrDecl: []
+          TypeDecl: cp, []
+            IdentifierType: ['char']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: cp
+          ID: static_char_array
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: cp
+          ID: static_char_pointer
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: cp
+          UnaryOp: &
+            ID: static_char
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: cp
+          ID: char_array
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: cp
+          ID: char_pointer
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: cp
+          UnaryOp: &
+            ID: character

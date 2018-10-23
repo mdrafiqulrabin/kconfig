@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: b
+        EmptyStatement: 
+        Compound: 
+          Decl: c, [], [], []
+            ArrayDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+              Constant: int, 1
+            InitList: 
+              Constant: int, 0
+          Label: l1
+            EmptyStatement: 
+      If: 
+        ID: a
+        Goto: l1

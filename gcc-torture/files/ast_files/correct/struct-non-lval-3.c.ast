@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: foo
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['char']
+      Decl: z, [], [], []
+        ArrayDecl: []
+          TypeDecl: z, []
+            IdentifierType: ['char']
+          Constant: int, 2
+  Decl: p, [], [], []
+    TypeDecl: p, []
+      Struct: foo
+  Decl: q, [], [], []
+    TypeDecl: q, []
+      Struct: foo
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: baz, [], [], []
+            TypeDecl: baz, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            Assignment: =
+              ID: p
+              ID: q
+            ID: z
+          ID: baz
+        Constant: int, 1

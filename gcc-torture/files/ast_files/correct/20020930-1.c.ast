@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: expm1f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: expm1f, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: sf_u, [], [], []
+        TypeDecl: sf_u, []
+          Union: None
+            Decl: value, [], [], []
+              TypeDecl: value, []
+                IdentifierType: ['float']
+            Decl: word, [], [], []
+              TypeDecl: word, []
+                IdentifierType: ['unsigned']
+      Assignment: =
+        StructRef: .
+          ID: sf_u
+          ID: word
+        BinaryOp: *
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            ID: x
+          Constant: int, 2
+      Return: 
+        BinaryOp: +
+          ID: x
+          StructRef: .
+            ID: sf_u
+            ID: value

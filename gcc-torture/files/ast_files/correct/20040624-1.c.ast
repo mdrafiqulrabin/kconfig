@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: f, [], [], []
+        ArrayDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['float']
+          Constant: int, 1
+  Decl: foo, [], [], []
+    FuncDecl: 
+      TypeDecl: foo, []
+        Struct: s
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          StructRef: .
+            FuncCall: 
+              ID: foo
+            ID: f
+          Constant: int, 0

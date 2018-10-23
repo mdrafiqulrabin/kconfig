@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 50
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 20
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: S
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'short']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  Decl: d, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: S
+      Decl: g, [], [], []
+        ArrayDecl: []
+          TypeDecl: g, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 50
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: g
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: s
+          ID: g
+          UnaryOp: sizeof
+            ID: g
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          StructRef: .
+            ID: s
+            ID: b
+          ID: d
+          UnaryOp: sizeof
+            StructRef: .
+              ID: s
+              ID: b
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: s

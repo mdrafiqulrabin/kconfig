@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: zone_type
+      EnumeratorList: 
+        Enumerator: ZONE_DMA
+        Enumerator: ZONE_NORMAL
+        Enumerator: ZONE_MOVABLE
+        Enumerator: MAX_NR_ZONES
+  Decl: arch_zone_lowest_possible_pfn, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: arch_zone_lowest_possible_pfn, []
+        IdentifierType: ['unsigned', 'long']
+      ID: MAX_NR_ZONES
+  Decl: arch_zone_highest_possible_pfn, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: arch_zone_highest_possible_pfn, []
+        IdentifierType: ['unsigned', 'long']
+      ID: MAX_NR_ZONES
+  FuncDef: 
+    Decl: free_area_init_nodes, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: max_zone_pfn, [], [], []
+            PtrDecl: []
+              TypeDecl: max_zone_pfn, []
+                IdentifierType: ['unsigned', 'long']
+        TypeDecl: free_area_init_nodes, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          Enum: zone_type
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          ID: MAX_NR_ZONES
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: i
+              ID: ZONE_MOVABLE
+            Continue: 
+          Decl: _x, [], [], []
+            TypeDecl: _x, []
+              IdentifierType: ['unsigned', 'long']
+            ArrayRef: 
+              ID: max_zone_pfn
+              ID: i
+          Decl: _y, [], [], []
+            TypeDecl: _y, []
+              IdentifierType: ['unsigned', 'long']
+            ArrayRef: 
+              ID: arch_zone_lowest_possible_pfn
+              ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: arch_zone_highest_possible_pfn
+              ID: i
+            TernaryOp: 
+              BinaryOp: >
+                ID: _x
+                ID: _y
+              ID: _x
+              ID: _y

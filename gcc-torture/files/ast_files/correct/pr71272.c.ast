@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: p1
+          ID: p2
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['short']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['short']
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Compound: 
+          If: 
+            BinaryOp: <
+              Constant: int, 5
+              BinaryOp: ^
+                Constant: int, 1
+                ID: p2
+            For: 
+              ID: a
+              For: 
+                Compound: 
+                  Assignment: =
+                    ID: b
+                    BinaryOp: ||
+                      BinaryOp: <
+                        Constant: int, 0xE7BC92A3EDA01CD8
+                        Assignment: =
+                          ID: d
+                          ID: p2
+                      ExprList: 
+                        Constant: int, 0
+                        Constant: int, 0
+                  Break: 
+          If: 
+            ID: p1
+            Break: 
+          Assignment: =
+            ID: p2
+            Constant: int, 5
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tmp, [], [], []
+        TypeDecl: tmp, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 2L
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            Constant: int, 90
+            BinaryOp: !=
+              ID: x
+              Constant: int, 10
+      FuncCall: 
+        ID: f2
+        ExprList: 
+          ID: c
+          ID: tmp

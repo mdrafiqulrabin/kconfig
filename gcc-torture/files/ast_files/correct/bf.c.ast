@@ -1,0 +1,174 @@
+FileAST: 
+  Typedef: uint32, [], ['typedef']
+    TypeDecl: uint32, []
+      IdentifierType: ['unsigned', 'long']
+  Typedef: sint32, [], ['typedef']
+    TypeDecl: sint32, []
+      IdentifierType: ['signed', 'long']
+  FuncDef: 
+    Decl: ext, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['sint32']
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['unsigned']
+          Decl: w5, [], [], []
+            TypeDecl: w5, []
+              IdentifierType: ['unsigned']
+        TypeDecl: ext, []
+          IdentifierType: ['uint32']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: w5
+            Constant: int, 0
+          BinaryOp: >>
+            ID: src
+            ID: o5
+          BinaryOp: >>
+            BinaryOp: <<
+              ID: src
+              BinaryOp: &
+                BinaryOp: -
+                  UnaryOp: -
+                    ID: o5
+                  ID: w5
+                Constant: int, 31
+            BinaryOp: -
+              Constant: int, 32
+              ID: w5
+  FuncDef: 
+    Decl: extu, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['uint32']
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['unsigned']
+          Decl: w5, [], [], []
+            TypeDecl: w5, []
+              IdentifierType: ['unsigned']
+        TypeDecl: extu, []
+          IdentifierType: ['uint32']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: w5
+            Constant: int, 0
+          BinaryOp: >>
+            ID: src
+            ID: o5
+          BinaryOp: >>
+            BinaryOp: <<
+              ID: src
+              BinaryOp: &
+                BinaryOp: -
+                  UnaryOp: -
+                    ID: o5
+                  ID: w5
+                Constant: int, 31
+            BinaryOp: -
+              Constant: int, 32
+              ID: w5
+  FuncDef: 
+    Decl: mak, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['uint32']
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['unsigned']
+          Decl: w5, [], [], []
+            TypeDecl: w5, []
+              IdentifierType: ['unsigned']
+        TypeDecl: mak, []
+          IdentifierType: ['uint32']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: w5
+            Constant: int, 0
+          BinaryOp: <<
+            ID: src
+            ID: o5
+          BinaryOp: >>
+            BinaryOp: <<
+              ID: src
+              BinaryOp: -
+                Constant: int, 32
+                ID: w5
+            BinaryOp: &
+              BinaryOp: -
+                UnaryOp: -
+                  ID: o5
+                ID: w5
+              Constant: int, 31
+  FuncDef: 
+    Decl: rot, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['uint32']
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['unsigned']
+        TypeDecl: rot, []
+          IdentifierType: ['uint32']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: >>
+            ID: src
+            ID: o5
+          BinaryOp: <<
+            ID: src
+            BinaryOp: &
+              UnaryOp: -
+                ID: o5
+              Constant: int, 31
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%x\n"
+          FuncCall: 
+            ID: clr
+            ExprList: 
+              Constant: int, 0xffffffff
+              FuncCall: 
+                ID: atoi
+                ExprList: 
+                  ArrayRef: 
+                    ID: argv
+                    Constant: int, 2
+              FuncCall: 
+                ID: atoi
+                ExprList: 
+                  ArrayRef: 
+                    ID: argv
+                    Constant: int, 1

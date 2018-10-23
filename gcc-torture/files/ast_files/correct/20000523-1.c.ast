@@ -1,0 +1,18 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: None
+      EnumeratorList: 
+        Enumerator: foo
+          UnaryOp: sizeof
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['int']
+    UnaryOp: sizeof
+      Typename: None, []
+        PtrDecl: []
+          TypeDecl: None, []
+            IdentifierType: ['void']

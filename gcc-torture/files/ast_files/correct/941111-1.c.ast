@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: obj1, [], [], []
+        TypeDecl: obj1, []
+          Struct: S
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                IdentifierType: ['char']
+      Decl: obj2, [], [], []
+        TypeDecl: obj2, []
+          Struct: S
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                IdentifierType: ['char']
+      FuncCall: 
+        ID: foo
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: obj1
+            ID: c
+          StructRef: .
+            ID: obj2
+            ID: c
+        FuncCall: 
+          ID: bar

@@ -1,0 +1,63 @@
+FileAST: 
+  FuncDef: 
+    Decl: internal_insn_latency, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: insn_code, [], [], []
+            TypeDecl: insn_code, []
+              IdentifierType: ['int']
+          Decl: insn2_code, [], [], []
+            TypeDecl: insn2_code, []
+              IdentifierType: ['int']
+        TypeDecl: internal_insn_latency, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: insn_code
+        Compound: 
+          Case: 
+            Constant: int, 256
+            Switch: 
+              ID: insn2_code
+              Compound: 
+                Case: 
+                  Constant: int, 267
+                  Return: 
+                    Constant: int, 8
+                Case: 
+                  Constant: int, 266
+                  Return: 
+                    Constant: int, 8
+                Case: 
+                  Constant: int, 265
+                  Return: 
+                    Constant: int, 8
+                Case: 
+                  Constant: int, 264
+                  Return: 
+                    Constant: int, 8
+                Case: 
+                  Constant: int, 263
+                  Return: 
+                    Constant: int, 8
+            Break: 
+          Case: 
+            Constant: int, 273
+            Switch: 
+              ID: insn2_code
+              Compound: 
+                Case: 
+                  Constant: int, 267
+                  Return: 
+                    Constant: int, 5
+                Case: 
+                  Constant: int, 266
+                  Return: 
+                    Constant: int, 5
+                Case: 
+                  Constant: int, 277
+                  Return: 
+                    Constant: int, 3
+            Break: 
+      Return: 
+        Constant: int, 0

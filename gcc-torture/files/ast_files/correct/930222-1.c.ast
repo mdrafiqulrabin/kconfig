@@ -1,0 +1,62 @@
+FileAST: 
+  Typedef: T, [], ['typedef']
+    TypeDecl: T, []
+      Struct: None
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['long']
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['double']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n1, [], [], []
+            PtrDecl: []
+              TypeDecl: n1, []
+                IdentifierType: ['T']
+          Decl: n2, [], [], []
+            PtrDecl: []
+              TypeDecl: n2, []
+                IdentifierType: ['T']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: g
+          ExprList: 
+            ID: n2
+        Return: 
+          BinaryOp: -
+            StructRef: ->
+              ID: n1
+              ID: i
+            StructRef: ->
+              ID: n2
+              ID: i
+        Compound: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['double']
+            BinaryOp: -
+              StructRef: ->
+                ID: n1
+                ID: f
+              StructRef: ->
+                ID: n2
+                ID: i
+          Return: 
+            TernaryOp: 
+              BinaryOp: ==
+                ID: f
+                Constant: float, 0.0
+              Constant: int, 0
+              TernaryOp: 
+                BinaryOp: >
+                  ID: f
+                  Constant: float, 0.0
+                Constant: int, 1
+                UnaryOp: -
+                  Constant: int, 1

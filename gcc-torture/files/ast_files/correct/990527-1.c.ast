@@ -1,0 +1,126 @@
+FileAST: 
+  Typedef: XWindowAttributes, [], ['typedef']
+    TypeDecl: XWindowAttributes, []
+      Struct: None
+        Decl: dummy, [], [], []
+          TypeDecl: dummy, []
+            IdentifierType: ['int']
+        Decl: width, [], [], []
+          TypeDecl: width, []
+            IdentifierType: ['int']
+        Decl: height, [], [], []
+          TypeDecl: height, []
+            IdentifierType: ['int']
+  Typedef: XPoint, [], ['typedef']
+    TypeDecl: XPoint, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['short']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['short']
+  Decl: ya_random, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: ya_random, []
+        IdentifierType: ['unsigned', 'int']
+  Decl: XDrawPoints, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['XPoint']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: XDrawPoints, []
+        IdentifierType: ['int']
+  Decl: iterations, [], ['static'], []
+    TypeDecl: iterations, []
+      IdentifierType: ['int']
+  Decl: offset, [], ['static'], []
+    TypeDecl: offset, []
+      IdentifierType: ['int']
+  Decl: xsym, [], ['static'], []
+    TypeDecl: xsym, []
+      IdentifierType: ['int']
+  Decl: ysym, [], ['static'], []
+    TypeDecl: ysym, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: hurm, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: hurm, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xgwa, [], [], []
+        TypeDecl: xgwa, []
+          IdentifierType: ['XWindowAttributes']
+      Decl: xlim, [], [], []
+        TypeDecl: xlim, []
+          IdentifierType: ['int']
+      Decl: ylim, [], [], []
+        TypeDecl: ylim, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: points, [], [], []
+        ArrayDecl: []
+          TypeDecl: points, []
+            IdentifierType: ['XPoint']
+          Constant: int, 4
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: iterations
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          UnaryOp: p++
+            ID: j
+          If: 
+            ID: xsym
+            Compound: 
+              Assignment: =
+                StructRef: .
+                  ArrayRef: 
+                    ID: points
+                    ID: j
+                  ID: x
+                BinaryOp: -
+                  ID: xlim
+                  ID: x
+              UnaryOp: p++
+                ID: j
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: points
+                ID: j
+              ID: x
+            ID: x
+          UnaryOp: p++
+            ID: j

@@ -1,0 +1,132 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: name, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: name, ['const']
+                IdentifierType: ['char']
+          Decl: nmlen, [], [], []
+            TypeDecl: nmlen, []
+              IdentifierType: ['int']
+          Decl: flags, [], [], []
+            PtrDecl: []
+              TypeDecl: flags, []
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: nonspc, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: nonspc, ['const']
+            IdentifierType: ['char']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: lfn, [], [], []
+        TypeDecl: lfn, []
+          IdentifierType: ['int']
+      Decl: needlfn, [], [], []
+        ArrayDecl: []
+          TypeDecl: needlfn, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: dotspc, [], [], []
+        ArrayDecl: []
+          TypeDecl: dotspc, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: locale, [], [], []
+        ArrayDecl: []
+          TypeDecl: locale, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 2
+      For: 
+        Assignment: =
+          ID: nonspc
+          UnaryOp: &
+            ArrayRef: 
+              ID: name
+              BinaryOp: -
+                ID: nmlen
+                Constant: int, 1
+        BinaryOp: &&
+          BinaryOp: >=
+            ID: nonspc
+            ID: name
+          BinaryOp: ==
+            UnaryOp: *
+              ID: nonspc
+            Constant: char, ' '
+        UnaryOp: ++
+          ID: n
+        Compound: 
+          If: 
+            UnaryOp: !
+              ID: nmlen
+            Compound: 
+              ExprList: 
+                Assignment: =
+                  ArrayRef: 
+                    ID: needlfn
+                    BinaryOp: >=
+                      ID: name
+                      ID: nonspc
+                  UnaryOp: !
+                    Constant: int, 0
+                Assignment: =
+                  ArrayRef: 
+                    ID: dotspc
+                    BinaryOp: !=
+                      ID: n
+                      Constant: int, 0
+                  ArrayRef: 
+                    ID: locale
+                    Constant: int, 0
+                UnaryOp: --
+                  ID: n
+                Assignment: +=
+                  ID: name
+                  ID: len
+                Assignment: -=
+                  ID: nmlen
+                  ID: len
+      If: 
+        BinaryOp: &&
+          UnaryOp: !
+            ID: lfn
+          BinaryOp: ||
+            BinaryOp: &&
+              BinaryOp: ==
+                ArrayRef: 
+                  ID: dotspc
+                  Constant: int, 0
+                Constant: char, ' '
+              UnaryOp: !
+                BinaryOp: &
+                  ID: len
+                  Constant: int, 0x0010
+            BinaryOp: ==
+              ArrayRef: 
+                ID: dotspc
+                Constant: int, 0
+              Constant: char, '.'
+        Return: 
+          Constant: int, 22
+      If: 
+        UnaryOp: !
+          BinaryOp: ||
+            ArrayRef: 
+              ID: needlfn
+              Constant: int, 0
+            ArrayRef: 
+              ID: needlfn
+              Constant: int, 1
+        Assignment: |=
+          UnaryOp: *
+            ID: flags
+          Constant: int, 0x02

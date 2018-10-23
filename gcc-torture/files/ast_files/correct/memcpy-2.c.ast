@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: OggFLAC__MAPPING_VERSION_MAJOR, ['const'], ['static'], []
+    TypeDecl: OggFLAC__MAPPING_VERSION_MAJOR, ['const']
+      IdentifierType: ['char']
+    Constant: int, 1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: synthetic_first_packet_body, [], [], []
+        ArrayDecl: []
+          TypeDecl: synthetic_first_packet_body, []
+            IdentifierType: ['char']
+          Constant: int, 10
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+        ID: synthetic_first_packet_body
+      Assignment: +=
+        ID: b
+        Constant: int, 4u
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: b
+          UnaryOp: &
+            ID: OggFLAC__MAPPING_VERSION_MAJOR
+          Constant: int, 1u

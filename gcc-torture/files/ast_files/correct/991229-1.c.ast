@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: parse, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: parse, []
+        IdentifierType: ['int']
+  Decl: parseStmt, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: parseStmt, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: ejEval, [], [], []
+      FuncDecl: 
+        TypeDecl: ejEval, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: state, [], [], []
+        TypeDecl: state, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: state
+        FuncCall: 
+          ID: parse
+          ExprList: 
+            Constant: int, 8
+            Constant: int, 0x1
+  FuncDef: 
+    Decl: parse, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            TypeDecl: state, []
+              IdentifierType: ['int']
+          Decl: flags, [], [], []
+            TypeDecl: flags, []
+              IdentifierType: ['int']
+        TypeDecl: parse, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: state
+        Compound: 
+          Case: 
+            Constant: int, 8
+          Case: 
+            Constant: int, 18
+          Case: 
+            Constant: int, 6
+          Case: 
+            Constant: int, 2
+            Assignment: =
+              ID: state
+              FuncCall: 
+                ID: parseStmt
+                ExprList: 
+                  ID: state
+                  ID: flags
+            Break: 
+  FuncDef: 
+    Decl: parseStmt, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            TypeDecl: state, []
+              IdentifierType: ['int']
+          Decl: flags, [], [], []
+            TypeDecl: flags, []
+              IdentifierType: ['int']
+        TypeDecl: parseStmt, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: parse
+        ExprList: 
+          Constant: int, 2
+          ID: flags

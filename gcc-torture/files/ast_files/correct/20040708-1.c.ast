@@ -1,0 +1,154 @@
+FileAST: 
+  Typedef: apr_lockmech_e, [], ['typedef']
+    TypeDecl: apr_lockmech_e, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: APR_LOCK_FCNTL
+          Enumerator: APR_LOCK_FLOCK
+          Enumerator: APR_LOCK_SYSVSEM
+          Enumerator: APR_LOCK_PROC_PTHREAD
+          Enumerator: APR_LOCK_POSIXSEM
+          Enumerator: APR_LOCK_DEFAULT
+  Decl: None, [], [], []
+    Struct: apr_proc_mutex_unix_lock_methods_t
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: name, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: name, ['const']
+            IdentifierType: ['char']
+  Typedef: apr_proc_mutex_unix_lock_methods_t, [], ['typedef']
+    TypeDecl: apr_proc_mutex_unix_lock_methods_t, []
+      Struct: apr_proc_mutex_unix_lock_methods_t
+  Decl: apr_proc_mutex_unix_sysv_methods, ['const'], ['extern'], []
+    TypeDecl: apr_proc_mutex_unix_sysv_methods, ['const']
+      IdentifierType: ['apr_proc_mutex_unix_lock_methods_t']
+  Decl: None, [], [], []
+    Struct: apr_proc_mutex_t
+      Decl: inter_meth, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: inter_meth, ['const']
+            IdentifierType: ['apr_proc_mutex_unix_lock_methods_t']
+      Decl: curr_locked, [], [], []
+        TypeDecl: curr_locked, []
+          IdentifierType: ['int']
+      Decl: fname, [], [], []
+        PtrDecl: []
+          TypeDecl: fname, []
+            IdentifierType: ['char']
+  Typedef: apr_proc_mutex_t, [], ['typedef']
+    TypeDecl: apr_proc_mutex_t, []
+      Struct: apr_proc_mutex_t
+  Decl: apr_proc_mutex_unix_proc_pthread_methods, ['const'], ['extern'], []
+    TypeDecl: apr_proc_mutex_unix_proc_pthread_methods, ['const']
+      IdentifierType: ['apr_proc_mutex_unix_lock_methods_t']
+  Decl: apr_proc_mutex_unix_fcntl_methods, ['const'], ['extern'], []
+    TypeDecl: apr_proc_mutex_unix_fcntl_methods, ['const']
+      IdentifierType: ['apr_proc_mutex_unix_lock_methods_t']
+  FuncDef: 
+    Decl: proc_mutex_choose_method, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: new_mutex, [], [], []
+            PtrDecl: []
+              TypeDecl: new_mutex, []
+                IdentifierType: ['apr_proc_mutex_t']
+          Decl: mech, [], [], []
+            TypeDecl: mech, []
+              IdentifierType: ['apr_lockmech_e']
+        TypeDecl: proc_mutex_choose_method, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: mech
+        Compound: 
+          Case: 
+            ID: APR_LOCK_FCNTL
+            Assignment: =
+              StructRef: ->
+                ID: new_mutex
+                ID: inter_meth
+              UnaryOp: &
+                ID: apr_proc_mutex_unix_fcntl_methods
+            Break: 
+          Case: 
+            ID: APR_LOCK_FLOCK
+            Return: 
+              BinaryOp: +
+                BinaryOp: +
+                  Constant: int, 20000
+                  Constant: int, 50000
+                Constant: int, 23
+            Break: 
+          Case: 
+            ID: APR_LOCK_SYSVSEM
+            Assignment: =
+              StructRef: ->
+                ID: new_mutex
+                ID: inter_meth
+              UnaryOp: &
+                ID: apr_proc_mutex_unix_sysv_methods
+            Break: 
+          Case: 
+            ID: APR_LOCK_POSIXSEM
+            Return: 
+              BinaryOp: +
+                BinaryOp: +
+                  Constant: int, 20000
+                  Constant: int, 50000
+                Constant: int, 23
+            Break: 
+          Case: 
+            ID: APR_LOCK_PROC_PTHREAD
+            Assignment: =
+              StructRef: ->
+                ID: new_mutex
+                ID: inter_meth
+              UnaryOp: &
+                ID: apr_proc_mutex_unix_proc_pthread_methods
+            Break: 
+          Case: 
+            ID: APR_LOCK_DEFAULT
+            Assignment: =
+              StructRef: ->
+                ID: new_mutex
+                ID: inter_meth
+              UnaryOp: &
+                ID: apr_proc_mutex_unix_proc_pthread_methods
+            Break: 
+          Default: 
+            Return: 
+              BinaryOp: +
+                BinaryOp: +
+                  Constant: int, 20000
+                  Constant: int, 50000
+                Constant: int, 23
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: apr_proc_mutex_defname, ['const'], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: apr_proc_mutex_defname, ['const']
+            IdentifierType: ['char']
+    Compound: 
+      Decl: mutex, [], [], []
+        TypeDecl: mutex, []
+          IdentifierType: ['apr_proc_mutex_t']
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: proc_mutex_choose_method
+            ExprList: 
+              UnaryOp: &
+                ID: mutex
+              ID: APR_LOCK_DEFAULT
+          Constant: int, 0
+        Compound: 
+          Return: 
+            Constant: string, "unknown"

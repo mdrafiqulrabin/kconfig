@@ -1,0 +1,979 @@
+FileAST: 
+  Typedef: bus_space_handle_t, [], ['typedef']
+    TypeDecl: bus_space_handle_t, []
+      Union: None
+        Decl: ioport, [], [], []
+          TypeDecl: ioport, []
+            IdentifierType: ['int']
+        Decl: maddr, ['volatile'], [], []
+          PtrDecl: []
+            TypeDecl: maddr, ['volatile']
+              IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: scb
+      Decl: hscb, [], [], []
+        PtrDecl: []
+          TypeDecl: hscb, []
+            IdentifierType: ['unsigned', 'short']
+  Decl: None, [], [], []
+    Struct: ahd_softc
+      Decl: tags, [], [], []
+        ArrayDecl: []
+          TypeDecl: tags, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: bshs, [], [], []
+        ArrayDecl: []
+          TypeDecl: bshs, []
+            IdentifierType: ['bus_space_handle_t']
+          Constant: int, 2
+      Decl: dst_mode, [], [], []
+        TypeDecl: dst_mode, []
+          IdentifierType: ['int']
+      Decl: src_mode, [], [], []
+        TypeDecl: src_mode, []
+          IdentifierType: ['int']
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['int']
+  Decl: outb, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: outb, []
+        IdentifierType: ['void']
+  Decl: foo_inb, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: ahd_softc
+      TypeDecl: foo_inb, []
+        IdentifierType: ['int']
+  Decl: foo_int_int, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo_int_int, []
+        IdentifierType: ['int']
+  Decl: ahd_inb, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: ahd_softc
+      TypeDecl: ahd_inb, []
+        IdentifierType: ['int']
+  Decl: ahd_scb_active_in_fifo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: ahd_scb_active_in_fifo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: ahd_flush_qoutfifo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ahd, [], [], []
+            PtrDecl: []
+              TypeDecl: ahd, []
+                Struct: ahd_softc
+          Decl: scb, [], [], []
+            PtrDecl: []
+              TypeDecl: scb, []
+                Struct: scb
+        TypeDecl: ahd_flush_qoutfifo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: src, [], [], []
+        TypeDecl: src, []
+          IdentifierType: ['int']
+      Decl: dst, [], [], []
+        TypeDecl: dst, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: src
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: dst
+      ExprList: 
+        Assignment: =
+          UnaryOp: *
+            ID: a
+          Constant: int, 1
+        Assignment: =
+          UnaryOp: *
+            ID: b
+          Constant: int, 1
+      Decl: bb, [], [], []
+        TypeDecl: bb, []
+          IdentifierType: ['int']
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: ahd
+            ID: src_mode
+          Constant: int, 1
+        Compound: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['int']
+          Decl: dst, [], [], []
+            TypeDecl: dst, []
+              IdentifierType: ['int']
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: src
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: dst
+          ExprList: 
+            Assignment: =
+              UnaryOp: *
+                ID: a
+              Constant: int, 1
+            Assignment: =
+              UnaryOp: *
+                ID: b
+              Constant: int, 1
+      FuncCall: 
+        ID: foo_int_int
+        ExprList: 
+          StructRef: ->
+            ID: ahd
+            ID: src_mode
+          StructRef: ->
+            ID: ahd
+            ID: dst_mode
+      Assignment: =
+        ID: p
+        Constant: int, 1
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: ahd
+              ID: src_mode
+            Constant: int, 2
+          BinaryOp: ==
+            StructRef: ->
+              ID: ahd
+              ID: dst_mode
+            ID: p
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+      Assignment: =
+        StructRef: ->
+          ID: ahd
+          ID: src_mode
+        Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: ahd
+          ID: dst_mode
+        Constant: int, 2
+      While: 
+        BinaryOp: !=
+          BinaryOp: &
+            FuncCall: 
+              ID: ahd_inb
+              ExprList: 
+                ID: ahd
+            Constant: int, 0x01
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: p
+            Constant: int, 1
+          If: 
+            BinaryOp: &&
+              BinaryOp: ==
+                StructRef: ->
+                  ID: ahd
+                  ID: src_mode
+                Constant: int, 2
+              BinaryOp: ==
+                StructRef: ->
+                  ID: ahd
+                  ID: dst_mode
+                ID: p
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: ahd
+                      ID: tags
+                    Constant: int, 0
+                  Constant: int, 1
+                UnaryOp: *
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: maddr
+              FuncCall: 
+                ID: outb
+                ExprList: 
+                  Constant: int, 1
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: ioport
+              If: 
+                BinaryOp: ==
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: ahd
+                      ID: tags
+                    Constant: int, 0
+                  Constant: int, 1
+                UnaryOp: *
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: maddr
+              FuncCall: 
+                ID: outb
+                ExprList: 
+                  Constant: int, 1
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: ioport
+          Assignment: =
+            StructRef: ->
+              ID: ahd
+              ID: src_mode
+            Constant: int, 1
+          Assignment: =
+            StructRef: ->
+              ID: ahd
+              ID: dst_mode
+            Constant: int, 2
+          If: 
+            BinaryOp: ==
+              FuncCall: 
+                ID: ahd_scb_active_in_fifo
+              Constant: int, 0
+            Continue: 
+          Assignment: =
+            ID: p
+            Constant: int, 1
+          If: 
+            BinaryOp: &&
+              BinaryOp: ==
+                StructRef: ->
+                  ID: ahd
+                  ID: src_mode
+                Constant: int, 2
+              BinaryOp: ==
+                StructRef: ->
+                  ID: ahd
+                  ID: dst_mode
+                ID: p
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: ahd
+                      ID: tags
+                    Constant: int, 0
+                  Constant: int, 1
+                UnaryOp: *
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: maddr
+              FuncCall: 
+                ID: outb
+                ExprList: 
+                  Constant: int, 1
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: ioport
+              If: 
+                BinaryOp: ==
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: ahd
+                      ID: tags
+                    Constant: int, 0
+                  Constant: int, 1
+                UnaryOp: *
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: maddr
+              FuncCall: 
+                ID: outb
+                ExprList: 
+                  Constant: int, 1
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: ahd
+                        ID: bshs
+                      Constant: int, 0
+                    ID: ioport
+          Assignment: =
+            StructRef: ->
+              ID: ahd
+              ID: src_mode
+            Constant: int, 1
+          Assignment: =
+            StructRef: ->
+              ID: ahd
+              ID: dst_mode
+            Constant: int, 2
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: !=
+              BinaryOp: &
+                StructRef: ->
+                  ID: ahd
+                  ID: flags
+                Constant: int, 1
+              Constant: int, 0
+            FuncCall: 
+              ID: foo_inb
+              ExprList: 
+                ID: ahd
+          If: 
+            BinaryOp: !=
+              BinaryOp: &
+                StructRef: ->
+                  ID: ahd
+                  ID: flags
+                Constant: int, 1
+              Constant: int, 0
+            FuncCall: 
+              ID: foo_inb
+              ExprList: 
+                ID: ahd
+          If: 
+            BinaryOp: !=
+              BinaryOp: &
+                StructRef: ->
+                  ID: ahd
+                  ID: flags
+                Constant: int, 1
+              Constant: int, 0
+            FuncCall: 
+              ID: foo_inb
+              ExprList: 
+                ID: ahd
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: !=
+              BinaryOp: &
+                StructRef: ->
+                  ID: ahd
+                  ID: flags
+                Constant: int, 1
+              Constant: int, 0
+            FuncCall: 
+              ID: foo_inb
+              ExprList: 
+                ID: ahd
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          Assignment: =
+            ID: bb
+            UnaryOp: *
+              StructRef: ->
+                ID: scb
+                ID: hscb
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          Assignment: =
+            ID: bb
+            UnaryOp: *
+              StructRef: ->
+                ID: scb
+                ID: hscb
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+      If: 
+        BinaryOp: ==
+          ArrayRef: 
+            StructRef: ->
+              ID: ahd
+              ID: tags
+            Constant: int, 0
+          Constant: int, 1
+        UnaryOp: *
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: ahd
+                ID: bshs
+              Constant: int, 0
+            ID: maddr
+      FuncCall: 
+        ID: outb
+        ExprList: 
+          Constant: int, 1
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: ahd
+                ID: bshs
+              Constant: int, 0
+            ID: ioport
+      If: 
+        BinaryOp: ==
+          ArrayRef: 
+            StructRef: ->
+              ID: ahd
+              ID: tags
+            Constant: int, 0
+          Constant: int, 1
+        UnaryOp: *
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: ahd
+                ID: bshs
+              Constant: int, 0
+            ID: maddr
+      FuncCall: 
+        ID: outb
+        ExprList: 
+          Constant: int, 1
+          StructRef: .
+            ArrayRef: 
+              StructRef: ->
+                ID: ahd
+                ID: bshs
+              Constant: int, 0
+            ID: ioport
+      Assignment: =
+        ID: p
+        Constant: int, 1
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: ahd
+              ID: src_mode
+            Constant: int, 2
+          BinaryOp: ==
+            StructRef: ->
+              ID: ahd
+              ID: dst_mode
+            ID: p
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+      Assignment: =
+        StructRef: ->
+          ID: ahd
+          ID: src_mode
+        Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: ahd
+          ID: dst_mode
+        Constant: int, 2
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: ahd
+              ID: src_mode
+            Constant: int, 2
+          BinaryOp: ==
+            StructRef: ->
+              ID: ahd
+              ID: dst_mode
+            ID: dst
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                StructRef: ->
+                  ID: ahd
+                  ID: tags
+                Constant: int, 0
+              Constant: int, 1
+            UnaryOp: *
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: maddr
+          FuncCall: 
+            ID: outb
+            ExprList: 
+              Constant: int, 1
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: ahd
+                    ID: bshs
+                  Constant: int, 0
+                ID: ioport
+      Assignment: =
+        StructRef: ->
+          ID: ahd
+          ID: src_mode
+        Constant: int, 1
+      Assignment: =
+        StructRef: ->
+          ID: ahd
+          ID: dst_mode
+        Constant: int, 2
+      Assignment: |=
+        StructRef: ->
+          ID: ahd
+          ID: flags
+        Constant: int, 1

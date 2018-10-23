@@ -1,0 +1,186 @@
+FileAST: 
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Union: double_union
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+      Decl: i, [], [], []
+        ArrayDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['uint32_t']
+          Constant: int, 2
+  Decl: None, [], [], []
+    Struct: _Jv_reent
+      Decl: _errno, [], [], []
+        TypeDecl: _errno, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: _Jv_strtod_r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                Struct: _Jv_reent
+          Decl: se, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: se, []
+                  IdentifierType: ['char']
+        TypeDecl: _Jv_strtod_r, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bb2, [], [], []
+        TypeDecl: bb2, []
+          IdentifierType: ['int']
+      Decl: sign, [], [], []
+        TypeDecl: sign, []
+          IdentifierType: ['int']
+      Decl: aadj, [], [], []
+        TypeDecl: aadj, []
+          IdentifierType: ['double']
+      Decl: aadj1, [], [], []
+        TypeDecl: aadj1, []
+          IdentifierType: ['double']
+      Decl: adj, [], [], []
+        TypeDecl: adj, []
+          IdentifierType: ['double']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: rv, [], [], []
+        TypeDecl: rv, []
+          Union: double_union
+      Decl: bs, [], [], []
+        PtrDecl: []
+          TypeDecl: bs, []
+            Union: double_union
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Decl: delta, [], [], []
+        PtrDecl: []
+          TypeDecl: delta, []
+            Union: double_union
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Compound: 
+        Label: ovfl
+          Assignment: =
+            StructRef: ->
+              ID: ptr
+              ID: _errno
+            Constant: int, 34
+        Compound: 
+          BinaryOp: |
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['uint32_t']
+              Constant: int, 0xfffffL
+            BinaryOp: *
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['uint32_t']
+                Constant: int, 0x100000L
+              BinaryOp: -
+                BinaryOp: +
+                  Constant: int, 1024
+                  Constant: int, 1023
+                Constant: int, 1
+        If: 
+          BinaryOp: <=
+            Assignment: =
+              ID: aadj
+              FuncCall: 
+                ID: _Jv_ratio
+                ExprList: 
+                  ID: delta
+                  ID: bs
+            Constant: float, 2.
+          Compound: 
+            Compound: 
+              If: 
+                BinaryOp: <
+                  ID: aadj
+                  BinaryOp: /
+                    Constant: float, 2.
+                    Constant: int, 2
+                Assignment: =
+                  ID: aadj
+                  BinaryOp: /
+                    Constant: float, 1.
+                    Constant: int, 2
+              Assignment: =
+                ID: aadj1
+                UnaryOp: -
+                  ID: aadj
+        Compound: 
+          Assignment: -=
+            ArrayRef: 
+              StructRef: .
+                ID: rv
+                ID: i
+              Constant: int, 1
+            BinaryOp: *
+              Constant: int, 53
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['uint32_t']
+                Constant: int, 0x100000L
+          Assignment: =
+            ID: adj
+            BinaryOp: *
+              ID: aadj1
+              FuncCall: 
+                ID: _Jv_ulp
+                ExprList: 
+                  StructRef: .
+                    ID: rv
+                    ID: d
+          Assignment: +=
+            StructRef: .
+              ID: rv
+              ID: d
+            ID: adj
+          If: 
+            BinaryOp: >=
+              BinaryOp: &
+                ArrayRef: 
+                  StructRef: .
+                    ID: rv
+                    ID: i
+                  Constant: int, 1
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['uint32_t']
+                  Constant: int, 0x7ff00000L
+              BinaryOp: *
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['uint32_t']
+                  Constant: int, 0x100000L
+                BinaryOp: -
+                  BinaryOp: +
+                    Constant: int, 1024
+                    Constant: int, 1023
+                  Constant: int, 53
+            Compound: 
+              Goto: ovfl

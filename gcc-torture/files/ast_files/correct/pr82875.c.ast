@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['long']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['long']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['short']
+        Assignment: =
+          ID: a
+          Constant: int, 6
+      While: 
+        Constant: int, 0
+        While: 
+          BinaryOp: <=
+            ID: a
+            Constant: int, 7
+          Compound: 
+            For: 
+              EmptyStatement: 
+            Label: lab
+              While: 
+                BinaryOp: <=
+                  ID: c
+                  Constant: int, 73
+                EmptyStatement: 
+            Assignment: =
+              ID: e
+              Constant: int, 20
+            TernaryOp: 
+              ID: d
+              BinaryOp: *
+                Assignment: %=
+                  ID: a
+                  ID: c
+                Assignment: *=
+                  ID: e
+                  TernaryOp: 
+                    ID: a
+                    ID: f
+                    ID: b
+              Constant: int, 0
+      Goto: lab

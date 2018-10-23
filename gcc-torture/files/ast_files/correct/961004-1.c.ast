@@ -1,0 +1,209 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: o1
+          ID: o2
+          ID: o3
+          ID: i
+          ID: j
+          ID: k
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: --
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: o1
+            ID: i
+          BinaryOp: +
+            ArrayRef: 
+              ID: o2
+              Assignment: >>=
+                ID: j
+                Constant: int, 1
+            ArrayRef: 
+              ID: o3
+              Assignment: >>=
+                ID: k
+                Constant: int, 1
+    Decl: o1, [], [], []
+      PtrDecl: []
+        TypeDecl: o1, []
+          IdentifierType: ['long', 'long']
+    Decl: o2, [], [], []
+      PtrDecl: []
+        TypeDecl: o2, []
+          IdentifierType: ['long', 'long']
+    Decl: o3, [], [], []
+      PtrDecl: []
+        TypeDecl: o3, []
+          IdentifierType: ['long', 'long']
+    Decl: i, [], [], []
+      TypeDecl: i, []
+        IdentifierType: ['int']
+    Decl: j, [], [], []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+    Decl: k, [], [], []
+      TypeDecl: k, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: o1
+          ID: o2
+          ID: o3
+          ID: i
+          ID: j
+          ID: k
+        TypeDecl: f2, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: --
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: o1
+            ID: i
+          BinaryOp: -
+            ArrayRef: 
+              ID: o2
+              Assignment: >>=
+                ID: j
+                Constant: int, 1
+            ArrayRef: 
+              ID: o3
+              Assignment: >>=
+                ID: k
+                Constant: int, 1
+    Decl: o1, [], [], []
+      PtrDecl: []
+        TypeDecl: o1, []
+          IdentifierType: ['long', 'long']
+    Decl: o2, [], [], []
+      PtrDecl: []
+        TypeDecl: o2, []
+          IdentifierType: ['long', 'long']
+    Decl: o3, [], [], []
+      PtrDecl: []
+        TypeDecl: o3, []
+          IdentifierType: ['long', 'long']
+    Decl: i, [], [], []
+      TypeDecl: i, []
+        IdentifierType: ['int']
+    Decl: j, [], [], []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+    Decl: k, [], [], []
+      TypeDecl: k, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: o1
+          ID: o2
+          ID: o3
+          ID: i
+          ID: j
+          ID: k
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: --
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: o1
+            ID: i
+          BinaryOp: +
+            ArrayRef: 
+              ID: o2
+              Assignment: >>=
+                ID: j
+                Constant: int, 1
+            ArrayRef: 
+              ID: o3
+              Assignment: >>=
+                ID: k
+                Constant: int, 1
+    Decl: o1, [], [], []
+      PtrDecl: []
+        TypeDecl: o1, []
+          IdentifierType: ['long', 'long']
+    Decl: o3, [], [], []
+      PtrDecl: []
+        TypeDecl: o3, []
+          IdentifierType: ['long', 'long']
+    Decl: o2, [], [], []
+      PtrDecl: []
+        TypeDecl: o2, []
+          IdentifierType: ['unsigned']
+    Decl: i, [], [], []
+      TypeDecl: i, []
+        IdentifierType: ['int']
+    Decl: j, [], [], []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+    Decl: k, [], [], []
+      TypeDecl: k, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: o1
+          ID: o2
+          ID: o3
+          ID: i
+          ID: j
+          ID: k
+        TypeDecl: f4, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        UnaryOp: --
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: o1
+            ID: i
+          BinaryOp: -
+            ArrayRef: 
+              ID: o2
+              Assignment: >>=
+                ID: j
+                Constant: int, 1
+            ArrayRef: 
+              ID: o3
+              Assignment: >>=
+                ID: k
+                Constant: int, 1
+    Decl: o1, [], [], []
+      PtrDecl: []
+        TypeDecl: o1, []
+          IdentifierType: ['long', 'long']
+    Decl: o2, [], [], []
+      PtrDecl: []
+        TypeDecl: o2, []
+          IdentifierType: ['long', 'long']
+    Decl: o3, [], [], []
+      PtrDecl: []
+        TypeDecl: o3, []
+          IdentifierType: ['unsigned']
+    Decl: i, [], [], []
+      TypeDecl: i, []
+        IdentifierType: ['int']
+    Decl: j, [], [], []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+    Decl: k, [], [], []
+      TypeDecl: k, []
+        IdentifierType: ['int']

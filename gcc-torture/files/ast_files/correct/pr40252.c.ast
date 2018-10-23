@@ -1,0 +1,35 @@
+FileAST: 
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: IP, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            ArrayDecl: []
+              TypeDecl: v, []
+                IdentifierType: ['uint32_t']
+              Constant: int, 2
+        TypeDecl: IP, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: v
+          Constant: int, 0
+        BinaryOp: &
+          BinaryOp: |
+            BinaryOp: <<
+              ArrayRef: 
+                ID: v
+                Constant: int, 0
+              Constant: int, 1
+            BinaryOp: &
+              BinaryOp: >>
+                ArrayRef: 
+                  ID: v
+                  Constant: int, 0
+                Constant: int, 31
+              Constant: int, 1L
+          Constant: int, 0xffffffffL

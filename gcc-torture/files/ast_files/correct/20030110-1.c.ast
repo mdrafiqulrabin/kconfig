@@ -1,0 +1,82 @@
+FileAST: 
+  Decl: bpp, [], ['extern'], []
+    TypeDecl: bpp, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: bpp
+          Constant: int, 32
+        Compound: 
+          If: 
+            BinaryOp: <
+              Constant: int, 2
+              Constant: int, 8
+            Compound: 
+              DoWhile: 
+                Constant: int, 0
+                Compound: 
+                  While: 
+                    BinaryOp: &
+                      FuncCall: 
+                        ID: inb
+                        ExprList: 
+                          Constant: int, 0x9ae8
+                      BinaryOp: >>
+                        Constant: int, 0x0100
+                        BinaryOp: +
+                          Constant: int, 2
+                          Constant: int, 1
+                    EmptyStatement: 
+            Compound: 
+              DoWhile: 
+                Constant: int, 0
+                Compound: 
+                  While: 
+                    BinaryOp: &
+                      FuncCall: 
+                        ID: inb
+                        ExprList: 
+                          Constant: int, 0x9ae8
+                      BinaryOp: >>
+                        Constant: int, 0x0100
+                        Constant: int, 2
+                    EmptyStatement: 
+        DoWhile: 
+          Constant: int, 0
+          Compound: 
+            While: 
+              BinaryOp: &
+                FuncCall: 
+                  ID: inb
+                  ExprList: 
+                    Constant: int, 0x9ae8
+                BinaryOp: >>
+                  Constant: int, 0x0100
+                  Constant: int, 1
+              EmptyStatement: 
+      If: 
+        BinaryOp: <
+          Constant: int, 8
+          Constant: int, 8
+        Compound: 
+          DoWhile: 
+            Constant: int, 0
+            Compound: 
+              While: 
+                BinaryOp: &
+                  FuncCall: 
+                    ID: inb
+                    ExprList: 
+                      Constant: int, 0x9ae8
+                  BinaryOp: >>
+                    Constant: int, 0x0100
+                    BinaryOp: +
+                      Constant: int, 8
+                      Constant: int, 1
+                EmptyStatement: 

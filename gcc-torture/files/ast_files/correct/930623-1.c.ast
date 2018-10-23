@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: xx
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_apply
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: g
+          ID: xx
+          Constant: int, 200
+    Decl: xx, [], [], []
+      PtrDecl: []
+        TypeDecl: xx, []
+          IdentifierType: ['void']

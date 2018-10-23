@@ -1,0 +1,137 @@
+FileAST: 
+  Decl: _offsetTable, [], [], []
+    PtrDecl: []
+      TypeDecl: _offsetTable, []
+        IdentifierType: ['short']
+  FuncDef: 
+    Decl: proc4WithoutFDFE, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['char']
+          Decl: src, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: src, ['const']
+                IdentifierType: ['char']
+          Decl: next_offs, [], [], []
+            TypeDecl: next_offs, []
+              IdentifierType: ['int']
+          Decl: bw, [], [], []
+            TypeDecl: bw, []
+              IdentifierType: ['int']
+          Decl: bh, [], [], []
+            TypeDecl: bh, []
+              IdentifierType: ['int']
+          Decl: pitch, [], [], []
+            TypeDecl: pitch, []
+              IdentifierType: ['int']
+        TypeDecl: proc4WithoutFDFE, []
+          IdentifierType: ['void']
+    Compound: 
+      DoWhile: 
+        UnaryOp: --
+          ID: bh
+        Compound: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            ID: bw
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['int']
+            UnaryOp: *
+              UnaryOp: p++
+                ID: src
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['int']
+          Decl: length, [], [], []
+            TypeDecl: length, []
+              IdentifierType: ['int']
+            BinaryOp: +
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: src
+              Constant: int, 1
+          For: 
+            Assignment: =
+              ID: l
+              Constant: int, 0
+            BinaryOp: <
+              ID: l
+              ID: length
+            UnaryOp: p++
+              ID: l
+            Compound: 
+              Decl: x, [], [], []
+                TypeDecl: x, []
+                  IdentifierType: ['int']
+              For: 
+                Assignment: =
+                  ID: x
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: x
+                  Constant: int, 4
+                UnaryOp: p++
+                  ID: x
+                EmptyStatement: 
+              If: 
+                BinaryOp: ==
+                  ID: i
+                  Constant: int, 0
+                Assignment: +=
+                  ID: dst
+                  BinaryOp: *
+                    ID: pitch
+                    Constant: int, 3
+          Decl: dst2, [], [], []
+            PtrDecl: []
+              TypeDecl: dst2, []
+                IdentifierType: ['char']
+            BinaryOp: +
+              BinaryOp: +
+                ID: dst
+                ArrayRef: 
+                  ID: _offsetTable
+                  ID: code
+              ID: next_offs
+          For: 
+            Assignment: =
+              ID: x
+              Constant: int, 0
+            BinaryOp: <
+              ID: x
+              Constant: int, 4
+            UnaryOp: p++
+              ID: x
+            Compound: 
+              Decl: j, [], [], []
+                TypeDecl: j, []
+                  IdentifierType: ['int']
+                Constant: int, 0
+              Assignment: =
+                ArrayRef: 
+                  BinaryOp: +
+                    ID: dst
+                    BinaryOp: *
+                      ID: pitch
+                      ID: x
+                  ID: j
+                ArrayRef: 
+                  BinaryOp: +
+                    ID: dst2
+                    BinaryOp: *
+                      ID: pitch
+                      ID: x
+                  ID: j
+          Assignment: +=
+            ID: dst
+            BinaryOp: *
+              ID: pitch
+              Constant: int, 3

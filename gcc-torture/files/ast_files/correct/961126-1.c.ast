@@ -1,0 +1,345 @@
+FileAST: 
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: sub
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      If: 
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          ID: i
+        Goto: quit
+      Assignment: =
+        ID: i
+        UnaryOp: -
+          ID: i
+      Label: quit
+        FuncCall: 
+          ID: sub2
+          ExprList: 
+            ID: i

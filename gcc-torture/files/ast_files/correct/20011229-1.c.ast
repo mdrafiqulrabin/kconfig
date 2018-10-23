@@ -1,0 +1,389 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s0
+      Decl: init_color, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            TypeDecl: init_color, []
+              IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: s1
+      Decl: map_cmyk, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            TypeDecl: map_cmyk, []
+              IdentifierType: ['void']
+      Decl: map_rgb_alpha, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            TypeDecl: map_rgb_alpha, []
+              IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: s5
+      Decl: fill1, [], [], []
+        TypeDecl: fill1, []
+          IdentifierType: ['long']
+      Decl: fill2, [], [], []
+        TypeDecl: fill2, []
+          IdentifierType: ['int']
+      Decl: fill3, [], [], []
+        TypeDecl: fill3, []
+          IdentifierType: ['long']
+      Decl: fill4, [], [], []
+        TypeDecl: fill4, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: fill5, [], [], []
+        TypeDecl: fill5, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: s2
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          Struct: s5
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          Struct: s5
+  Decl: None, [], [], []
+    Struct: s3
+      Decl: dev_color, [], [], []
+        TypeDecl: dev_color, []
+          IdentifierType: ['long']
+      Decl: key, [], [], []
+        TypeDecl: key, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: s4
+      Decl: spp, [], [], []
+        TypeDecl: spp, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: alpha, [], [], []
+        TypeDecl: alpha, []
+          IdentifierType: ['int']
+      Decl: mask_color, [], [], []
+        TypeDecl: mask_color, []
+          Struct: mc_
+            Decl: values, [], [], []
+              ArrayDecl: []
+                TypeDecl: values, []
+                  IdentifierType: ['unsigned', 'int']
+                Constant: int, 14
+            Decl: mask, [], [], []
+              TypeDecl: mask, []
+                IdentifierType: ['unsigned', 'int']
+            Decl: test, [], [], []
+              TypeDecl: test, []
+                IdentifierType: ['unsigned', 'int']
+            Decl: exact, [], [], []
+              TypeDecl: exact, []
+                IdentifierType: ['int']
+      Decl: pis, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: pis, []
+              IdentifierType: ['void']
+      Decl: pcs, [], [], []
+        PtrDecl: []
+          TypeDecl: pcs, []
+            Struct: s0
+      Decl: dda, [], [], []
+        TypeDecl: dda, []
+          Struct: dd_
+            Decl: row, [], [], []
+              ArrayDecl: []
+                TypeDecl: row, []
+                  Struct: s2
+                Constant: int, 2
+            Decl: pixel0, [], [], []
+              TypeDecl: pixel0, []
+                Struct: s2
+      Decl: clues, [], [], []
+        ArrayDecl: []
+          TypeDecl: clues, []
+            Struct: s3
+          Constant: int, 256
+  Decl: get_cmap_procs, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: get_cmap_procs, []
+          Struct: s1
+  Decl: image_render_color, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: s4
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: image_render_color, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: image_render_color, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: penum, [], [], []
+            PtrDecl: []
+              TypeDecl: penum, []
+                Struct: s4
+          Decl: buffer, [], [], []
+            PtrDecl: []
+              TypeDecl: buffer, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: data_x, [], [], []
+            TypeDecl: data_x, []
+              IdentifierType: ['int']
+          Decl: dev, [], [], []
+            PtrDecl: []
+              TypeDecl: dev, []
+                IdentifierType: ['void']
+        TypeDecl: image_render_color, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: clues, [], [], []
+        PtrDecl: []
+          TypeDecl: clues, []
+            Struct: s3
+        StructRef: ->
+          ID: penum
+          ID: clues
+      Decl: pis, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: pis, []
+              IdentifierType: ['void']
+        StructRef: ->
+          ID: penum
+          ID: pis
+      Decl: pnext, [], [], []
+        TypeDecl: pnext, []
+          Struct: s2
+      Decl: pcs, [], [], []
+        PtrDecl: []
+          TypeDecl: pcs, []
+            Struct: s0
+        StructRef: ->
+          ID: penum
+          ID: pcs
+      Decl: cmap_procs, [], [], []
+        PtrDecl: []
+          TypeDecl: cmap_procs, []
+            Struct: s1
+        FuncCall: 
+          ID: get_cmap_procs
+          ExprList: 
+            ID: pis
+            ID: dev
+      Decl: map_4, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            TypeDecl: map_4, []
+              IdentifierType: ['void']
+        TernaryOp: 
+          StructRef: ->
+            ID: penum
+            ID: alpha
+          StructRef: ->
+            ID: cmap_procs
+            ID: map_rgb_alpha
+          StructRef: ->
+            ID: cmap_procs
+            ID: map_cmyk
+      Decl: mask, [], [], []
+        TypeDecl: mask, []
+          IdentifierType: ['unsigned', 'int']
+        StructRef: .
+          StructRef: ->
+            ID: penum
+            ID: mask_color
+          ID: mask
+      Decl: test, [], [], []
+        TypeDecl: test, []
+          IdentifierType: ['unsigned', 'int']
+        StructRef: .
+          StructRef: ->
+            ID: penum
+            ID: mask_color
+          ID: test
+      Decl: pic_next, [], [], []
+        PtrDecl: []
+          TypeDecl: pic_next, []
+            Struct: s3
+        UnaryOp: &
+          ArrayRef: 
+            ID: clues
+            Constant: int, 1
+      Decl: spp, [], [], []
+        TypeDecl: spp, []
+          IdentifierType: ['int']
+        StructRef: ->
+          ID: penum
+          ID: spp
+      Decl: psrc, [], [], []
+        PtrDecl: []
+          TypeDecl: psrc, []
+            IdentifierType: ['unsigned', 'char']
+        BinaryOp: +
+          ID: buffer
+          BinaryOp: *
+            ID: data_x
+            ID: spp
+      Decl: v, [], [], []
+        ArrayDecl: []
+          TypeDecl: v, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 6
+      Assignment: =
+        ID: pnext
+        StructRef: .
+          StructRef: ->
+            ID: penum
+            ID: dda
+          ID: pixel0
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          UnaryOp: &
+            ID: v
+          Constant: int, 0
+          UnaryOp: sizeof
+            ID: v
+      FuncCall: 
+        UnaryOp: *
+          StructRef: ->
+            ID: pcs
+            ID: init_color
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+      If: 
+        BinaryOp: ==
+          ID: spp
+          Constant: int, 4
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: v
+              Constant: int, 0
+            ArrayRef: 
+              ID: psrc
+              Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: v
+              Constant: int, 1
+            ArrayRef: 
+              ID: psrc
+              Constant: int, 1
+          If: 
+            BinaryOp: &&
+              BinaryOp: ==
+                BinaryOp: &
+                  ArrayRef: 
+                    ID: buffer
+                    Constant: int, 0
+                  ID: mask
+                ID: test
+              StructRef: .
+                StructRef: ->
+                  ID: penum
+                  ID: mask_color
+                ID: exact
+            Assignment: =
+              StructRef: ->
+                ID: pic_next
+                ID: dev_color
+              Constant: int, 0
+          FuncCall: 
+            UnaryOp: *
+              ID: map_4
+            ExprList: 
+              ArrayRef: 
+                ID: v
+                Constant: int, 0
+              UnaryOp: &
+                StructRef: ->
+                  ID: pic_next
+                  ID: dev_color
+              ID: pis
+              ID: dev
+      Return: 
+        Constant: int, 0

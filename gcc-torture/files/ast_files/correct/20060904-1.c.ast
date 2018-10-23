@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: chunk_s
+      Decl: size, [], [], []
+        TypeDecl: size, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: offset_next, [], [], []
+        TypeDecl: offset_next, []
+          IdentifierType: ['int']
+  Typedef: chunk_t, [], ['typedef']
+    TypeDecl: chunk_t, []
+      Struct: chunk_s
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: first, [], [], []
+            PtrDecl: []
+              TypeDecl: first, []
+                IdentifierType: ['chunk_t']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cur, [], [], []
+        PtrDecl: []
+          TypeDecl: cur, []
+            IdentifierType: ['chunk_t']
+      Decl: first0, [], [], []
+        PtrDecl: []
+          TypeDecl: first0, []
+            IdentifierType: ['char']
+      DoWhile: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: cur
+            ID: size
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: first0
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              ID: first
+          Assignment: =
+            ID: cur
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['chunk_t']
+              BinaryOp: +
+                ID: first0
+                StructRef: ->
+                  ID: first
+                  ID: offset_next
+          If: 
+            BinaryOp: !=
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['chunk_t']
+                BinaryOp: +
+                  ID: first0
+                  StructRef: ->
+                    ID: cur
+                    ID: offset_next
+              ID: first
+            Return: 
+          Assignment: =
+            StructRef: ->
+              ID: first
+              ID: offset_next
+            Constant: int, 0

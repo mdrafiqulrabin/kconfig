@@ -1,0 +1,60 @@
+FileAST: 
+  Typedef: T, [], ['typedef']
+    TypeDecl: T, []
+      Struct: None
+        Decl: ttype, [], [], []
+          TypeDecl: ttype, []
+            IdentifierType: ['short']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['float']
+  Decl: t, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        TypeDecl: t, []
+          IdentifierType: ['short']
+        Constant: int, 8
+      Constant: int, 8
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t2, [], [], []
+            TypeDecl: t2, []
+              IdentifierType: ['T']
+          Decl: t1, [], [], []
+            TypeDecl: t1, []
+              IdentifierType: ['T']
+        TypeDecl: f, []
+          IdentifierType: ['T']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['T']
+      If: 
+        BinaryOp: ==
+          StructRef: .
+            ID: t1
+            ID: ttype
+          Constant: int, 1
+        ExprList: 
+          Assignment: =
+            StructRef: .
+              ID: x
+              ID: ttype
+            ArrayRef: 
+              ArrayRef: 
+                ID: t
+                StructRef: .
+                  ID: t2
+                  ID: ttype
+              StructRef: .
+                ID: t1
+                ID: ttype
+          Assignment: =
+            StructRef: .
+              ID: x
+              ID: s
+            Constant: int, 1
+      Return: 
+        ID: x

@@ -1,0 +1,158 @@
+FileAST: 
+  Decl: ff, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: ff, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: isc_fsaccess_set, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: access, [], [], []
+            TypeDecl: access, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: isc_fsaccess_set, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: mode, [], [], []
+        TypeDecl: mode, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: bits, [], [], []
+        TypeDecl: bits, []
+          IdentifierType: ['unsigned', 'int']
+      Assignment: =
+        ID: mode
+        Constant: int, 0
+      Assignment: =
+        ID: bits
+        Constant: int, 0x00000021
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Compound: 
+          Assignment: |=
+            ID: mode
+            Constant: int, 0400
+          Assignment: &=
+            ID: access
+            UnaryOp: ~
+              ID: bits
+      Assignment: &=
+        ID: access
+        UnaryOp: ~
+          ID: bits
+      Assignment: <<=
+        ID: bits
+        Constant: int, 10
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Assignment: &=
+          ID: access
+          UnaryOp: ~
+            ID: bits
+      Assignment: =
+        ID: bits
+        Constant: int, 0x00000012
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Compound: 
+          Assignment: |=
+            ID: mode
+            Constant: int, 0200
+          Assignment: &=
+            ID: access
+            UnaryOp: ~
+              ID: bits
+      Assignment: |=
+        ID: mode
+        BinaryOp: >>
+          Constant: int, 0200
+          Constant: int, 3
+      Assignment: &=
+        ID: access
+        UnaryOp: ~
+          ID: bits
+      Assignment: <<=
+        ID: bits
+        Constant: int, 10
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Assignment: |=
+          ID: mode
+          BinaryOp: >>
+            BinaryOp: >>
+              Constant: int, 0200
+              Constant: int, 3
+            Constant: int, 3
+      Assignment: =
+        ID: bits
+        Constant: int, 0x00000044
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Compound: 
+          Assignment: |=
+            ID: mode
+            Constant: int, 0100
+          Assignment: &=
+            ID: access
+            UnaryOp: ~
+              ID: bits
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Compound: 
+          Assignment: |=
+            ID: mode
+            BinaryOp: >>
+              Constant: int, 0100
+              Constant: int, 3
+          Assignment: &=
+            ID: access
+            UnaryOp: ~
+              ID: bits
+      EmptyStatement: 
+      Assignment: <<=
+        ID: bits
+        Constant: int, 10
+      If: 
+        BinaryOp: !=
+          BinaryOp: &
+            ID: access
+            ID: bits
+          Constant: int, 0
+        Assignment: |=
+          ID: mode
+          BinaryOp: >>
+            BinaryOp: >>
+              Constant: int, 0100
+              Constant: int, 3
+            Constant: int, 3
+      FuncCall: 
+        ID: ff
+        ExprList: 
+          ID: mode

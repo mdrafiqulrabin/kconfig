@@ -1,0 +1,130 @@
+FileAST: 
+  Decl: foo, [], [], []
+    TypeDecl: foo, []
+      IdentifierType: ['int']
+  Typedef: size_t, [], ['typedef']
+    TypeDecl: size_t, []
+      IdentifierType: ['long', 'unsigned', 'int']
+  Typedef: wchar_t, [], ['typedef']
+    TypeDecl: wchar_t, []
+      IdentifierType: ['short', 'unsigned', 'int']
+  Decl: swprintf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: wcs, [], [], []
+          PtrDecl: []
+            TypeDecl: wcs, []
+              IdentifierType: ['wchar_t']
+        Decl: maxlen, [], [], []
+          TypeDecl: maxlen, []
+            IdentifierType: ['size_t']
+        Decl: format, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: format, ['const']
+              IdentifierType: ['wchar_t']
+        EllipsisParam: 
+      TypeDecl: swprintf, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: tm
+      Decl: tm_mday, [], [], []
+        TypeDecl: tm_mday, []
+          IdentifierType: ['int']
+      Decl: tm_mon, [], [], []
+        TypeDecl: tm_mon, []
+          IdentifierType: ['int']
+      Decl: tm_year, [], [], []
+        TypeDecl: tm_year, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: __strftime, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['wchar_t']
+          Decl: maxsize, [], [], []
+            TypeDecl: maxsize, []
+              IdentifierType: ['size_t']
+          Decl: format, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: format, ['const']
+                IdentifierType: ['wchar_t']
+          Decl: tim_p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: tim_p, ['const']
+                Struct: tm
+        TypeDecl: __strftime, []
+          IdentifierType: ['size_t']
+    Compound: 
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['size_t']
+        Constant: int, 0
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['size_t']
+      Decl: ctloclen, [], [], []
+        TypeDecl: ctloclen, []
+          IdentifierType: ['size_t']
+      Decl: width, [], [], []
+        TypeDecl: width, []
+          IdentifierType: ['unsigned', 'long']
+      Compound: 
+        If: 
+          ID: foo
+          Compound: 
+            Compound: 
+              Decl: fmt, [], [], []
+                PtrDecl: []
+                  TypeDecl: fmt, []
+                    IdentifierType: ['wchar_t']
+                Constant: string, L"%s%.*d"
+              Assignment: =
+                ID: len
+                FuncCall: 
+                  ID: swprintf
+                  ExprList: 
+                    UnaryOp: &
+                      ArrayRef: 
+                        ID: s
+                        ID: count
+                    ID: maxsize
+                    ID: fmt
+                    Constant: string, "-"
+                    ID: width
+                    Constant: int, 0
+            If: 
+              BinaryOp: >=
+                ID: count
+                ID: maxsize
+              Return: 
+                Constant: int, 0
+          Compound: 
+            Assignment: =
+              ID: len
+              FuncCall: 
+                ID: swprintf
+                ExprList: 
+                  UnaryOp: &
+                    ArrayRef: 
+                      ID: s
+                      ID: count
+                  BinaryOp: -
+                    ID: maxsize
+                    ID: count
+                  Constant: string, L"%.2d/%.2d/%.2d"
+                  Constant: int, 42
+                  Constant: int, 99
+                  Constant: int, 0
+            If: 
+              BinaryOp: >=
+                ID: count
+                ID: maxsize
+              Return: 
+                Constant: int, 0

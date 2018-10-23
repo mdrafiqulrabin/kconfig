@@ -1,0 +1,17 @@
+FileAST: 
+  Decl: i, ['volatile'], ['extern'], []
+    TypeDecl: i, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: j
+          ID: i

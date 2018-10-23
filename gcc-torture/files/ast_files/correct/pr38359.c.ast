@@ -1,0 +1,48 @@
+FileAST: 
+  FuncDef: 
+    Decl: _ov_64_seek_lap, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x1, [], [], []
+            TypeDecl: x1, []
+              IdentifierType: ['_Bool']
+          Decl: x2, [], [], []
+            TypeDecl: x2, []
+              IdentifierType: ['_Bool']
+          Decl: x3, [], [], []
+            TypeDecl: x3, []
+              IdentifierType: ['_Bool']
+        TypeDecl: _ov_64_seek_lap, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Decl: ltmp_3978_7__PHI_TEMPORARY, [], [], []
+        TypeDecl: ltmp_3978_7__PHI_TEMPORARY, []
+          IdentifierType: ['unsigned']
+      Decl: ltmp_4011_7, [], [], []
+        TypeDecl: ltmp_4011_7, []
+          IdentifierType: ['signed']
+      If: 
+        BinaryOp: ||
+          UnaryOp: !
+            ID: x1
+          UnaryOp: !
+            ID: x2
+        While: 
+          Constant: int, 1
+          EmptyStatement: 
+      If: 
+        ID: x3
+        Assignment: =
+          ID: ltmp_3978_7__PHI_TEMPORARY
+          Constant: int, 0xffffff7e
+        Assignment: =
+          ID: ltmp_3978_7__PHI_TEMPORARY
+          Constant: int, 1
+      Assignment: =
+        ID: ltmp_4011_7
+        UnaryOp: -
+          Constant: int, 1
+      Return: 
+        BinaryOp: >>
+          ID: ltmp_4011_7
+          ID: ltmp_3978_7__PHI_TEMPORARY

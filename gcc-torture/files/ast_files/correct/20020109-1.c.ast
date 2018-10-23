@@ -1,0 +1,90 @@
+FileAST: 
+  Typedef: A, [], ['typedef']
+    TypeDecl: A, []
+      Struct: A
+        Decl: s, [], [], []
+          PtrDecl: []
+            TypeDecl: s, []
+              Struct: A
+        Decl: t, [], [], []
+          PtrDecl: []
+            TypeDecl: t, []
+              Struct: A
+        Decl: u, [], [], []
+          TypeDecl: u, []
+            IdentifierType: ['unsigned', 'int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['A']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['A']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['A']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                IdentifierType: ['A']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: &&
+          ID: y
+          BinaryOp: ==
+            StructRef: ->
+              TernaryOp: 
+                BinaryOp: &&
+                  BinaryOp: &&
+                    ID: y
+                    StructRef: ->
+                      ID: y
+                      ID: t
+                  StructRef: ->
+                    StructRef: ->
+                      ID: y
+                      ID: t
+                    ID: u
+                ID: y
+                ID: z
+              ID: t
+            StructRef: ->
+              TernaryOp: 
+                BinaryOp: &&
+                  BinaryOp: &&
+                    ID: x
+                    StructRef: ->
+                      ID: x
+                      ID: t
+                  StructRef: ->
+                    StructRef: ->
+                      ID: x
+                      ID: t
+                    ID: u
+                ID: x
+                ID: z
+              ID: t
+        Assignment: =
+          ID: y
+          StructRef: ->
+            ID: y
+            ID: s
+      If: 
+        ID: y
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: y

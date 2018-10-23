@@ -1,0 +1,68 @@
+FileAST: 
+  FuncDef: 
+    Decl: dpsnaffle, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: kbuf, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: kbuf, ['const']
+                IdentifierType: ['char']
+        TypeDecl: dpsnaffle, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: hash, [], [], []
+        TypeDecl: hash, []
+          IdentifierType: ['int']
+      Decl: thash, [], [], []
+        TypeDecl: thash, []
+          IdentifierType: ['int']
+      Decl: head, [], [], []
+        ArrayDecl: []
+          TypeDecl: head, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: off, [], [], []
+        TypeDecl: off, []
+          IdentifierType: ['int']
+      Compound: 
+        Decl: _DP_i, [], [], []
+          TypeDecl: _DP_i, []
+            IdentifierType: ['int']
+        Assignment: =
+          ID: hash
+          Constant: int, 19780211
+        Compound: 
+          Assignment: =
+            ID: hash
+            BinaryOp: +
+              ID: hash
+              ArrayRef: 
+                ID: kbuf
+                ID: _DP_i
+        Assignment: =
+          ID: hash
+          BinaryOp: &
+            BinaryOp: *
+              ID: hash
+              Constant: int, 43321879
+            Constant: int, 0x7FFFFFFF
+      While: 
+        BinaryOp: !=
+          ID: off
+          Constant: int, 0
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: hash
+              ID: thash
+            Compound: 
+            If: 
+              BinaryOp: <
+                ID: hash
+                ID: thash
+              Compound: 
+                Assignment: =
+                  ID: off
+                  ArrayRef: 
+                    ID: head
+                    Constant: int, 2

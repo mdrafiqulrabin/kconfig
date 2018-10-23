@@ -1,0 +1,69 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: na, [], [], []
+            TypeDecl: na, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: wflg, [], [], []
+        TypeDecl: wflg, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: tflg, [], [], []
+        TypeDecl: tflg, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: dflg, [], [], []
+        TypeDecl: dflg, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0
+      While: 
+        Constant: int, 1
+        Compound: 
+          Switch: 
+            ArrayRef: 
+              ArrayRef: 
+                ID: argv
+                Constant: int, 1
+              Constant: int, 0
+            Compound: 
+              Label: help
+                FuncCall: 
+                  ID: exit
+                  ExprList: 
+                    Constant: int, 0
+              Case: 
+                Constant: char, 'w'
+              Case: 
+                Constant: char, 'W'
+                Assignment: =
+                  ID: wflg
+                  Constant: int, 1
+                Break: 
+              Case: 
+                Constant: char, 't'
+              Case: 
+                Constant: char, 'T'
+                Assignment: =
+                  ID: tflg
+                  Constant: int, 1
+                Break: 
+              Case: 
+                Constant: char, 'd'
+                Assignment: =
+                  ID: dflg
+                  Constant: int, 1
+                Break: 

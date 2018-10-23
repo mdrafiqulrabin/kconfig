@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['char']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            CompoundLiteral: 
+              Typename: None, []
+                TypeDecl: None, []
+                  Struct: s
+              InitList: 
+                Constant: int, 1
+                Constant: int, 2
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Struct: s
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1

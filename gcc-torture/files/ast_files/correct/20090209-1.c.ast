@@ -1,0 +1,113 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: d_info
+      Decl: subs, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: subs, []
+              IdentifierType: ['int']
+  FuncDef: 
+    Decl: d_substitution, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: di, [], [], []
+            PtrDecl: []
+              TypeDecl: di, []
+                Struct: d_info
+          Decl: prefix, [], [], []
+            TypeDecl: prefix, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: d_substitution, []
+            IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: c
+        Constant: char, '_'
+      If: 
+        BinaryOp: ==
+          ID: c
+          Constant: char, '_'
+        Compound: 
+          Decl: id, [], [], []
+            TypeDecl: id, []
+              IdentifierType: ['unsigned', 'int']
+          If: 
+            BinaryOp: !=
+              ID: c
+              Constant: char, '_'
+            Compound: 
+              DoWhile: 
+                BinaryOp: !=
+                  ID: c
+                  Constant: char, '_'
+                Compound: 
+                  Decl: new_id, [], [], []
+                    TypeDecl: new_id, []
+                      IdentifierType: ['unsigned', 'int']
+                  If: 
+                    BinaryOp: <
+                      ID: new_id
+                      ID: id
+                    Return: 
+                      Constant: int, 0
+                  Assignment: =
+                    ID: id
+                    ID: new_id
+          Return: 
+            ArrayRef: 
+              StructRef: ->
+                ID: di
+                ID: subs
+              ID: id
+        Compound: 
+          Decl: verbose, [], [], []
+            TypeDecl: verbose, []
+              IdentifierType: ['int']
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['int']
+          Decl: simple_len, [], [], []
+            TypeDecl: simple_len, []
+              IdentifierType: ['int']
+          Assignment: =
+            ID: code
+            Constant: int, 0
+          Assignment: =
+            ID: simple_len
+            Constant: int, 0
+          Assignment: =
+            ID: verbose
+            Constant: int, 0
+          If: 
+            BinaryOp: &&
+              UnaryOp: !
+                ID: code
+              ID: prefix
+            Compound: 
+              Decl: peek, [], [], []
+                TypeDecl: peek, []
+                  IdentifierType: ['char']
+              Assignment: =
+                ID: peek
+                Constant: char, 'A'
+              If: 
+                BinaryOp: ||
+                  BinaryOp: ==
+                    ID: peek
+                    Constant: char, 'C'
+                  BinaryOp: ==
+                    ID: peek
+                    Constant: char, 'D'
+                Assignment: =
+                  ID: verbose
+                  Constant: int, 1
+          If: 
+            ID: verbose
+            Compound: 
+              Assignment: =
+                ID: code
+                ID: simple_len

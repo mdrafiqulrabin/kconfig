@@ -1,0 +1,31 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: x
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['int']
+    Compound: 
+      If: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 4
+        Compound: 
+          Decl: h, [], [], []
+            ArrayDecl: []
+              TypeDecl: h, []
+                IdentifierType: ['int']
+              Constant: int, 1
+          If: 
+            FuncCall: 
+              ID: setjmp
+              ExprList: 
+                ID: h
+            Return: 
+              ID: x
+    Decl: x, [], [], []
+      PtrDecl: []
+        TypeDecl: x, []
+          IdentifierType: ['int']

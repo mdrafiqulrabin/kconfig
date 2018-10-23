@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+        Decl: f, [], [], []
+          ArrayDecl: []
+            TypeDecl: f, []
+              IdentifierType: ['char']
+            Constant: int, 3
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['long']
+    BinaryOp: -
+      StructRef: .
+        ID: s
+        ID: f
+      UnaryOp: &
+        StructRef: .
+          ID: s
+          ID: b
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['long', 'long']
+    BinaryOp: -
+      StructRef: .
+        ID: s
+        ID: f
+      UnaryOp: &
+        StructRef: .
+          ID: s
+          ID: b

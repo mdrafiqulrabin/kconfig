@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: bar, [], [], []
+    TypeDecl: bar, []
+      Union: foo
+        Decl: ld, [], [], []
+          TypeDecl: ld, []
+            IdentifierType: ['long', 'double']
+  FuncDef: 
+    Decl: sub, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: baz, [], [], []
+            TypeDecl: baz, []
+              Union: foo
+        TypeDecl: sub, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: /
+          StructRef: .
+            ID: baz
+            ID: ld
+          Constant: int, 2

@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: /
+          UnaryOp: *
+            Cast: 
+              Typename: None, ['volatile']
+                PtrDecl: []
+                  TypeDecl: None, ['volatile']
+                    IdentifierType: ['unsigned', 'int']
+              Constant: int, 8000
+          Constant: int, 3

@@ -1,0 +1,131 @@
+FileAST: 
+  Decl: lcset, ['const'], ['static'], []
+    PtrDecl: ['const']
+      TypeDecl: lcset, ['const']
+        IdentifierType: ['char']
+    Constant: string, "0123456789abcdef"
+  Decl: ucset, ['const'], ['static'], []
+    PtrDecl: ['const']
+      TypeDecl: ucset, ['const']
+        IdentifierType: ['char']
+    Constant: string, "0123456789ABCDEF"
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: buffer, [], [], []
+            PtrDecl: []
+              TypeDecl: buffer, []
+                IdentifierType: ['char']
+          Decl: value, [], [], []
+            TypeDecl: value, []
+              IdentifierType: ['long', 'long']
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: base, [], [], []
+        TypeDecl: base, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: i
+        BinaryOp: -
+          Constant: int, 128
+          Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ID: buffer
+          UnaryOp: p--
+            ID: i
+        Constant: char, '\0'
+      Switch: 
+        ID: type
+        Compound: 
+          Case: 
+            Constant: char, 'u'
+          Case: 
+            Constant: char, 'o'
+          Case: 
+            Constant: char, 'x'
+          Case: 
+            Constant: char, 'X'
+            If: 
+              BinaryOp: ==
+                ID: type
+                Constant: char, 'u'
+              Assignment: =
+                ID: base
+                Constant: int, 10
+              If: 
+                BinaryOp: ==
+                  ID: type
+                  Constant: char, 'o'
+                Assignment: =
+                  ID: base
+                  Constant: int, 8
+                Assignment: =
+                  ID: base
+                  Constant: int, 16
+            While: 
+              BinaryOp: >=
+                ID: i
+                Constant: int, 0
+              Compound: 
+                If: 
+                  BinaryOp: ==
+                    ID: type
+                    Constant: char, 'X'
+                  Assignment: =
+                    ArrayRef: 
+                      ID: buffer
+                      UnaryOp: p--
+                        ID: i
+                    ArrayRef: 
+                      ID: ucset
+                      BinaryOp: %
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['unsigned', 'long', 'long']
+                          ID: value
+                        ID: base
+                  Assignment: =
+                    ArrayRef: 
+                      ID: buffer
+                      UnaryOp: p--
+                        ID: i
+                    ArrayRef: 
+                      ID: lcset
+                      BinaryOp: %
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['unsigned', 'long', 'long']
+                          ID: value
+                        ID: base
+                If: 
+                  BinaryOp: ==
+                    Assignment: =
+                      ID: value
+                      BinaryOp: /
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['unsigned', 'long', 'long']
+                          ID: value
+                        ID: base
+                    Constant: int, 0
+                  Break: 
+            Break: 
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            ID: buffer
+            UnaryOp: ++
+              ID: i

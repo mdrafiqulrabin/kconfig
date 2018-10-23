@@ -1,0 +1,103 @@
+FileAST: 
+  Typedef: chunk_t, [], ['typedef']
+    TypeDecl: chunk_t, []
+      Struct: chunk_t
+  Decl: None, [], [], []
+    Struct: chunk_t
+      Decl: ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['long', 'unsigned', 'int']
+  Decl: asn1_wrap, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['chunk_t']
+        EllipsisParam: 
+      TypeDecl: asn1_wrap, []
+        IdentifierType: ['chunk_t']
+  Typedef: linked_list_t, [], ['typedef']
+    TypeDecl: linked_list_t, []
+      Struct: linked_list_t
+  Decl: ietfAttr_list_encode, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: list, [], [], []
+          PtrDecl: []
+            TypeDecl: list, []
+              IdentifierType: ['linked_list_t']
+      TypeDecl: ietfAttr_list_encode, []
+        IdentifierType: ['chunk_t']
+  Decl: groups, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: groups, []
+        IdentifierType: ['linked_list_t']
+  Decl: ASN1_group_oid_str, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: ASN1_group_oid_str, []
+        IdentifierType: ['unsigned', 'char']
+    InitList: 
+      Constant: int, 0x06
+  Decl: ASN1_group_oid, ['const'], ['static'], []
+    TypeDecl: ASN1_group_oid, ['const']
+      IdentifierType: ['chunk_t']
+    InitList: 
+      ID: ASN1_group_oid_str
+      UnaryOp: sizeof
+        ID: ASN1_group_oid_str
+  FuncDef: 
+    Decl: build_attribute_type, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, ['const'], [], []
+            TypeDecl: type, ['const']
+              IdentifierType: ['chunk_t']
+          Decl: content, [], [], []
+            TypeDecl: content, []
+              IdentifierType: ['chunk_t']
+        TypeDecl: build_attribute_type, []
+          IdentifierType: ['chunk_t']
+    Compound: 
+      Return: 
+        ID: type
+  FuncDef: 
+    Decl: build_attributes, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: build_attributes, []
+          IdentifierType: ['chunk_t']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: asn1_wrap
+          ExprList: 
+            FuncCall: 
+              ID: build_attribute_type
+              ExprList: 
+                ID: ASN1_group_oid
+                FuncCall: 
+                  ID: ietfAttr_list_encode
+                  ExprList: 
+                    ID: groups
+  FuncDef: 
+    Decl: build_attr_cert, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: build_attr_cert, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: asn1_wrap
+        ExprList: 
+          FuncCall: 
+            ID: build_attributes

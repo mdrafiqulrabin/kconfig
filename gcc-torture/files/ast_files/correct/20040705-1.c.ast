@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: foo, []
+        IdentifierType: ['char']
+  Decl: bar, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: bar, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: memcpy
+        ExprList: 
+          ID: foo
+          ID: bar
+          Constant: int, 7

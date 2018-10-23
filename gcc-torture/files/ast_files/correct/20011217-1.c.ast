@@ -1,0 +1,51 @@
+FileAST: 
+  Typedef: pt, [], ['typedef']
+    TypeDecl: pt, []
+      Struct: None
+        Decl: p, [], [], []
+          TypeDecl: p, []
+            IdentifierType: ['long']
+  FuncDef: 
+    Decl: f, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: _p, [], [], []
+            TypeDecl: _p, []
+              IdentifierType: ['pt']
+        TypeDecl: f, []
+          IdentifierType: ['pt']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['long']
+        StructRef: .
+          ID: _p
+          ID: p
+      Return: 
+        CompoundLiteral: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['pt']
+          InitList: 
+            ID: p
+  FuncDef: 
+    Decl: mmap_mem, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: mmap_mem, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['pt']
+      Assignment: =
+        ID: p
+        FuncCall: 
+          ID: f
+          ExprList: 
+            ID: p
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,36 @@
+FileAST: 
+  Typedef: foo, [], ['typedef']
+    TypeDecl: foo, []
+      IdentifierType: ['void']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['foo']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: bar
+  Decl: f, ['volatile'], [], []
+    FuncDecl: 
+      TypeDecl: f, ['volatile']
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f

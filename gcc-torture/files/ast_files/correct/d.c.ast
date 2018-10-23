@@ -1,0 +1,54 @@
+FileAST: 
+  FuncDef: 
+    Decl: str2llu, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: str
+        TypeDecl: str2llu, []
+          IdentifierType: ['long', 'long', 'unsigned']
+    Compound: 
+      Decl: acc, [], [], []
+        TypeDecl: acc, []
+          IdentifierType: ['long', 'long', 'unsigned']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['long', 'long']
+        Constant: int, 10
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: acc
+        BinaryOp: -
+          UnaryOp: *
+            UnaryOp: p++
+              ID: str
+          Constant: char, '0'
+      For: 
+        Compound: 
+          Assignment: =
+            ID: d
+            UnaryOp: *
+              UnaryOp: p++
+                ID: str
+          If: 
+            BinaryOp: ==
+              ID: d
+              Constant: char, '\0'
+            Break: 
+          Assignment: -=
+            ID: d
+            Constant: char, '0'
+          Assignment: =
+            ID: acc
+            BinaryOp: +
+              BinaryOp: *
+                ID: acc
+                Constant: int, 10
+              ID: d
+      Return: 
+        ID: acc
+    Decl: str, [], [], []
+      PtrDecl: []
+        TypeDecl: str, []
+          IdentifierType: ['char']

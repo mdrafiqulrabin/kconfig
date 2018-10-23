@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: make_file_symbol_completion_list, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: make_file_symbol_completion_list, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: location_completer, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: text, [], [], []
+            PtrDecl: []
+              TypeDecl: text, []
+                IdentifierType: ['char']
+        TypeDecl: location_completer, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+      Decl: symbol_start, [], [], []
+        PtrDecl: []
+          TypeDecl: symbol_start, []
+            IdentifierType: ['char']
+        ID: text
+      For: 
+        Assignment: =
+          ID: p
+          ID: text
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          Constant: char, '\0'
+        UnaryOp: ++
+          ID: p
+        Compound: 
+          If: 
+            BinaryOp: &&
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: p
+                Constant: char, '\\'
+              BinaryOp: ==
+                ArrayRef: 
+                  ID: p
+                  Constant: int, 1
+                Constant: char, '\''
+            UnaryOp: p++
+              ID: p
+            If: 
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: p
+                Constant: char, ':'
+              Assignment: =
+                ID: symbol_start
+                BinaryOp: +
+                  ID: p
+                  Constant: int, 1
+              Assignment: =
+                ID: symbol_start
+                BinaryOp: +
+                  ID: p
+                  Constant: int, 1
+          FuncCall: 
+            ID: make_file_symbol_completion_list
+            ExprList: 
+              ID: symbol_start

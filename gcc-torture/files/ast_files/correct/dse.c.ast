@@ -1,0 +1,66 @@
+FileAST: 
+  Typedef: microblaze_reg_t, [], ['typedef']
+    TypeDecl: microblaze_reg_t, []
+      IdentifierType: ['unsigned', 'long']
+  Decl: None, [], [], []
+    Struct: pt_regs
+      Decl: msr, [], [], []
+        TypeDecl: msr, []
+          IdentifierType: ['microblaze_reg_t']
+      Decl: pt_mode, [], [], []
+        TypeDecl: pt_mode, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: task_struct
+      Decl: stack, [], [], []
+        PtrDecl: []
+          TypeDecl: stack, []
+            IdentifierType: ['void']
+  FuncDef: 
+    Decl: copy_thread, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: task_struct
+        TypeDecl: copy_thread, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: childregs, [], [], []
+        PtrDecl: []
+          TypeDecl: childregs, []
+            Struct: pt_regs
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  Struct: pt_regs
+            BinaryOp: +
+              BinaryOp: <<
+                Constant: int, 1
+                Constant: int, 13
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                StructRef: ->
+                  ID: p
+                  ID: stack
+          Constant: int, 1
+      FuncCall: 
+        ID: memset
+        ExprList: 
+          ID: childregs
+          Constant: int, 0
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Struct: pt_regs
+      Assignment: =
+        StructRef: ->
+          ID: childregs
+          ID: pt_mode
+        Constant: int, 1

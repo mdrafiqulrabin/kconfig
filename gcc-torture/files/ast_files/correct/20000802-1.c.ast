@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: foo
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 3
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['char']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+  Decl: bs, [], [], []
+    TypeDecl: bs, []
+      Struct: foo
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  Decl: y, [], [], []
+    ArrayDecl: []
+      TypeDecl: y, []
+        IdentifierType: ['char']
+      Constant: int, 3
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: memcpy
+        ExprList: 
+          StructRef: .
+            ID: bs
+            ID: a
+          ID: y
+          Constant: int, 3
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            ID: bs
+            ID: a
+          Constant: int, 1
+        BinaryOp: -
+          BinaryOp: -
+            TernaryOp: 
+              ID: x
+              UnaryOp: &
+                StructRef: .
+                  ID: bs
+                  ID: b
+              UnaryOp: &
+                StructRef: .
+                  ID: bs
+                  ID: c
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+              UnaryOp: &
+                ID: bs
+          Constant: int, 2

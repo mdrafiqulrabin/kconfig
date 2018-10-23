@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: foo1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo1, []
+        IdentifierType: ['unsigned', 'char']
+  Decl: foo2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo2, []
+        IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: bar1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['unsigned', 'char']
+        FuncCall: 
+          ID: foo1
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: q
+            Constant: int, 0x80
+          Constant: int, 64
+          Constant: int, 0
+  FuncDef: 
+    Decl: bar2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned', 'short']
+        FuncCall: 
+          ID: foo2
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: h
+            Constant: int, 0x8000
+          Constant: int, 64
+          Constant: int, 0

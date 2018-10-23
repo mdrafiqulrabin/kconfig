@@ -1,0 +1,82 @@
+FileAST: 
+  FuncDef: 
+    Decl: yasm_lc3b__parse_insn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: num_info, [], [], []
+            TypeDecl: num_info, []
+              IdentifierType: ['int']
+          Decl: num_operands, [], [], []
+            PtrDecl: []
+              TypeDecl: num_operands, []
+                IdentifierType: ['int']
+          Decl: operands, [], [], []
+            PtrDecl: []
+              TypeDecl: operands, []
+                IdentifierType: ['int']
+          Decl: op, [], [], []
+            TypeDecl: op, []
+              IdentifierType: ['int']
+        TypeDecl: yasm_lc3b__parse_insn, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: found, [], [], []
+        TypeDecl: found, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        BinaryOp: &&
+          BinaryOp: >
+            ID: num_info
+            Constant: int, 0
+          UnaryOp: !
+            ID: found
+        UnaryOp: p--
+          ID: num_info
+        Compound: 
+          Decl: mismatch, [], [], []
+            TypeDecl: mismatch, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: &&
+              BinaryOp: &&
+                ID: op
+                BinaryOp: <
+                  ID: i
+                  UnaryOp: *
+                    ID: num_operands
+              UnaryOp: !
+                ID: mismatch
+            UnaryOp: p++
+              ID: i
+            Compound: 
+              If: 
+                UnaryOp: !
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    BinaryOp: &
+                      ArrayRef: 
+                        ID: operands
+                        ID: i
+                      Constant: int, 0x1
+                Assignment: =
+                  ID: mismatch
+                  Constant: int, 1
+              If: 
+                ID: mismatch
+                Break: 
+          If: 
+            UnaryOp: !
+              ID: mismatch
+            Assignment: =
+              ID: found
+              Constant: int, 1

@@ -1,0 +1,118 @@
+FileAST: 
+  FuncDef: 
+    Decl: asn1_length_der, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned', 'long', 'int']
+          Decl: ans, [], [], []
+            PtrDecl: []
+              TypeDecl: ans, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: ans_len, [], [], []
+            PtrDecl: []
+              TypeDecl: ans_len, []
+                IdentifierType: ['int']
+        TypeDecl: asn1_length_der, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: temp, [], [], []
+        ArrayDecl: []
+          TypeDecl: temp, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 4
+      If: 
+        BinaryOp: <
+          ID: len
+          Constant: int, 128
+        Compound: 
+          If: 
+            BinaryOp: !=
+              ID: ans
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: ans
+                Constant: int, 0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'char']
+                ID: len
+          Assignment: =
+            UnaryOp: *
+              ID: ans_len
+            Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: k
+            Constant: int, 0
+          While: 
+            ID: len
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  ID: temp
+                  UnaryOp: p++
+                    ID: k
+                BinaryOp: &
+                  ID: len
+                  Constant: int, 0xFF
+              Assignment: =
+                ID: len
+                BinaryOp: >>
+                  ID: len
+                  Constant: int, 8
+          Assignment: =
+            UnaryOp: *
+              ID: ans_len
+            BinaryOp: +
+              ID: k
+              Constant: int, 1
+          If: 
+            BinaryOp: !=
+              ID: ans
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  ID: ans
+                  Constant: int, 0
+                BinaryOp: +
+                  BinaryOp: &
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned', 'char']
+                      ID: k
+                    Constant: int, 0x7F
+                  Constant: int, 128
+              While: 
+                UnaryOp: p--
+                  ID: k
+                Assignment: =
+                  ArrayRef: 
+                    ID: ans
+                    BinaryOp: -
+                      BinaryOp: -
+                        UnaryOp: *
+                          ID: ans_len
+                        Constant: int, 1
+                      ID: k
+                  ArrayRef: 
+                    ID: temp
+                    ID: k

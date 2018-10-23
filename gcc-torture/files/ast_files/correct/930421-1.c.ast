@@ -1,0 +1,153 @@
+FileAST: 
+  Decl: q, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: q, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: x, []
+                  IdentifierType: ['int']
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                IdentifierType: ['int']
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Decl: z, [], [], []
+        ArrayDecl: []
+          TypeDecl: z, []
+            IdentifierType: ['int']
+          Constant: int, 1024
+      Decl: y, [], [], []
+        ArrayDecl: []
+          TypeDecl: y, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Assignment: =
+        ID: e
+        Assignment: =
+          ID: g
+          Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: a
+        UnaryOp: p++
+          ID: i
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          BinaryOp: <
+            ID: j
+            ID: b
+          UnaryOp: p++
+            ID: j
+          If: 
+            ArrayRef: 
+              ArrayRef: 
+                ID: x
+                ID: i
+              ID: j
+            For: 
+              Assignment: =
+                ID: k
+                Constant: int, 0
+              BinaryOp: <
+                ID: k
+                ID: c
+              UnaryOp: p++
+                ID: k
+              Compound: 
+                Assignment: =
+                  ID: f
+                  BinaryOp: +
+                    FuncCall: 
+                      ID: q
+                      ExprList: 
+                        Constant: float, 1.5
+                    FuncCall: 
+                      ID: q
+                      ExprList: 
+                        Constant: float, 2.5
+                If: 
+                  BinaryOp: <
+                    ID: g
+                    ArrayRef: 
+                      ID: y
+                      ID: f
+                  Assignment: =
+                    ID: g
+                    ID: e
+      For: 
+        Assignment: =
+          ID: m
+          Constant: int, 0
+        BinaryOp: <
+          ID: m
+          Constant: int, 1
+        UnaryOp: p++
+          ID: m
+        Assignment: =
+          ArrayRef: 
+            ID: z
+            Constant: int, 0
+          BinaryOp: -
+            BinaryOp: /
+              BinaryOp: *
+                BinaryOp: *
+                  ID: m
+                  Constant: int, 2
+                ID: d
+              Constant: float, 3.0
+            ID: d

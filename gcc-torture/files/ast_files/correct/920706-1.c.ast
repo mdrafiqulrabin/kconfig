@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        ArrayDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['float']
+          Constant: int, 2
+      Decl: o, [], [], []
+        ArrayDecl: []
+          TypeDecl: o, []
+            IdentifierType: ['float']
+          Constant: int, 1
+      FuncCall: 
+        ID: g
+        ExprList: 
+          ID: o
+      Return: 
+        UnaryOp: *
+          ID: o

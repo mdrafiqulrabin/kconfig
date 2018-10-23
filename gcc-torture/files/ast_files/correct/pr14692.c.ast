@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: assert_failed, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: assert_failed, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: eidecpos_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pos, [], [], []
+            PtrDecl: []
+              TypeDecl: pos, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['long']
+        TypeDecl: eidecpos_1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: dc_ptr1, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: dc_ptr1, ['const']
+                IdentifierType: ['unsigned', 'char']
+            ID: pos
+          UnaryOp: p--
+            ID: pos
+          If: 
+            BinaryOp: ==
+              BinaryOp: -
+                ID: dc_ptr1
+                ID: pos
+              Constant: int, 1
+            FuncCall: 
+              ID: assert_failed

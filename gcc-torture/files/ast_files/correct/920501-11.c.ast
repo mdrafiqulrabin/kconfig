@@ -1,0 +1,42 @@
+FileAST: 
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: None
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          UnaryOp: &
+            CompoundLiteral: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['S']
+              InitList: 
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    UnaryOp: &
+                      CompoundLiteral: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['S']
+                        InitList: 
+                          Constant: int, 1

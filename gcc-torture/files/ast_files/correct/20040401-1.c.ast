@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: __atomic_readv_replacement, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: iov_len, [], [], []
+            TypeDecl: iov_len, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['int']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: __atomic_readv_replacement, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bytes, [], [], []
+        TypeDecl: bytes, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 0
+      If: 
+        BinaryOp: <
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            BinaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+                Constant: int, 127
+              ID: bytes
+          ID: iov_len
+        Return: 
+          Constant: int, 22
+      Return: 
+        Constant: int, 0

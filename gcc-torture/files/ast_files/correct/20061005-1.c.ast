@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['char']
+  FuncDef: 
+    Decl: testc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: testc, []
+          IdentifierType: ['void']
+    Compound: 
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: c
+            UnaryOp: -
+              Constant: int, 1
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: tests, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: tests, []
+          IdentifierType: ['void']
+    Compound: 
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: s
+            UnaryOp: -
+              Constant: int, 1
+  FuncDef: 
+    Decl: testc2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: testc2, []
+          IdentifierType: ['void']
+    Compound: 
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: c
+            UnaryOp: -
+              Constant: int, 1
+            UnaryOp: -
+              Constant: int, 3

@@ -1,0 +1,36 @@
+FileAST: 
+  Typedef: t, [], ['typedef']
+    TypeDecl: t, []
+      Struct: None
+        Decl: l, [], [], []
+          ArrayDecl: []
+            TypeDecl: l, []
+              IdentifierType: ['long']
+            Constant: int, 5
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: size
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: event, [], [], []
+        TypeDecl: event, []
+          IdentifierType: ['t']
+      FuncCall: 
+        ID: g
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: .
+                ID: event
+                ID: l
+              BinaryOp: +
+                Constant: int, 2
+                ID: size
+          BinaryOp: *
+            BinaryOp: -
+              Constant: int, 3
+              ID: size
+            Constant: int, 4

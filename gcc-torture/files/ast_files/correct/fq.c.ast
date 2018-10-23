@@ -1,0 +1,103 @@
+FileAST: 
+  FuncDef: 
+    Decl: expand_to_ascii, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+          Decl: o, [], [], []
+            PtrDecl: []
+              TypeDecl: o, []
+                IdentifierType: ['int']
+        TypeDecl: expand_to_ascii, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['unsigned']
+      Decl: out, [], [], []
+        TypeDecl: out, []
+          IdentifierType: ['unsigned']
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['unsigned']
+      Assignment: =
+        ID: x
+        UnaryOp: *
+          UnaryOp: p++
+            ID: i
+      Assignment: =
+        ID: y
+        BinaryOp: >>
+          ID: x
+          BinaryOp: -
+            Constant: int, 32
+            Constant: int, 13
+      Assignment: =
+        ID: out
+        BinaryOp: /
+          ID: y
+          Constant: int, 91
+      Assignment: =
+        ID: out
+        BinaryOp: |
+          BinaryOp: <<
+            ID: out
+            Constant: int, 8
+          BinaryOp: %
+            ID: y
+            Constant: int, 91
+      Assignment: <<=
+        ID: x
+        Constant: int, 13
+      Assignment: =
+        ID: y
+        BinaryOp: >>
+          ID: x
+          BinaryOp: -
+            Constant: int, 32
+            Constant: int, 13
+      Assignment: =
+        ID: out
+        BinaryOp: |
+          BinaryOp: <<
+            ID: out
+            Constant: int, 8
+          BinaryOp: /
+            ID: y
+            Constant: int, 91
+      Assignment: =
+        ID: out
+        BinaryOp: |
+          BinaryOp: <<
+            ID: out
+            Constant: int, 8
+          BinaryOp: %
+            ID: y
+            Constant: int, 91
+      Assignment: =
+        UnaryOp: *
+          UnaryOp: p++
+            ID: o
+        BinaryOp: +
+          ID: out
+          Constant: int, 0x20202020
+      Assignment: =
+        ID: x1
+        UnaryOp: *
+          UnaryOp: p++
+            ID: i
+      Assignment: =
+        ID: x
+        BinaryOp: |
+          BinaryOp: <<
+            ID: x
+            Constant: int, 26
+          BinaryOp: >>
+            ID: x1
+            Constant: int, 6

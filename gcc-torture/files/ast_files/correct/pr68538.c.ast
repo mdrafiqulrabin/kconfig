@@ -1,0 +1,219 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: percpu_counter
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['signed', 'long', 'long']
+  Decl: None, [], [], []
+    Struct: blkg_rwstat
+      Decl: cpu_cnt, [], [], []
+        ArrayDecl: []
+          TypeDecl: cpu_cnt, []
+            Struct: percpu_counter
+          Constant: int, 4
+  Decl: None, [], [], []
+    Struct: cfq_group
+      Decl: service_time, [], [], []
+        TypeDecl: service_time, []
+          Struct: blkg_rwstat
+  Decl: None, [], [], []
+    Struct: cfq_queue
+      Decl: group, [], [], []
+        PtrDecl: []
+          TypeDecl: group, []
+            Struct: cfq_group
+  Decl: None, [], [], []
+    Struct: request
+      Decl: active_queue, [], [], []
+        PtrDecl: []
+          TypeDecl: active_queue, []
+            Struct: cfq_queue
+      Decl: cmd_flags, [], [], []
+        TypeDecl: cmd_flags, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      Decl: priv, [], [], []
+        PtrDecl: []
+          TypeDecl: priv, []
+            IdentifierType: ['void']
+  FuncDef: 
+    Decl: blkg_rwstat_add, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rwstat, [], [], []
+            PtrDecl: []
+              TypeDecl: rwstat, []
+                Struct: blkg_rwstat
+          Decl: rw, [], [], []
+            TypeDecl: rw, []
+              IdentifierType: ['int']
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: blkg_rwstat_add, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cnt, [], [], []
+        PtrDecl: []
+          TypeDecl: cnt, []
+            Struct: percpu_counter
+      If: 
+        BinaryOp: &
+          ID: rw
+          Constant: int, 1
+        Assignment: =
+          ID: cnt
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: ->
+                ID: rwstat
+                ID: cpu_cnt
+              Constant: int, 1
+        Assignment: =
+          ID: cnt
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: ->
+                ID: rwstat
+                ID: cpu_cnt
+              Constant: int, 0
+      Assignment: +=
+        StructRef: ->
+          ID: cnt
+          ID: count
+        ID: val
+      If: 
+        BinaryOp: &
+          ID: rw
+          Constant: int, 2
+        Assignment: =
+          ID: cnt
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: ->
+                ID: rwstat
+                ID: cpu_cnt
+              Constant: int, 2
+        Assignment: =
+          ID: cnt
+          UnaryOp: &
+            ArrayRef: 
+              StructRef: ->
+                ID: rwstat
+                ID: cpu_cnt
+              Constant: int, 3
+      Assignment: +=
+        StructRef: ->
+          ID: cnt
+          ID: count
+        ID: val
+  Decl: rq_start_time_ns, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: rq_start_time_ns, []
+        IdentifierType: ['unsigned', 'long', 'long']
+  Decl: rq_io_start_time_ns, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: rq_io_start_time_ns, []
+        IdentifierType: ['unsigned', 'long', 'long']
+  Decl: rq_is_sync, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: rq_is_sync, []
+        IdentifierType: ['int']
+  Decl: cfq_arm_slice_timer, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: cfq_arm_slice_timer, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: cfq_completed_request, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rq, [], [], []
+            PtrDecl: []
+              TypeDecl: rq, []
+                Struct: request
+        TypeDecl: cfq_completed_request, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: queue, [], [], []
+        PtrDecl: []
+          TypeDecl: queue, []
+            Struct: cfq_queue
+        StructRef: ->
+          ID: rq
+          ID: priv
+      Decl: sync, [], [], []
+        TypeDecl: sync, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: rq_is_sync
+      Decl: group, [], [], []
+        PtrDecl: []
+          TypeDecl: group, []
+            Struct: cfq_group
+        StructRef: ->
+          ID: queue
+          ID: group
+      Decl: start_time, [], [], []
+        TypeDecl: start_time, []
+          IdentifierType: ['long', 'long']
+        FuncCall: 
+          ID: rq_start_time_ns
+      Decl: io_start_time, [], [], []
+        TypeDecl: io_start_time, []
+          IdentifierType: ['long', 'long']
+        FuncCall: 
+          ID: rq_io_start_time_ns
+      Decl: rw, [], [], []
+        TypeDecl: rw, []
+          IdentifierType: ['int']
+        StructRef: ->
+          ID: rq
+          ID: cmd_flags
+      If: 
+        BinaryOp: <
+          ID: io_start_time
+          Constant: int, 1
+        FuncCall: 
+          ID: blkg_rwstat_add
+          ExprList: 
+            UnaryOp: &
+              StructRef: ->
+                ID: group
+                ID: service_time
+            ID: rw
+            BinaryOp: -
+              Constant: int, 1
+              ID: io_start_time
+      FuncCall: 
+        ID: blkg_rwstat_add
+        ExprList: 
+          Constant: int, 0
+          ID: rw
+          BinaryOp: -
+            ID: io_start_time
+            ID: start_time
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: rq
+              ID: active_queue
+            ID: queue
+          ID: sync
+        FuncCall: 
+          ID: cfq_arm_slice_timer

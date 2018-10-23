@@ -1,0 +1,61 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        UnaryOp: p--
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: f
+            Constant: int, 0
+          If: 
+            BinaryOp: ==
+              BinaryOp: &
+                ID: i
+                BinaryOp: -
+                  ID: i
+                  Constant: int, 1
+              Constant: int, 0
+            Compound: 
+              FuncCall: 
+                ID: printf
+                ExprList: 
+                  Constant: string, "d"
+              Assignment: =
+                ID: f
+                Constant: int, 1
+          If: 
+            BinaryOp: ==
+              BinaryOp: &
+                ID: i
+                UnaryOp: -
+                  ID: i
+              ID: i
+            Compound: 
+              FuncCall: 
+                ID: printf
+                ExprList: 
+                  Constant: string, "t"
+              Assignment: =
+                ID: f
+                Constant: int, 1
+          If: 
+            ID: f
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "%d\n"
+                ID: i

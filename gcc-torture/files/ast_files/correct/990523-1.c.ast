@@ -1,0 +1,175 @@
+FileAST: 
+  Decl: decwin, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: decwin, []
+        IdentifierType: ['float']
+      BinaryOp: +
+        Constant: int, 512
+        Constant: int, 32
+  FuncDef: 
+    Decl: synth_1to1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bandPtr, [], [], []
+            PtrDecl: []
+              TypeDecl: bandPtr, []
+                IdentifierType: ['float']
+          Decl: channel, [], [], []
+            TypeDecl: channel, []
+              IdentifierType: ['int']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: pnt, [], [], []
+            PtrDecl: []
+              TypeDecl: pnt, []
+                IdentifierType: ['int']
+        TypeDecl: synth_1to1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: step, ['const'], ['static'], []
+        TypeDecl: step, ['const']
+          IdentifierType: ['int']
+        Constant: int, 2
+      Decl: samples, [], [], []
+        PtrDecl: []
+          TypeDecl: samples, []
+            IdentifierType: ['short']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['short']
+          BinaryOp: +
+            ID: out
+            UnaryOp: *
+              ID: pnt
+      Decl: b0, [], [], []
+        PtrDecl: []
+          TypeDecl: b0, []
+            IdentifierType: ['float']
+      Decl: clip, [], [], []
+        TypeDecl: clip, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: bo1, [], [], []
+        TypeDecl: bo1, []
+          IdentifierType: ['int']
+      Compound: 
+        Decl: j, [], ['register'], []
+          TypeDecl: j, []
+            IdentifierType: ['int']
+        Decl: window, [], [], []
+          PtrDecl: []
+            TypeDecl: window, []
+              IdentifierType: ['float']
+          BinaryOp: -
+            BinaryOp: +
+              ID: decwin
+              Constant: int, 16
+            ID: bo1
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 15
+          ID: j
+          ExprList: 
+            UnaryOp: p--
+              ID: j
+            Assignment: -=
+              ID: b0
+              Constant: int, 0x20
+            Assignment: -=
+              ID: window
+              Constant: int, 0x10
+            Assignment: +=
+              ID: samples
+              ID: step
+          Compound: 
+            Decl: sum, [], [], []
+              TypeDecl: sum, []
+                IdentifierType: ['float']
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            Assignment: -=
+              ID: sum
+              BinaryOp: *
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: window
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: b0
+            If: 
+              BinaryOp: >
+                ID: sum
+                Constant: float, 32767.0
+              Assignment: =
+                UnaryOp: *
+                  ID: samples
+                Constant: int, 0x7fff
+            UnaryOp: p++
+              ID: clip
+            EmptyStatement: 

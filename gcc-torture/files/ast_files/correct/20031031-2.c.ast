@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: node_type
+      EnumeratorList: 
+        Enumerator: INITIAL
+          Constant: int, 0
+        Enumerator: FREE
+        Enumerator: PRECOLORED
+        Enumerator: SIMPLIFY
+        Enumerator: SIMPLIFY_SPILL
+        Enumerator: SIMPLIFY_FAT
+        Enumerator: FREEZE
+        Enumerator: SPILL
+        Enumerator: SELECT
+        Enumerator: SPILLED
+        Enumerator: COALESCED
+        Enumerator: COLORED
+        Enumerator: LAST_NODE_TYPE
+  FuncDef: 
+    Decl: put_web, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              Enum: node_type
+        TypeDecl: put_web, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: type
+        Compound: 
+          Case: 
+            ID: INITIAL
+          Case: 
+            ID: FREE
+          Case: 
+            ID: FREEZE
+          Case: 
+            ID: SPILL
+            FuncCall: 
+              ID: foo
+            Break: 
+          Case: 
+            ID: PRECOLORED
+            FuncCall: 
+              ID: bar
+            Break: 
+          Default: 
+            FuncCall: 
+              ID: baz
+  FuncDef: 
+    Decl: reset_lists, [], [], []
+      FuncDecl: 
+        TypeDecl: reset_lists, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: put_web
+        ExprList: 
+          ID: INITIAL

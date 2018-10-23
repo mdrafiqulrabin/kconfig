@@ -1,0 +1,74 @@
+FileAST: 
+  Typedef: T, [], ['typedef']
+    TypeDecl: T, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['signed', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: a, [], ['static'], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+  Decl: b, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['T']
+      Constant: int, 1
+    InitList: 
+      UnaryOp: -
+        Constant: int, 1
+  Decl: c, [], ['static'], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: bar, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['short']
+        TypeDecl: bar, []
+          IdentifierType: ['short', 'int']
+    Compound: 
+      Assignment: |=
+        ID: c
+        BinaryOp: <
+          ID: a
+          ArrayRef: 
+            ID: b
+            Constant: int, 0
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        PtrDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['signed', 'char']
+        UnaryOp: &
+          ID: a
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: e
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: c
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 2
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['float']
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 0
+        BinaryOp: /
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            ID: f
+          Constant: int, 256
+      Return: 
+        Constant: int, 0

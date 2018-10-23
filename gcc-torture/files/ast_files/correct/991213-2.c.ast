@@ -1,0 +1,80 @@
+FileAST: 
+  Typedef: __kernel_time_t, [], ['typedef']
+    TypeDecl: __kernel_time_t, []
+      IdentifierType: ['long']
+  Typedef: time_t, [], ['typedef']
+    TypeDecl: time_t, []
+      IdentifierType: ['__kernel_time_t']
+  FuncDef: 
+    Decl: time2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: funcp, [], [], []
+            FuncDecl: 
+              ParamList: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['time_t']
+              PtrDecl: ['const']
+                TypeDecl: funcp, []
+                  IdentifierType: ['void']
+          Decl: offset, ['const'], [], []
+            TypeDecl: offset, ['const']
+              IdentifierType: ['long']
+          Decl: okayp, [], [], []
+            PtrDecl: ['const']
+              TypeDecl: okayp, []
+                IdentifierType: ['int']
+        TypeDecl: time2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: bits, [], ['register'], []
+        TypeDecl: bits, []
+          IdentifierType: ['int']
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['time_t']
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: bits
+            Constant: int, 0
+          Assignment: =
+            ID: t
+            Constant: int, 1
+        BinaryOp: >
+          ID: t
+          Constant: int, 0
+        ExprList: 
+          UnaryOp: ++
+            ID: bits
+          Assignment: <<=
+            ID: t
+            Constant: int, 1
+        EmptyStatement: 
+      Assignment: =
+        ID: t
+        TernaryOp: 
+          BinaryOp: <
+            ID: t
+            Constant: int, 0
+          Constant: int, 0
+          BinaryOp: <<
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['time_t']
+              Constant: int, 1
+            ID: bits
+      For: 
+        Compound: 
+          FuncCall: 
+            UnaryOp: *
+              ID: funcp
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['time_t']
+                UnaryOp: &
+                  ID: t

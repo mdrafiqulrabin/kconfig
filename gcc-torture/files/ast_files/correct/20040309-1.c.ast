@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: default_tupleseps, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: default_tupleseps, ['const']
+        IdentifierType: ['char']
+    Constant: string, ", \t"
+  FuncDef: 
+    Decl: fubar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: tupleseps
+        TypeDecl: fubar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: kp, [], [], []
+        PtrDecl: []
+          TypeDecl: kp, []
+            IdentifierType: ['char']
+      Decl: sp, [], [], []
+        PtrDecl: []
+          TypeDecl: sp, []
+            IdentifierType: ['char']
+      Decl: septmp, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: septmp, ['const']
+            IdentifierType: ['char']
+      Decl: tseplist, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: tseplist, ['const']
+            IdentifierType: ['char']
+      Assignment: =
+        ID: tseplist
+        TernaryOp: 
+          ID: tupleseps
+          ID: tupleseps
+          ID: default_tupleseps
+      While: 
+        ID: kp
+        Compound: 
+          If: 
+            UnaryOp: *
+              ID: tseplist
+            Assignment: =
+              ID: septmp
+              ID: tseplist
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              UnaryOp: *
+                ID: septmp
+          If: 
+            UnaryOp: *
+              ID: tseplist
+            If: 
+              UnaryOp: *
+                ID: kp
+              EmptyStatement: 
+    Decl: tupleseps, ['const'], [], []
+      PtrDecl: []
+        TypeDecl: tupleseps, ['const']
+          IdentifierType: ['char']

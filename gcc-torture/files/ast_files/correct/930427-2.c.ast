@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: w
+          ID: v0
+          ID: v1
+          ID: v2
+          ID: v3
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: g
+        ExprList: 
+          TernaryOp: 
+            ID: v0
+            Constant: int, 1
+            StructRef: ->
+              ID: w
+              ID: f
+          TernaryOp: 
+            ID: v1
+            ID: v3
+            ID: v2
+    Decl: w, [], [], []
+      PtrDecl: []
+        TypeDecl: w, []
+          Struct: s

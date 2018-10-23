@@ -1,0 +1,55 @@
+FileAST: 
+  Typedef: T, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: T, []
+          IdentifierType: ['void']
+  Decl: x, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['T']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], ['static'], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['T']
+        ID: x
+      Decl: a, [], ['static'], []
+        TypeDecl: a, []
+          IdentifierType: ['_Bool']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['T']
+      If: 
+        FuncCall: 
+          ID: __builtin_expect
+          ExprList: 
+            ID: a
+            Constant: int, 0
+        Return: 
+      While: 
+        Assignment: =
+          ID: f
+          UnaryOp: *
+            ID: p
+        Compound: 
+          UnaryOp: p++
+            ID: p
+          FuncCall: 
+            ID: f
+      Assignment: =
+        ID: a
+        Constant: int, 1

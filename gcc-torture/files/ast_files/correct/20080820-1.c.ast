@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: jiffies, ['volatile'], ['extern'], []
+    TypeDecl: jiffies, ['volatile']
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: do_timer, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: do_timer, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: p++
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+            UnaryOp: &
+              ID: jiffies

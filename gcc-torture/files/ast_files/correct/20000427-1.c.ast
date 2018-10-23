@@ -1,0 +1,43 @@
+FileAST: 
+  Decl: lwidth, [], [], []
+    TypeDecl: lwidth, []
+      IdentifierType: ['int']
+  Decl: lheight, [], [], []
+    TypeDecl: lheight, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: ConvertFor3dDriver, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: requirePO2, [], [], []
+            TypeDecl: requirePO2, []
+              IdentifierType: ['int']
+          Decl: maxAspect, [], [], []
+            TypeDecl: maxAspect, []
+              IdentifierType: ['int']
+        TypeDecl: ConvertFor3dDriver, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: oldw, [], [], []
+        TypeDecl: oldw, []
+          IdentifierType: ['int']
+        ID: lwidth
+      Decl: oldh, [], [], []
+        TypeDecl: oldh, []
+          IdentifierType: ['int']
+        ID: lheight
+      Assignment: =
+        ID: lheight
+        FuncCall: 
+          ID: FindNearestPowerOf2
+          ExprList: 
+            ID: lheight
+      While: 
+        BinaryOp: >
+          BinaryOp: /
+            ID: lwidth
+            ID: lheight
+          ID: maxAspect
+        Assignment: +=
+          ID: lheight
+          ID: lheight

@@ -1,0 +1,270 @@
+FileAST: 
+  Typedef: int16_t, [], ['typedef']
+    TypeDecl: int16_t, []
+      IdentifierType: ['short', 'int']
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: gsm0610_frame_t, [], ['typedef']
+    TypeDecl: gsm0610_frame_t, []
+      Struct: None
+        Decl: LARc, [], [], []
+          ArrayDecl: []
+            TypeDecl: LARc, []
+              IdentifierType: ['int16_t']
+            Constant: int, 8
+        Decl: Nc, [], [], []
+          ArrayDecl: []
+            TypeDecl: Nc, []
+              IdentifierType: ['int16_t']
+            Constant: int, 4
+        Decl: bc, [], [], []
+          ArrayDecl: []
+            TypeDecl: bc, []
+              IdentifierType: ['int16_t']
+            Constant: int, 4
+        Decl: Mc, [], [], []
+          ArrayDecl: []
+            TypeDecl: Mc, []
+              IdentifierType: ['int16_t']
+            Constant: int, 4
+        Decl: xmaxc, [], [], []
+          ArrayDecl: []
+            TypeDecl: xmaxc, []
+              IdentifierType: ['int16_t']
+            Constant: int, 4
+        Decl: xMc, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: xMc, []
+                IdentifierType: ['int16_t']
+              Constant: int, 13
+            Constant: int, 4
+  FuncDef: 
+    Decl: gsm0610_unpack_voip, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['gsm0610_frame_t']
+          Decl: c, ['const'], [], []
+            ArrayDecl: []
+              TypeDecl: c, ['const']
+                IdentifierType: ['uint8_t']
+              Constant: int, 33
+        TypeDecl: gsm0610_unpack_voip, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 4
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: Nc
+              ID: i
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 1
+              Constant: int, 0x7F
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: bc
+              ID: i
+            BinaryOp: <<
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: c
+                Constant: int, 0x1
+              Constant: int, 1
+          Assignment: |=
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: bc
+              ID: i
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 7
+              Constant: int, 0x1
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: Mc
+              ID: i
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 5
+              Constant: int, 0x3
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: xmaxc
+              ID: i
+            BinaryOp: <<
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: c
+                Constant: int, 0x1F
+              Constant: int, 1
+          Assignment: |=
+            ArrayRef: 
+              StructRef: ->
+                ID: s
+                ID: xmaxc
+              ID: i
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 7
+              Constant: int, 0x1
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 0
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 4
+              Constant: int, 0x7
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 1
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 1
+              Constant: int, 0x7
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 2
+            BinaryOp: <<
+              BinaryOp: &
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: c
+                Constant: int, 0x1
+              Constant: int, 2
+          Assignment: |=
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 2
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 6
+              Constant: int, 0x3
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 3
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 3
+              Constant: int, 0x7
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 4
+            BinaryOp: &
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: c
+              Constant: int, 0x7
+          Assignment: |=
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 10
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 6
+              Constant: int, 0x3
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 11
+            BinaryOp: &
+              BinaryOp: >>
+                UnaryOp: *
+                  ID: c
+                Constant: int, 3
+              Constant: int, 0x7
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                StructRef: ->
+                  ID: s
+                  ID: xMc
+                ID: i
+              Constant: int, 12
+            BinaryOp: &
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: c
+              Constant: int, 0x7

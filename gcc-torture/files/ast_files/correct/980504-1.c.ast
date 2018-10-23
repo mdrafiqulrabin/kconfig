@@ -1,0 +1,250 @@
+FileAST: 
+  Typedef: pGeomDefRec, [], ['typedef']
+    TypeDecl: pGeomDefRec, []
+      Struct: _geom_elem
+        Decl: coeffs, [], [], []
+          ArrayDecl: []
+            TypeDecl: coeffs, []
+              IdentifierType: ['double']
+            Constant: int, 6
+  Typedef: pGeomDefPtr, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: pGeomDefPtr, []
+        Struct: _geom_elem
+          Decl: coeffs, [], [], []
+            ArrayDecl: []
+              TypeDecl: coeffs, []
+                IdentifierType: ['double']
+              Constant: int, 6
+  Typedef: mpGeometryBandRec, [], ['typedef']
+    TypeDecl: mpGeometryBandRec, []
+      Struct: _mpgeombanddef
+        Decl: yOut, [], [], []
+          TypeDecl: yOut, []
+            IdentifierType: ['int']
+        Decl: in_width, [], [], []
+          TypeDecl: in_width, []
+            IdentifierType: ['int']
+  Typedef: mpGeometryBandPtr, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: mpGeometryBandPtr, []
+        Struct: _mpgeombanddef
+          Decl: yOut, [], [], []
+            TypeDecl: yOut, []
+              IdentifierType: ['int']
+          Decl: in_width, [], [], []
+            TypeDecl: in_width, []
+              IdentifierType: ['int']
+  Typedef: pointer, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: pointer, []
+        IdentifierType: ['void']
+  Typedef: CARD8, [], ['typedef']
+    TypeDecl: CARD8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: BytePixel, [], ['typedef']
+    TypeDecl: BytePixel, []
+      IdentifierType: ['CARD8']
+  FuncDef: 
+    Decl: BiGL_B, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: OUTP
+          ID: srcimg
+          ID: width
+          ID: sline
+          ID: pedpvt
+          ID: pvtband
+        TypeDecl: BiGL_B, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], ['register'], []
+        TypeDecl: s, []
+          IdentifierType: ['float']
+      Decl: t, [], ['register'], []
+        TypeDecl: t, []
+          IdentifierType: ['float']
+      Decl: st, [], ['register'], []
+        TypeDecl: st, []
+          IdentifierType: ['float']
+      Decl: isrcline, [], ['register'], []
+        TypeDecl: isrcline, []
+          IdentifierType: ['int']
+      Decl: isrcpix, [], ['register'], []
+        TypeDecl: isrcpix, []
+          IdentifierType: ['int']
+      Decl: srcwidth, [], ['register'], []
+        TypeDecl: srcwidth, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          StructRef: ->
+            ID: pvtband
+            ID: in_width
+          Constant: int, 1
+      Decl: val, [], ['register'], []
+        TypeDecl: val, []
+          IdentifierType: ['BytePixel']
+      Decl: ptrIn, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: ptrIn, []
+            IdentifierType: ['BytePixel']
+      Decl: ptrJn, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: ptrJn, []
+            IdentifierType: ['BytePixel']
+      Decl: a, [], ['register'], []
+        TypeDecl: a, []
+          IdentifierType: ['double']
+        ArrayRef: 
+          StructRef: ->
+            ID: pedpvt
+            ID: coeffs
+          Constant: int, 0
+      Decl: c, [], ['register'], []
+        TypeDecl: c, []
+          IdentifierType: ['double']
+        ArrayRef: 
+          StructRef: ->
+            ID: pedpvt
+            ID: coeffs
+          Constant: int, 2
+      Decl: srcpix, [], ['register'], []
+        TypeDecl: srcpix, []
+          IdentifierType: ['double']
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: *
+              ID: a
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['double']
+                Constant: float, 0.0000
+            BinaryOp: *
+              ArrayRef: 
+                StructRef: ->
+                  ID: pedpvt
+                  ID: coeffs
+                Constant: int, 1
+              BinaryOp: +
+                StructRef: ->
+                  ID: pvtband
+                  ID: yOut
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['double']
+                  Constant: float, 0.0000
+          ArrayRef: 
+            StructRef: ->
+              ID: pedpvt
+              ID: coeffs
+            Constant: int, 4
+      Decl: srcline, [], ['register'], []
+        TypeDecl: srcline, []
+          IdentifierType: ['double']
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: *
+              ID: c
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['double']
+                Constant: float, 0.0000
+            BinaryOp: *
+              ArrayRef: 
+                StructRef: ->
+                  ID: pedpvt
+                  ID: coeffs
+                Constant: int, 3
+              BinaryOp: +
+                StructRef: ->
+                  ID: pvtband
+                  ID: yOut
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['double']
+                  Constant: float, 0.0000
+          ArrayRef: 
+            StructRef: ->
+              ID: pedpvt
+              ID: coeffs
+            Constant: int, 5
+      If: 
+        BinaryOp: &&
+          BinaryOp: >=
+            ID: isrcpix
+            Constant: int, 0
+          BinaryOp: <
+            ID: isrcpix
+            ID: srcwidth
+        Assignment: =
+          ID: val
+          BinaryOp: +
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  BinaryOp: *
+                    ArrayRef: 
+                      ID: ptrIn
+                      ID: isrcpix
+                    BinaryOp: +
+                      BinaryOp: -
+                        BinaryOp: -
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['float']
+                            Constant: float, 1.
+                          ID: s
+                        ID: t
+                      ID: st
+                  BinaryOp: *
+                    ArrayRef: 
+                      ID: ptrIn
+                      BinaryOp: +
+                        ID: isrcpix
+                        Constant: int, 1
+                    BinaryOp: -
+                      ID: s
+                      ID: st
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: ptrJn
+                    ID: isrcpix
+                  BinaryOp: -
+                    ID: t
+                    ID: st
+              BinaryOp: *
+                ArrayRef: 
+                  ID: ptrJn
+                  BinaryOp: +
+                    ID: isrcpix
+                    Constant: int, 1
+                ID: st
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['float']
+              Constant: float, 0.5
+    Decl: OUTP, [], [], []
+      TypeDecl: OUTP, []
+        IdentifierType: ['pointer']
+    Decl: srcimg, [], [], []
+      PtrDecl: []
+        TypeDecl: srcimg, []
+          IdentifierType: ['pointer']
+    Decl: width, [], ['register'], []
+      TypeDecl: width, []
+        IdentifierType: ['int']
+    Decl: sline, [], [], []
+      TypeDecl: sline, []
+        IdentifierType: ['int']
+    Decl: pedpvt, [], [], []
+      TypeDecl: pedpvt, []
+        IdentifierType: ['pGeomDefPtr']
+    Decl: pvtband, [], [], []
+      TypeDecl: pvtband, []
+        IdentifierType: ['mpGeometryBandPtr']

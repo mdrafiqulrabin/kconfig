@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: s1
+          ID: s2
+        PtrDecl: []
+          TypeDecl: main, []
+            IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: !=
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: s1
+            UnaryOp: *
+              UnaryOp: p++
+                ID: s2
+          Constant: char, '\0'
+        EmptyStatement: 
+      Return: 
+        BinaryOp: -
+          ID: s1
+          Constant: int, 1
+    Decl: s1, [], [], []
+      PtrDecl: []
+        TypeDecl: s1, []
+          IdentifierType: ['int']
+    Decl: s2, [], [], []
+      PtrDecl: []
+        TypeDecl: s2, []
+          IdentifierType: ['int']

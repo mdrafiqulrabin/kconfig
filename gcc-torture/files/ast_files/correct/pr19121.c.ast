@@ -1,0 +1,91 @@
+FileAST: 
+  Typedef: PerlInterpreter, [], ['typedef']
+    TypeDecl: PerlInterpreter, []
+      Struct: interpreter
+        Decl: Itokenbuf, [], [], []
+          ArrayDecl: []
+            TypeDecl: Itokenbuf, []
+              IdentifierType: ['char']
+            Constant: int, 256
+  FuncDef: 
+    Decl: S_missingterm, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+        TypeDecl: S_missingterm, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tmpbuf, [], [], []
+        ArrayDecl: []
+          TypeDecl: tmpbuf, []
+            IdentifierType: ['char']
+          Constant: int, 3
+        Constant: string, ""
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['char']
+      If: 
+        UnaryOp: !
+          ID: s
+        Assignment: =
+          ID: s
+          ID: tmpbuf
+      Assignment: =
+        ID: q
+        TernaryOp: 
+          FuncCall: 
+            ID: strchr
+            ExprList: 
+              ID: s
+              Constant: char, '"'
+          Constant: char, '\''
+          Constant: char, '"'
+  FuncDef: 
+    Decl: S_scan_heredoc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: my_perl, [], [], []
+            PtrDecl: []
+              TypeDecl: my_perl, []
+                IdentifierType: ['PerlInterpreter']
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: S_scan_heredoc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: term, [], [], []
+        TypeDecl: term, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: term
+        UnaryOp: *
+          StructRef: ->
+            ID: my_perl
+            ID: Itokenbuf
+      If: 
+        ID: i
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: s
+            ID: term
+          FuncCall: 
+            ID: S_missingterm
+            ExprList: 
+              StructRef: ->
+                ID: my_perl
+                ID: Itokenbuf
+        FuncCall: 
+          ID: S_missingterm
+          ExprList: 
+            StructRef: ->
+              ID: my_perl
+              ID: Itokenbuf

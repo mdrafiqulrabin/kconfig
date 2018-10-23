@@ -1,0 +1,90 @@
+FileAST: 
+  Typedef: a, [], ['typedef']
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['a']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['a']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: g, [], [], []
+            PtrDecl: []
+              TypeDecl: g, []
+                IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: *
+        Cast: 
+          Typename: None, ['volatile']
+            PtrDecl: []
+              TypeDecl: None, ['volatile']
+                IdentifierType: ['int']
+          ID: g
+  FuncDef: 
+    Decl: j, [], [], []
+      FuncDecl: 
+        TypeDecl: j, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['a']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['a']
+      For: 
+        ID: b
+        Assignment: +=
+          ID: b
+          Constant: int, 2
+        Compound: 
+          Assignment: =
+            ID: d
+            ID: b
+          Assignment: =
+            ID: i
+            BinaryOp: >>
+              ID: i
+              ID: b
+          If: 
+            ID: i
+            Continue: 
+          FuncCall: 
+            ID: f
+            ExprList: 
+              BinaryOp: +
+                UnaryOp: &
+                  ID: c
+                BinaryOp: >>
+                  ID: b
+                  Constant: int, 2
+          Assignment: =
+            ID: h
+            Constant: int, 0
+          For: 
+            BinaryOp: <
+              ID: h
+              BinaryOp: /
+                Constant: int, 8
+                Constant: int, 2
+            UnaryOp: p++
+              ID: h
+            If: 
+              BinaryOp: <<
+                ID: i
+                ID: h
+              Assignment: =
+                ID: e
+                Constant: int, 0

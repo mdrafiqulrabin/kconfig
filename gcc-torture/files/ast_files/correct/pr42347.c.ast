@@ -1,0 +1,51 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['long']
+        TypeDecl: foo, []
+          IdentifierType: ['long']
+    Compound: 
+      Assignment: =
+        ID: x
+        BinaryOp: &
+          ID: x
+          ID: y
+      Switch: 
+        ID: y
+        Compound: 
+          Case: 
+            Constant: int, 63L
+            Assignment: >>=
+              ID: x
+              Constant: int, 0
+            Break: 
+          Case: 
+            Constant: int, 4032L
+            Assignment: >>=
+              ID: x
+              Constant: int, 6
+            Break: 
+          Case: 
+            Constant: int, 258048L
+            Assignment: >>=
+              ID: x
+              Constant: int, 12
+            Break: 
+          Case: 
+            Constant: int, 16515072L
+            Assignment: >>=
+              ID: x
+              Constant: int, 18
+            Break: 
+          Default: 
+            FuncCall: 
+              ID: __builtin_unreachable
+      Return: 
+        ID: x

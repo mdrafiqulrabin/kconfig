@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: buf, [], [], []
+    PtrDecl: []
+      TypeDecl: buf, []
+        IdentifierType: ['char']
+  Decl: buflen, [], [], []
+    TypeDecl: buflen, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: sub, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: length, [], [], []
+            TypeDecl: length, []
+              IdentifierType: ['int']
+        TypeDecl: sub, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          ID: length
+          ID: buflen
+        Assignment: =
+          ArrayRef: 
+            ID: buf
+            ID: length
+          Constant: char, '\0'
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: sub2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: sub2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: sub
+          ExprList: 
+            Constant: int, 0x7fffffff

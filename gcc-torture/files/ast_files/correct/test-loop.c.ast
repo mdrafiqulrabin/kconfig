@@ -1,0 +1,22 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 100
+        BinaryOp: >=
+          ID: i
+          UnaryOp: -
+            Constant: int, 1
+        UnaryOp: p--
+          ID: i
+        FuncCall: 
+          ID: foo

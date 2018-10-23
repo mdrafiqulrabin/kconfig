@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: c
+        BinaryOp: >>
+          ID: b
+          Constant: int, 16
+      If: 
+        BinaryOp: >
+          ID: c
+          Constant: int, 32767
+        Assignment: =
+          ID: c
+          Constant: int, 0
+      Assignment: =
+        ID: a
+        ID: b

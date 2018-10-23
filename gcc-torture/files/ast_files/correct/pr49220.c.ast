@@ -1,0 +1,86 @@
+FileAST: 
+  Decl: array, [], [], []
+    ArrayDecl: []
+      TypeDecl: array, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  FuncDef: 
+    Decl: func1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: func1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: func2, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: func2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: b
+            Constant: int, 0
+          ID: a
+          ID: b
+  FuncDef: 
+    Decl: func3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: func3, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: func4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            PtrDecl: []
+              TypeDecl: arg, []
+                IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: func4, []
+            IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: arg
+        FuncCall: 
+          ID: func1
+          ExprList: 
+            BinaryOp: |
+              FuncCall: 
+                ID: func2
+                ExprList: 
+                  FuncCall: 
+                    ID: func3
+                    ExprList: 
+                      ArrayRef: 
+                        ID: array
+                        Constant: int, 0
+                  UnaryOp: *
+                    ID: arg
+              ArrayRef: 
+                ID: array
+                Constant: int, 0
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            ID: array
+            Constant: int, 1

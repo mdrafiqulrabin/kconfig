@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: mulqi, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['char']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['char']
+        TypeDecl: mulqi, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+        BinaryOp: /
+          ID: a
+          ID: b

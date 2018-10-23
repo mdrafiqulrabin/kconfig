@@ -1,0 +1,147 @@
+FileAST: 
+  Typedef: atype, [], ['typedef']
+    TypeDecl: atype, []
+      Struct: atype
+        Decl: bg, [], [], []
+          ArrayDecl: []
+            TypeDecl: bg, []
+              IdentifierType: ['float']
+            Constant: int, 1
+        Decl: cg, [], [], []
+          ArrayDecl: []
+            TypeDecl: cg, []
+              IdentifierType: ['float']
+            Constant: int, 1
+        Decl: ant, [], [], []
+          TypeDecl: ant, []
+            IdentifierType: ['_Bool']
+  Decl: cp_assert, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['_Bool']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['float']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['_Bool']
+      TypeDecl: cp_assert, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rng_stream, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: rng_stream, []
+                  IdentifierType: ['atype']
+          Decl: error, [], [], []
+            PtrDecl: []
+              TypeDecl: error, []
+                IdentifierType: ['int']
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['float']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['_Bool']
+        BinaryOp: !=
+          UnaryOp: *
+            ID: rng_stream
+          Constant: int, 0
+      Decl: routinep, [], [], []
+        TypeDecl: routinep, []
+          IdentifierType: ['float']
+      Decl: failure, [], [], []
+        TypeDecl: failure, []
+          IdentifierType: ['_Bool']
+      FuncCall: 
+        ID: cp_assert
+        ExprList: 
+          UnaryOp: &
+            ID: t
+          UnaryOp: &
+            ID: routinep
+          ID: error
+          UnaryOp: &
+            ID: failure
+      If: 
+        BinaryOp: ==
+          ID: failure
+          Constant: int, 0
+        Compound: 
+          Typedef: ty, [], ['typedef']
+            ArrayDecl: []
+              TypeDecl: ty, []
+                IdentifierType: ['float']
+              Constant: int, 1
+          Decl: tt, [], [], []
+            PtrDecl: []
+              TypeDecl: tt, []
+                IdentifierType: ['ty']
+            UnaryOp: &
+              StructRef: ->
+                UnaryOp: *
+                  ID: rng_stream
+                ID: bg
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          DoWhile: 
+            BinaryOp: >
+              ID: i
+              Constant: int, 1
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  UnaryOp: *
+                    ID: tt
+                  BinaryOp: -
+                    ID: i
+                    Constant: int, 1
+                ID: u
+              UnaryOp: p++
+                ID: i
+          Compound: 
+            Decl: tt, [], [], []
+              PtrDecl: []
+                TypeDecl: tt, []
+                  IdentifierType: ['ty']
+              UnaryOp: &
+                StructRef: ->
+                  UnaryOp: *
+                    ID: rng_stream
+                  ID: cg
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+              Constant: int, 1
+            DoWhile: 
+              BinaryOp: >
+                ID: i
+                Constant: int, 1
+              Compound: 
+                Assignment: =
+                  ArrayRef: 
+                    UnaryOp: *
+                      ID: tt
+                    BinaryOp: -
+                      ID: i
+                      Constant: int, 1
+                  ID: u
+                UnaryOp: p++
+                  ID: i

@@ -1,0 +1,101 @@
+FileAST: 
+  Typedef: int8_t, [], ['typedef']
+    TypeDecl: int8_t, []
+      IdentifierType: ['signed', 'char']
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  Typedef: uint16_t, [], ['typedef']
+    TypeDecl: uint16_t, []
+      IdentifierType: ['unsigned', 'short', 'int']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: g_19, [], [], []
+    TypeDecl: g_19, []
+      IdentifierType: ['int32_t']
+    Constant: int, 0x67F5AEE0L
+  Decl: g_169, [], [], []
+    TypeDecl: g_169, []
+      IdentifierType: ['uint16_t']
+    Constant: int, 0x89E3L
+  Decl: g_258, ['const', 'volatile'], [], []
+    TypeDecl: g_258, ['const', 'volatile']
+      IdentifierType: ['uint32_t']
+    Constant: int, 0x63AFEBCAL
+  Decl: func_11, [], [], []
+    TypeDecl: func_11, []
+      IdentifierType: ['int32_t']
+  Decl: func_29, [], [], []
+    TypeDecl: func_29, []
+      IdentifierType: ['int32_t']
+  FuncDef: 
+    Decl: func_5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_6, [], [], []
+            TypeDecl: p_6, []
+              IdentifierType: ['int32_t']
+          Decl: p_8, [], [], []
+            TypeDecl: p_8, []
+              IdentifierType: ['int32_t']
+          Decl: p_10, [], [], []
+            TypeDecl: p_10, []
+              IdentifierType: ['uint16_t']
+        TypeDecl: func_5, []
+          IdentifierType: ['int32_t']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: lshift_s_s
+          ExprList: 
+            ID: func_11
+            ID: p_8
+        Compound: 
+          Decl: l_18, [], [], []
+            TypeDecl: l_18, []
+              IdentifierType: ['int8_t']
+            Constant: int, 0x6FL
+          If: 
+            ID: l_18
+            For: 
+              Assignment: =
+                ID: p_6
+                UnaryOp: -
+                  Constant: int, 14
+              Assignment: +=
+                ID: g_19
+                Constant: int, 6
+              Compound: 
+                Decl: l_283, [], [], []
+                  TypeDecl: l_283, []
+                    IdentifierType: ['int32_t']
+                  UnaryOp: -
+                    Constant: int, 1L
+                If: 
+                  BinaryOp: /
+                    BinaryOp: >
+                      BinaryOp: >
+                        BinaryOp: /
+                          Constant: int, 0x45L
+                          Constant: int, 1L
+                        BinaryOp: /
+                          BinaryOp: *
+                            Constant: int, 0x07414511L
+                            Constant: int, 1L
+                          Constant: int, 1L
+                      ID: func_29
+                    Constant: int, 1L
+                  For: 
+                    Assignment: =
+                      ID: p_8
+                      Constant: int, 6
+                    Assignment: -=
+                      ID: p_8
+                      Constant: int, 5
+                    Assignment: =
+                      ID: l_283
+                      Constant: int, 0xC90541F7L
+        Assignment: =
+          ID: g_169
+          ID: g_258

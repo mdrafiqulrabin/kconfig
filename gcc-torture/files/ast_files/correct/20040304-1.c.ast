@@ -1,0 +1,51 @@
+FileAST: 
+  FuncDef: 
+    Decl: cpplib_macroExpand, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pfile, [], [], []
+            PtrDecl: []
+              TypeDecl: pfile, []
+                IdentifierType: ['char']
+        TypeDecl: cpplib_macroExpand, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: nargs, [], [], []
+        TypeDecl: nargs, []
+          IdentifierType: ['int']
+      Decl: rest_args, [], [], []
+        TypeDecl: rest_args, []
+          IdentifierType: ['int']
+      Decl: token, [], [], []
+        TypeDecl: token, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Assignment: =
+        ID: rest_args
+        Constant: int, 0
+      DoWhile: 
+        BinaryOp: ==
+          ID: token
+          Constant: int, 20
+        Compound: 
+          If: 
+            BinaryOp: !=
+              ID: rest_args
+              Constant: int, 0
+            Continue: 
+          If: 
+            BinaryOp: ==
+              ID: nargs
+              Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: rest_args
+                Constant: int, 1
+              Assignment: =
+                ID: token
+                FuncCall: 
+                  ID: macarg
+                  ExprList: 
+                    ID: pfile
+                    ID: rest_args

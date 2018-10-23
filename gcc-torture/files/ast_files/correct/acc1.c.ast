@@ -1,0 +1,59 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: n
+          Constant: int, 0
+        Return: 
+          ID: f
+        Return: 
+          BinaryOp: +
+            ID: f
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                BinaryOp: -
+                  ID: n
+                  Constant: int, 1
+                ID: f
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['double']
+        TypeDecl: bar, []
+          IdentifierType: ['double']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: n
+          Constant: int, 0
+        Return: 
+          ID: f
+        Return: 
+          BinaryOp: *
+            ID: f
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                BinaryOp: -
+                  ID: n
+                  Constant: int, 1
+                ID: f

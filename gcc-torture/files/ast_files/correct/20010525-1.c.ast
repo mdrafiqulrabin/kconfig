@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: kind_varread, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: str, [], [], []
+            PtrDecl: []
+              TypeDecl: str, []
+                IdentifierType: ['char']
+        TypeDecl: kind_varread, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          Constant: int, 0
+          FuncCall: 
+            ID: memcmp
+            ExprList: 
+              Constant: string, "%_#"
+              ID: str
+              Constant: int, 3
+        Return: 
+          Constant: int, 2

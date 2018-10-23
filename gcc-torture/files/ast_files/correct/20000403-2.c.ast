@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tmp, [], [], []
+        TypeDecl: tmp, []
+          IdentifierType: ['long', 'long']
+      Assignment: =
+        ID: tmp
+        BinaryOp: >>
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+            ID: tmp
+          Constant: int, 32

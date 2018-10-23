@@ -1,0 +1,132 @@
+FileAST: 
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      Struct: S
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  Decl: fn, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+      TypeDecl: fn, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['signed']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['char']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            BinaryOp: <
+              ID: x
+              Constant: int, 0
+            BinaryOp: >=
+              ID: y
+              Constant: int, 32
+          Constant: int, 1
+          BinaryOp: >>
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['long']
+        TypeDecl: bar, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            ID: y
+            Constant: int, 0
+          Constant: int, 1LL
+          BinaryOp: -
+            ID: x
+            ID: y
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['char']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        ArrayDecl: []
+          TypeDecl: v, []
+            IdentifierType: ['unsigned']
+          Constant: int, 2
+      FuncCall: 
+        ID: fn
+        ExprList: 
+          BinaryOp: ||
+            ID: w
+            FuncCall: 
+              ID: baz
+          ID: y
+          StructRef: .
+            ID: t
+            ID: s
+          ID: y
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              BinaryOp: <=
+                FuncCall: 
+                  ID: bar
+                  ExprList: 
+                    ID: z
+                    ID: w
+                ArrayRef: 
+                  ID: v
+                  Constant: int, 0
+              ID: x

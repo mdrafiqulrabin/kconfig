@@ -1,0 +1,129 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: s
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: r
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: |
+                    BinaryOp: |
+                      BinaryOp: |
+                        BinaryOp: |
+                          BinaryOp: |
+                            BinaryOp: |
+                              BinaryOp: |
+                                BinaryOp: |
+                                  BinaryOp: |
+                                    BinaryOp: |
+                                      BinaryOp: |
+                                        BinaryOp: |
+                                          BinaryOp: |
+                                            UnaryOp: !
+                                              FuncCall: 
+                                                ID: g
+                                                ExprList: 
+                                                  ID: s
+                                            UnaryOp: !
+                                              FuncCall: 
+                                                ID: g
+                                                ExprList: 
+                                                  ID: s
+                                          UnaryOp: !
+                                            FuncCall: 
+                                              ID: g
+                                              ExprList: 
+                                                ID: s
+                                        UnaryOp: !
+                                          FuncCall: 
+                                            ID: g
+                                            ExprList: 
+                                              ID: s
+                                      UnaryOp: !
+                                        FuncCall: 
+                                          ID: g
+                                          ExprList: 
+                                            ID: s
+                                    UnaryOp: !
+                                      FuncCall: 
+                                        ID: g
+                                        ExprList: 
+                                          ID: s
+                                  UnaryOp: !
+                                    FuncCall: 
+                                      ID: g
+                                      ExprList: 
+                                        ID: s
+                                UnaryOp: !
+                                  FuncCall: 
+                                    ID: g
+                                    ExprList: 
+                                      ID: s
+                              UnaryOp: !
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: s
+                            UnaryOp: !
+                              FuncCall: 
+                                ID: g
+                                ExprList: 
+                                  ID: s
+                          UnaryOp: !
+                            FuncCall: 
+                              ID: g
+                              ExprList: 
+                                ID: s
+                        UnaryOp: !
+                          FuncCall: 
+                            ID: g
+                            ExprList: 
+                              ID: s
+                      UnaryOp: !
+                        FuncCall: 
+                          ID: g
+                          ExprList: 
+                            ID: s
+                    UnaryOp: !
+                      FuncCall: 
+                        ID: g
+                        ExprList: 
+                          ID: s
+                  UnaryOp: !
+                    FuncCall: 
+                      ID: g
+                      ExprList: 
+                        ID: s
+                UnaryOp: !
+                  FuncCall: 
+                    ID: g
+                    ExprList: 
+                      ID: s
+              UnaryOp: !
+                FuncCall: 
+                  ID: g
+                  ExprList: 
+                    ID: s
+            UnaryOp: !
+              FuncCall: 
+                ID: g
+                ExprList: 
+                  ID: s
+          UnaryOp: !
+            FuncCall: 
+              ID: g
+              ExprList: 
+                ID: s
+      Return: 
+        ID: r

@@ -1,0 +1,81 @@
+FileAST: 
+  Typedef: AVCodecContext, [], ['typedef']
+    TypeDecl: AVCodecContext, []
+      Struct: AVCodecContext
+        Decl: flags, [], [], []
+          TypeDecl: flags, []
+            IdentifierType: ['int']
+        Decl: priv_data, [], [], []
+          PtrDecl: []
+            TypeDecl: priv_data, []
+              IdentifierType: ['void']
+        Decl: codec_name, [], [], []
+          ArrayDecl: []
+            TypeDecl: codec_name, []
+              IdentifierType: ['char']
+            Constant: int, 32
+  Typedef: MpegEncContext, [], ['typedef']
+    TypeDecl: MpegEncContext, []
+      Struct: ScanTable
+        Decl: obmc, [], [], []
+          TypeDecl: obmc, []
+            IdentifierType: ['int']
+        Decl: umvplus, [], [], []
+          TypeDecl: umvplus, []
+            IdentifierType: ['int']
+        Decl: h263_aic, [], [], []
+          TypeDecl: h263_aic, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: MPV_encode_init, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: avctx, [], [], []
+            PtrDecl: []
+              TypeDecl: avctx, []
+                IdentifierType: ['AVCodecContext']
+        TypeDecl: MPV_encode_init, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['MpegEncContext']
+        StructRef: ->
+          ID: avctx
+          ID: priv_data
+      Assignment: =
+        StructRef: ->
+          ID: s
+          ID: umvplus
+        TernaryOp: 
+          BinaryOp: &
+            StructRef: ->
+              ID: avctx
+              ID: flags
+            Constant: int, 0x02000000
+          Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: s
+          ID: h263_aic
+        TernaryOp: 
+          BinaryOp: &
+            StructRef: ->
+              ID: avctx
+              ID: flags
+            Constant: int, 0x01000000
+          Constant: int, 1
+          Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: s
+          ID: h263_aic
+        BinaryOp: ||
+          StructRef: ->
+            ID: s
+            ID: obmc
+          StructRef: ->
+            ID: s
+            ID: umvplus

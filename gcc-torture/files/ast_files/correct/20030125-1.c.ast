@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: count, [], [], []
+    TypeDecl: count, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: valp, [], [], []
+            PtrDecl: []
+              TypeDecl: valp, []
+                IdentifierType: ['int']
+        TypeDecl: func, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['int']
+      Decl: locked, [], [], []
+        TypeDecl: locked, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: !=
+          Assignment: =
+            ID: val
+            UnaryOp: *
+              ID: valp
+          Constant: int, 0
+        Compound: 
+          If: 
+            ID: count
+            Compound: 
+              If: 
+                ID: count
+                Assignment: =
+                  ID: locked
+                  Constant: int, 1
+                Assignment: =
+                  ID: locked
+                  Constant: int, 1
+              If: 
+                UnaryOp: !
+                  ID: locked
+                Continue: 
+          If: 
+            UnaryOp: !
+              ID: count
+            UnaryOp: p--
+              ID: count
+          Break: 
+      Return: 
+        ID: val

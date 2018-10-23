@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: hrs, [], [], []
+        TypeDecl: hrs, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: min, [], [], []
+        TypeDecl: min, []
+          IdentifierType: ['unsigned', 'char']
+      Assignment: =
+        ID: min
+        BinaryOp: +
+          BinaryOp: <<
+            BinaryOp: /
+              ID: min
+              Constant: int, 10
+            Constant: int, 4
+          BinaryOp: %
+            ID: min
+            Constant: int, 10
+      Assignment: =
+        ID: hrs
+        BinaryOp: +
+          BinaryOp: <<
+            BinaryOp: /
+              ID: hrs
+              Constant: int, 10
+            Constant: int, 4
+          BinaryOp: %
+            ID: hrs
+            Constant: int, 10
+      Return: 
+        BinaryOp: +
+          ID: hrs
+          ID: min

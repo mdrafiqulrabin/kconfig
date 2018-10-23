@@ -1,0 +1,164 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a1, [], [], []
+        PtrDecl: []
+          TypeDecl: a1, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: a2, [], [], []
+        PtrDecl: []
+          TypeDecl: a2, []
+            IdentifierType: ['unsigned', 'long']
+      Decl: vertex2, [], [], []
+        TypeDecl: vertex2, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['int']
+      Decl: x2, [], [], []
+        TypeDecl: x2, []
+          IdentifierType: ['int']
+      Decl: dx1, [], [], []
+        TypeDecl: dx1, []
+          IdentifierType: ['int']
+      Decl: dx2, [], [], []
+        TypeDecl: dx2, []
+          IdentifierType: ['int']
+      Decl: dy1, [], [], []
+        TypeDecl: dy1, []
+          IdentifierType: ['int']
+      Decl: dy2, [], [], []
+        TypeDecl: dy2, []
+          IdentifierType: ['int']
+      Decl: e1, [], [], []
+        TypeDecl: e1, []
+          IdentifierType: ['int']
+      Decl: e2, [], [], []
+        TypeDecl: e2, []
+          IdentifierType: ['int']
+      Decl: s2, [], [], []
+        TypeDecl: s2, []
+          IdentifierType: ['int']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: aba, [], [], []
+        TypeDecl: aba, []
+          IdentifierType: ['int']
+      DoWhile: 
+        BinaryOp: /
+          ID: vertex2
+          Constant: int, 65536
+        Compound: 
+          If: 
+            BinaryOp: >=
+              ID: dx2
+              ID: dy2
+            Assignment: =
+              ID: dx2
+              BinaryOp: %
+                ID: dx2
+                ID: dy2
+          If: 
+            BinaryOp: >=
+              ID: dx2
+              ID: dy2
+            Compound: 
+              Assignment: =
+                ID: s2
+                UnaryOp: -
+                  BinaryOp: /
+                    ID: dx2
+                    ID: dy2
+              Assignment: =
+                ID: dx2
+                BinaryOp: %
+                  ID: dx2
+                  ID: dy2
+      For: 
+        Compound: 
+          Assignment: =
+            ID: c
+            ID: x2
+          Assignment: =
+            ID: a2
+            ID: a1
+          If: 
+            ID: v
+            Assignment: =
+              ID: a2
+              Constant: int, 0
+          If: 
+            BinaryOp: +
+              ID: c
+              ID: n
+            Compound: 
+              Assignment: =
+                ID: m
+                BinaryOp: <<
+                  ID: b
+                  BinaryOp: *
+                    ID: c
+                    Constant: int, 8
+              Assignment: =
+                UnaryOp: *
+                  ID: a2
+                BinaryOp: |
+                  BinaryOp: &
+                    UnaryOp: *
+                      ID: a2
+                    UnaryOp: ~
+                      ID: m
+                  BinaryOp: &
+                    ID: r
+                    ID: m
+              Assignment: +=
+                ID: n
+                ID: c
+              While: 
+                UnaryOp: --
+                  ID: n
+                Compound: 
+                  Compound: 
+          Assignment: =
+            ID: a1
+            Constant: int, 0
+          Assignment: +=
+            ID: x1
+            Constant: int, 0
+          If: 
+            Assignment: +=
+              ID: e1
+              ID: dx1
+            Assignment: -=
+              ID: e1
+              ID: dy1
+          Assignment: +=
+            ID: x2
+            ID: s2
+          If: 
+            Assignment: +=
+              ID: e2
+              ID: dx2
+            Assignment: -=
+              ID: e2
+              ID: dy2

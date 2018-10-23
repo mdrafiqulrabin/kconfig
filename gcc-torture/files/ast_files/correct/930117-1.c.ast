@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: x
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                FuncDecl: 
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            UnaryOp: &
+              ID: x

@@ -1,0 +1,65 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: tree_node
+  Typedef: tree, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tree, []
+        Union: tree_node
+  Decl: None, [], [], []
+    Struct: tree_common
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['tree']
+      Decl: lang_flag_0, [], [], []
+        TypeDecl: lang_flag_0, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+  Decl: None, [], [], []
+    Union: tree_node
+      Decl: common, [], [], []
+        TypeDecl: common, []
+          Struct: tree_common
+  FuncDef: 
+    Decl: java_check_regular_methods, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: class_decl, [], [], []
+            TypeDecl: class_decl, []
+              IdentifierType: ['tree']
+        TypeDecl: java_check_regular_methods, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: saw_constructor, [], [], []
+        TypeDecl: saw_constructor, []
+          IdentifierType: ['int']
+        StructRef: .
+          StructRef: ->
+            StructRef: .
+              StructRef: ->
+                ID: class_decl
+                ID: common
+              ID: type
+            ID: common
+          ID: lang_flag_0
+      Decl: class, [], [], []
+        TypeDecl: class, []
+          IdentifierType: ['tree']
+        StructRef: .
+          StructRef: ->
+            ID: class_decl
+            ID: common
+          ID: type
+      For: 
+        Compound: 
+          If: 
+            ID: class
+            If: 
+              StructRef: .
+                StructRef: ->
+                  ID: class_decl
+                  ID: common
+                ID: type
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  ID: class

@@ -1,0 +1,29 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x1, [], [], []
+        TypeDecl: x1, []
+          IdentifierType: ['int']
+      Decl: x2, [], [], []
+        TypeDecl: x2, []
+          IdentifierType: ['int']
+      Decl: x3, [], [], []
+        TypeDecl: x3, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          BinaryOp: -
+            UnaryOp: &
+              ID: x2
+            UnaryOp: &
+              ID: x1
+          BinaryOp: -
+            UnaryOp: &
+              ID: x3
+            UnaryOp: &
+              ID: x2

@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: keyring_list
+      Decl: keys, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: keys, []
+              Struct: key
+          Constant: int, 0
+  FuncDef: 
+    Decl: keyring_destroy, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: keyring, [], [], []
+            PtrDecl: []
+              TypeDecl: keyring, []
+                Struct: keyring_list
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: keyring_destroy, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: loop, [], [], []
+        TypeDecl: loop, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: loop
+          BinaryOp: -
+            ID: a
+            Constant: int, 1
+        BinaryOp: >=
+          ID: loop
+          Constant: int, 0
+        UnaryOp: p--
+          ID: loop
+        FuncCall: 
+          ID: key_put
+          ExprList: 
+            ArrayRef: 
+              StructRef: ->
+                ID: keyring
+                ID: keys
+              ID: loop

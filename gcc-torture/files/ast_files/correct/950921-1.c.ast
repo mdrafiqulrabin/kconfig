@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: c, [], [], []
+              TypeDecl: c, []
+                IdentifierType: ['signed', 'char']
+            Decl: d, [], [], []
+              TypeDecl: d, []
+                IdentifierType: ['double']
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: c
+        Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: c
+        Constant: int, 1
+      Return: 
+        StructRef: .
+          ID: u
+          ID: c

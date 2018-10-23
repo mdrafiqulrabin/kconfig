@@ -1,0 +1,171 @@
+FileAST: 
+  Decl: pid_count, [], [], []
+    TypeDecl: pid_count, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: getopt, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: getopt, []
+        IdentifierType: ['unsigned', 'int']
+  Decl: atoll, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: atoll, []
+        IdentifierType: ['unsigned', 'long', 'long']
+  Decl: fork, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fork, []
+        IdentifierType: ['int']
+  Decl: kill, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: kill, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, ['const'], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, ['const']
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: maxbytes, [], [], []
+        TypeDecl: maxbytes, []
+          IdentifierType: ['unsigned', 'long', 'long']
+        Constant: int, 0
+      Decl: optarg, ['const'], ['extern'], []
+        PtrDecl: []
+          TypeDecl: optarg, ['const']
+            IdentifierType: ['char']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: pid_cntr, [], [], []
+        TypeDecl: pid_cntr, []
+          IdentifierType: ['int']
+      Decl: pid, [], [], []
+        TypeDecl: pid, []
+          IdentifierType: ['int']
+      Decl: pid_list, [], [], []
+        ArrayDecl: []
+          TypeDecl: pid_list, []
+            IdentifierType: ['int']
+          Constant: int, 1000
+      While: 
+        BinaryOp: !=
+          Assignment: =
+            ID: c
+            FuncCall: 
+              ID: getopt
+              ExprList: 
+                ID: argc
+                ID: argv
+                Constant: string, "c:b:p:wvh"
+          UnaryOp: -
+            Constant: int, 1
+        Compound: 
+          Switch: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              ID: c
+            Compound: 
+              Case: 
+                Constant: char, 'b'
+                Assignment: =
+                  ID: maxbytes
+                  FuncCall: 
+                    ID: atoll
+                    ExprList: 
+                      ID: optarg
+      Assignment: =
+        ID: pid
+        FuncCall: 
+          ID: fork
+      While: 
+        BinaryOp: &&
+          BinaryOp: !=
+            ID: pid
+            Constant: int, 0
+          BinaryOp: >
+            ID: maxbytes
+            BinaryOp: *
+              BinaryOp: *
+                Constant: int, 1024
+                Constant: int, 1024
+              Constant: int, 1024
+        Compound: 
+          Assignment: =
+            ID: maxbytes
+            BinaryOp: -
+              ID: maxbytes
+              BinaryOp: *
+                BinaryOp: *
+                  Constant: int, 1024
+                  Constant: int, 1024
+                Constant: int, 1024
+          Assignment: =
+            ID: pid
+            FuncCall: 
+              ID: fork
+          If: 
+            BinaryOp: !=
+              ID: pid
+              Constant: int, 0
+            UnaryOp: p++
+              ID: pid_cntr
+          Assignment: =
+            ArrayRef: 
+              ID: pid_list
+              ID: i
+            ID: pid
+      While: 
+        BinaryOp: <
+          ID: pid_count
+          ID: pid_cntr
+        Compound: 
+      FuncCall: 
+        ID: kill
+        ExprList: 
+          ArrayRef: 
+            ID: pid_list
+            ID: i
+          Constant: int, 9

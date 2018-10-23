@@ -1,0 +1,280 @@
+FileAST: 
+  Decl: washQtoM3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: m, [], [], []
+          ArrayDecl: []
+            TypeDecl: m, []
+              IdentifierType: ['double']
+            Constant: int, 9
+        Decl: q, [], [], []
+          ArrayDecl: []
+            TypeDecl: q, []
+              IdentifierType: ['double']
+            Constant: int, 4
+      TypeDecl: washQtoM3, []
+        IdentifierType: ['void']
+  Decl: sqrt, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: sqrt, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: samp, [], [], []
+            TypeDecl: samp, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: clp, [], [], []
+        ArrayDecl: []
+          TypeDecl: clp, []
+            IdentifierType: ['double']
+          Constant: int, 2
+      Decl: xyz, [], [], []
+        ArrayDecl: []
+          TypeDecl: xyz, []
+            IdentifierType: ['double']
+          Constant: int, 3
+      Decl: q, [], [], []
+        ArrayDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['double']
+          Constant: int, 4
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['double']
+      Decl: mRF, [], [], []
+        ArrayDecl: []
+          TypeDecl: mRF, []
+            IdentifierType: ['double']
+          Constant: int, 9
+      Decl: xi, [], [], []
+        TypeDecl: xi, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: xi
+          Constant: int, 0
+        BinaryOp: <
+          ID: xi
+          ID: samp
+        UnaryOp: p++
+          ID: xi
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: q
+              Constant: int, 0
+            Constant: float, 1.0
+          Assignment: =
+            ArrayRef: 
+              ID: q
+              Constant: int, 1
+            BinaryOp: +
+              BinaryOp: /
+                BinaryOp: *
+                  BinaryOp: -
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['double']
+                      Constant: int, 1
+                    UnaryOp: -
+                      Constant: int, 1
+                  BinaryOp: -
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['double']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['float']
+                        ID: xi
+                    UnaryOp: -
+                      Constant: float, 0.5
+                BinaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['double']
+                    BinaryOp: -
+                      ID: samp
+                      Constant: float, 0.5
+                  UnaryOp: -
+                    Constant: float, 0.5
+              UnaryOp: -
+                Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: q
+              Constant: int, 2
+            BinaryOp: +
+              BinaryOp: /
+                BinaryOp: *
+                  BinaryOp: -
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['double']
+                      Constant: int, 1
+                    UnaryOp: -
+                      Constant: int, 1
+                  BinaryOp: -
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['double']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['float']
+                        Constant: int, 0
+                    UnaryOp: -
+                      Constant: float, 0.5
+                BinaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['double']
+                    BinaryOp: -
+                      ID: samp
+                      Constant: float, 0.5
+                  UnaryOp: -
+                    Constant: float, 0.5
+              UnaryOp: -
+                Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: q
+              Constant: int, 3
+            BinaryOp: +
+              BinaryOp: /
+                BinaryOp: *
+                  BinaryOp: -
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['double']
+                      Constant: int, 1
+                    UnaryOp: -
+                      Constant: int, 1
+                  BinaryOp: -
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['double']
+                      Cast: 
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['float']
+                        Constant: int, 0
+                    UnaryOp: -
+                      Constant: float, 0.5
+                BinaryOp: -
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['double']
+                    BinaryOp: -
+                      ID: samp
+                      Constant: float, 0.5
+                  UnaryOp: -
+                    Constant: float, 0.5
+              UnaryOp: -
+                Constant: int, 1
+          Assignment: =
+            ID: len
+            FuncCall: 
+              ID: sqrt
+              ExprList: 
+                BinaryOp: +
+                  BinaryOp: +
+                    BinaryOp: +
+                      BinaryOp: *
+                        ArrayRef: 
+                          ID: q
+                          Constant: int, 0
+                        ArrayRef: 
+                          ID: q
+                          Constant: int, 0
+                      BinaryOp: *
+                        ArrayRef: 
+                          ID: q
+                          Constant: int, 1
+                        ArrayRef: 
+                          ID: q
+                          Constant: int, 1
+                    BinaryOp: *
+                      ArrayRef: 
+                        ID: q
+                        Constant: int, 2
+                      ArrayRef: 
+                        ID: q
+                        Constant: int, 2
+                  BinaryOp: *
+                    ArrayRef: 
+                      ID: q
+                      Constant: int, 3
+                    ArrayRef: 
+                      ID: q
+                      Constant: int, 3
+          ExprList: 
+            Assignment: =
+              ArrayRef: 
+                ID: q
+                Constant: int, 0
+              BinaryOp: /
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: q
+                    Constant: int, 0
+                  Constant: float, 1.0
+                ID: len
+            Assignment: =
+              ArrayRef: 
+                ID: q
+                Constant: int, 1
+              BinaryOp: /
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: q
+                    Constant: int, 1
+                  Constant: float, 1.0
+                ID: len
+            Assignment: =
+              ArrayRef: 
+                ID: q
+                Constant: int, 2
+              BinaryOp: /
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: q
+                    Constant: int, 2
+                  Constant: float, 1.0
+                ID: len
+            Assignment: =
+              ArrayRef: 
+                ID: q
+                Constant: int, 3
+              BinaryOp: /
+                BinaryOp: *
+                  ArrayRef: 
+                    ID: q
+                    Constant: int, 3
+                  Constant: float, 1.0
+                ID: len
+          FuncCall: 
+            ID: washQtoM3
+            ExprList: 
+              ID: mRF
+              ID: q
+      Return: 
+        Constant: int, 0

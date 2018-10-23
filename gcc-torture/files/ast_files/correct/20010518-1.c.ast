@@ -1,0 +1,782 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: insn_code
+      EnumeratorList: 
+        Enumerator: CODE_FOR_extendqidi2
+          Constant: int, 3
+        Enumerator: CODE_FOR_nothing
+          Constant: int, 870
+  Decl: None, [], [], []
+    Struct: rtx_def
+  Decl: None, [], [], []
+    Enum: machine_mode
+      EnumeratorList: 
+        Enumerator: VOIDmode
+        Enumerator: MAX_MACHINE_MODE
+  Typedef: HARD_REG_ELT_TYPE, [], ['typedef']
+    TypeDecl: HARD_REG_ELT_TYPE, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Typedef: HARD_REG_SET, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: HARD_REG_SET, []
+        IdentifierType: ['HARD_REG_ELT_TYPE']
+      BinaryOp: /
+        BinaryOp: -
+          BinaryOp: +
+            Constant: int, 77
+            BinaryOp: *
+              Constant: int, 8
+              Constant: int, 8
+          Constant: int, 1
+        BinaryOp: *
+          Constant: int, 8
+          Constant: int, 8
+  Decl: None, [], [], []
+    Enum: rtx_code
+      EnumeratorList: 
+        Enumerator: UNKNOWN
+        Enumerator: NIL
+        Enumerator: REG
+        Enumerator: LAST_AND_UNUSED_RTX_CODE
+          Constant: int, 256
+  Typedef: addr_diff_vec_flags, [], ['typedef']
+    TypeDecl: addr_diff_vec_flags, []
+      Struct: None
+        Decl: min_align, [], [], []
+          TypeDecl: min_align, []
+            IdentifierType: ['unsigned']
+          Constant: int, 8
+        Decl: base_after_vec, [], [], []
+          TypeDecl: base_after_vec, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+        Decl: min_after_vec, [], [], []
+          TypeDecl: min_after_vec, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+        Decl: max_after_vec, [], [], []
+          TypeDecl: max_after_vec, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+        Decl: min_after_base, [], [], []
+          TypeDecl: min_after_base, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+        Decl: max_after_base, [], [], []
+          TypeDecl: max_after_base, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+        Decl: offset_unsigned, [], [], []
+          TypeDecl: offset_unsigned, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+        Decl: None, [], [], []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned']
+          Constant: int, 2
+        Decl: scale, [], [], []
+          TypeDecl: scale, []
+            IdentifierType: ['unsigned']
+          Constant: int, 8
+  Typedef: rtunion, [], ['typedef']
+    TypeDecl: rtunion, []
+      Union: rtunion_def
+        Decl: rtwint, [], [], []
+          TypeDecl: rtwint, []
+            IdentifierType: ['long', 'long']
+        Decl: rtint, [], [], []
+          TypeDecl: rtint, []
+            IdentifierType: ['int']
+        Decl: rtuint, [], [], []
+          TypeDecl: rtuint, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: rtstr, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: rtstr, ['const']
+              IdentifierType: ['char']
+        Decl: rtx, [], [], []
+          PtrDecl: []
+            TypeDecl: rtx, []
+              Struct: rtx_def
+        Decl: rtvec, [], [], []
+          PtrDecl: []
+            TypeDecl: rtvec, []
+              Struct: rtvec_def
+        Decl: rttype, [], [], []
+          TypeDecl: rttype, []
+            Enum: machine_mode
+        Decl: rt_addr_diff_vec_flags, [], [], []
+          TypeDecl: rt_addr_diff_vec_flags, []
+            IdentifierType: ['addr_diff_vec_flags']
+        Decl: rt_cselib, [], [], []
+          PtrDecl: []
+            TypeDecl: rt_cselib, []
+              Struct: cselib_val_struct
+        Decl: rtbit, [], [], []
+          PtrDecl: []
+            TypeDecl: rtbit, []
+              Struct: bitmap_head_def
+        Decl: rttree, [], [], []
+          PtrDecl: []
+            TypeDecl: rttree, []
+              Union: tree_node
+        Decl: bb, [], [], []
+          PtrDecl: []
+            TypeDecl: bb, []
+              Struct: basic_block_def
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              Enum: rtx_code
+            Constant: int, 16
+          Decl: mode, [], [], []
+            TypeDecl: mode, []
+              Enum: machine_mode
+            Constant: int, 8
+          Decl: jump, [], [], []
+            TypeDecl: jump, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: call, [], [], []
+            TypeDecl: call, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: unchanging, [], [], []
+            TypeDecl: unchanging, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: volatil, [], [], []
+            TypeDecl: volatil, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: in_struct, [], [], []
+            TypeDecl: in_struct, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: used, [], [], []
+            TypeDecl: used, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 1
+          Decl: integrated, [], [], []
+            TypeDecl: integrated, []
+              IdentifierType: ['unsigned']
+            Constant: int, 1
+          Decl: frame_related, [], [], []
+            TypeDecl: frame_related, []
+              IdentifierType: ['unsigned']
+            Constant: int, 1
+          Decl: fld, [], [], []
+            ArrayDecl: []
+              TypeDecl: fld, []
+                IdentifierType: ['rtunion']
+              Constant: int, 1
+  Decl: None, [], [], []
+    Enum: reload_type
+      EnumeratorList: 
+        Enumerator: RELOAD_FOR_INPUT
+        Enumerator: RELOAD_FOR_OUTPUT
+        Enumerator: RELOAD_FOR_INSN
+        Enumerator: RELOAD_FOR_INPUT_ADDRESS
+        Enumerator: RELOAD_FOR_INPADDR_ADDRESS
+        Enumerator: RELOAD_FOR_OUTPUT_ADDRESS
+        Enumerator: RELOAD_FOR_OUTADDR_ADDRESS
+        Enumerator: RELOAD_FOR_OPERAND_ADDRESS
+        Enumerator: RELOAD_FOR_OPADDR_ADDR
+        Enumerator: RELOAD_OTHER
+        Enumerator: RELOAD_FOR_OTHER_ADDRESS
+  Decl: None, [], [], []
+    Struct: reload
+      Decl: in, [], [], []
+        TypeDecl: in, []
+          IdentifierType: ['rtx']
+      Decl: out, [], [], []
+        TypeDecl: out, []
+          IdentifierType: ['rtx']
+      Decl: inmode, [], [], []
+        TypeDecl: inmode, []
+          Enum: machine_mode
+      Decl: outmode, [], [], []
+        TypeDecl: outmode, []
+          Enum: machine_mode
+      Decl: mode, [], [], []
+        TypeDecl: mode, []
+          Enum: machine_mode
+      Decl: nregs, [], [], []
+        TypeDecl: nregs, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: inc, [], [], []
+        TypeDecl: inc, []
+          IdentifierType: ['int']
+      Decl: in_reg, [], [], []
+        TypeDecl: in_reg, []
+          IdentifierType: ['rtx']
+      Decl: out_reg, [], [], []
+        TypeDecl: out_reg, []
+          IdentifierType: ['rtx']
+      Decl: regno, [], [], []
+        TypeDecl: regno, []
+          IdentifierType: ['int']
+      Decl: reg_rtx, [], [], []
+        TypeDecl: reg_rtx, []
+          IdentifierType: ['rtx']
+      Decl: opnum, [], [], []
+        TypeDecl: opnum, []
+          IdentifierType: ['int']
+      Decl: secondary_in_reload, [], [], []
+        TypeDecl: secondary_in_reload, []
+          IdentifierType: ['int']
+      Decl: secondary_out_reload, [], [], []
+        TypeDecl: secondary_out_reload, []
+          IdentifierType: ['int']
+      Decl: secondary_in_icode, [], [], []
+        TypeDecl: secondary_in_icode, []
+          Enum: insn_code
+      Decl: secondary_out_icode, [], [], []
+        TypeDecl: secondary_out_icode, []
+          Enum: insn_code
+      Decl: when_needed, [], [], []
+        TypeDecl: when_needed, []
+          Enum: reload_type
+      Decl: optional, [], [], []
+        TypeDecl: optional, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: nocombine, [], [], []
+        TypeDecl: nocombine, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: secondary_p, [], [], []
+        TypeDecl: secondary_p, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: nongroup, [], [], []
+        TypeDecl: nongroup, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+  Decl: None, [], [], []
+    Struct: insn_chain
+      Decl: insn, [], [], []
+        TypeDecl: insn, []
+          IdentifierType: ['rtx']
+  Decl: n_reloads, [], ['extern'], []
+    TypeDecl: n_reloads, []
+      IdentifierType: ['int']
+  Decl: reload_order, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: reload_order, []
+        IdentifierType: ['short']
+      BinaryOp: *
+        BinaryOp: *
+          Constant: int, 2
+          Constant: int, 10
+        BinaryOp: +
+          Constant: int, 2
+          Constant: int, 1
+  Decl: reload_spill_index, [], [], []
+    ArrayDecl: []
+      TypeDecl: reload_spill_index, []
+        IdentifierType: ['int']
+      BinaryOp: *
+        BinaryOp: *
+          Constant: int, 2
+          Constant: int, 10
+        BinaryOp: +
+          Constant: int, 2
+          Constant: int, 1
+  Decl: rld, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: rld, []
+        Struct: reload
+      BinaryOp: *
+        BinaryOp: *
+          Constant: int, 2
+          Constant: int, 10
+        BinaryOp: +
+          Constant: int, 2
+          Constant: int, 1
+  Decl: reg_last_reload_reg, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: reg_last_reload_reg, []
+        IdentifierType: ['rtx']
+  Decl: reg_reloaded_valid, [], ['static'], []
+    TypeDecl: reg_reloaded_valid, []
+      IdentifierType: ['HARD_REG_SET']
+  Decl: reg_reloaded_dead, [], ['static'], []
+    TypeDecl: reg_reloaded_dead, []
+      IdentifierType: ['HARD_REG_SET']
+  Decl: reg_reloaded_died, [], ['static'], []
+    TypeDecl: reg_reloaded_died, []
+      IdentifierType: ['HARD_REG_SET']
+  Decl: reg_is_output_reload, [], ['static'], []
+    TypeDecl: reg_is_output_reload, []
+      IdentifierType: ['HARD_REG_SET']
+  Decl: mode_size, ['const'], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: mode_size, ['const']
+        IdentifierType: ['unsigned', 'int']
+  Decl: target_flags, [], ['extern'], []
+    TypeDecl: target_flags, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: emit_reload_insns, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: chain
+        TypeDecl: emit_reload_insns, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: insn, [], [], []
+        TypeDecl: insn, []
+          IdentifierType: ['rtx']
+        StructRef: ->
+          ID: chain
+          ID: insn
+      Decl: j, [], ['register'], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: following_insn, [], [], []
+        TypeDecl: following_insn, []
+          IdentifierType: ['rtx']
+        StructRef: .
+          ArrayRef: 
+            StructRef: ->
+              ID: insn
+              ID: fld
+            Constant: int, 2
+          ID: rtx
+      Decl: before_insn, [], [], []
+        TypeDecl: before_insn, []
+          IdentifierType: ['rtx']
+        StructRef: .
+          ArrayRef: 
+            StructRef: ->
+              ID: insn
+              ID: fld
+            Constant: int, 1
+          ID: rtx
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          ID: n_reloads
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          Decl: r, [], ['register'], []
+            TypeDecl: r, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: reload_order
+              ID: j
+          Decl: i, [], ['register'], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+            ArrayRef: 
+              ID: reload_spill_index
+              ID: r
+          Compound: 
+            Decl: out, [], [], []
+              TypeDecl: out, []
+                IdentifierType: ['rtx']
+              TernaryOp: 
+                BinaryOp: ==
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        Enum: rtx_code
+                    StructRef: ->
+                      StructRef: .
+                        ArrayRef: 
+                          ID: rld
+                          ID: r
+                        ID: out
+                      ID: code
+                  ID: REG
+                StructRef: .
+                  ArrayRef: 
+                    ID: rld
+                    ID: r
+                  ID: out
+                StructRef: .
+                  ArrayRef: 
+                    ID: rld
+                    ID: r
+                  ID: out_reg
+            Decl: nregno, [], ['register'], []
+              TypeDecl: nregno, []
+                IdentifierType: ['int']
+              StructRef: .
+                ArrayRef: 
+                  StructRef: ->
+                    ID: out
+                    ID: fld
+                  Constant: int, 0
+                ID: rtuint
+            If: 
+              BinaryOp: >=
+                ID: nregno
+                Constant: int, 77
+              Compound: 
+                Decl: src_reg, [], [], []
+                  TypeDecl: src_reg, []
+                    IdentifierType: ['rtx']
+                Decl: store_insn, [], [], []
+                  TypeDecl: store_insn, []
+                    IdentifierType: ['rtx']
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['rtx']
+                    Constant: int, 0
+                Assignment: =
+                  ArrayRef: 
+                    ID: reg_last_reload_reg
+                    ID: nregno
+                  Constant: int, 0
+                If: 
+                  BinaryOp: &&
+                    BinaryOp: &&
+                      ID: src_reg
+                      BinaryOp: ==
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              Enum: rtx_code
+                          StructRef: ->
+                            ID: src_reg
+                            ID: code
+                        ID: REG
+                    BinaryOp: <
+                      StructRef: .
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: src_reg
+                            ID: fld
+                          Constant: int, 0
+                        ID: rtuint
+                      Constant: int, 77
+                  Compound: 
+                    Decl: src_regno, [], [], []
+                      TypeDecl: src_regno, []
+                        IdentifierType: ['int']
+                      StructRef: .
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: src_reg
+                            ID: fld
+                          Constant: int, 0
+                        ID: rtuint
+                    Decl: nr, [], [], []
+                      TypeDecl: nr, []
+                        IdentifierType: ['int']
+                      TernaryOp: 
+                        BinaryOp: &&
+                          BinaryOp: >=
+                            ID: src_regno
+                            Constant: int, 32
+                          BinaryOp: <=
+                            ID: src_regno
+                            Constant: int, 63
+                        BinaryOp: /
+                          BinaryOp: -
+                            BinaryOp: +
+                              ArrayRef: 
+                                ID: mode_size
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['int']
+                                  StructRef: .
+                                    ArrayRef: 
+                                      ID: rld
+                                      ID: r
+                                    ID: mode
+                              Constant: int, 8
+                            Constant: int, 1
+                          Constant: int, 8
+                        BinaryOp: /
+                          BinaryOp: -
+                            BinaryOp: +
+                              ArrayRef: 
+                                ID: mode_size
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['int']
+                                  StructRef: .
+                                    ArrayRef: 
+                                      ID: rld
+                                      ID: r
+                                    ID: mode
+                              TernaryOp: 
+                                UnaryOp: !
+                                  BinaryOp: &
+                                    ID: target_flags
+                                    Constant: int, 0x00000020
+                                Constant: int, 4
+                                Constant: int, 8
+                            Constant: int, 1
+                          TernaryOp: 
+                            UnaryOp: !
+                              BinaryOp: &
+                                ID: target_flags
+                                Constant: int, 0x00000020
+                            Constant: int, 4
+                            Constant: int, 8
+                    Decl: note, [], [], []
+                      TypeDecl: note, []
+                        IdentifierType: ['rtx']
+                      Constant: int, 0
+                    While: 
+                      BinaryOp: >
+                        UnaryOp: p--
+                          ID: nr
+                        Constant: int, 0
+                      Compound: 
+                        Assignment: &=
+                          ArrayRef: 
+                            ID: reg_reloaded_dead
+                            BinaryOp: /
+                              BinaryOp: +
+                                ID: src_regno
+                                ID: nr
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['unsigned']
+                                BinaryOp: *
+                                  Constant: int, 8
+                                  Constant: int, 8
+                          UnaryOp: ~
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['HARD_REG_ELT_TYPE']
+                                Constant: int, 1
+                              BinaryOp: %
+                                BinaryOp: +
+                                  ID: src_regno
+                                  ID: nr
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['unsigned']
+                                  BinaryOp: *
+                                    Constant: int, 8
+                                    Constant: int, 8
+                        Assignment: |=
+                          ArrayRef: 
+                            ID: reg_reloaded_valid
+                            BinaryOp: /
+                              BinaryOp: +
+                                ID: src_regno
+                                ID: nr
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['unsigned']
+                                BinaryOp: *
+                                  Constant: int, 8
+                                  Constant: int, 8
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['HARD_REG_ELT_TYPE']
+                              Constant: int, 1
+                            BinaryOp: %
+                              BinaryOp: +
+                                ID: src_regno
+                                ID: nr
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['unsigned']
+                                BinaryOp: *
+                                  Constant: int, 8
+                                  Constant: int, 8
+                        Assignment: |=
+                          ArrayRef: 
+                            ID: reg_is_output_reload
+                            BinaryOp: /
+                              BinaryOp: +
+                                ID: src_regno
+                                ID: nr
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['unsigned']
+                                BinaryOp: *
+                                  Constant: int, 8
+                                  Constant: int, 8
+                          BinaryOp: <<
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['HARD_REG_ELT_TYPE']
+                              Constant: int, 1
+                            BinaryOp: %
+                              BinaryOp: +
+                                ID: src_regno
+                                ID: nr
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['unsigned']
+                                BinaryOp: *
+                                  Constant: int, 8
+                                  Constant: int, 8
+                        If: 
+                          ID: note
+                          Assignment: |=
+                            ArrayRef: 
+                              ID: reg_reloaded_died
+                              BinaryOp: /
+                                ID: src_regno
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['unsigned']
+                                  BinaryOp: *
+                                    Constant: int, 8
+                                    Constant: int, 8
+                            BinaryOp: <<
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    IdentifierType: ['HARD_REG_ELT_TYPE']
+                                Constant: int, 1
+                              BinaryOp: %
+                                ID: src_regno
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['unsigned']
+                                  BinaryOp: *
+                                    Constant: int, 8
+                                    Constant: int, 8
+                          Assignment: &=
+                            ArrayRef: 
+                              ID: reg_reloaded_died
+                              BinaryOp: /
+                                ID: src_regno
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['unsigned']
+                                  BinaryOp: *
+                                    Constant: int, 8
+                                    Constant: int, 8
+                            UnaryOp: ~
+                              BinaryOp: <<
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['HARD_REG_ELT_TYPE']
+                                  Constant: int, 1
+                                BinaryOp: %
+                                  ID: src_regno
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['unsigned']
+                                    BinaryOp: *
+                                      Constant: int, 8
+                                      Constant: int, 8
+                    Assignment: =
+                      ArrayRef: 
+                        ID: reg_last_reload_reg
+                        ID: nregno
+                      ID: src_reg
+              Compound: 
+                Decl: num_regs, [], [], []
+                  TypeDecl: num_regs, []
+                    IdentifierType: ['int']
+                  TernaryOp: 
+                    BinaryOp: &&
+                      BinaryOp: >=
+                        ID: nregno
+                        Constant: int, 32
+                      BinaryOp: <=
+                        ID: nregno
+                        Constant: int, 63
+                    BinaryOp: /
+                      BinaryOp: -
+                        BinaryOp: +
+                          ArrayRef: 
+                            ID: mode_size
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['int']
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    Enum: machine_mode
+                                StructRef: ->
+                                  StructRef: .
+                                    ArrayRef: 
+                                      ID: rld
+                                      ID: r
+                                    ID: out
+                                  ID: mode
+                          Constant: int, 8
+                        Constant: int, 1
+                      Constant: int, 8
+                    BinaryOp: /
+                      BinaryOp: -
+                        BinaryOp: +
+                          ArrayRef: 
+                            ID: mode_size
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['int']
+                              Cast: 
+                                Typename: None, []
+                                  TypeDecl: None, []
+                                    Enum: machine_mode
+                                StructRef: ->
+                                  StructRef: .
+                                    ArrayRef: 
+                                      ID: rld
+                                      ID: r
+                                    ID: out
+                                  ID: mode
+                          TernaryOp: 
+                            UnaryOp: !
+                              BinaryOp: &
+                                ID: target_flags
+                                Constant: int, 0x00000020
+                            Constant: int, 4
+                            Constant: int, 8
+                        Constant: int, 1
+                      TernaryOp: 
+                        UnaryOp: !
+                          BinaryOp: &
+                            ID: target_flags
+                            Constant: int, 0x00000020
+                        Constant: int, 4
+                        Constant: int, 8
+                While: 
+                  BinaryOp: >
+                    UnaryOp: p--
+                      ID: num_regs
+                    Constant: int, 0
+                  Assignment: =
+                    ArrayRef: 
+                      ID: reg_last_reload_reg
+                      BinaryOp: +
+                        ID: nregno
+                        ID: num_regs
+                    Constant: int, 0
+    Decl: chain, [], [], []
+      PtrDecl: []
+        TypeDecl: chain, []
+          Struct: insn_chain

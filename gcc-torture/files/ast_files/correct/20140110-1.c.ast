@@ -1,0 +1,56 @@
+FileAST: 
+  Typedef: size_t, [], ['typedef']
+    TypeDecl: size_t, []
+      IdentifierType: ['long', 'unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: RangeMapRange
+      Decl: fromMin, [], [], []
+        TypeDecl: fromMin, []
+          IdentifierType: ['unsigned']
+      Decl: fromMax, [], [], []
+        TypeDecl: fromMax, []
+          IdentifierType: ['unsigned']
+      Decl: toMin, [], [], []
+        TypeDecl: toMin, []
+          IdentifierType: ['unsigned']
+  Decl: reserve1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: reserve1, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: q1, [], [], []
+            PtrDecl: []
+              TypeDecl: q1, []
+                Struct: RangeMapRange
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['size_t']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: q2, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: q2, ['const']
+            Struct: RangeMapRange
+        BinaryOp: +
+          ID: q1
+          ID: t
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['size_t']
+        BinaryOp: -
+          ID: q2
+          ID: q1
+      If: 
+        BinaryOp: >
+          ID: n
+          Constant: int, 0
+        FuncCall: 
+          ID: reserve1

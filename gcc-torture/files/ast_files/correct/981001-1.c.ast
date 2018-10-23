@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: code, [], [], []
+    TypeDecl: code, []
+      IdentifierType: ['unsigned', 'short']
+    Constant: int, 0x0000
+  Decl: low, [], [], []
+    TypeDecl: low, []
+      IdentifierType: ['unsigned', 'short']
+    Constant: int, 0x4000
+  Decl: high, [], [], []
+    TypeDecl: high, []
+      IdentifierType: ['unsigned', 'short']
+    Constant: int, 0xb000
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: !=
+              BinaryOp: &
+                ID: high
+                Constant: int, 0x8000
+              BinaryOp: &
+                ID: low
+                Constant: int, 0x8000
+            BinaryOp: ==
+              BinaryOp: &
+                ID: low
+                Constant: int, 0x4000
+              Constant: int, 0x4000
+          BinaryOp: ==
+            BinaryOp: &
+              ID: high
+              Constant: int, 0x4000
+            Constant: int, 0
+        Compound: 
+          Assignment: ^=
+            ID: code
+            Constant: int, 0x4000
+          Assignment: |=
+            ID: low
+            Constant: int, 0x4000
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: x, [], ['extern'], []
+    TypeDecl: x, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: y
+            BinaryOp: &
+              ID: __INTPTR_TYPE__
+              ID: x
+          BinaryOp: >>
+            ID: y
+            BinaryOp: -
+              Constant: int, 32
+              BinaryOp: &
+                ID: __INTPTR_TYPE__
+                ID: x

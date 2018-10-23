@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['signed', 'char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['signed', 'char']
+          Constant: int, 123
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['signed', 'char']
+          Constant: int, 123
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['signed', 'char']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 123
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ID: y
+              ID: x
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            TernaryOp: 
+              BinaryOp: <
+                ID: e
+                Constant: int, 0
+              UnaryOp: -
+                ID: e
+              ID: e
+          Assignment: =
+            ID: c
+            BinaryOp: <
+              ID: d
+              Constant: int, 75
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              ID: y
+            ID: c
+          Assignment: =
+            ArrayRef: 
+              ID: b
+              ID: y
+            ID: c
+          UnaryOp: p--
+            ID: y
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: b
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: a

@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v1, [], [], []
+            TypeDecl: v1, []
+              IdentifierType: ['char']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: >>=
+        ID: v1
+        Constant: int, 0xdebecced
+      Return: 
+        ID: v1

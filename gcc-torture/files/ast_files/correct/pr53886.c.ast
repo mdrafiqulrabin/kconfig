@@ -1,0 +1,236 @@
+FileAST: 
+  Typedef: ASN1_BIT_STRING, [], ['typedef']
+    TypeDecl: ASN1_BIT_STRING, []
+      Struct: asn1_string_st
+  Typedef: BIGNUM, [], ['typedef']
+    TypeDecl: BIGNUM, []
+      Struct: bignum_st
+  Typedef: EC_GROUP, [], ['typedef']
+    TypeDecl: EC_GROUP, []
+      Struct: ec_group_st
+  Typedef: EC_KEY, [], ['typedef']
+    TypeDecl: EC_KEY, []
+      Struct: ec_key_st
+  Decl: X9_62_PENTANOMIAL, [], [], []
+    TypeDecl: X9_62_PENTANOMIAL, []
+      Struct: ec_key_st
+        Decl: group, [], [], []
+          PtrDecl: []
+            TypeDecl: group, []
+              IdentifierType: ['EC_GROUP']
+        Decl: priv_key, [], [], []
+          PtrDecl: []
+            TypeDecl: priv_key, []
+              IdentifierType: ['BIGNUM']
+        Decl: enc_flag, [], [], []
+          TypeDecl: enc_flag, []
+            IdentifierType: ['unsigned', 'int']
+  Typedef: EC_PRIVATEKEY, [], ['typedef']
+    TypeDecl: EC_PRIVATEKEY, []
+      Struct: ec_privatekey_st
+        Decl: publicKey, [], [], []
+          PtrDecl: []
+            TypeDecl: publicKey, []
+              IdentifierType: ['ASN1_BIT_STRING']
+  Decl: EC_PRIVATEKEY_new, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: EC_PRIVATEKEY_new, []
+          IdentifierType: ['EC_PRIVATEKEY']
+  Decl: EC_PRIVATEKEY_free, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['EC_PRIVATEKEY']
+      TypeDecl: EC_PRIVATEKEY_free, []
+        IdentifierType: ['void']
+  Decl: CRYPTO_realloc, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: CRYPTO_realloc, []
+          IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: i2d_ECPrivateKey, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['EC_KEY']
+          Decl: out, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: out, []
+                  IdentifierType: ['unsigned', 'char']
+        TypeDecl: i2d_ECPrivateKey, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ret, [], [], []
+        TypeDecl: ret, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: ok, [], [], []
+        TypeDecl: ok, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: buffer, [], [], []
+        PtrDecl: []
+          TypeDecl: buffer, []
+            IdentifierType: ['unsigned', 'char']
+        Constant: int, 0
+      Decl: buf_len, [], [], []
+        TypeDecl: buf_len, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Decl: tmp_len, [], [], []
+        TypeDecl: tmp_len, []
+          IdentifierType: ['unsigned']
+      Decl: priv_key, [], [], []
+        PtrDecl: []
+          TypeDecl: priv_key, []
+            IdentifierType: ['EC_PRIVATEKEY']
+        Constant: int, 0
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ==
+              ID: a
+              Constant: int, 0
+            BinaryOp: ==
+              StructRef: ->
+                ID: a
+                ID: group
+              Constant: int, 0
+          BinaryOp: ==
+            StructRef: ->
+              ID: a
+              ID: priv_key
+            Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: ERR_put_error
+            ExprList: 
+              Constant: int, 16
+              Constant: int, 192
+              BinaryOp: |
+                Constant: int, 3
+                Constant: int, 64
+              Constant: string, ""
+              Constant: int, 1234
+          Goto: err
+      If: 
+        BinaryOp: ==
+          Assignment: =
+            ID: priv_key
+            FuncCall: 
+              ID: EC_PRIVATEKEY_new
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: ERR_put_error
+            ExprList: 
+              Constant: int, 16
+              Constant: int, 192
+              BinaryOp: |
+                Constant: int, 1
+                Constant: int, 64
+              Constant: string, ""
+              Constant: int, 1241
+          Goto: err
+      If: 
+        UnaryOp: !
+          BinaryOp: &
+            StructRef: ->
+              ID: a
+              ID: enc_flag
+            Constant: int, 0x002
+        Compound: 
+          If: 
+            BinaryOp: ==
+              StructRef: ->
+                ID: priv_key
+                ID: publicKey
+              Constant: int, 0
+            Compound: 
+              Goto: err
+          If: 
+            BinaryOp: >
+              ID: tmp_len
+              ID: buf_len
+            Compound: 
+              Decl: tmp_buffer, [], [], []
+                PtrDecl: []
+                  TypeDecl: tmp_buffer, []
+                    IdentifierType: ['unsigned', 'char']
+                FuncCall: 
+                  ID: CRYPTO_realloc
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['char']
+                      ID: buffer
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      ID: tmp_len
+                    Constant: string, ""
+                    Constant: int, 1293
+              Assignment: =
+                ID: buffer
+                ID: tmp_buffer
+      If: 
+        BinaryOp: ==
+          Assignment: =
+            ID: ret
+            FuncCall: 
+              ID: i2d_EC_PRIVATEKEY
+              ExprList: 
+                ID: priv_key
+                ID: out
+          Constant: int, 0
+        Compound: 
+      Assignment: =
+        ID: ok
+        Constant: int, 1
+      Label: err
+        If: 
+          ID: buffer
+          FuncCall: 
+            ID: CRYPTO_free
+            ExprList: 
+              ID: buffer
+      If: 
+        ID: priv_key
+        FuncCall: 
+          ID: EC_PRIVATEKEY_free
+          ExprList: 
+            ID: priv_key
+      Return: 
+        TernaryOp: 
+          ID: ok
+          ID: ret
+          Constant: int, 0

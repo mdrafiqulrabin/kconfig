@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: p, [], [], []
+        ArrayDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+          Constant: int, 2
+  Decl: v, [], ['static'], []
+    TypeDecl: v, []
+      Struct: s
+  Decl: o0, ['const'], [], []
+    TypeDecl: o0, ['const']
+      IdentifierType: ['int']
+    BinaryOp: +
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ArrayRef: 
+                StructRef: .
+                  ID: v
+                  ID: p
+                Constant: int, 0
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ID: v
+      Constant: int, 0
+  Decl: o1, ['const'], [], []
+    TypeDecl: o1, ['const']
+      IdentifierType: ['int']
+    BinaryOp: +
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ArrayRef: 
+                StructRef: .
+                  ID: v
+                  ID: p
+                Constant: int, 0
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: &
+              ID: v
+      Constant: int, 1

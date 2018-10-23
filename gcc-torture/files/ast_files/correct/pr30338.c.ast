@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: grub_scratch_mem, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: grub_scratch_mem, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: testload_func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            PtrDecl: []
+              TypeDecl: arg, []
+                IdentifierType: ['char']
+          Decl: flags, [], [], []
+            TypeDecl: flags, []
+              IdentifierType: ['int']
+        TypeDecl: testload_func, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 0x10ac0
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: !=
+            UnaryOp: *
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'char']
+                BinaryOp: +
+                  BinaryOp: +
+                    Constant: int, 0x200000
+                    ID: i
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    ID: grub_scratch_mem
+            UnaryOp: *
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'char']
+                BinaryOp: +
+                  BinaryOp: +
+                    Constant: int, 0x300000
+                    ID: i
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                    ID: grub_scratch_mem
+          Return: 
+            Constant: int, 0
+      Return: 
+        Constant: int, 1

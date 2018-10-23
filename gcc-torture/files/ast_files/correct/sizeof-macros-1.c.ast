@@ -1,0 +1,162 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          ID: __SIZEOF_INT__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+          ID: __SIZEOF_LONG__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: c, [], [], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+          ID: __SIZEOF_LONG_LONG__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['short']
+          ID: __SIZEOF_SHORT__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: e, [], [], []
+    ArrayDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+          ID: __SIZEOF_POINTER__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: f, [], [], []
+    ArrayDecl: []
+      TypeDecl: f, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['float']
+          ID: __SIZEOF_FLOAT__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: g, [], [], []
+    ArrayDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['double']
+          ID: __SIZEOF_DOUBLE__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: h, [], [], []
+    ArrayDecl: []
+      TypeDecl: h, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'double']
+          ID: __SIZEOF_LONG_DOUBLE__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: i, [], [], []
+    ArrayDecl: []
+      TypeDecl: i, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            ID: __SIZE_TYPE__
+          ID: __SIZEOF_SIZE_T__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: j, [], [], []
+    ArrayDecl: []
+      TypeDecl: j, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            ID: __WCHAR_TYPE__
+          ID: __SIZEOF_WCHAR_T__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: k, [], [], []
+    ArrayDecl: []
+      TypeDecl: k, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            ID: __WINT_TYPE__
+          ID: __SIZEOF_WINT_T__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1
+  Decl: l, [], [], []
+    ArrayDecl: []
+      TypeDecl: l, []
+        IdentifierType: ['int']
+      TernaryOp: 
+        BinaryOp: ==
+          UnaryOp: sizeof
+            ID: __PTRDIFF_TYPE__
+          ID: __SIZEOF_PTRDIFF_T__
+        Constant: int, 1
+        UnaryOp: -
+          Constant: int, 1

@@ -1,0 +1,110 @@
+FileAST: 
+  Typedef: long_long, [], ['typedef']
+    TypeDecl: long_long, []
+      Union: longlong
+        Decl: h, [], [], []
+          TypeDecl: h, []
+            Struct: None
+              Decl: h0, [], [], []
+                TypeDecl: h0, []
+                  IdentifierType: ['unsigned', 'short']
+              Decl: h1, [], [], []
+                TypeDecl: h1, []
+                  IdentifierType: ['unsigned', 'short']
+              Decl: h2, [], [], []
+                TypeDecl: h2, []
+                  IdentifierType: ['unsigned', 'short']
+              Decl: h3, [], [], []
+                TypeDecl: h3, []
+                  IdentifierType: ['unsigned', 'short']
+        Decl: si, [], [], []
+          TypeDecl: si, []
+            Struct: None
+              Decl: low, [], [], []
+                TypeDecl: low, []
+                  IdentifierType: ['signed', 'long']
+              Decl: high, [], [], []
+                TypeDecl: high, []
+                  IdentifierType: ['signed', 'long']
+        Decl: ui, [], [], []
+          TypeDecl: ui, []
+            Struct: None
+              Decl: low, [], [], []
+                TypeDecl: low, []
+                  IdentifierType: ['unsigned', 'long']
+              Decl: high, [], [], []
+                TypeDecl: high, []
+                  IdentifierType: ['unsigned', 'long']
+        Decl: sll, [], [], []
+          TypeDecl: sll, []
+            IdentifierType: ['signed', 'long', 'long']
+        Decl: ull, [], [], []
+          TypeDecl: ull, []
+            IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: __negdi2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: u
+        TypeDecl: __negdi2, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: uu, [], [], []
+        TypeDecl: uu, []
+          IdentifierType: ['long_long']
+      Assignment: =
+        StructRef: .
+          ID: uu
+          ID: sll
+        ID: u
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: uu
+            ID: si
+          ID: low
+        UnaryOp: -
+          StructRef: .
+            StructRef: .
+              ID: uu
+              ID: si
+            ID: low
+      If: 
+        BinaryOp: ==
+          StructRef: .
+            StructRef: .
+              ID: uu
+              ID: si
+            ID: low
+          Constant: int, 0
+        Assignment: =
+          StructRef: .
+            StructRef: .
+              ID: uu
+              ID: si
+            ID: high
+          UnaryOp: -
+            StructRef: .
+              StructRef: .
+                ID: uu
+                ID: si
+              ID: high
+        Assignment: =
+          StructRef: .
+            StructRef: .
+              ID: uu
+              ID: si
+            ID: high
+          UnaryOp: ~
+            StructRef: .
+              StructRef: .
+                ID: uu
+                ID: si
+              ID: high
+      Return: 
+        StructRef: .
+          ID: uu
+          ID: sll
+    Decl: u, [], [], []
+      TypeDecl: u, []
+        IdentifierType: ['long', 'long']

@@ -1,0 +1,843 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          FuncCall: 
+            ID: alloca
+            ExprList: 
+              Constant: int, 10000
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          FuncCall: 
+            ID: alloca
+            ExprList: 
+              Constant: int, 100000
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          FuncCall: 
+            ID: alloca
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                UnaryOp: &
+                  ID: main
+  FuncDef: 
+    Decl: many_par, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: c
+          ID: d
+          ID: e
+          ID: f
+          ID: g
+          ID: h
+          ID: i
+          ID: j
+          ID: k
+          ID: l
+          ID: m
+          ID: n
+          ID: o
+          ID: p
+        TypeDecl: many_par, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        PtrDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['char']
+      Decl: aa, [], [], []
+        TypeDecl: aa, []
+          IdentifierType: ['int']
+      Decl: ba, [], [], []
+        TypeDecl: ba, []
+          IdentifierType: ['int']
+      Decl: ca, [], [], []
+        TypeDecl: ca, []
+          IdentifierType: ['int']
+      Decl: da, [], [], []
+        TypeDecl: da, []
+          IdentifierType: ['int']
+      Decl: ea, [], [], []
+        TypeDecl: ea, []
+          IdentifierType: ['int']
+      Decl: fa, [], [], []
+        TypeDecl: fa, []
+          IdentifierType: ['int']
+      Decl: ga, [], [], []
+        TypeDecl: ga, []
+          IdentifierType: ['int']
+      Decl: ha, [], [], []
+        TypeDecl: ha, []
+          IdentifierType: ['int']
+      Decl: ia, [], [], []
+        TypeDecl: ia, []
+          IdentifierType: ['int']
+      Decl: ja, [], [], []
+        TypeDecl: ja, []
+          IdentifierType: ['int']
+      Decl: ka, [], [], []
+        TypeDecl: ka, []
+          IdentifierType: ['int']
+      Decl: la, [], [], []
+        TypeDecl: la, []
+          IdentifierType: ['int']
+      Decl: ma, [], [], []
+        TypeDecl: ma, []
+          IdentifierType: ['int']
+      Decl: na, [], [], []
+        TypeDecl: na, []
+          IdentifierType: ['int']
+      Decl: oa, [], [], []
+        TypeDecl: oa, []
+          IdentifierType: ['int']
+      Decl: pa, [], [], []
+        TypeDecl: pa, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: aa
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ba
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ca
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: da
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ea
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: fa
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ga
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ha
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ia
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ja
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ka
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: la
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ma
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: na
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: oa
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: pa
+        FuncCall: 
+          ID: bar
+      FuncCall: 
+        ID: foobar
+        ExprList: 
+          ID: a
+          ID: b
+          ID: c
+          ID: d
+          ID: e
+          ID: f
+          ID: g
+          ID: h
+          ID: i
+          ID: j
+          ID: k
+          ID: l
+          ID: m
+          ID: n
+          ID: o
+          ID: p
+          ID: aa
+          ID: ba
+          ID: ca
+          ID: da
+          ID: ea
+          ID: fa
+          ID: ga
+          ID: ha
+          ID: ia
+          ID: ja
+          ID: ka
+          ID: la
+          ID: ma
+          ID: na
+          ID: oa
+          ID: pa
+  FuncDef: 
+    Decl: foobar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: c
+          ID: d
+          ID: e
+          ID: f
+          ID: g
+          ID: h
+          ID: i
+          ID: j
+          ID: k
+          ID: l
+          ID: m
+          ID: n
+          ID: o
+          ID: p
+          ID: aa
+          ID: ba
+          ID: ca
+          ID: da
+          ID: ea
+          ID: fa
+          ID: ga
+          ID: ha
+          ID: ia
+          ID: ja
+          ID: ka
+          ID: la
+          ID: ma
+          ID: na
+          ID: oa
+          ID: pa
+        TypeDecl: foobar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ab, [], [], []
+        TypeDecl: ab, []
+          IdentifierType: ['int']
+      Decl: bb, [], [], []
+        TypeDecl: bb, []
+          IdentifierType: ['int']
+      Decl: cb, [], [], []
+        TypeDecl: cb, []
+          IdentifierType: ['int']
+      Decl: db, [], [], []
+        TypeDecl: db, []
+          IdentifierType: ['int']
+      Decl: eb, [], [], []
+        TypeDecl: eb, []
+          IdentifierType: ['int']
+      Decl: fb, [], [], []
+        TypeDecl: fb, []
+          IdentifierType: ['int']
+      Decl: gb, [], [], []
+        TypeDecl: gb, []
+          IdentifierType: ['int']
+      Decl: hb, [], [], []
+        TypeDecl: hb, []
+          IdentifierType: ['int']
+      Decl: ib, [], [], []
+        TypeDecl: ib, []
+          IdentifierType: ['int']
+      Decl: jb, [], [], []
+        TypeDecl: jb, []
+          IdentifierType: ['int']
+      Decl: kb, [], [], []
+        TypeDecl: kb, []
+          IdentifierType: ['int']
+      Decl: lb, [], [], []
+        TypeDecl: lb, []
+          IdentifierType: ['int']
+      Decl: mb, [], [], []
+        TypeDecl: mb, []
+          IdentifierType: ['int']
+      Decl: nb, [], [], []
+        TypeDecl: nb, []
+          IdentifierType: ['int']
+      Decl: ob, [], [], []
+        TypeDecl: ob, []
+          IdentifierType: ['int']
+      Decl: pb, [], [], []
+        TypeDecl: pb, []
+          IdentifierType: ['int']
+      Decl: qb, [], [], []
+        TypeDecl: qb, []
+          IdentifierType: ['int']
+      Decl: rb, [], [], []
+        TypeDecl: rb, []
+          IdentifierType: ['int']
+      Decl: sb, [], [], []
+        TypeDecl: sb, []
+          IdentifierType: ['int']
+      Decl: tb, [], [], []
+        TypeDecl: tb, []
+          IdentifierType: ['int']
+      Decl: ub, [], [], []
+        TypeDecl: ub, []
+          IdentifierType: ['int']
+      Decl: vb, [], [], []
+        TypeDecl: vb, []
+          IdentifierType: ['int']
+      Decl: xb, [], [], []
+        TypeDecl: xb, []
+          IdentifierType: ['int']
+      Decl: yb, [], [], []
+        TypeDecl: yb, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: ab
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: bb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: cb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: db
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: eb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: fb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: gb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: hb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ib
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: jb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: kb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: lb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: mb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: nb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ob
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: pb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: qb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: rb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: sb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: tb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: ub
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: vb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: xb
+        FuncCall: 
+          ID: bar
+      Assignment: =
+        ID: yb
+        FuncCall: 
+          ID: bar
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: a
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: b
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: c
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: d
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: e
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: f
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: g
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: h
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: i
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: j
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: k
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: l
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: m
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: n
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: o
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: aa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ba
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ca
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: da
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ea
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: fa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ga
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ha
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ia
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ja
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ka
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: la
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ma
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: na
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: oa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: pa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ab
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: bb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: cb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: db
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: eb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: fb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: gb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: hb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ib
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: jb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: kb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: lb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: mb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: nb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ob
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: pb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: a
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: b
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: c
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: d
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: e
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: f
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: g
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: h
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: i
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: j
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: k
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: l
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: m
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: n
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: o
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: p
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: aa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ba
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ca
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: da
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ea
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: fa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ga
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ha
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ia
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ja
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ka
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: la
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ma
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: na
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: oa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: pa
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ab
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: bb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: cb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: db
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: eb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: fb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: gb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: hb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ib
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: jb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: kb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: lb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: mb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: nb
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: ob
+      FuncCall: 
+        ID: boofar
+        ExprList: 
+          ID: pb
+  FuncDef: 
+    Decl: test_exit_ignore_stack, [], [], []
+      FuncDecl: 
+        TypeDecl: test_exit_ignore_stack, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foobar
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1
+          Constant: int, 1

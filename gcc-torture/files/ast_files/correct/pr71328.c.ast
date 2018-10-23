@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 3
+      If: 
+        BinaryOp: >
+          ID: d
+          Constant: int, 11
+        Label: lbl_596
+          Assignment: =
+            ID: c
+            Constant: int, 0
+      While: 
+        UnaryOp: !
+          ID: d
+        Assignment: =
+          ID: b
+          ID: b
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['unsigned', 'char']
+        BinaryOp: ||
+          ID: e
+          ID: d
+      Assignment: =
+        ID: d
+        ID: e
+      If: 
+        ID: a
+        Assignment: =
+          ID: d
+          BinaryOp: ||
+            ID: d
+            ID: a
+      Goto: lbl_596

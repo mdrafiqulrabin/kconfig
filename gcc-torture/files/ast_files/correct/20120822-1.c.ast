@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: shr_long, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: shr_long, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: dvd, [], [], []
+        TypeDecl: dvd, []
+          IdentifierType: ['long', 'long']
+      Decl: div, [], [], []
+        TypeDecl: div, []
+          IdentifierType: ['long', 'long']
+      Decl: mod, [], [], []
+        TypeDecl: mod, []
+          IdentifierType: ['long', 'long']
+      Assignment: =
+        ID: dvd
+        ID: b
+      Assignment: =
+        ID: mod
+        BinaryOp: %
+          ID: dvd
+          ID: s
+      If: 
+        BinaryOp: ==
+          BinaryOp: &
+            BinaryOp: >>
+              ID: c
+              BinaryOp: %
+                BinaryOp: &
+                  ID: mod
+                  Constant: int, 0xff
+                Constant: int, 32
+            Constant: int, 1
+          Constant: int, 0
+        Assignment: =
+          ID: a
+          Constant: int, 1

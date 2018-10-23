@@ -1,0 +1,407 @@
+FileAST: 
+  Typedef: bool8, [], ['typedef']
+    TypeDecl: bool8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint16_t, [], ['typedef']
+    TypeDecl: uint16_t, []
+      IdentifierType: ['unsigned', 'short', 'int']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: uint8, [], ['typedef']
+    TypeDecl: uint8, []
+      IdentifierType: ['uint8_t']
+  Typedef: uint16, [], ['typedef']
+    TypeDecl: uint16, []
+      IdentifierType: ['uint16_t']
+  Typedef: uint32, [], ['typedef']
+    TypeDecl: uint32, []
+      IdentifierType: ['uint32_t']
+  Decl: None, [], [], []
+    Struct: SIAPU
+      Decl: PC, [], [], []
+        PtrDecl: []
+          TypeDecl: PC, []
+            IdentifierType: ['uint8']
+      Decl: RAM, [], [], []
+        PtrDecl: []
+          TypeDecl: RAM, []
+            IdentifierType: ['uint8']
+      Decl: Bit, [], [], []
+        TypeDecl: Bit, []
+          IdentifierType: ['uint8']
+      Decl: Address, [], [], []
+        TypeDecl: Address, []
+          IdentifierType: ['uint32']
+      Decl: WaitAddress1, [], [], []
+        PtrDecl: []
+          TypeDecl: WaitAddress1, []
+            IdentifierType: ['uint8']
+      Decl: WaitAddress2, [], [], []
+        PtrDecl: []
+          TypeDecl: WaitAddress2, []
+            IdentifierType: ['uint8']
+      Decl: _Carry, [], [], []
+        TypeDecl: _Carry, []
+          IdentifierType: ['uint8']
+  Decl: None, [], [], []
+    Struct: SAPU
+      Decl: ShowROM, [], [], []
+        TypeDecl: ShowROM, []
+          IdentifierType: ['bool8']
+      Decl: OutPorts, [], [], []
+        ArrayDecl: []
+          TypeDecl: OutPorts, []
+            IdentifierType: ['uint8']
+          Constant: int, 4
+      Decl: ExtraRAM, [], [], []
+        ArrayDecl: []
+          TypeDecl: ExtraRAM, []
+            IdentifierType: ['uint8']
+          Constant: int, 64
+      Decl: TimerTarget, [], [], []
+        ArrayDecl: []
+          TypeDecl: TimerTarget, []
+            IdentifierType: ['uint16']
+          Constant: int, 3
+  Decl: APU, [], [], []
+    TypeDecl: APU, []
+      Struct: SAPU
+  Decl: IAPU, [], [], []
+    TypeDecl: IAPU, []
+      Struct: SIAPU
+  Decl: S9xSetAPUControl, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: byte, [], [], []
+          TypeDecl: byte, []
+            IdentifierType: ['uint8']
+      TypeDecl: S9xSetAPUControl, []
+        IdentifierType: ['void']
+  Decl: S9xSetAPUDSP, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: byte, [], [], []
+          TypeDecl: byte, []
+            IdentifierType: ['uint8']
+      TypeDecl: S9xSetAPUDSP, []
+        IdentifierType: ['void']
+  Decl: S9xGetAPUDSP, [], [], []
+    FuncDecl: 
+      TypeDecl: S9xGetAPUDSP, []
+        IdentifierType: ['uint8']
+  FuncDef: 
+    Decl: S9xAPUGetByte, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: Address, [], [], []
+            TypeDecl: Address, []
+              IdentifierType: ['uint32']
+        TypeDecl: S9xAPUGetByte, []
+          IdentifierType: ['uint8']
+    Compound: 
+      Assignment: &=
+        ID: Address
+        Constant: int, 0xffff
+      If: 
+        BinaryOp: &&
+          BinaryOp: <=
+            ID: Address
+            Constant: int, 0xff
+          BinaryOp: >=
+            ID: Address
+            Constant: int, 0xf0
+        Compound: 
+          If: 
+            BinaryOp: &&
+              BinaryOp: >=
+                ID: Address
+                Constant: int, 0xf4
+              BinaryOp: <=
+                ID: Address
+                Constant: int, 0xf7
+            Compound: 
+              Assignment: =
+                StructRef: .
+                  ID: IAPU
+                  ID: WaitAddress2
+                StructRef: .
+                  ID: IAPU
+                  ID: WaitAddress1
+              Assignment: =
+                StructRef: .
+                  ID: IAPU
+                  ID: WaitAddress1
+                StructRef: .
+                  ID: IAPU
+                  ID: PC
+              Return: 
+                ArrayRef: 
+                  StructRef: .
+                    ID: IAPU
+                    ID: RAM
+                  ID: Address
+            If: 
+              BinaryOp: ==
+                ID: Address
+                Constant: int, 0xf3
+              Return: 
+                FuncCall: 
+                  ID: S9xGetAPUDSP
+          If: 
+            BinaryOp: >=
+              ID: Address
+              Constant: int, 0xfd
+            Compound: 
+              Assignment: =
+                StructRef: .
+                  ID: IAPU
+                  ID: WaitAddress2
+                StructRef: .
+                  ID: IAPU
+                  ID: WaitAddress1
+              Assignment: =
+                StructRef: .
+                  ID: IAPU
+                  ID: WaitAddress1
+                StructRef: .
+                  ID: IAPU
+                  ID: PC
+              Decl: t, [], [], []
+                TypeDecl: t, []
+                  IdentifierType: ['uint8']
+                ArrayRef: 
+                  StructRef: .
+                    ID: IAPU
+                    ID: RAM
+                  ID: Address
+              Assignment: =
+                ArrayRef: 
+                  StructRef: .
+                    ID: IAPU
+                    ID: RAM
+                  ID: Address
+                Constant: int, 0
+              Return: 
+                ID: t
+          Return: 
+            ArrayRef: 
+              StructRef: .
+                ID: IAPU
+                ID: RAM
+              ID: Address
+        Return: 
+          ArrayRef: 
+            StructRef: .
+              ID: IAPU
+              ID: RAM
+            ID: Address
+  FuncDef: 
+    Decl: S9xAPUSetByte, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: byte, [], [], []
+            TypeDecl: byte, []
+              IdentifierType: ['uint8']
+          Decl: Address, [], [], []
+            TypeDecl: Address, []
+              IdentifierType: ['uint32']
+        TypeDecl: S9xAPUSetByte, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        ID: Address
+        Constant: int, 0xffff
+      If: 
+        BinaryOp: &&
+          BinaryOp: <=
+            ID: Address
+            Constant: int, 0xff
+          BinaryOp: >=
+            ID: Address
+            Constant: int, 0xf0
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: Address
+              Constant: int, 0xf3
+            FuncCall: 
+              ID: S9xSetAPUDSP
+              ExprList: 
+                ID: byte
+            If: 
+              BinaryOp: &&
+                BinaryOp: >=
+                  ID: Address
+                  Constant: int, 0xf4
+                BinaryOp: <=
+                  ID: Address
+                  Constant: int, 0xf7
+              Assignment: =
+                ArrayRef: 
+                  StructRef: .
+                    ID: APU
+                    ID: OutPorts
+                  BinaryOp: -
+                    ID: Address
+                    Constant: int, 0xf4
+                ID: byte
+              If: 
+                BinaryOp: ==
+                  ID: Address
+                  Constant: int, 0xf1
+                FuncCall: 
+                  ID: S9xSetAPUControl
+                  ExprList: 
+                    ID: byte
+                If: 
+                  BinaryOp: <
+                    ID: Address
+                    Constant: int, 0xfd
+                  Compound: 
+                    Assignment: =
+                      ArrayRef: 
+                        StructRef: .
+                          ID: IAPU
+                          ID: RAM
+                        ID: Address
+                      ID: byte
+                    If: 
+                      BinaryOp: >=
+                        ID: Address
+                        Constant: int, 0xfa
+                      Compound: 
+                        If: 
+                          BinaryOp: ==
+                            ID: byte
+                            Constant: int, 0
+                          Assignment: =
+                            ArrayRef: 
+                              StructRef: .
+                                ID: APU
+                                ID: TimerTarget
+                              BinaryOp: -
+                                ID: Address
+                                Constant: int, 0xfa
+                            Constant: int, 0x100
+                          Assignment: =
+                            ArrayRef: 
+                              StructRef: .
+                                ID: APU
+                                ID: TimerTarget
+                              BinaryOp: -
+                                ID: Address
+                                Constant: int, 0xfa
+                            ID: byte
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: Address
+              Constant: int, 0xffc0
+            Assignment: =
+              ArrayRef: 
+                StructRef: .
+                  ID: IAPU
+                  ID: RAM
+                ID: Address
+              ID: byte
+            Compound: 
+              Assignment: =
+                ArrayRef: 
+                  StructRef: .
+                    ID: APU
+                    ID: ExtraRAM
+                  BinaryOp: -
+                    ID: Address
+                    Constant: int, 0xffc0
+                ID: byte
+              If: 
+                UnaryOp: !
+                  StructRef: .
+                    ID: APU
+                    ID: ShowROM
+                Assignment: =
+                  ArrayRef: 
+                    StructRef: .
+                      ID: IAPU
+                      ID: RAM
+                    ID: Address
+                  ID: byte
+  FuncDef: 
+    Decl: ApuCA, [], [], []
+      FuncDecl: 
+        TypeDecl: ApuCA, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: IAPU
+          ID: Address
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['uint16']
+            BinaryOp: +
+              StructRef: .
+                ID: IAPU
+                ID: PC
+              Constant: int, 1
+      Assignment: =
+        StructRef: .
+          ID: IAPU
+          ID: Bit
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['uint8']
+          BinaryOp: >>
+            StructRef: .
+              ID: IAPU
+              ID: Address
+            Constant: int, 13
+      If: 
+        StructRef: .
+          ID: IAPU
+          ID: _Carry
+        FuncCall: 
+          ID: S9xAPUSetByte
+          ExprList: 
+            BinaryOp: |
+              FuncCall: 
+                ID: S9xAPUGetByte
+                ExprList: 
+                  StructRef: .
+                    ID: IAPU
+                    ID: Address
+              BinaryOp: <<
+                Constant: int, 1
+                StructRef: .
+                  ID: IAPU
+                  ID: Bit
+            StructRef: .
+              ID: IAPU
+              ID: Address
+        FuncCall: 
+          ID: S9xAPUSetByte
+          ExprList: 
+            BinaryOp: &
+              FuncCall: 
+                ID: S9xAPUGetByte
+                ExprList: 
+                  StructRef: .
+                    ID: IAPU
+                    ID: Address
+              UnaryOp: ~
+                BinaryOp: <<
+                  Constant: int, 1
+                  StructRef: .
+                    ID: IAPU
+                    ID: Bit
+            StructRef: .
+              ID: IAPU
+              ID: Address

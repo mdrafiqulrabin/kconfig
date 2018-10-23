@@ -1,0 +1,145 @@
+FileAST: 
+  Typedef: sample, [], ['typedef']
+    TypeDecl: sample, []
+      IdentifierType: ['unsigned', 'long']
+  Decl: None, [], [], []
+    Struct: pam
+      Decl: maxval, [], [], []
+        TypeDecl: maxval, []
+          IdentifierType: ['sample']
+  Typedef: tuple, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tuple, []
+        IdentifierType: ['sample']
+  Decl: None, [], [], []
+    Enum: function
+      EnumeratorList: 
+        Enumerator: FN_MULTIPLY
+        Enumerator: FN_DIVIDE
+        Enumerator: FN_ADD
+        Enumerator: FN_SUBTRACT
+        Enumerator: FN_MIN
+        Enumerator: FN_MAX
+        Enumerator: FN_AND
+        Enumerator: FN_OR
+        Enumerator: FN_XOR
+        Enumerator: FN_NOT
+        Enumerator: FN_SHIFTLEFT
+        Enumerator: FN_SHIFTRIGHT
+  Decl: None, [], [], []
+    Struct: cmdlineInfo
+      Decl: function, [], [], []
+        TypeDecl: function, []
+          Enum: function
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: divisor, [], [], []
+              TypeDecl: divisor, []
+                IdentifierType: ['float']
+            Decl: shiftCount, [], [], []
+              TypeDecl: shiftCount, []
+                IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: applyFunction, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cmdline, ['const'], [], []
+            TypeDecl: cmdline, ['const']
+              Struct: cmdlineInfo
+          Decl: inpam, ['const'], [], []
+            TypeDecl: inpam, ['const']
+              Struct: pam
+          Decl: outpam, ['const'], [], []
+            TypeDecl: outpam, ['const']
+              Struct: pam
+          Decl: inputRow, [], [], []
+            PtrDecl: ['const']
+              TypeDecl: inputRow, []
+                IdentifierType: ['tuple']
+          Decl: outputRow, [], [], []
+            PtrDecl: ['const']
+              TypeDecl: outputRow, []
+                IdentifierType: ['tuple']
+        TypeDecl: applyFunction, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: oneOverDivisor, ['const'], [], []
+        TypeDecl: oneOverDivisor, ['const']
+          IdentifierType: ['float']
+        BinaryOp: /
+          Constant: int, 1
+          StructRef: .
+            StructRef: .
+              ID: cmdline
+              ID: u
+            ID: divisor
+      Decl: col, [], [], []
+        TypeDecl: col, []
+          IdentifierType: ['int']
+      Compound: 
+        Decl: plane, [], [], []
+          TypeDecl: plane, []
+            IdentifierType: ['int']
+        Compound: 
+          Decl: inSample, ['const'], [], []
+            TypeDecl: inSample, ['const']
+              IdentifierType: ['sample']
+            ArrayRef: 
+              ArrayRef: 
+                ID: inputRow
+                ID: col
+              ID: plane
+          Decl: outSample, [], [], []
+            TypeDecl: outSample, []
+              IdentifierType: ['sample']
+          Switch: 
+            StructRef: .
+              ID: cmdline
+              ID: function
+            Compound: 
+              Case: 
+                ID: FN_DIVIDE
+                Assignment: =
+                  ID: outSample
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'int']
+                    BinaryOp: +
+                      BinaryOp: *
+                        ID: inSample
+                        ID: oneOverDivisor
+                      Constant: float, 0.5
+                Break: 
+              Case: 
+                ID: FN_SHIFTLEFT
+                Assignment: =
+                  ID: outSample
+                  BinaryOp: &
+                    BinaryOp: <<
+                      ID: inSample
+                      StructRef: .
+                        StructRef: .
+                          ID: cmdline
+                          ID: u
+                        ID: shiftCount
+                    StructRef: .
+                      ID: outpam
+                      ID: maxval
+          Assignment: =
+            ArrayRef: 
+              ArrayRef: 
+                ID: outputRow
+                ID: col
+              ID: plane
+            TernaryOp: 
+              BinaryOp: <
+                StructRef: .
+                  ID: outpam
+                  ID: maxval
+                ID: outSample
+              StructRef: .
+                ID: outpam
+                ID: maxval
+              ID: outSample

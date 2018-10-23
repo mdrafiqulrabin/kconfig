@@ -1,0 +1,63 @@
+FileAST: 
+  FuncDef: 
+    Decl: centerln, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: width, [], [], []
+            TypeDecl: width, []
+              IdentifierType: ['int']
+          Decl: ch, [], [], []
+            TypeDecl: ch, []
+              IdentifierType: ['int']
+          Decl: s, [], [], []
+            PtrDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+        TypeDecl: centerln, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: sidebar, [], [], []
+        TypeDecl: sidebar, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: linet1, [], [], []
+        ArrayDecl: []
+          TypeDecl: linet1, []
+            IdentifierType: ['char']
+          Constant: int, 1000
+      Decl: linet2, [], [], []
+        ArrayDecl: []
+          TypeDecl: linet2, []
+            IdentifierType: ['char']
+          Constant: int, 100
+      Assignment: =
+        ID: sidebar
+        BinaryOp: /
+          BinaryOp: -
+            ID: width
+            FuncCall: 
+              ID: __builtin_strlen
+              ExprList: 
+                ID: s
+          Constant: int, 2
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: sidebar
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: linet2
+            ID: i
+          ID: ch
+      FuncCall: 
+        ID: __builtin_strcpy
+        ExprList: 
+          ID: linet1
+          ID: linet2

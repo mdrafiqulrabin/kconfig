@@ -1,0 +1,38 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: option
+      Decl: value, [], [], []
+        PtrDecl: []
+          TypeDecl: value, []
+            IdentifierType: ['void']
+  Decl: parse_options, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: option
+      TypeDecl: parse_options, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: cmd_grep, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: cmd_grep, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: options, [], [], []
+        ArrayDecl: []
+          TypeDecl: options, []
+            Struct: option
+        InitList: 
+          InitList: 
+            UnaryOp: &
+              ID: options
+      FuncCall: 
+        ID: parse_options
+        ExprList: 
+          ID: options

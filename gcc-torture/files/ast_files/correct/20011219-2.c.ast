@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['double']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: bar, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        StructRef: ->
+          ID: z
+          ID: a
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        TernaryOp: 
+          BinaryOp: >
+            BinaryOp: /
+              ID: y
+              StructRef: ->
+                ID: z
+                ID: a
+            Constant: int, 1
+          BinaryOp: /
+            ID: y
+            StructRef: ->
+              ID: z
+              ID: a
+          Constant: int, 1
+      Assignment: =
+        ID: a
+        TernaryOp: 
+          BinaryOp: <
+            BinaryOp: /
+              ID: y
+              ID: b
+            StructRef: ->
+              ID: z
+              ID: a
+          BinaryOp: /
+            ID: y
+            ID: b
+          StructRef: ->
+            ID: z
+            ID: a
+      Assignment: =
+        StructRef: ->
+          ID: z
+          ID: c
+        BinaryOp: *
+          StructRef: ->
+            ID: z
+            ID: b
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['double']
+                ID: a
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['double']
+                ID: x
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: node234_Tag
+      Decl: t1, [], [], []
+        TypeDecl: t1, []
+          IdentifierType: ['int']
+      Decl: kids, [], [], []
+        ArrayDecl: []
+          TypeDecl: kids, []
+            IdentifierType: ['int']
+          Constant: int, 4
+      Decl: elems, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: elems, []
+              IdentifierType: ['void']
+          Constant: int, 3
+  FuncDef: 
+    Decl: add234_internal, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            PtrDecl: []
+              TypeDecl: n, []
+                Struct: node234_Tag
+          Decl: ei, [], [], []
+            TypeDecl: ei, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: add234_internal, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: j
+          ID: ei
+        BinaryOp: &&
+          BinaryOp: <
+            ID: j
+            Constant: int, 2
+          ArrayRef: 
+            StructRef: ->
+              ID: n
+              ID: elems
+            BinaryOp: +
+              ID: j
+              Constant: int, 1
+        UnaryOp: p++
+          ID: j
+      Assignment: =
+        ArrayRef: 
+          StructRef: ->
+            ID: n
+            ID: kids
+          BinaryOp: +
+            ID: j
+            Constant: int, 1
+        Constant: int, 0

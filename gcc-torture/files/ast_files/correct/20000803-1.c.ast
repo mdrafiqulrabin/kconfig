@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: gl_cnt, [], ['static'], []
+    TypeDecl: gl_cnt, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: gl_buf, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: gl_buf, []
+        IdentifierType: ['char']
+      Constant: int, 1024
+  FuncDef: 
+    Decl: gl_yank, [], [], []
+      FuncDecl: 
+        TypeDecl: gl_yank, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          ID: gl_cnt
+        BinaryOp: >=
+          ID: i
+          Constant: int, 0
+        UnaryOp: p--
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: gl_buf
+            BinaryOp: +
+              ID: i
+              Constant: int, 10
+          ArrayRef: 
+            ID: gl_buf
+            ID: i

@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: CJPAT_Packet, [], [], []
+    ArrayDecl: []
+      TypeDecl: CJPAT_Packet, []
+        IdentifierType: ['char']
+      Constant: int, 1508
+    InitList: 
+  FuncDef: 
+    Decl: build_packet, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: port, [], [], []
+            TypeDecl: port, []
+              IdentifierType: ['int']
+          Decl: packet, [], [], []
+            PtrDecl: []
+              TypeDecl: packet, []
+                IdentifierType: ['char']
+        TypeDecl: build_packet, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: memcpy
+        ExprList: 
+          ID: packet
+          ID: CJPAT_Packet
+          UnaryOp: sizeof
+            ID: CJPAT_Packet

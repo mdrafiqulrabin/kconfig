@@ -1,0 +1,115 @@
+FileAST: 
+  Decl: prepare_to_wait, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: prepare_to_wait, []
+        IdentifierType: ['void']
+  Decl: finish_wait, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: finish_wait, []
+        IdentifierType: ['void']
+  Decl: schedule_timeout, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['signed', 'long']
+      TypeDecl: schedule_timeout, []
+        IdentifierType: ['signed', 'long']
+  Decl: None, [], [], []
+    Struct: sock
+      Decl: skc_state, [], [], []
+        TypeDecl: skc_state, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: sk_sleep, [], [], []
+        PtrDecl: []
+          TypeDecl: sk_sleep, []
+            IdentifierType: ['void']
+      Decl: sk_err, [], [], []
+        TypeDecl: sk_err, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: sk_stream_wait_connect, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sk, [], [], []
+            PtrDecl: []
+              TypeDecl: sk, []
+                Struct: sock
+          Decl: timeo_p, [], [], []
+            PtrDecl: []
+              TypeDecl: timeo_p, []
+                IdentifierType: ['long']
+        TypeDecl: sk_stream_wait_connect, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: done, [], [], []
+        TypeDecl: done, []
+          IdentifierType: ['int']
+      Decl: wait, [], [], []
+        TypeDecl: wait, []
+          IdentifierType: ['int']
+      DoWhile: 
+        UnaryOp: !
+          ID: done
+        Compound: 
+          If: 
+            BinaryOp: &
+              BinaryOp: <<
+                Constant: int, 1
+                StructRef: ->
+                  ID: sk
+                  ID: skc_state
+              UnaryOp: ~
+                Constant: int, 12
+            Return: 
+          FuncCall: 
+            ID: prepare_to_wait
+            ExprList: 
+              StructRef: ->
+                ID: sk
+                ID: sk_sleep
+              UnaryOp: &
+                ID: wait
+              Constant: int, 1
+          Assignment: =
+            UnaryOp: *
+              ID: timeo_p
+            FuncCall: 
+              ID: schedule_timeout
+              ExprList: 
+                Constant: int, 0
+          Assignment: =
+            ID: done
+            UnaryOp: !
+              StructRef: ->
+                ID: sk
+                ID: sk_err
+          FuncCall: 
+            ID: finish_wait
+            ExprList: 
+              StructRef: ->
+                ID: sk
+                ID: sk_sleep
+              UnaryOp: &
+                ID: wait

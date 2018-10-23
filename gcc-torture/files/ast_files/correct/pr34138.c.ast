@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: free, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __ptr, [], [], []
+          PtrDecl: []
+            TypeDecl: __ptr, []
+              IdentifierType: ['void']
+      TypeDecl: free, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: shparam
+      Decl: p, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['char']
+      Decl: foo, [], [], []
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+  Decl: shellparam, [], ['static'], []
+    TypeDecl: shellparam, []
+      Struct: shparam
+  FuncDef: 
+    Decl: freeparam, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: param, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: param, ['volatile']
+                Struct: shparam
+          Decl: ap, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: ap, []
+                  IdentifierType: ['char']
+        TypeDecl: freeparam, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: free
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            UnaryOp: *
+              ID: ap
+      FuncCall: 
+        ID: free
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            StructRef: ->
+              ID: param
+              ID: p
+  FuncDef: 
+    Decl: dotcmd, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['char']
+        TypeDecl: dotcmd, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: freeparam
+        ExprList: 
+          UnaryOp: &
+            ID: shellparam
+          ID: p
+  FuncDef: 
+    Decl: evaltree, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: evaltree, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: evalfn, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+            TypeDecl: evalfn, []
+              IdentifierType: ['void']
+      Assignment: =
+        ID: evalfn
+        ID: dotcmd

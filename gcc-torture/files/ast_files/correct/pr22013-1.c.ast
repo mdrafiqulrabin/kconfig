@@ -1,0 +1,36 @@
+FileAST: 
+  Typedef: W, [], ['typedef']
+    TypeDecl: W, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: P, ['const'], ['typedef']
+    PtrDecl: []
+      TypeDecl: P, ['const']
+        IdentifierType: ['W']
+  Decl: g, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['P']
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, ['const'], [], []
+        TypeDecl: s, ['const']
+          IdentifierType: ['P']
+        CompoundLiteral: 
+          Typename: None, ['const']
+            ArrayDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['W']
+          InitList: 
+            Constant: char, 'R'
+      FuncCall: 
+        ID: g
+        ExprList: 
+          ID: s

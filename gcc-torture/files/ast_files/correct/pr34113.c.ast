@@ -1,0 +1,65 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: sockaddr_in
+      Decl: sin_addr, [], [], []
+        TypeDecl: sin_addr, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: ConvertAddr, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: saddr, [], [], []
+            PtrDecl: []
+              TypeDecl: saddr, []
+                Struct: sockaddr_in
+          Decl: addr, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: addr, []
+                  IdentifierType: ['void']
+        TypeDecl: ConvertAddr, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: addr
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          UnaryOp: &
+            StructRef: ->
+              ID: saddr
+              ID: sin_addr
+  FuncDef: 
+    Decl: EnableLocalHost, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ifa_addr, [], [], []
+            PtrDecl: []
+              TypeDecl: ifa_addr, []
+                Struct: sockaddr_in
+        TypeDecl: EnableLocalHost, []
+          IdentifierType: ['unsigned', 'char']
+    Compound: 
+      Decl: addr, [], [], []
+        PtrDecl: []
+          TypeDecl: addr, []
+            IdentifierType: ['unsigned', 'char']
+      FuncCall: 
+        ID: ConvertAddr
+        ExprList: 
+          ID: ifa_addr
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['void']
+            UnaryOp: &
+              ID: addr
+      Return: 
+        ArrayRef: 
+          ID: addr
+          Constant: int, 0

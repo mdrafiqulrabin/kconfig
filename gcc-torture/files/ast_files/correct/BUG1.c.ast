@@ -1,0 +1,66 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _XtTextSource
+      Decl: SetSelection, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            TypeDecl: SetSelection, []
+              IdentifierType: ['void']
+  Typedef: XtTextSource, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: XtTextSource, []
+        Struct: _XtTextSource
+  Typedef: TextPart, [], ['typedef']
+    TypeDecl: TextPart, []
+      Struct: _TextPart
+        Decl: source, [], [], []
+          TypeDecl: source, []
+            IdentifierType: ['XtTextSource']
+  Typedef: TextRec, [], ['typedef']
+    TypeDecl: TextRec, []
+      Struct: _TextRec
+        Decl: text, [], [], []
+          TypeDecl: text, []
+            IdentifierType: ['TextPart']
+  Typedef: TextWidget, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: TextWidget, []
+        Struct: _TextRec
+  FuncDef: 
+    Decl: XtTextUnsetSelection, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: w
+        TypeDecl: XtTextUnsetSelection, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ctx, [], ['register'], []
+        TypeDecl: ctx, []
+          IdentifierType: ['TextWidget']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['TextWidget']
+          ID: w
+      Decl: nullProc, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            TypeDecl: nullProc, []
+              IdentifierType: ['void']
+        Constant: int, 0
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            StructRef: .
+              StructRef: ->
+                ID: ctx
+                ID: text
+              ID: source
+            ID: SetSelection
+          ID: nullProc
+        Compound: 
+          FuncCall: 
+            ID: foo
+    Decl: w, [], [], []
+      TypeDecl: w, []
+        IdentifierType: ['TextWidget']

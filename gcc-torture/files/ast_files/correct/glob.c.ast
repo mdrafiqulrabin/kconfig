@@ -1,0 +1,25 @@
+FileAST: 
+  Typedef: tt, [], ['typedef']
+    TypeDecl: tt, []
+      IdentifierType: ['int']
+  Decl: a1, [], [], []
+    TypeDecl: a1, []
+      IdentifierType: ['tt']
+  Decl: a2, [], [], []
+    TypeDecl: a2, []
+      IdentifierType: ['tt']
+  Decl: a3, [], [], []
+    TypeDecl: a3, []
+      IdentifierType: ['tt']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      UnaryOp: p++
+        ID: a1
+      UnaryOp: p++
+        ID: a2
+      UnaryOp: p++
+        ID: a1

@@ -1,0 +1,102 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: u
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          Struct: None
+            Decl: h, [], [], []
+              TypeDecl: h, []
+                IdentifierType: ['unsigned']
+            Decl: l, [], [], []
+              TypeDecl: l, []
+                IdentifierType: ['unsigned']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              Union: u
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        UnaryOp: p++
+          StructRef: .
+            StructRef: .
+              ID: x
+              ID: i
+            ID: h
+        Compound: 
+          While: 
+            BinaryOp: >
+              UnaryOp: p--
+                StructRef: .
+                  StructRef: .
+                    ID: x
+                    ID: i
+                  ID: l
+              Constant: int, 0
+            EmptyStatement: 
+          While: 
+            BinaryOp: >
+              UnaryOp: p++
+                StructRef: .
+                  ID: x
+                  ID: d
+              Constant: int, 0
+            EmptyStatement: 
+  Decl: None, [], [], []
+    Union: n
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long', 'long', 'unsigned']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              Union: n
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          While: 
+            BinaryOp: >
+              UnaryOp: --
+                StructRef: .
+                  ID: x
+                  ID: i
+              Constant: int, 0
+            EmptyStatement: 
+          While: 
+            BinaryOp: >
+              UnaryOp: ++
+                StructRef: .
+                  ID: x
+                  ID: d
+              Constant: int, 0
+            EmptyStatement: 
+      Return: 
+        StructRef: .
+          ID: x
+          ID: i

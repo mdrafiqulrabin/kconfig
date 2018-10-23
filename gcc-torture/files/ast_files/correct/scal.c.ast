@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: g1, [], [], []
+    TypeDecl: g1, []
+      IdentifierType: ['int']
+  Decl: g2, [], [], []
+    TypeDecl: g2, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: write_at, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: addr
+          ID: off
+          ID: val
+        TypeDecl: write_at, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: g2
+        Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ID: addr
+          ID: off
+        ID: val
+      UnaryOp: p++
+        ID: g2
+    Decl: addr, [], [], []
+      PtrDecl: []
+        TypeDecl: addr, []
+          IdentifierType: ['int']
+    Decl: off, [], [], []
+      TypeDecl: off, []
+        IdentifierType: ['int']
+    Decl: val, [], [], []
+      TypeDecl: val, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: g2
+        Constant: int, 12
+      FuncCall: 
+        ID: write_at
+        ExprList: 
+          UnaryOp: &
+            ID: g1
+          BinaryOp: -
+            UnaryOp: &
+              ID: g2
+            UnaryOp: &
+              ID: g1
+          Constant: int, 12345
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%d\n"
+          ID: g2

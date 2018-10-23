@@ -1,0 +1,42 @@
+FileAST: 
+  FuncDef: 
+    Decl: andop, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: andop, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          ID: x
+          Constant: int, 1
+  FuncDef: 
+    Decl: orop, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: orop, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          ID: x
+          Constant: int, 1
+  FuncDef: 
+    Decl: notop, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: notop, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        UnaryOp: ~
+          ID: x

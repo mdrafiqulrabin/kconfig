@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['short', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['short', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: a
+            Constant: int, 0
+          ID: x
+          Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['short', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          ID: e
+        Compound: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                BinaryOp: ^
+                  Constant: int, 65535
+                  ID: b
+          If: 
+            BinaryOp: ==
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  BinaryOp: <=
+                    UnaryOp: !
+                      Constant: int, 6L
+                    UnaryOp: ~
+                      ID: f
+                  UnaryOp: ~
+                    ID: e
+              ID: c
+            Assignment: =
+              ID: d
+              Constant: int, 0

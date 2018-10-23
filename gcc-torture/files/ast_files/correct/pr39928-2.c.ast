@@ -1,0 +1,55 @@
+FileAST: 
+  Typedef: __m128, [], ['typedef']
+    TypeDecl: __m128, []
+      IdentifierType: ['_Complex', 'float']
+  Decl: _mm_sub_ps, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __A, [], [], []
+          TypeDecl: __A, []
+            IdentifierType: ['__m128']
+        Decl: __B, [], [], []
+          TypeDecl: __B, []
+            IdentifierType: ['__m128']
+      TypeDecl: _mm_sub_ps, []
+        IdentifierType: ['__m128']
+  Decl: _mm_mul_ps, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: __A, [], [], []
+          TypeDecl: __A, []
+            IdentifierType: ['__m128']
+        Decl: __B, [], [], []
+          TypeDecl: __B, []
+            IdentifierType: ['__m128']
+      TypeDecl: _mm_mul_ps, []
+        IdentifierType: ['__m128']
+  FuncDef: 
+    Decl: vq_nbest, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: codebook, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: codebook, ['const']
+                IdentifierType: ['__m128']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['__m128']
+          Decl: in, [], [], []
+            TypeDecl: in, []
+              IdentifierType: ['__m128']
+        TypeDecl: vq_nbest, []
+          IdentifierType: ['__m128']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: _mm_sub_ps
+          ExprList: 
+            ID: d
+            FuncCall: 
+              ID: _mm_mul_ps
+              ExprList: 
+                ID: in
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: codebook

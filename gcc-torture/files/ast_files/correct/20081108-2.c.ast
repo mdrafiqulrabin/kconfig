@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f, []
+          IdentifierType: ['_Bool']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          ID: a
+          Constant: int, 1

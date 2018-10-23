@@ -1,0 +1,32 @@
+FileAST: 
+  Typedef: f, [], ['typedef']
+    FuncDecl: 
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  Typedef: pf, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: pf, []
+        IdentifierType: ['f']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          IdentifierType: ['long', 'long']
+        ID: i
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['pf']
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+            ID: p

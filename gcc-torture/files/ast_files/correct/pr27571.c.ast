@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: r3isseparator, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: r3isseparator, []
+        IdentifierType: ['int']
+  Decl: r3isdigit, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: r3isdigit, []
+        IdentifierType: ['void']
+  Decl: r3decimalvalue, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: r3decimalvalue, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: r7todouble, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: storage, [], [], []
+            PtrDecl: []
+              TypeDecl: storage, []
+                IdentifierType: ['int']
+          Decl: count, [], [], []
+            PtrDecl: []
+              TypeDecl: count, []
+                IdentifierType: ['int']
+        TypeDecl: r7todouble, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: state, [], [], []
+        TypeDecl: state, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: cc, [], [], []
+        TypeDecl: cc, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: >
+          ID: i
+          UnaryOp: *
+            ID: count
+        Compound: 
+          Assignment: =
+            ID: cc
+            UnaryOp: *
+              ID: storage
+          Switch: 
+            ID: state
+            Compound: 
+              Case: 
+                Constant: int, 0
+                If: 
+                  FuncCall: 
+                    ID: r3isseparator
+                    ExprList: 
+                      ID: cc
+                  Assignment: =
+                    ID: state
+                    Constant: int, 1
+              Case: 
+                Constant: int, 1
+                FuncCall: 
+                  ID: r3isdigit
+                  ExprList: 
+                    ID: cc
+              Case: 
+                Constant: int, 2
+              Case: 
+                Constant: int, 5
+              Case: 
+                Constant: int, 6
+                FuncCall: 
+                  ID: r3decimalvalue
+                  ExprList: 
+                    ID: cc
+          UnaryOp: p++
+            ID: i

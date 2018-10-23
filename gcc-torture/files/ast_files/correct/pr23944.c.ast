@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: src, []
+                  IdentifierType: ['float']
+                Constant: int, 4
+        TypeDecl: f, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ArrayRef: 
+            ID: src
+            Constant: int, 3

@@ -1,0 +1,89 @@
+FileAST: 
+  Decl: s, [], [], []
+    PtrDecl: []
+      TypeDecl: s, []
+        Struct: S
+          Decl: n, [], [], []
+            PtrDecl: []
+              TypeDecl: n, []
+                Struct: S
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: S
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        TypeDecl: p, []
+          Struct: S
+        InitList: 
+          UnaryOp: &
+            ID: p
+          UnaryOp: &
+            ID: p
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: x
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: s
+      Return: 
+        BinaryOp: ==
+          StructRef: .
+            ID: p
+            ID: n
+          UnaryOp: &
+            ID: p
+  FuncDef: 
+    Decl: dialog_calendar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            TypeDecl: state, []
+              IdentifierType: ['int']
+        TypeDecl: dialog_calendar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: obj, [], [], []
+        PtrDecl: []
+          TypeDecl: obj, []
+            IdentifierType: ['int']
+        TernaryOp: 
+          BinaryOp: ==
+            ID: state
+            Constant: int, 1
+          UnaryOp: &
+            ID: state
+          Constant: int, 0
+      Return: 
+        BinaryOp: ==
+          ID: obj
+          UnaryOp: &
+            ID: state

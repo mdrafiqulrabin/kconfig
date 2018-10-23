@@ -1,0 +1,166 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S1
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: S1
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['float']
+  Decl: None, [], [], []
+    Struct: S2
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+  Decl: func_ex1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: func_ex1, []
+        IdentifierType: ['int']
+  Decl: f, [], ['extern'], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: n, [], ['extern'], []
+    TypeDecl: n, []
+      IdentifierType: ['float']
+  Decl: bp1, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: bp1, []
+        Struct: S1
+  Decl: bp2, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: bp2, []
+        Struct: S2
+  FuncDef: 
+    Decl: func1, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+          Decl: p2, [], [], []
+            PtrDecl: []
+              TypeDecl: p2, []
+                Struct: S2
+        TypeDecl: func1, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+      If: 
+        ID: f
+        Assignment: =
+          ID: a
+          TernaryOp: 
+            BinaryOp: >=
+              ID: n
+              StructRef: ->
+                ID: p2
+                ID: y
+            ID: n
+            StructRef: ->
+              ID: p2
+              ID: y
+        Assignment: =
+          ID: a
+          ID: n
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: func2, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                Struct: S1
+          Decl: p2, [], [], []
+            PtrDecl: []
+              TypeDecl: p2, []
+                Struct: S2
+        TypeDecl: func2, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+      If: 
+        BinaryOp: <=
+          ID: n
+          Constant: float, 1.0
+        Assignment: =
+          ID: b
+          FuncCall: 
+            ID: func1
+            ExprList: 
+              ID: f
+              ID: p2
+        Compound: 
+          Assignment: =
+            ID: a
+            TernaryOp: 
+              BinaryOp: <=
+                ID: n
+                StructRef: ->
+                  ID: p1
+                  ID: x
+              Constant: float, 0.0
+              StructRef: ->
+                ID: p1
+                ID: x
+          Assignment: =
+            ID: b
+            TernaryOp: 
+              BinaryOp: >=
+                ID: a
+                StructRef: ->
+                  ID: p2
+                  ID: y
+              ID: a
+              StructRef: ->
+                ID: p2
+                ID: y
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: func3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: S1
+        TypeDecl: func3, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+        Constant: float, 0.0
+      If: 
+        ID: f
+        Assignment: =
+          ID: a
+          FuncCall: 
+            ID: func2
+            ExprList: 
+              ID: bp1
+              ID: bp2
+      If: 
+        FuncCall: 
+          ID: func_ex1
+          ExprList: 
+            ID: a
+        Assignment: =
+          ID: bp1
+          ID: p

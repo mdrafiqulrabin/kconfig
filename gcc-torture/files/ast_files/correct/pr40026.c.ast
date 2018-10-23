@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: None
+        Decl: bits, [], [], []
+          TypeDecl: bits, []
+            IdentifierType: ['unsigned', 'long']
+  Decl: None, [], [], []
+    Struct: T
+      Decl: span, [], [], []
+        TypeDecl: span, []
+          IdentifierType: ['S']
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          Struct: T
+    Compound: 
+      Return: 
+        CompoundLiteral: 
+          Typename: None, []
+            TypeDecl: None, []
+              Struct: T
+          InitList: 
+            NamedInitializer: 
+              CompoundLiteral: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['S']
+                InitList: 
+                  Constant: int, 0UL
+              ID: span
+            NamedInitializer: 
+              TernaryOp: 
+                ID: x
+                Constant: int, 256
+                Constant: int, 0
+              ID: flags

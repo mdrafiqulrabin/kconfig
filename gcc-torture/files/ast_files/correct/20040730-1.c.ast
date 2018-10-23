@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: dev_roles, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: dev_roles, []
+        IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: super_1_sync, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rdev2, [], [], []
+            PtrDecl: []
+              TypeDecl: rdev2, []
+                IdentifierType: ['int']
+        TypeDecl: super_1_sync, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: max_dev, [], [], []
+        TypeDecl: max_dev, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 20
+        UnaryOp: p++
+          ID: i
+        If: 
+          BinaryOp: >
+            ArrayRef: 
+              ID: rdev2
+              ID: i
+            ID: max_dev
+          Assignment: =
+            ID: max_dev
+            ArrayRef: 
+              ID: rdev2
+              ID: i
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: max_dev
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: dev_roles
+            ID: max_dev
+          Constant: int, 0xfffe

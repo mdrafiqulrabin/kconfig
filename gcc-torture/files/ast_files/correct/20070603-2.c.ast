@@ -1,0 +1,60 @@
+FileAST: 
+  Typedef: ar, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: ar, []
+        IdentifierType: ['_Complex', 'double']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['ar']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              UnaryOp: *
+                ID: a
+              BinaryOp: *
+                ID: i
+                Constant: int, 4
+            BinaryOp: +
+              ArrayRef: 
+                FuncCall: 
+                  ID: __real__
+                  ExprList: 
+                    UnaryOp: *
+                      ID: a
+                BinaryOp: *
+                  BinaryOp: +
+                    ID: i
+                    Constant: int, 1
+                  Constant: int, 4
+              ArrayRef: 
+                FuncCall: 
+                  ID: __real__
+                  ExprList: 
+                    UnaryOp: *
+                      ID: a
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 4

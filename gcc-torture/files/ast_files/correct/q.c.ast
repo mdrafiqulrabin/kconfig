@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: reg0indreg1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: r0
+          ID: p1
+        TypeDecl: reg0indreg1, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: r0
+          ID: p1
+    Decl: r0, [], [], []
+      TypeDecl: r0, []
+        IdentifierType: ['unsigned', 'short']
+    Decl: p1, [], [], []
+      TypeDecl: p1, []
+        IdentifierType: ['unsigned', 'short']

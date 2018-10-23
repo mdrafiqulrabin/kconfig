@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: dynreplace_trampoline, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: dynreplace_trampoline, []
+        IdentifierType: ['void']
+  Decl: dynreplace_trampoline_endlabel, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: dynreplace_trampoline_endlabel, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: dynreplace_add_trampoline, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: dynreplace_add_trampoline, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: trampoline_code, [], [], []
+        ArrayDecl: []
+          TypeDecl: trampoline_code, []
+            IdentifierType: ['unsigned', 'long']
+          BinaryOp: -
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+              UnaryOp: &
+                ID: dynreplace_trampoline_endlabel
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+              UnaryOp: &
+                ID: dynreplace_trampoline

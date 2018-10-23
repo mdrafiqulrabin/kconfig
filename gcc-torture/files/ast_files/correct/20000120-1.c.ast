@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: letters, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: letters, []
+        IdentifierType: ['char']
+      BinaryOp: +
+        Constant: int, 26
+        Constant: int, 1
+  Decl: letter, [], [], []
+    TypeDecl: letter, []
+      IdentifierType: ['char']
+  Decl: letter_number, [], [], []
+    TypeDecl: letter_number, []
+      IdentifierType: ['int']
+  Decl: letters, [], [], []
+    ArrayDecl: []
+      TypeDecl: letters, []
+        IdentifierType: ['char']
+    Constant: string, "AbCdefghiJklmNopQrStuVwXyZ"
+  FuncDef: 
+    Decl: pad_home1, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: pad_home1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: letter
+        ArrayRef: 
+          ID: letters
+          Assignment: =
+            ID: letter_number
+            TernaryOp: 
+              ArrayRef: 
+                ID: letters
+                BinaryOp: +
+                  ID: letter_number
+                  Constant: int, 1
+              BinaryOp: +
+                ID: letter_number
+                Constant: int, 1
+              Constant: int, 0

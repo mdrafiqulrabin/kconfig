@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        Constant: int, 1
+        Goto: foo
+        For: 
+          Compound: 
+            Label: foo
+              FuncCall: 
+                ID: bar
+            Return: 

@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: dm
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['unsigned']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: dm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: dm, []
+          Struct: dm
+    Compound: 
+      Decl: qr, [], [], []
+        TypeDecl: qr, []
+          Struct: dm
+      Assignment: =
+        StructRef: .
+          ID: qr
+          ID: q
+        BinaryOp: /
+          ID: a
+          ID: b
+      Assignment: =
+        StructRef: .
+          ID: qr
+          ID: r
+        BinaryOp: %
+          ID: a
+          ID: b
+      Return: 
+        ID: qr
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['unsigned']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: qr, [], [], []
+        TypeDecl: qr, []
+          Struct: dm
+      Assignment: =
+        ID: qr
+        FuncCall: 
+          ID: dm
+          ExprList: 
+            Constant: int, 100
+            Constant: int, 30
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%u, %u\n"
+          StructRef: .
+            ID: qr
+            ID: q
+          StructRef: .
+            ID: qr
+            ID: r

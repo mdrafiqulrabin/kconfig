@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: glob, [], [], []
+    TypeDecl: glob, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: conseq, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: c
+          ID: d
+        TypeDecl: conseq, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 2
+        ID: d
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+        ID: c
+      FuncCall: 
+        ID: sequence
+        ExprList: 
+          ID: a
+          ID: b
+          ID: c
+          ID: d
+      FuncCall: 
+        ID: sequence
+        ExprList: 
+          ID: d
+          ID: c
+          ID: b
+          ID: a
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 0
+        Constant: int, 0
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 1
+        Constant: int, 123
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+        Constant: int, 321
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+        Constant: int, 0
+      FuncCall: 
+        ID: sequence
+        ExprList: 
+          Constant: int, 111
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 222
+          Constant: int, 0
+          Constant: int, 333
+      Assignment: =
+        ArrayRef: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            ID: glob
+          Constant: int, 2
+        ID: c
+      Assignment: =
+        ArrayRef: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            ID: glob
+          Constant: int, 3
+        ID: d
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+    Decl: b, [], [], []
+      PtrDecl: []
+        TypeDecl: b, []
+          IdentifierType: ['int']

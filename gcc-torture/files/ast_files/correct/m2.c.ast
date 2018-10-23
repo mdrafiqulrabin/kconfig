@@ -1,0 +1,101 @@
+FileAST: 
+  FuncDef: 
+    Decl: store16, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+          ID: a
+        TypeDecl: store16, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        ID: a
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['short']
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['short']
+  FuncDef: 
+    Decl: sign_extend16, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: sign_extend16, []
+          IdentifierType: ['signed', 'int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: p
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['signed', 'short']
+  FuncDef: 
+    Decl: zero_extend16, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: zero_extend16, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: p
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: store8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+          ID: a
+        TypeDecl: store8, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        ID: a
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['char']
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: sign_extend8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: sign_extend8, []
+          IdentifierType: ['signed', 'int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: p
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['signed', 'char']
+  FuncDef: 
+    Decl: zero_extend8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: zero_extend8, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          ID: p
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['unsigned', 'char']

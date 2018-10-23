@@ -1,0 +1,47 @@
+FileAST: 
+  Typedef: T1, [], ['typedef']
+    TypeDecl: T1, []
+      Struct: None
+        Decl: key, [], [], []
+          PtrDecl: []
+            TypeDecl: key, []
+              IdentifierType: ['char']
+        Decl: value, [], [], []
+          PtrDecl: []
+            TypeDecl: value, []
+              IdentifierType: ['char']
+  Typedef: T3, [], ['typedef']
+    TypeDecl: T3, []
+      Struct: None
+        Decl: type, [], [], []
+          TypeDecl: type, []
+            IdentifierType: ['long']
+        Decl: value, [], [], []
+          PtrDecl: []
+            TypeDecl: value, []
+              IdentifierType: ['char']
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['T1']
+    InitList: 
+      InitList: 
+        Constant: string, ""
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          UnaryOp: &
+            CompoundLiteral: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['T3']
+              InitList: 
+                Constant: int, 1
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['char']
+                  Constant: int, 1

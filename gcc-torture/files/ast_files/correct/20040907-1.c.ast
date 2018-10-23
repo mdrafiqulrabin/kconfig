@@ -1,0 +1,53 @@
+FileAST: 
+  FuncDef: 
+    Decl: ProdWord_bla, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: gtL
+          ID: gtRes
+          ID: lnL
+        TypeDecl: ProdWord_bla, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        BinaryOp: <
+          Constant: int, 1
+          ID: lnL
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: gtRes
+            UnaryOp: *
+              UnaryOp: p++
+                ID: gtL
+          UnaryOp: --
+            ID: lnL
+      If: 
+        BinaryOp: <
+          Constant: int, 0
+          ID: lnL
+        If: 
+          BinaryOp: ==
+            ArrayRef: 
+              ID: gtL
+              Constant: int, 0
+            ArrayRef: 
+              ID: gtL
+              Constant: int, 1
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: gtRes
+            Constant: int, 0
+    Decl: gtL, [], [], []
+      PtrDecl: []
+        TypeDecl: gtL, []
+          IdentifierType: ['int']
+    Decl: gtRes, [], [], []
+      PtrDecl: []
+        TypeDecl: gtRes, []
+          IdentifierType: ['int']
+    Decl: lnL, [], [], []
+      TypeDecl: lnL, []
+        IdentifierType: ['int']

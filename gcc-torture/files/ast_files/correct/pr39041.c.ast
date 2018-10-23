@@ -1,0 +1,141 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_bit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: nr, [], [], []
+            TypeDecl: nr, []
+              IdentifierType: ['int']
+          Decl: addr, [], [], []
+            PtrDecl: []
+              TypeDecl: addr, []
+                IdentifierType: ['void']
+        TypeDecl: test_bit, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+          ID: addr
+      Decl: mask, [], [], []
+        TypeDecl: mask, []
+          IdentifierType: ['int']
+      Assignment: +=
+        ID: a
+        ID: nr
+      Assignment: =
+        ID: mask
+        BinaryOp: <<
+          Constant: int, 1
+          ID: nr
+      Return: 
+        BinaryOp: &
+          ID: mask
+          UnaryOp: *
+            ID: a
+  Decl: trace, [], [], []
+    TypeDecl: trace, []
+      Struct: None
+        Decl: data, [], [], []
+          ArrayDecl: []
+            PtrDecl: []
+              TypeDecl: data, []
+                Struct: None
+                  Decl: disabled, [], [], []
+                    TypeDecl: disabled, []
+                      IdentifierType: ['int']
+            Constant: int, 1
+  Decl: cpumask, [], [], []
+    TypeDecl: cpumask, []
+      Struct: None
+        Decl: bits, [], [], []
+          ArrayDecl: []
+            TypeDecl: bits, []
+              IdentifierType: ['unsigned']
+            Constant: int, 1
+  Decl: inc, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: inc, []
+        IdentifierType: ['void']
+  Decl: dec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: dec, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: cpu, [], [], []
+        TypeDecl: cpu, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: cpu
+          Constant: int, 0
+        BinaryOp: <
+          ID: cpu
+          Constant: int, 1
+        UnaryOp: p++
+          ID: cpu
+        Compound: 
+          If: 
+            FuncCall: 
+              ID: test_bit
+              ExprList: 
+                ID: cpu
+                StructRef: .
+                  ID: cpumask
+                  ID: bits
+            FuncCall: 
+              ID: inc
+              ExprList: 
+                UnaryOp: &
+                  StructRef: ->
+                    ArrayRef: 
+                      StructRef: .
+                        ID: trace
+                        ID: data
+                      ID: cpu
+                    ID: disabled
+          If: 
+            UnaryOp: !
+              FuncCall: 
+                ID: test_bit
+                ExprList: 
+                  ID: cpu
+                  StructRef: .
+                    ID: cpumask
+                    ID: bits
+            FuncCall: 
+              ID: dec
+              ExprList: 
+                UnaryOp: &
+                  StructRef: ->
+                    ArrayRef: 
+                      StructRef: .
+                        ID: trace
+                        ID: data
+                      ID: cpu
+                    ID: disabled

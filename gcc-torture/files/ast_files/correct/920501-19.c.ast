@@ -1,0 +1,14 @@
+FileAST: 
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      IdentifierType: ['long', 'long']
+    Constant: int, 0
+  FuncDef: 
+    Decl: y, [], [], []
+      FuncDecl: 
+        TypeDecl: y, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: x
+        Constant: int, 0

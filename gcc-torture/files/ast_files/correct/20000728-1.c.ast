@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: clock
+      Decl: sec, [], [], []
+        TypeDecl: sec, []
+          IdentifierType: ['long']
+      Decl: usec, [], [], []
+        TypeDecl: usec, []
+          IdentifierType: ['long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: clock_old, [], [], []
+        TypeDecl: clock_old, []
+          Struct: clock
+        InitList: 
+          Constant: int, 0
+          Constant: int, 0
+      For: 
+        Compound: 
+          Decl: foo, [], [], []
+            TypeDecl: foo, []
+              IdentifierType: ['long']
+          If: 
+            BinaryOp: &&
+              BinaryOp: ==
+                ID: foo
+                StructRef: .
+                  ID: clock_old
+                  ID: sec
+              BinaryOp: ==
+                Constant: int, 0
+                StructRef: .
+                  ID: clock_old
+                  ID: usec
+            EmptyStatement: 
+      Return: 
+        Constant: int, 0

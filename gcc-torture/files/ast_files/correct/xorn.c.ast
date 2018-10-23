@@ -1,0 +1,107 @@
+FileAST: 
+  FuncDef: 
+    Decl: xorn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: xorn, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ^
+          ID: a
+          UnaryOp: ~
+            ID: b
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: not, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: not, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: ~
+          ID: a
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: xor, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: xor, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: ^
+          ID: a
+          ID: b
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <=
+          ID: i
+          Constant: int, 1
+        UnaryOp: p++
+          ID: i
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          BinaryOp: <=
+            ID: j
+            Constant: int, 1
+          UnaryOp: p++
+            ID: j
+          FuncCall: 
+            ID: printf
+            ExprList: 
+              Constant: string, "%d op %d = %d = %d?\n"
+              ID: i
+              ID: j
+              BinaryOp: &
+                Constant: int, 1
+                FuncCall: 
+                  ID: xor
+                  ExprList: 
+                    ID: i
+                    FuncCall: 
+                      ID: not
+                      ExprList: 
+                        ID: j
+              BinaryOp: &
+                Constant: int, 1
+                FuncCall: 
+                  ID: xorn
+                  ExprList: 
+                    ID: i
+                    ID: j

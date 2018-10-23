@@ -1,0 +1,232 @@
+FileAST: 
+  Typedef: GLint, [], ['typedef']
+    TypeDecl: GLint, []
+      IdentifierType: ['int']
+  Typedef: GLubyte, [], ['typedef']
+    TypeDecl: GLubyte, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: radeon_bo
+      Decl: ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr, []
+            IdentifierType: ['void']
+      Decl: flags, [], [], []
+        TypeDecl: flags, []
+          IdentifierType: ['uint32_t']
+  Decl: None, [], [], []
+    Struct: radeon_renderbuffer
+      Decl: bo, [], [], []
+        PtrDecl: []
+          TypeDecl: bo, []
+            Struct: radeon_bo
+      Decl: cpp, [], [], []
+        TypeDecl: cpp, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: has_surface, [], [], []
+        TypeDecl: has_surface, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: r600_1d_tile_helper, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: rrb, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: rrb, ['const']
+                Struct: radeon_renderbuffer
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['GLint']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['GLint']
+          Decl: is_depth, [], [], []
+            TypeDecl: is_depth, []
+              IdentifierType: ['GLint']
+          Decl: is_stencil, [], [], []
+            TypeDecl: is_stencil, []
+              IdentifierType: ['GLint']
+        TypeDecl: r600_1d_tile_helper, []
+          IdentifierType: ['GLint']
+    Compound: 
+      Decl: element_bytes, [], [], []
+        TypeDecl: element_bytes, []
+          IdentifierType: ['GLint']
+        StructRef: ->
+          ID: rrb
+          ID: cpp
+      Decl: num_samples, [], [], []
+        TypeDecl: num_samples, []
+          IdentifierType: ['GLint']
+        Constant: int, 1
+      Decl: tile_width, [], [], []
+        TypeDecl: tile_width, []
+          IdentifierType: ['GLint']
+        Constant: int, 8
+      Decl: tile_height, [], [], []
+        TypeDecl: tile_height, []
+          IdentifierType: ['GLint']
+        Constant: int, 8
+      Decl: tile_thickness, [], [], []
+        TypeDecl: tile_thickness, []
+          IdentifierType: ['GLint']
+        Constant: int, 1
+      Decl: tile_bytes, [], [], []
+        TypeDecl: tile_bytes, []
+          IdentifierType: ['GLint']
+      Decl: tiles_per_row, [], [], []
+        TypeDecl: tiles_per_row, []
+          IdentifierType: ['GLint']
+      Decl: slice_offset, [], [], []
+        TypeDecl: slice_offset, []
+          IdentifierType: ['GLint']
+      Decl: tile_row_index, [], [], []
+        TypeDecl: tile_row_index, []
+          IdentifierType: ['GLint']
+      Decl: tile_column_index, [], [], []
+        TypeDecl: tile_column_index, []
+          IdentifierType: ['GLint']
+      Decl: tile_offset, [], [], []
+        TypeDecl: tile_offset, []
+          IdentifierType: ['GLint']
+      Decl: pixel_number, [], [], []
+        TypeDecl: pixel_number, []
+          IdentifierType: ['GLint']
+        Constant: int, 0
+      Decl: element_offset, [], [], []
+        TypeDecl: element_offset, []
+          IdentifierType: ['GLint']
+      Decl: offset, [], [], []
+        TypeDecl: offset, []
+          IdentifierType: ['GLint']
+        Constant: int, 0
+      Assignment: =
+        ID: tile_bytes
+        BinaryOp: *
+          BinaryOp: *
+            BinaryOp: *
+              BinaryOp: *
+                ID: tile_width
+                ID: tile_height
+              ID: tile_thickness
+            ID: element_bytes
+          ID: num_samples
+      Assignment: =
+        ID: tile_column_index
+        BinaryOp: /
+          ID: x
+          ID: tile_width
+      Assignment: =
+        ID: tile_offset
+        BinaryOp: *
+          BinaryOp: +
+            BinaryOp: *
+              ID: tile_row_index
+              ID: tiles_per_row
+            ID: tile_column_index
+          ID: tile_bytes
+      If: 
+        ID: is_depth
+        Compound: 
+        Compound: 
+          Decl: sample_offset, [], [], []
+            TypeDecl: sample_offset, []
+              IdentifierType: ['GLint']
+          Switch: 
+            ID: element_bytes
+            Compound: 
+              Case: 
+                Constant: int, 1
+                Assignment: |=
+                  ID: pixel_number
+                  BinaryOp: <<
+                    BinaryOp: &
+                      BinaryOp: >>
+                        ID: x
+                        Constant: int, 0
+                      Constant: int, 1
+                    Constant: int, 0
+          Assignment: =
+            ID: element_offset
+            BinaryOp: +
+              ID: sample_offset
+              BinaryOp: *
+                ID: pixel_number
+                ID: element_bytes
+      Assignment: =
+        ID: offset
+        BinaryOp: +
+          BinaryOp: +
+            ID: slice_offset
+            ID: tile_offset
+          ID: element_offset
+      Return: 
+        ID: offset
+  FuncDef: 
+    Decl: r600_ptr_color, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rrb, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: rrb, ['const']
+                Struct: radeon_renderbuffer
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['GLint']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['GLint']
+        PtrDecl: []
+          TypeDecl: r600_ptr_color, []
+            IdentifierType: ['GLubyte']
+    Compound: 
+      Decl: ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr, []
+            IdentifierType: ['GLubyte']
+        StructRef: ->
+          StructRef: ->
+            ID: rrb
+            ID: bo
+          ID: ptr
+      Decl: mask, [], [], []
+        TypeDecl: mask, []
+          IdentifierType: ['uint32_t']
+        BinaryOp: |
+          Constant: int, 1
+          Constant: int, 2
+      Decl: offset, [], [], []
+        TypeDecl: offset, []
+          IdentifierType: ['GLint']
+      If: 
+        BinaryOp: ||
+          StructRef: ->
+            ID: rrb
+            ID: has_surface
+          UnaryOp: !
+            BinaryOp: &
+              StructRef: ->
+                StructRef: ->
+                  ID: rrb
+                  ID: bo
+                ID: flags
+              ID: mask
+        Compound: 
+          Assignment: =
+            ID: offset
+            FuncCall: 
+              ID: r600_1d_tile_helper
+              ExprList: 
+                ID: rrb
+                ID: x
+                ID: y
+                Constant: int, 0
+                Constant: int, 0
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            ID: ptr
+            ID: offset

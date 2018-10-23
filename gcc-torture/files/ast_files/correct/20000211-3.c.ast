@@ -1,0 +1,17 @@
+FileAST: 
+  FuncDef: 
+    Decl: f_clos, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f_clos, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: x
+        Compound: 
+          Default: 
+            Label: mumble
+              EmptyStatement: 

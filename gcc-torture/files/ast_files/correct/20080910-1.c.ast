@@ -1,0 +1,202 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: yy_buffer_state
+      Decl: yy_is_interactive, [], [], []
+        TypeDecl: yy_is_interactive, []
+          IdentifierType: ['int']
+  Decl: yy_buffer_stack, [], ['static'], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: yy_buffer_stack, []
+          Struct: yy_buffer_state
+    Constant: int, 0
+  Decl: yy_n_chars, [], ['static'], []
+    TypeDecl: yy_n_chars, []
+      IdentifierType: ['int']
+  Decl: orafce_sql_yyleng, [], [], []
+    TypeDecl: orafce_sql_yyleng, []
+      IdentifierType: ['int']
+  Decl: yy_c_buf_p, [], [], []
+    PtrDecl: []
+      TypeDecl: yy_c_buf_p, []
+        IdentifierType: ['unsigned', 'char']
+    Constant: int, 0
+  Decl: orafce_sql_yytext, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: orafce_sql_yytext, []
+        IdentifierType: ['char']
+  Decl: yy_ec, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: yy_ec, ['const']
+        IdentifierType: ['int']
+      Constant: int, 256
+    InitList: 
+  Decl: yy_accept, [], [], []
+    ArrayDecl: []
+      TypeDecl: yy_accept, []
+        IdentifierType: ['short']
+      Constant: int, 155
+  Decl: yy_base, [], [], []
+    ArrayDecl: []
+      TypeDecl: yy_base, []
+        IdentifierType: ['short']
+      Constant: int, 193
+    InitList: 
+  Decl: yy_def, [], [], []
+    ArrayDecl: []
+      TypeDecl: yy_def, []
+        IdentifierType: ['short']
+      Constant: int, 193
+    InitList: 
+  Decl: yy_chk, [], [], []
+    ArrayDecl: []
+      TypeDecl: yy_chk, []
+        IdentifierType: ['short']
+      Constant: int, 738
+    InitList: 
+  Decl: yy_last_accepting_cpos, [], [], []
+    PtrDecl: []
+      TypeDecl: yy_last_accepting_cpos, []
+        IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: orafce_sql_yylex, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: orafce_sql_yylex, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: yy_current_state, [], ['register'], []
+        TypeDecl: yy_current_state, []
+          IdentifierType: ['int']
+      Decl: yy_cp, [], [], []
+        PtrDecl: []
+          TypeDecl: yy_cp, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: yy_bp, [], [], []
+        PtrDecl: []
+          TypeDecl: yy_bp, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: yy_act, [], ['register'], []
+        TypeDecl: yy_act, []
+          IdentifierType: ['int']
+      While: 
+        Constant: int, 1
+        Compound: 
+          DoWhile: 
+            BinaryOp: !=
+              ID: yy_current_state
+              Constant: int, 154
+            Compound: 
+              Decl: yy_c, [], [], []
+                TypeDecl: yy_c, []
+                  IdentifierType: ['char']
+                ArrayRef: 
+                  ID: yy_ec
+                  UnaryOp: *
+                    ID: yy_cp
+              If: 
+                ArrayRef: 
+                  ID: yy_accept
+                  ID: yy_current_state
+                Assignment: =
+                  ID: yy_last_accepting_cpos
+                  ID: yy_cp
+              While: 
+                BinaryOp: !=
+                  ArrayRef: 
+                    ID: yy_chk
+                    BinaryOp: +
+                      ArrayRef: 
+                        ID: yy_base
+                        ID: yy_current_state
+                      ID: yy_c
+                  ID: yy_current_state
+                Assignment: =
+                  ID: yy_current_state
+                  ArrayRef: 
+                    ID: yy_def
+                    ID: yy_current_state
+          Label: yy_find_action
+            Assignment: =
+              ID: yy_act
+              ArrayRef: 
+                ID: yy_accept
+                ID: yy_current_state
+          Assignment: =
+            UnaryOp: *
+              ID: yy_cp
+            Constant: char, '\0'
+          Switch: 
+            ID: yy_act
+            Compound: 
+              Case: 
+                Constant: int, 2
+                Assignment: =
+                  UnaryOp: *
+                    ID: yy_cp
+                  Constant: int, 1
+                Return: 
+                  Constant: int, 265
+              Case: 
+                Constant: int, 24
+              Case: 
+                Constant: int, 25
+                FuncCall: 
+                  ID: addlit
+                  ExprList: 
+                    ID: orafce_sql_yytext
+                    ID: orafce_sql_yyleng
+              Case: 
+                Constant: int, 26
+                FuncCall: 
+                  ID: addlit
+                  ExprList: 
+                    ID: orafce_sql_yytext
+                    ID: orafce_sql_yyleng
+              Case: 
+                Constant: int, 53
+                FuncCall: 
+                  ID: yy_fatal_error
+                  ExprList: 
+                    Constant: string, "flex scanner jammed"
+                Break: 
+              Case: 
+                Constant: int, 54
+                Assignment: =
+                  ID: yy_cp
+                  UnaryOp: ++
+                    ID: yy_c_buf_p
+                Decl: n, [], [], []
+                  TypeDecl: n, []
+                    IdentifierType: ['unsigned', 'long']
+                  Constant: int, 0
+                If: 
+                  StructRef: ->
+                    ArrayRef: 
+                      ID: yy_buffer_stack
+                      Constant: int, 0
+                    ID: yy_is_interactive
+                  For: 
+                    BinaryOp: !=
+                      FuncCall: 
+                        ID: _IO_getc
+                      UnaryOp: -
+                        Constant: int, 1
+                    UnaryOp: ++
+                      ID: n
+                    Assignment: =
+                      ID: yy_n_chars
+                      ID: n
+                If: 
+                  BinaryOp: ==
+                    ID: a
+                    Constant: int, 0
+                  Compound: 
+                    Assignment: =
+                      ID: yy_current_state
+                      FuncCall: 
+                        ID: yy_get_previous_state
+                    Goto: yy_find_action

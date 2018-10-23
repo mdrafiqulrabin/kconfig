@@ -1,0 +1,211 @@
+FileAST: 
+  Typedef: S1, [], ['typedef']
+    TypeDecl: S1, []
+      Struct: s1
+        Decl: v1, [], [], []
+          TypeDecl: v1, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: v2, [], [], []
+          PtrDecl: []
+            TypeDecl: v2, []
+              IdentifierType: ['unsigned', 'char']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: hdb, ['const'], [], []
+          PtrDecl: ['const']
+            TypeDecl: hdb, ['const']
+              Struct: s1
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'char']
+  Decl: sn, [], [], []
+    TypeDecl: sn, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: hdb, [], [], []
+    PtrDecl: []
+      TypeDecl: hdb, []
+        IdentifierType: ['S1']
+  Decl: pb, [], [], []
+    PtrDecl: []
+      TypeDecl: pb, []
+        IdentifierType: ['S1']
+  Decl: len, [], [], []
+    TypeDecl: len, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: crashIt, [], [], []
+      FuncDecl: 
+        TypeDecl: crashIt, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: nsn, [], [], []
+        TypeDecl: nsn, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: cnt, [], [], []
+        TypeDecl: cnt, []
+          IdentifierType: ['unsigned', 'short']
+      If: 
+        BinaryOp: !=
+          ID: sn
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+      If: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: len
+            Constant: int, 12
+          BinaryOp: ==
+            Assignment: =
+              ID: p
+              TernaryOp: 
+                BinaryOp: >=
+                  StructRef: ->
+                    ID: pb
+                    ID: v1
+                  Constant: int, 8
+                StructRef: ->
+                  ID: pb
+                  ID: v2
+                FuncCall: 
+                  ID: foo
+            Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Assignment: =
+        ID: nsn
+        BinaryOp: |
+          BinaryOp: |
+            BinaryOp: |
+              BinaryOp: <<
+                BinaryOp: &
+                  UnaryOp: *
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['unsigned', 'int']
+                      ID: p
+                  Constant: int, 0x000000ff
+                Constant: int, 24
+              BinaryOp: <<
+                BinaryOp: &
+                  UnaryOp: *
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['unsigned', 'int']
+                      ID: p
+                  Constant: int, 0x0000ff00
+                Constant: int, 8
+            BinaryOp: >>
+              BinaryOp: &
+                UnaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned', 'int']
+                    ID: p
+                Constant: int, 0x00ff0000
+              Constant: int, 8
+          BinaryOp: >>
+            BinaryOp: &
+              UnaryOp: *
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'int']
+                  ID: p
+              Constant: int, 0xff000000
+            Constant: int, 24
+      Assignment: +=
+        ID: p
+        Constant: int, 4
+      Assignment: =
+        ID: cnt
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'short']
+          BinaryOp: &
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: <<
+                    BinaryOp: &
+                      UnaryOp: *
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned', 'int']
+                          ID: p
+                      Constant: int, 0x000000ff
+                    Constant: int, 24
+                  BinaryOp: <<
+                    BinaryOp: &
+                      UnaryOp: *
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned', 'int']
+                          ID: p
+                      Constant: int, 0x0000ff00
+                    Constant: int, 8
+                BinaryOp: >>
+                  BinaryOp: &
+                    UnaryOp: *
+                      Cast: 
+                        Typename: None, []
+                          PtrDecl: []
+                            TypeDecl: None, []
+                              IdentifierType: ['unsigned', 'int']
+                        ID: p
+                    Constant: int, 0x00ff0000
+                  Constant: int, 8
+              BinaryOp: >>
+                BinaryOp: &
+                  UnaryOp: *
+                    Cast: 
+                      Typename: None, []
+                        PtrDecl: []
+                          TypeDecl: None, []
+                            IdentifierType: ['unsigned', 'int']
+                      ID: p
+                  Constant: int, 0xff000000
+                Constant: int, 24
+            Constant: int, 0xffff
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: len
+            BinaryOp: +
+              Constant: int, 12
+              BinaryOp: *
+                ID: cnt
+                Constant: int, 56
+          BinaryOp: ==
+            ID: nsn
+            Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: hdb
+          Return: 
+            Constant: int, 1
+      Return: 
+        Constant: int, 0

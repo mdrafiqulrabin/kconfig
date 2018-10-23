@@ -1,0 +1,64 @@
+FileAST: 
+  FuncDef: 
+    Decl: good, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['unsigned']
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['unsigned']
+          Decl: w5, [], [], []
+            TypeDecl: w5, []
+              IdentifierType: ['unsigned']
+        TypeDecl: good, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          ID: src
+          UnaryOp: ~
+            TernaryOp: 
+              BinaryOp: ==
+                ID: w5
+                Constant: int, 0
+              BinaryOp: <<
+                UnaryOp: ~
+                  Constant: int, 0
+                ID: o5
+              BinaryOp: <<
+                Constant: int, 1
+                ID: o5
+  FuncDef: 
+    Decl: bad, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: src, [], [], []
+            TypeDecl: src, []
+              IdentifierType: ['unsigned']
+          Decl: o5, [], [], []
+            TypeDecl: o5, []
+              IdentifierType: ['unsigned']
+          Decl: w5, [], [], []
+            TypeDecl: w5, []
+              IdentifierType: ['unsigned']
+        TypeDecl: bad, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          ID: src
+          TernaryOp: 
+            BinaryOp: ==
+              ID: w5
+              Constant: int, 0
+            UnaryOp: ~
+              BinaryOp: <<
+                UnaryOp: ~
+                  Constant: int, 0
+                ID: o5
+            UnaryOp: ~
+              BinaryOp: <<
+                Constant: int, 1
+                ID: o5

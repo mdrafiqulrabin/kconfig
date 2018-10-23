@@ -1,0 +1,72 @@
+FileAST: 
+  FuncDef: 
+    Decl: dr106_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pv, [], [], []
+            PtrDecl: []
+              TypeDecl: pv, []
+                IdentifierType: ['void']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: dr106_1, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: *
+        ID: pv
+      TernaryOp: 
+        ID: i
+        UnaryOp: *
+          ID: pv
+        UnaryOp: *
+          ID: pv
+      ExprList: 
+        UnaryOp: *
+          ID: pv
+        UnaryOp: *
+          ID: pv
+  FuncDef: 
+    Decl: dr106_2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pcv, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: pcv, ['const']
+                IdentifierType: ['void']
+          Decl: pvv, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: pvv, ['volatile']
+                IdentifierType: ['void']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: dr106_2, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: *
+        ID: pcv
+      TernaryOp: 
+        ID: i
+        UnaryOp: *
+          ID: pcv
+        UnaryOp: *
+          ID: pcv
+      ExprList: 
+        UnaryOp: *
+          ID: pcv
+        UnaryOp: *
+          ID: pcv
+      UnaryOp: *
+        ID: pvv
+      TernaryOp: 
+        ID: i
+        UnaryOp: *
+          ID: pvv
+        UnaryOp: *
+          ID: pvv
+      ExprList: 
+        UnaryOp: *
+          ID: pvv
+        UnaryOp: *
+          ID: pvv

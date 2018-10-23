@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    PtrDecl: []
+      FuncDecl: 
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  Decl: c, [], [], []
+    PtrDecl: []
+      FuncDecl: 
+        TypeDecl: c, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: a
+        Return: 
+          Constant: int, 0
+      If: 
+        ID: p1
+        Compound: 
+          FuncCall: 
+            ID: c
+          FuncCall: 
+            ID: b
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Constant: int, 0

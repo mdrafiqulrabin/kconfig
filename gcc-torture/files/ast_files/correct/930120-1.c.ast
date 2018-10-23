@@ -1,0 +1,558 @@
+FileAST: 
+  Decl: itolws, [], [], []
+    TypeDecl: itolws, []
+      Union: None
+        Decl: I, [], [], []
+          ArrayDecl: []
+            TypeDecl: I, []
+              IdentifierType: ['short']
+            Constant: int, 2
+        Decl: L, [], [], []
+          TypeDecl: L, []
+            IdentifierType: ['long', 'int']
+        Decl: C, [], [], []
+          ArrayDecl: []
+            TypeDecl: C, []
+              IdentifierType: ['char']
+            Constant: int, 4
+  Decl: errflg, [], [], []
+    PtrDecl: []
+      TypeDecl: errflg, []
+        IdentifierType: ['char']
+  Decl: dot, [], [], []
+    TypeDecl: dot, []
+      IdentifierType: ['long', 'int']
+  Decl: dotinc, [], [], []
+    TypeDecl: dotinc, []
+      IdentifierType: ['short']
+  Decl: expvf, [], [], []
+    TypeDecl: expvf, []
+      IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: fcount
+          ID: ifp
+          ID: itype
+          ID: ptype
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['unsigned']
+      Decl: savdot, [], [], []
+        TypeDecl: savdot, []
+          IdentifierType: ['long', 'int']
+      Decl: wx, [], [], []
+        TypeDecl: wx, []
+          IdentifierType: ['long', 'int']
+      Decl: fp, [], [], []
+        PtrDecl: []
+          TypeDecl: fp, []
+            IdentifierType: ['char']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Decl: modifier, [], [], []
+        TypeDecl: modifier, []
+          IdentifierType: ['char']
+      Decl: longpr, [], [], []
+        TypeDecl: longpr, []
+          IdentifierType: ['char']
+      Decl: dw, [], [], []
+        TypeDecl: dw, []
+          Union: None
+            Decl: dval, [], [], []
+              TypeDecl: dval, []
+                IdentifierType: ['double']
+            Decl: ival, [], [], []
+              TypeDecl: ival, []
+                Struct: None
+                  Decl: i1, [], [], []
+                    TypeDecl: i1, []
+                      IdentifierType: ['int']
+                  Decl: i2, [], [], []
+                    TypeDecl: i2, []
+                      IdentifierType: ['int']
+      Decl: fw, [], [], []
+        TypeDecl: fw, []
+          Union: None
+            Decl: fval, [], [], []
+              TypeDecl: fval, []
+                IdentifierType: ['float']
+            Decl: ival, [], [], []
+              TypeDecl: ival, []
+                IdentifierType: ['int']
+      Decl: gotdot, [], [], []
+        TypeDecl: gotdot, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        BinaryOp: >
+          ID: fcount
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: fp
+            ID: ifp
+          Assignment: =
+            ID: c
+            UnaryOp: *
+              ID: fp
+          Assignment: =
+            ID: longpr
+            BinaryOp: |
+              BinaryOp: |
+                BinaryOp: |
+                  BinaryOp: |
+                    BinaryOp: &
+                      BinaryOp: >=
+                        ID: c
+                        Constant: char, 'A'
+                      BinaryOp: <=
+                        ID: c
+                        Constant: char, 'Z'
+                    BinaryOp: ==
+                      ID: c
+                      Constant: char, 'f'
+                  BinaryOp: ==
+                    ID: c
+                    Constant: char, '4'
+                BinaryOp: ==
+                  ID: c
+                  Constant: char, 'p'
+              BinaryOp: ==
+                ID: c
+                Constant: char, 'i'
+          If: 
+            BinaryOp: ||
+              BinaryOp: ==
+                ID: itype
+                Constant: int, 0
+              BinaryOp: ==
+                UnaryOp: *
+                  ID: fp
+                Constant: char, 'a'
+            Compound: 
+              Assignment: =
+                ID: wx
+                ID: dot
+              Assignment: =
+                ID: w
+                ID: dot
+            Compound: 
+              Assignment: =
+                ID: gotdot
+                Constant: int, 1
+              Assignment: =
+                ID: wx
+                FuncCall: 
+                  ID: get
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      ID: dot
+                    ID: itype
+              If: 
+                UnaryOp: !
+                  ID: longpr
+                Compound: 
+                  Assignment: =
+                    ID: w
+                    ExprList: 
+                      Assignment: =
+                        StructRef: .
+                          ID: itolws
+                          ID: L
+                        ID: wx
+                      ArrayRef: 
+                        StructRef: .
+                          ID: itolws
+                          ID: I
+                        BinaryOp: >>
+                          BinaryOp: &
+                            ID: dot
+                            Constant: int, 3
+                          Constant: int, 1
+          If: 
+            BinaryOp: ==
+              ID: c
+              Constant: char, 'F'
+            Compound: 
+              Assignment: =
+                StructRef: .
+                  StructRef: .
+                    ID: dw
+                    ID: ival
+                  ID: i1
+                ID: wx
+              If: 
+                BinaryOp: ==
+                  ID: itype
+                  Constant: int, 0
+                Compound: 
+                  Assignment: =
+                    StructRef: .
+                      StructRef: .
+                        ID: dw
+                        ID: ival
+                      ID: i2
+                    ID: expvf
+          Assignment: =
+            ID: modifier
+            UnaryOp: *
+              UnaryOp: p++
+                ID: fp
+          Switch: 
+            ID: modifier
+            Compound: 
+              Case: 
+                Constant: char, ' '
+              Case: 
+                Constant: char, '\t'
+                Break: 
+              Case: 
+                Constant: char, 't'
+              Case: 
+                Constant: char, 'T'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%T"
+                    ID: fcount
+                Return: 
+                  ID: fp
+              Case: 
+                Constant: char, 'r'
+              Case: 
+                Constant: char, 'R'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%M"
+                    ID: fcount
+                Return: 
+                  ID: fp
+              Case: 
+                Constant: char, 'k'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%k"
+                    ID: w
+                Break: 
+              Case: 
+                Constant: char, 'K'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%K"
+                    ID: wx
+                Break: 
+              Case: 
+                Constant: char, 'a'
+                FuncCall: 
+                  ID: psymoff
+                  ExprList: 
+                    ID: dot
+                    ID: ptype
+                    Constant: string, ":%16t"
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 0
+                Break: 
+              Case: 
+                Constant: char, 'p'
+                FuncCall: 
+                  ID: psymoff
+                  ExprList: 
+                    Constant: int, 0
+                    ID: ptype
+                    Constant: string, "%16t"
+                Break: 
+              Case: 
+                Constant: char, 'u'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%-8u"
+                    ID: w
+                Break: 
+              Case: 
+                Constant: char, 'U'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%-16U"
+                    ID: wx
+                Break: 
+              Case: 
+                Constant: char, 'c'
+              Case: 
+                Constant: char, 'C'
+                If: 
+                  BinaryOp: ==
+                    ID: modifier
+                    Constant: char, 'C'
+                  Compound: 
+                    FuncCall: 
+                      ID: printesc
+                      ExprList: 
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['int']
+                          ExprList: 
+                            Assignment: =
+                              StructRef: .
+                                ID: itolws
+                                ID: L
+                              ID: wx
+                            ArrayRef: 
+                              StructRef: .
+                                ID: itolws
+                                ID: C
+                              BinaryOp: &
+                                ID: dot
+                                Constant: int, 3
+                  Compound: 
+                    FuncCall: 
+                      ID: printc
+                      ExprList: 
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['char']
+                          ExprList: 
+                            Assignment: =
+                              StructRef: .
+                                ID: itolws
+                                ID: L
+                              ID: wx
+                            ArrayRef: 
+                              StructRef: .
+                                ID: itolws
+                                ID: C
+                              BinaryOp: &
+                                ID: dot
+                                Constant: int, 3
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 1
+                Break: 
+              Case: 
+                Constant: char, 'b'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%-8x"
+                    ExprList: 
+                      Assignment: =
+                        StructRef: .
+                          ID: itolws
+                          ID: L
+                        ID: wx
+                      ArrayRef: 
+                        StructRef: .
+                          ID: itolws
+                          ID: C
+                        BinaryOp: &
+                          ID: dot
+                          Constant: int, 3
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 1
+                Break: 
+              Case: 
+                Constant: char, 'B'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%-8o"
+                    ExprList: 
+                      Assignment: =
+                        StructRef: .
+                          ID: itolws
+                          ID: L
+                        ID: wx
+                      ArrayRef: 
+                        StructRef: .
+                          ID: itolws
+                          ID: C
+                        BinaryOp: &
+                          ID: dot
+                          Constant: int, 3
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 1
+                Break: 
+              Case: 
+                Constant: char, 's'
+              Case: 
+                Constant: char, 'S'
+                Assignment: =
+                  ID: savdot
+                  ID: dot
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 1
+                While: 
+                  BinaryOp: &&
+                    Assignment: =
+                      ID: c
+                      ExprList: 
+                        Assignment: =
+                          StructRef: .
+                            ID: itolws
+                            ID: L
+                          ID: wx
+                        ArrayRef: 
+                          StructRef: .
+                            ID: itolws
+                            ID: C
+                          BinaryOp: &
+                            ID: dot
+                            Constant: int, 3
+                    BinaryOp: ==
+                      ID: errflg
+                      Constant: int, 0
+                  Compound: 
+                    Assignment: =
+                      ID: dot
+                      FuncCall: 
+                        ID: inkdot
+                        ExprList: 
+                          Constant: int, 1
+                    If: 
+                      BinaryOp: ==
+                        ID: modifier
+                        Constant: char, 'S'
+                      Compound: 
+                        FuncCall: 
+                          ID: printesc
+                          ExprList: 
+                            ID: c
+                      Compound: 
+                        FuncCall: 
+                          ID: printc
+                          ExprList: 
+                            ID: c
+                    FuncCall: 
+                      ID: endline
+                    If: 
+                      UnaryOp: !
+                        BinaryOp: &
+                          ID: dot
+                          Constant: int, 3
+                      Assignment: =
+                        ID: wx
+                        FuncCall: 
+                          ID: get
+                          ExprList: 
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['int']
+                              ID: dot
+                            ID: itype
+                Assignment: =
+                  ID: dotinc
+                  BinaryOp: +
+                    BinaryOp: -
+                      ID: dot
+                      ID: savdot
+                    Constant: int, 1
+                Assignment: =
+                  ID: dot
+                  ID: savdot
+                Break: 
+              Case: 
+                Constant: char, 'i'
+                If: 
+                  ID: gotdot
+                  Compound: 
+                    Assignment: =
+                      ID: wx
+                      FuncCall: 
+                        ID: get
+                        ExprList: 
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['int']
+                            BinaryOp: &
+                              ID: dot
+                              UnaryOp: ~
+                                Constant: int, 3
+                          ID: itype
+                FuncCall: 
+                  ID: iDasm
+                  ExprList: 
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      ID: wx
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned', 'int']
+                      Constant: int, 0
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['unsigned', 'int']
+                      BinaryOp: &
+                        ID: dot
+                        UnaryOp: ~
+                          Constant: int, 3
+                FuncCall: 
+                  ID: printc
+                  ExprList: 
+                    Constant: char, '\n'
+                Break: 
+              Case: 
+                Constant: char, 'f'
+                Assignment: =
+                  StructRef: .
+                    ID: fw
+                    ID: ival
+                  ID: wx
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%-16.9f"
+                    StructRef: .
+                      ID: fw
+                      ID: fval
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 4
+                Break: 
+              Case: 
+                Constant: char, 'F'
+                FuncCall: 
+                  ID: printf
+                  ExprList: 
+                    Constant: string, "%-32.18F"
+                    StructRef: .
+                      ID: dw
+                      ID: dval
+                Assignment: =
+                  ID: dotinc
+                  Constant: int, 8
+                Break: 
+      Return: 
+        ID: fp
+    Decl: fcount, [], [], []
+      TypeDecl: fcount, []
+        IdentifierType: ['short']
+    Decl: ifp, [], [], []
+      PtrDecl: []
+        TypeDecl: ifp, []
+          IdentifierType: ['char']

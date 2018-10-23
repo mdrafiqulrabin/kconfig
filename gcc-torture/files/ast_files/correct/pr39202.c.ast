@@ -1,0 +1,62 @@
+FileAST: 
+  Typedef: t_a, [], ['typedef']
+    TypeDecl: t_a, []
+      Struct: None
+        Decl: u, [], [], []
+          TypeDecl: u, []
+            Union: None
+              Decl: aaa, [], [], []
+                PtrDecl: []
+                  TypeDecl: aaa, []
+                    IdentifierType: ['int']
+  Typedef: t_b, [], ['typedef']
+    TypeDecl: t_b, []
+      Struct: None
+        Decl: bbb, [], [], []
+          TypeDecl: bbb, []
+            IdentifierType: ['unsigned']
+          Constant: int, 1
+  Typedef: t_c, [], ['typedef']
+    TypeDecl: t_c, []
+      Struct: None
+        Decl: ccc, [], [], []
+          TypeDecl: ccc, []
+            IdentifierType: ['int']
+        Decl: ddd, [], [], []
+          TypeDecl: ddd, []
+            IdentifierType: ['t_a']
+        Decl: eee, [], [], []
+          TypeDecl: eee, []
+            IdentifierType: ['t_b']
+        Decl: fff, [], [], []
+          TypeDecl: fff, []
+            IdentifierType: ['int']
+  Typedef: t_d, [], ['typedef']
+    TypeDecl: t_d, []
+      Struct: t_d
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['t_c']
+        Decl: f2, [], [], []
+          TypeDecl: f2, []
+            IdentifierType: ['t_c']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ggg, [], [], []
+        TypeDecl: ggg, []
+          IdentifierType: ['t_d']
+      Assignment: =
+        StructRef: .
+          ID: ggg
+          ID: f1
+        StructRef: .
+          ID: ggg
+          ID: f2

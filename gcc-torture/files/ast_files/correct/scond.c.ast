@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: scond, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: c
+          ID: d
+        TypeDecl: scond, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          BinaryOp: >
+            ID: a
+            ID: b
+          BinaryOp: <
+            ID: c
+            ID: d

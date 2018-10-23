@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: omit, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: omit, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: x
+        UnaryOp: *
+          ID: b
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 1
+        ID: x
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ID: x
+      Return: 
+        BinaryOp: +
+          ID: x
+          Constant: int, 1
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+    Decl: b, [], [], []
+      PtrDecl: []
+        TypeDecl: b, []
+          IdentifierType: ['char']

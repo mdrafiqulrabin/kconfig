@@ -1,0 +1,39 @@
+FileAST: 
+  Typedef: foo, [], ['typedef']
+    TypeDecl: foo, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: foobar, [], [], []
+        ArrayDecl: []
+          TypeDecl: foobar, []
+            IdentifierType: ['foo']
+          Constant: int, 100
+      Assignment: =
+        StructRef: .
+          ArrayRef: 
+            ID: foobar
+            Constant: int, 1
+          ID: a
+        Constant: char, 'a'
+      Assignment: =
+        StructRef: .
+          ArrayRef: 
+            ID: foobar
+            Constant: int, 2
+          ID: a
+        Constant: char, 'b'
+      FuncCall: 
+        ID: barfoo
+        ExprList: 
+          ID: foobar

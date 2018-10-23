@@ -1,0 +1,127 @@
+FileAST: 
+  Typedef: boolean, [], ['typedef']
+    TypeDecl: boolean, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: FALSE
+          Enumerator: TRUE
+  Decl: None, [], [], []
+    Enum: _errorTypes
+      EnumeratorList: 
+        Enumerator: FATAL
+          Constant: int, 1
+        Enumerator: WARNING
+          Constant: int, 2
+        Enumerator: PERROR
+          Constant: int, 4
+  Typedef: optionValues, [], ['typedef']
+    TypeDecl: optionValues, []
+      Struct: _optionValues
+        Decl: include, [], [], []
+          TypeDecl: include, []
+            Struct: _include
+              Decl: classNames, [], [], []
+                TypeDecl: classNames, []
+                  IdentifierType: ['boolean']
+              Decl: defines, [], [], []
+                TypeDecl: defines, []
+                  IdentifierType: ['boolean']
+              Decl: enumerators, [], [], []
+                TypeDecl: enumerators, []
+                  IdentifierType: ['boolean']
+  Decl: Option, [], ['extern'], []
+    TypeDecl: Option, []
+      IdentifierType: ['optionValues']
+  FuncDef: 
+    Decl: applyTagInclusionList, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: list
+        TypeDecl: applyTagInclusionList, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mode, [], [], []
+        TypeDecl: mode, []
+          IdentifierType: ['boolean']
+        ID: TRUE
+      Decl: p, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: p, ['const']
+            IdentifierType: ['char']
+      For: 
+        Assignment: =
+          ID: p
+          ID: list
+        BinaryOp: !=
+          UnaryOp: *
+            ID: p
+          Constant: char, '\0'
+        UnaryOp: ++
+          ID: p
+        Switch: 
+          UnaryOp: *
+            ID: p
+          Compound: 
+            Case: 
+              Constant: char, '='
+              FuncCall: 
+                ID: clearTagList
+              Assignment: =
+                ID: mode
+                ID: TRUE
+              Break: 
+            Case: 
+              Constant: char, '+'
+              Assignment: =
+                ID: mode
+                ID: TRUE
+              Break: 
+            Case: 
+              Constant: char, '-'
+              Assignment: =
+                ID: mode
+                ID: FALSE
+              Break: 
+            Case: 
+              Constant: char, 'c'
+              Assignment: =
+                StructRef: .
+                  StructRef: .
+                    ID: Option
+                    ID: include
+                  ID: classNames
+                ID: mode
+              Break: 
+            Case: 
+              Constant: char, 'd'
+              Assignment: =
+                StructRef: .
+                  StructRef: .
+                    ID: Option
+                    ID: include
+                  ID: defines
+                ID: mode
+              Break: 
+            Case: 
+              Constant: char, 'e'
+              Assignment: =
+                StructRef: .
+                  StructRef: .
+                    ID: Option
+                    ID: include
+                  ID: enumerators
+                ID: mode
+              Break: 
+            Default: 
+              FuncCall: 
+                ID: error
+                ExprList: 
+                  ID: FATAL
+                  Constant: string, "-i: Invalid tag option '%c'"
+                  UnaryOp: *
+                    ID: p
+              Break: 
+    Decl: list, ['const'], [], []
+      PtrDecl: ['const']
+        TypeDecl: list, ['const']
+          IdentifierType: ['char']

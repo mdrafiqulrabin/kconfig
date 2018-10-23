@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: temp, [], [], []
+        ArrayDecl: []
+          TypeDecl: temp, []
+            IdentifierType: ['char']
+          Constant: int, 1024
+        Constant: string, "tempfile"
+      Return: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: temp
+            Constant: int, 0
+          Constant: char, 't'

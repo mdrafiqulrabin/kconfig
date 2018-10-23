@@ -1,0 +1,79 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['int']
+      Decl: stop, [], [], []
+        TypeDecl: stop, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: len
+        Constant: int, 10
+      Assignment: =
+        ID: stop
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: len
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: a
+            TernaryOp: 
+              FuncCall: 
+                ID: bar1
+              Constant: int, 0
+              Constant: int, 1
+          Assignment: =
+            ID: b
+            TernaryOp: 
+              FuncCall: 
+                ID: bar2
+              Constant: int, 0
+              Constant: int, 1
+          Assignment: =
+            ID: g
+            TernaryOp: 
+              FuncCall: 
+                ID: bar3
+              Constant: int, 0
+              Constant: int, 1
+          If: 
+            Assignment: =
+              ID: stop
+              BinaryOp: !=
+                BinaryOp: %
+                  BinaryOp: +
+                    ID: a
+                    ID: b
+                  Constant: int, 2
+                ID: g
+            Break: 
+      Return: 
+        ID: stop

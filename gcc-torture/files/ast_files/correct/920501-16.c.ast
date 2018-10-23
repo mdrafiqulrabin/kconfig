@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: n
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: None, [], [], []
+        Struct: z
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            ArrayDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+              ID: n
+          Decl: c, [], [], []
+            ArrayDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['int']
+              ID: n

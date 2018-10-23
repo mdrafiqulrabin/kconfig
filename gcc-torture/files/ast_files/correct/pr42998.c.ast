@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: ndisc_fill_addr_option, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: opt, [], [], []
+            PtrDecl: []
+              TypeDecl: opt, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: data_len, [], [], []
+            TypeDecl: data_len, []
+              IdentifierType: ['int']
+          Decl: addr_type, [], [], []
+            TypeDecl: addr_type, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: ndisc_fill_addr_option, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: pad, [], [], []
+        TypeDecl: pad, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          ID: addr_type
+          Constant: int, 32
+        Assignment: =
+          ID: pad
+          Constant: int, 2
+        Assignment: =
+          ID: pad
+          Constant: int, 0
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          BinaryOp: +
+            ID: opt
+            Constant: int, 2
+          Constant: int, 0
+          ID: pad
+      Assignment: +=
+        ID: opt
+        ID: pad
+      TernaryOp: 
+        FuncCall: 
+          ID: __builtin_constant_p
+          ExprList: 
+            ID: data_len
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            BinaryOp: +
+              ID: opt
+              Constant: int, 2
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            BinaryOp: +
+              ID: opt
+              Constant: int, 2

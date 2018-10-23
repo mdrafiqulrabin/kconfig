@@ -1,0 +1,35 @@
+FileAST: 
+  Typedef: STACK, [], ['typedef']
+    TypeDecl: STACK, []
+      Struct: None
+        Decl: str, [], [], []
+          ArrayDecl: []
+            TypeDecl: str, []
+              IdentifierType: ['char']
+            Constant: int, 20
+  Decl: stack, [], [], []
+    ArrayDecl: []
+      TypeDecl: stack, []
+        IdentifierType: ['STACK']
+      Constant: int, 15
+  Decl: level, [], [], []
+    TypeDecl: level, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: rezero, [], [], []
+      FuncDecl: 
+        TypeDecl: rezero, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: level
+        Constant: int, 0
+      FuncCall: 
+        ID: __builtin_strcpy
+        ExprList: 
+          StructRef: .
+            ArrayRef: 
+              ID: stack
+              ID: level
+            ID: str
+          Constant: string, ""

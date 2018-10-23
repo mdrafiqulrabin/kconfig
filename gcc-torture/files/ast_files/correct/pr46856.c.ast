@@ -1,0 +1,97 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: data
+      Decl: prio, [], [], []
+        TypeDecl: prio, []
+          IdentifierType: ['int']
+      Decl: status, [], [], []
+        TypeDecl: status, []
+          IdentifierType: ['signed', 'char']
+  Decl: None, [], [], []
+    Struct: base
+      Decl: _num, [], [], []
+        TypeDecl: _num, []
+          IdentifierType: ['unsigned']
+      Decl: vec, [], [], []
+        ArrayDecl: []
+          TypeDecl: vec, []
+            Struct: data
+          Constant: int, 10
+  FuncDef: 
+    Decl: ix, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: base, [], [], []
+            PtrDecl: []
+              TypeDecl: base, []
+                Struct: base
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['unsigned']
+        PtrDecl: []
+          TypeDecl: ix, []
+            Struct: data
+    Compound: 
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            StructRef: ->
+              ID: base
+              ID: vec
+            ID: i
+  Decl: None, [], [], []
+    Struct: heap
+      Decl: base, [], [], []
+        TypeDecl: base, []
+          Struct: base
+  Decl: heap, [], [], []
+    PtrDecl: []
+      TypeDecl: heap, []
+        Struct: heap
+  FuncDef: 
+    Decl: increase_insn_priority, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fld, [], [], []
+            PtrDecl: []
+              TypeDecl: fld, []
+                IdentifierType: ['int']
+          Decl: amount, [], [], []
+            TypeDecl: amount, []
+              IdentifierType: ['int']
+        TypeDecl: increase_insn_priority, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: >
+          StructRef: ->
+            FuncCall: 
+              ID: ix
+              ExprList: 
+                TernaryOp: 
+                  ID: heap
+                  UnaryOp: &
+                    StructRef: ->
+                      ID: heap
+                      ID: base
+                  Constant: int, 0
+                UnaryOp: *
+                  ID: fld
+            ID: status
+          Constant: int, 0
+        Assignment: +=
+          StructRef: ->
+            FuncCall: 
+              ID: ix
+              ExprList: 
+                TernaryOp: 
+                  ID: heap
+                  UnaryOp: &
+                    StructRef: ->
+                      ID: heap
+                      ID: base
+                  Constant: int, 0
+                UnaryOp: *
+                  ID: fld
+            ID: prio
+          ID: amount

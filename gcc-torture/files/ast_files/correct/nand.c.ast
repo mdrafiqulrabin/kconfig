@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: nadn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: nadn, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          UnaryOp: ~
+            ID: a
+          UnaryOp: ~
+            ID: b

@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: !=
+          Assignment: -=
+            ID: a
+            Constant: int, 1
+          UnaryOp: -
+            Constant: int, 1
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            Constant: int, 270000
+      FuncCall: 
+        ID: putchar
+        ExprList: 
+          Constant: char, '\n'
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 5

@@ -1,0 +1,35 @@
+FileAST: 
+  FuncDef: 
+    Decl: eintr_source, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            PtrDecl: []
+              TypeDecl: arg, []
+                IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: eintr_source, []
+            IdentifierType: ['void']
+    Compound: 
+      Decl: ts, [], [], []
+        TypeDecl: ts, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        ID: arg
+        FuncCall: 
+          ID: foo
+      While: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            ID: arg
+            FuncCall: 
+              ID: foo
+          FuncCall: 
+            ID: foo1
+            ExprList: 
+              UnaryOp: &
+                ID: ts
+      Return: 
+        Constant: int, 0

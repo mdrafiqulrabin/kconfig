@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['long', 'long']
+          Constant: int, 2
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      If: 
+        FuncCall: 
+          ID: g
+        If: 
+          FuncCall: 
+            ID: h
+          EmptyStatement: 
+      Assignment: |=
+        UnaryOp: *
+          ID: a
+        BinaryOp: <<
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+            ID: i
+          Constant: int, 65

@@ -1,0 +1,44 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['long']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: &&
+            BinaryOp: &&
+              UnaryOp: *
+                ID: y
+              BinaryOp: !=
+                UnaryOp: *
+                  ID: x
+                Constant: int, 10
+            BinaryOp: !=
+              UnaryOp: *
+                ID: x
+              Constant: int, 12
+          BinaryOp: >=
+            UnaryOp: *
+              ID: y
+            Constant: int, 0
+        FuncCall: 
+          ID: bar

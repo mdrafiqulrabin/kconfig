@@ -1,0 +1,27 @@
+FileAST: 
+  Typedef: dw_cfa_location, [], ['typedef']
+    TypeDecl: dw_cfa_location, []
+      Struct: dw_cfi_oprnd_struct
+        Decl: reg, [], [], []
+          TypeDecl: reg, []
+            IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: def_cfa_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: def_cfa_1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: loc, [], [], []
+        TypeDecl: loc, []
+          IdentifierType: ['dw_cfa_location']
+      Assignment: =
+        StructRef: .
+          ID: loc
+          ID: reg
+        StructRef: .
+          ID: loc
+          ID: reg

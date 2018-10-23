@@ -1,0 +1,111 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: display
+      Decl: hstent, [], [], []
+        PtrDecl: []
+          TypeDecl: hstent, []
+            Struct: disphist
+      Decl: pid, [], [], []
+        TypeDecl: pid, []
+          IdentifierType: ['int']
+      Decl: status, [], [], []
+        TypeDecl: status, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: disphist
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: disphist
+      Decl: name, [], [], []
+        PtrDecl: []
+          TypeDecl: name, []
+            IdentifierType: ['char']
+      Decl: startTries, [], [], []
+        TypeDecl: startTries, []
+          IdentifierType: ['int']
+      Decl: rLogin, [], [], []
+        TypeDecl: rLogin, []
+          IdentifierType: ['unsigned']
+        Constant: int, 2
+      Decl: sd_how, [], [], []
+        TypeDecl: sd_how, []
+          IdentifierType: ['unsigned']
+        Constant: int, 2
+      Decl: sd_when, [], [], []
+        TypeDecl: sd_when, []
+          IdentifierType: ['unsigned']
+        Constant: int, 2
+      Decl: lock, [], [], []
+        TypeDecl: lock, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: goodExit, [], [], []
+        TypeDecl: goodExit, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: nuser, [], [], []
+        PtrDecl: []
+          TypeDecl: nuser, []
+            IdentifierType: ['char']
+      Decl: npass, [], [], []
+        PtrDecl: []
+          TypeDecl: npass, []
+            IdentifierType: ['char']
+      Decl: nargs, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: nargs, []
+              IdentifierType: ['char']
+  FuncDef: 
+    Decl: StartDisplay, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                Struct: display
+        TypeDecl: StartDisplay, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: d
+          ID: pid
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: d
+          ID: status
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          StructRef: ->
+            ID: d
+            ID: hstent
+          ID: lock
+        Assignment: =
+          StructRef: ->
+            StructRef: ->
+              ID: d
+              ID: hstent
+            ID: rLogin
+          Assignment: =
+            StructRef: ->
+              StructRef: ->
+                ID: d
+                ID: hstent
+              ID: goodExit
+            Assignment: =
+              StructRef: ->
+                StructRef: ->
+                  ID: d
+                  ID: hstent
+                ID: sd_how
+              Assignment: =
+                StructRef: ->
+                  StructRef: ->
+                    ID: d
+                    ID: hstent
+                  ID: sd_when
+                Constant: int, 0

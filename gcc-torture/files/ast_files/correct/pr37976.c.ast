@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: percent_x, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ch, [], [], []
+            TypeDecl: ch, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: ok_chars, [], [], []
+            PtrDecl: []
+              TypeDecl: ok_chars, []
+                IdentifierType: ['char']
+        TypeDecl: percent_x, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cp, [], [], []
+        PtrDecl: []
+          TypeDecl: cp, []
+            IdentifierType: ['char']
+        TernaryOp: 
+          BinaryOp: ==
+            ID: ch
+            Constant: char, 'a'
+          ID: p
+          Constant: string, ""
+      For: 
+        UnaryOp: *
+          Assignment: +=
+            ID: cp
+            FuncCall: 
+              ID: __builtin_strspn
+              ExprList: 
+                ID: cp
+                ID: ok_chars
+        EmptyStatement: 

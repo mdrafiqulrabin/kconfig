@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        TypeDecl: f1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: bit, [], [], []
+        TypeDecl: bit, []
+          IdentifierType: ['long']
+        Constant: int, 0
+      Decl: exponent, [], [], []
+        TypeDecl: exponent, []
+          IdentifierType: ['long']
+      Assignment: =
+        ID: exponent
+        UnaryOp: -
+          ID: exponent
+      For: 
+        Assignment: =
+          ID: bit
+          Constant: int, 1
+        ID: exponent
+        Assignment: <<=
+          ID: bit
+          Constant: int, 1
+        If: 
+          BinaryOp: &
+            ID: exponent
+            ID: bit
+          Assignment: ^=
+            ID: exponent
+            ID: bit

@@ -1,0 +1,108 @@
+FileAST: 
+  FuncDef: 
+    Decl: alloc_float, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: f
+        TypeDecl: alloc_float, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: f, [], [], []
+              TypeDecl: f, []
+                IdentifierType: ['float']
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: f
+        ID: f
+      Return: 
+        BinaryOp: &
+          StructRef: .
+            ID: u
+            ID: i
+          UnaryOp: ~
+            Constant: int, 1
+    Decl: f, [], [], []
+      TypeDecl: f, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: c_float, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: obj, [], [], []
+            TypeDecl: obj, []
+              IdentifierType: ['int']
+        TypeDecl: c_float, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: None
+            Decl: f, [], [], []
+              TypeDecl: f, []
+                IdentifierType: ['float']
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+      Assignment: =
+        StructRef: .
+          ID: u
+          ID: i
+        ID: obj
+      Return: 
+        StructRef: .
+          ID: u
+          ID: f
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: alloc_float
+          ExprList: 
+            Constant: float, 1.2
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: alloc_float
+          ExprList: 
+            Constant: float, 5.7
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: alloc_float
+          ExprList: 
+            BinaryOp: *
+              FuncCall: 
+                ID: c_float
+                ExprList: 
+                  ID: x
+              FuncCall: 
+                ID: c_float
+                ExprList: 
+                  ID: y
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%g\n"
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['double']
+            FuncCall: 
+              ID: c_float
+              ExprList: 
+                ID: z

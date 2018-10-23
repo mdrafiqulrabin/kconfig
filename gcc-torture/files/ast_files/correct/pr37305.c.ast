@@ -1,0 +1,83 @@
+FileAST: 
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: safe_add_s_s, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: si1, [], [], []
+            TypeDecl: si1, []
+              IdentifierType: ['int']
+          Decl: si2, [], [], []
+            TypeDecl: si2, []
+              IdentifierType: ['int']
+        TypeDecl: safe_add_s_s, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: >
+                ID: si1
+                Constant: int, 0
+              BinaryOp: >
+                ID: si2
+                Constant: int, 0
+            BinaryOp: >
+              ID: si1
+              ID: si2
+          BinaryOp: &&
+            BinaryOp: &&
+              BinaryOp: <
+                ID: si1
+                Constant: int, 0
+              BinaryOp: <
+                ID: si2
+                Constant: int, 0
+            BinaryOp: <
+              ID: si1
+              BinaryOp: -
+                BinaryOp: -
+                  UnaryOp: -
+                    ID: __INT_MAX__
+                  Constant: int, 1
+                ID: si2
+        Return: 
+          ID: si1
+  Decl: g_8, [], [], []
+    TypeDecl: g_8, []
+      IdentifierType: ['uint32_t']
+  FuncDef: 
+    Decl: func_24, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_25, [], [], []
+            TypeDecl: p_25, []
+              IdentifierType: ['int32_t']
+        TypeDecl: func_24, []
+          IdentifierType: ['uint32_t']
+    Compound: 
+      Decl: l_30, [], [], []
+        TypeDecl: l_30, []
+          IdentifierType: ['uint32_t']
+        UnaryOp: -
+          Constant: int, 1L
+      If: 
+        BinaryOp: |
+          FuncCall: 
+            ID: safe_mod_u_u
+            ExprList: 
+              Constant: int, 1
+              Constant: int, 1
+          FuncCall: 
+            ID: safe_add_s_s
+            ExprList: 
+              ID: g_8
+              ID: l_30
+        Return: 
+          Constant: int, 1

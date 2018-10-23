@@ -1,0 +1,855 @@
+FileAST: 
+  Typedef: RunlengthPacket, [], ['typedef']
+    TypeDecl: RunlengthPacket, []
+      Struct: _RunlengthPacket
+        Decl: red, [], [], []
+          TypeDecl: red, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: green, [], [], []
+          TypeDecl: green, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: blue, [], [], []
+          TypeDecl: blue, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: length, [], [], []
+          TypeDecl: length, []
+            IdentifierType: ['unsigned', 'short']
+        Decl: index, [], [], []
+          TypeDecl: index, []
+            IdentifierType: ['unsigned', 'short']
+  Typedef: Image, [], ['typedef']
+    TypeDecl: Image, []
+      Struct: _Image
+        Decl: status, [], [], []
+          TypeDecl: status, []
+            IdentifierType: ['int']
+        Decl: temporary, [], [], []
+          TypeDecl: temporary, []
+            IdentifierType: ['int']
+        Decl: filename, [], [], []
+          ArrayDecl: []
+            TypeDecl: filename, []
+              IdentifierType: ['char']
+            Constant: int, 1664
+        Decl: filesize, [], [], []
+          TypeDecl: filesize, []
+            IdentifierType: ['long', 'int']
+        Decl: pipe, [], [], []
+          TypeDecl: pipe, []
+            IdentifierType: ['int']
+        Decl: magick, [], [], []
+          ArrayDecl: []
+            TypeDecl: magick, []
+              IdentifierType: ['char']
+            Constant: int, 1664
+        Decl: comments, [], [], []
+          PtrDecl: []
+            TypeDecl: comments, []
+              IdentifierType: ['char']
+        Decl: label, [], [], []
+          PtrDecl: []
+            TypeDecl: label, []
+              IdentifierType: ['char']
+        Decl: text, [], [], []
+          PtrDecl: []
+            TypeDecl: text, []
+              IdentifierType: ['char']
+        Decl: matte, [], [], []
+          TypeDecl: matte, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: columns, [], [], []
+          TypeDecl: columns, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: rows, [], [], []
+          TypeDecl: rows, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: depth, [], [], []
+          TypeDecl: depth, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: scene, [], [], []
+          TypeDecl: scene, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: number_scenes, [], [], []
+          TypeDecl: number_scenes, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: montage, [], [], []
+          PtrDecl: []
+            TypeDecl: montage, []
+              IdentifierType: ['char']
+        Decl: directory, [], [], []
+          PtrDecl: []
+            TypeDecl: directory, []
+              IdentifierType: ['char']
+        Decl: colors, [], [], []
+          TypeDecl: colors, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: gamma, [], [], []
+          TypeDecl: gamma, []
+            IdentifierType: ['double']
+        Decl: x_resolution, [], [], []
+          TypeDecl: x_resolution, []
+            IdentifierType: ['float']
+        Decl: y_resolution, [], [], []
+          TypeDecl: y_resolution, []
+            IdentifierType: ['float']
+        Decl: mean_error_per_pixel, [], [], []
+          TypeDecl: mean_error_per_pixel, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: normalized_mean_error, [], [], []
+          TypeDecl: normalized_mean_error, []
+            IdentifierType: ['double']
+        Decl: normalized_maximum_error, [], [], []
+          TypeDecl: normalized_maximum_error, []
+            IdentifierType: ['double']
+        Decl: total_colors, [], [], []
+          TypeDecl: total_colors, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: signature, [], [], []
+          PtrDecl: []
+            TypeDecl: signature, []
+              IdentifierType: ['char']
+        Decl: packets, [], [], []
+          TypeDecl: packets, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: runlength, [], [], []
+          TypeDecl: runlength, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: packet_size, [], [], []
+          TypeDecl: packet_size, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: packed_pixels, [], [], []
+          PtrDecl: []
+            TypeDecl: packed_pixels, []
+              IdentifierType: ['unsigned', 'char']
+        Decl: magick_time, [], [], []
+          TypeDecl: magick_time, []
+            IdentifierType: ['long', 'int']
+        Decl: magick_filename, [], [], []
+          ArrayDecl: []
+            TypeDecl: magick_filename, []
+              IdentifierType: ['char']
+            Constant: int, 1664
+        Decl: magick_columns, [], [], []
+          TypeDecl: magick_columns, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: magick_rows, [], [], []
+          TypeDecl: magick_rows, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: geometry, [], [], []
+          PtrDecl: []
+            TypeDecl: geometry, []
+              IdentifierType: ['char']
+        Decl: page, [], [], []
+          PtrDecl: []
+            TypeDecl: page, []
+              IdentifierType: ['char']
+        Decl: dispose, [], [], []
+          TypeDecl: dispose, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: delay, [], [], []
+          TypeDecl: delay, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: iterations, [], [], []
+          TypeDecl: iterations, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: orphan, [], [], []
+          TypeDecl: orphan, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: previous, [], [], []
+          PtrDecl: []
+            TypeDecl: previous, []
+              Struct: _Image
+        Decl: list, [], [], []
+          PtrDecl: []
+            TypeDecl: list, []
+              Struct: _Image
+        Decl: next, [], [], []
+          PtrDecl: []
+            TypeDecl: next, []
+              Struct: _Image
+  FuncDef: 
+    Decl: MinifyImage, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: image, [], [], []
+            PtrDecl: []
+              TypeDecl: image, []
+                IdentifierType: ['Image']
+        PtrDecl: []
+          TypeDecl: MinifyImage, []
+            IdentifierType: ['Image']
+    Compound: 
+      Decl: minified_image, [], [], []
+        PtrDecl: []
+          TypeDecl: minified_image, []
+            IdentifierType: ['Image']
+      Decl: q, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['RunlengthPacket']
+      Decl: s, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['RunlengthPacket']
+      Decl: s0, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s0, []
+            IdentifierType: ['RunlengthPacket']
+      Decl: s1, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s1, []
+            IdentifierType: ['RunlengthPacket']
+      Decl: s2, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s2, []
+            IdentifierType: ['RunlengthPacket']
+      Decl: s3, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: s3, []
+            IdentifierType: ['RunlengthPacket']
+      Decl: x, [], ['register'], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: blue, [], [], []
+        TypeDecl: blue, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: green, [], [], []
+        TypeDecl: green, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: red, [], [], []
+        TypeDecl: red, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: total_matte, [], [], []
+        TypeDecl: total_matte, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: total_blue, [], [], []
+        TypeDecl: total_blue, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: total_green, [], [], []
+        TypeDecl: total_green, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: total_red, [], [], []
+        TypeDecl: total_red, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: index, [], [], []
+        TypeDecl: index, []
+          IdentifierType: ['unsigned', 'short']
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          BinaryOp: -
+            StructRef: ->
+              ID: image
+              ID: columns
+            Constant: int, 1
+        Assignment: +=
+          ID: x
+          Constant: int, 2
+        Compound: 
+          Assignment: =
+            ID: total_red
+            Constant: int, 0
+          Assignment: =
+            ID: total_green
+            Constant: int, 0
+          Assignment: =
+            ID: total_blue
+            Constant: int, 0
+          Assignment: =
+            ID: total_matte
+            Constant: int, 0
+          Assignment: =
+            ID: s
+            ID: s0
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: =
+            ID: s
+            ID: s1
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: =
+            ID: s
+            ID: s2
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 15
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: =
+            ID: s
+            ID: s3
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 7
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: +=
+            ID: total_red
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: red
+          Assignment: +=
+            ID: total_green
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: green
+          Assignment: +=
+            ID: total_blue
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: blue
+          Assignment: +=
+            ID: total_matte
+            BinaryOp: *
+              Constant: int, 3
+              StructRef: ->
+                ID: s
+                ID: index
+          UnaryOp: p++
+            ID: s
+          EmptyStatement: 
+          Assignment: =
+            ID: red
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'short']
+              BinaryOp: >>
+                BinaryOp: +
+                  ID: total_red
+                  Constant: int, 63
+                Constant: int, 7
+          Assignment: =
+            ID: green
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'short']
+              BinaryOp: >>
+                BinaryOp: +
+                  ID: total_green
+                  Constant: int, 63
+                Constant: int, 7
+          Assignment: =
+            ID: blue
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'short']
+              BinaryOp: >>
+                BinaryOp: +
+                  ID: total_blue
+                  Constant: int, 63
+                Constant: int, 7
+          Assignment: =
+            ID: index
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'short']
+              BinaryOp: >>
+                BinaryOp: +
+                  ID: total_matte
+                  Constant: int, 63
+                Constant: int, 7
+          If: 
+            BinaryOp: &&
+              BinaryOp: &&
+                BinaryOp: &&
+                  BinaryOp: &&
+                    BinaryOp: ==
+                      ID: red
+                      StructRef: ->
+                        ID: q
+                        ID: red
+                    BinaryOp: ==
+                      ID: green
+                      StructRef: ->
+                        ID: q
+                        ID: green
+                  BinaryOp: ==
+                    ID: blue
+                    StructRef: ->
+                      ID: q
+                      ID: blue
+                BinaryOp: ==
+                  ID: index
+                  StructRef: ->
+                    ID: q
+                    ID: index
+              BinaryOp: <
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  StructRef: ->
+                    ID: q
+                    ID: length
+                Constant: int, 65535L
+            UnaryOp: p++
+              StructRef: ->
+                ID: q
+                ID: length
+      Return: 
+        ID: minified_image

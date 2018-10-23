@@ -1,0 +1,68 @@
+FileAST: 
+  Typedef: FOO, [], ['typedef']
+    TypeDecl: FOO, []
+      Struct: None
+        Decl: knock_on_wood, [], [], []
+          TypeDecl: knock_on_wood, []
+            IdentifierType: ['int']
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['int']
+  Typedef: BAR, [], ['typedef']
+    TypeDecl: BAR, []
+      Struct: None
+        Decl: b1, [], [], []
+          PtrDecl: []
+            TypeDecl: b1, []
+              IdentifierType: ['FOO']
+  FuncDef: 
+    Decl: Nase, [], [], []
+      FuncDecl: 
+        TypeDecl: Nase, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: foop, [], [], []
+        PtrDecl: []
+          TypeDecl: foop, []
+            IdentifierType: ['FOO']
+      Decl: barp, [], [], []
+        PtrDecl: []
+          TypeDecl: barp, []
+            IdentifierType: ['BAR']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 2
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: foop
+            UnaryOp: &
+              ArrayRef: 
+                StructRef: ->
+                  ID: barp
+                  ID: b1
+                ID: i
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              StructRef: ->
+                ID: foop
+                ID: f1
+            UnaryOp: p++
+              ID: j
+            Compound: 
+              EmptyStatement: 

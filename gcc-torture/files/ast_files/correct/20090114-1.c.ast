@@ -1,0 +1,151 @@
+FileAST: 
+  Typedef: InputParameters, [], ['typedef']
+    TypeDecl: InputParameters, []
+      Struct: None
+        Decl: MbInterlace, [], [], []
+          TypeDecl: MbInterlace, []
+            IdentifierType: ['int']
+        Decl: channel_type, [], [], []
+          TypeDecl: channel_type, []
+            IdentifierType: ['int']
+  Typedef: ImageParameters, [], ['typedef']
+    TypeDecl: ImageParameters, []
+      Struct: None
+        Decl: type, [], [], []
+          TypeDecl: type, []
+            IdentifierType: ['int']
+        Decl: NumberofCodedPFrame, [], [], []
+          TypeDecl: NumberofCodedPFrame, []
+            IdentifierType: ['int']
+        Decl: NumberofGOP, [], [], []
+          TypeDecl: NumberofGOP, []
+            IdentifierType: ['int']
+        Decl: NumberofPPicture, [], [], []
+          TypeDecl: NumberofPPicture, []
+            IdentifierType: ['int']
+        Decl: FieldControl, [], [], []
+          TypeDecl: FieldControl, []
+            IdentifierType: ['int']
+        Decl: Frame_Total_Number_MB, [], [], []
+          TypeDecl: Frame_Total_Number_MB, []
+            IdentifierType: ['int']
+        Decl: NumberofCodedMacroBlocks, [], [], []
+          TypeDecl: NumberofCodedMacroBlocks, []
+            IdentifierType: ['int']
+        Decl: BasicUnit, [], [], []
+          TypeDecl: BasicUnit, []
+            IdentifierType: ['int']
+  Decl: input, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: input, []
+        IdentifierType: ['InputParameters']
+  Decl: img, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: img, []
+        IdentifierType: ['ImageParameters']
+  Decl: T, [], [], []
+    TypeDecl: T, []
+      IdentifierType: ['long']
+  FuncDef: 
+    Decl: rc_init_pict, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fieldpic, [], [], []
+            TypeDecl: fieldpic, []
+              IdentifierType: ['int']
+        TypeDecl: rc_init_pict, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        StructRef: ->
+          ID: input
+          ID: MbInterlace
+        Assignment: =
+          ID: T
+          StructRef: ->
+            ID: img
+            ID: Frame_Total_Number_MB
+      Assignment: =
+        StructRef: ->
+          ID: img
+          ID: NumberofCodedMacroBlocks
+        Constant: int, 0
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: input
+              ID: channel_type
+            Constant: int, 1
+          BinaryOp: ==
+            StructRef: ->
+              ID: img
+              ID: NumberofCodedPFrame
+            Constant: int, 58
+        Assignment: =
+          ID: T
+          Constant: int, 4
+      If: 
+        ID: fieldpic
+        Compound: 
+          Switch: 
+            StructRef: ->
+              ID: img
+              ID: type
+            Compound: 
+              Case: 
+                Constant: int, 0
+                If: 
+                  BinaryOp: &&
+                    BinaryOp: >
+                      StructRef: ->
+                        ID: img
+                        ID: NumberofCodedPFrame
+                      Constant: int, 0
+                    BinaryOp: ==
+                      StructRef: ->
+                        ID: img
+                        ID: FieldControl
+                      Constant: int, 1
+                  Assignment: =
+                    ID: T
+                    Constant: int, 3
+                If: 
+                  BinaryOp: ==
+                    StructRef: ->
+                      ID: img
+                      ID: NumberofPPicture
+                    Constant: int, 1
+                  Assignment: =
+                    ID: T
+                    Constant: int, 2
+          If: 
+            BinaryOp: &&
+              BinaryOp: ==
+                StructRef: ->
+                  ID: img
+                  ID: type
+                Constant: int, 0
+              BinaryOp: >
+                StructRef: ->
+                  ID: img
+                  ID: NumberofCodedPFrame
+                Constant: int, 0
+            Assignment: =
+              ID: T
+              Constant: int, 0
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: ->
+              ID: img
+              ID: type
+            Constant: int, 0
+          BinaryOp: ==
+            StructRef: ->
+              ID: img
+              ID: FieldControl
+            Constant: int, 1
+        Assignment: =
+          ID: T
+          Constant: int, 1

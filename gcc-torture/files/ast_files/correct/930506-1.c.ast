@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: f, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['double']
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      Assignment: =
+        ID: b
+        BinaryOp: /
+          ID: a
+          Constant: float, 2.0
+      Assignment: =
+        ID: v
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned']
+          ID: b
+      Assignment: -=
+        ID: a
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['double']
+          ID: v
+      Return: 
+        ID: v
+    Decl: a, [], [], []
+      TypeDecl: a, []
+        IdentifierType: ['double']

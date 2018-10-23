@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: xfs_dir2_grow_inode, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: xfs_dir2_grow_inode, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: map, [], [], []
+        TypeDecl: map, []
+          IdentifierType: ['int']
+      Decl: mapp, [], [], []
+        PtrDecl: []
+          TypeDecl: mapp, []
+            IdentifierType: ['int']
+      Decl: nmap, [], [], []
+        TypeDecl: nmap, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: mapp
+        UnaryOp: &
+          ID: map
+      If: 
+        BinaryOp: ==
+          ID: nmap
+          Constant: int, 0
+        Assignment: =
+          ID: mapp
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+      If: 
+        BinaryOp: !=
+          ID: mapp
+          UnaryOp: &
+            ID: map
+        FuncCall: 
+          ID: kmem_free
+          ExprList: 
+            ID: mapp

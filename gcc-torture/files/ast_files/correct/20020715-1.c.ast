@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['char']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  Decl: g, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: scale, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: scale, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: width, [], [], []
+        TypeDecl: width, []
+          IdentifierType: ['int']
+      Decl: bytes, [], [], []
+        TypeDecl: bytes, []
+          IdentifierType: ['char']
+      Decl: src, [], [], []
+        PtrDecl: []
+          TypeDecl: src, []
+            IdentifierType: ['char']
+      If: 
+        ID: width
+        Compound: 
+          Assignment: =
+            ID: bytes
+            UnaryOp: *
+              ID: src
+          FuncCall: 
+            ID: g
+          Assignment: *=
+            ID: width
+            ID: bytes
+      FuncCall: 
+        ID: f
+        ExprList: 
+          ID: bytes

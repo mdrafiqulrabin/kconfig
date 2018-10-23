@@ -1,0 +1,99 @@
+FileAST: 
+  Decl: s1, [], [], []
+    TypeDecl: s1, []
+      Struct: foo
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+        Decl: doubl, [], [], []
+          TypeDecl: doubl, []
+            IdentifierType: ['double']
+  Decl: s2, [], [], []
+    TypeDecl: s2, []
+      Struct: foo
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        Decl: d, [], [], []
+          TypeDecl: d, []
+            IdentifierType: ['int']
+        Decl: doubl, [], [], []
+          TypeDecl: doubl, []
+            IdentifierType: ['double']
+  FuncDef: 
+    Decl: structret, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: s1
+          ID: i1
+          ID: i2
+          ID: s2
+        TypeDecl: structret, []
+          Struct: foo
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: i1
+          ID: i2
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: i1
+              ID: i2
+            Return: 
+              ID: s1
+            Return: 
+              ID: s2
+      Assignment: =
+        StructRef: .
+          ID: s2
+          ID: a
+        Constant: int, 11
+      Assignment: =
+        StructRef: .
+          ID: s2
+          ID: b
+        Constant: int, 22
+      Assignment: =
+        StructRef: .
+          ID: s2
+          ID: c
+        StructRef: .
+          ID: s1
+          ID: c
+      Assignment: =
+        StructRef: .
+          ID: s2
+          ID: d
+        StructRef: .
+          ID: s1
+          ID: d
+      Return: 
+        ID: s2
+    Decl: s1, [], [], []
+      TypeDecl: s1, []
+        Struct: foo
+    Decl: s2, [], [], []
+      TypeDecl: s2, []
+        Struct: foo
+    Decl: i1, [], [], []
+      TypeDecl: i1, []
+        IdentifierType: ['int']
+    Decl: i2, [], [], []
+      TypeDecl: i2, []
+        IdentifierType: ['int']

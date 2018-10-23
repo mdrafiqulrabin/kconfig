@@ -1,0 +1,33 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: n, [], [], []
+          TypeDecl: n, []
+            IdentifierType: ['int']
+        Decl: m, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: m, []
+                IdentifierType: ['char']
+              ID: n
+            Constant: int, 1
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: m, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: m, []
+                  IdentifierType: ['char']
+                ID: n
+              Constant: int, 1
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 

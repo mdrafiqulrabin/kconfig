@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['float']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['float']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['float']
+      Decl: val, [], [], []
+        ArrayDecl: []
+          TypeDecl: val, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 2
+      Assignment: =
+        ID: i
+        FuncCall: 
+          ID: func
+          ExprList: 
+            UnaryOp: &
+              ID: c
+      Assignment: =
+        ArrayRef: 
+          ID: val
+          Constant: int, 0
+        TernaryOp: 
+          BinaryOp: <
+            ID: c
+            ID: a
+          ID: a
+          TernaryOp: 
+            BinaryOp: >=
+              ID: c
+              Constant: float, 1.0
+            ID: b
+            ID: c

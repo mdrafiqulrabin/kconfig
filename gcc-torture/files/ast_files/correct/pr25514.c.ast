@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: node
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: node
+      Decl: value, [], [], []
+        TypeDecl: value, []
+          IdentifierType: ['int']
+  Decl: current_node, [], [], []
+    PtrDecl: []
+      TypeDecl: current_node, []
+        Struct: node
+  Decl: global_list, [], [], []
+    TypeDecl: global_list, []
+      Struct: node
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: node, [], [], []
+        PtrDecl: []
+          TypeDecl: node, []
+            Struct: node
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: node
+      Assignment: =
+        ID: node
+        ID: current_node
+      Assignment: =
+        ID: next
+        StructRef: ->
+          ID: node
+          ID: next
+      If: 
+        BinaryOp: !=
+          ID: node
+          UnaryOp: &
+            ID: global_list
+        Assignment: =
+          ID: current_node
+          ID: next
+        Compound: 
+          Assignment: =
+            ID: node
+            StructRef: .
+              ID: global_list
+              ID: next
+          Assignment: =
+            StructRef: .
+              ID: global_list
+              ID: value
+            StructRef: ->
+              ID: node
+              ID: value
+          Assignment: =
+            StructRef: .
+              ID: global_list
+              ID: next
+            StructRef: ->
+              ID: node
+              ID: next
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: node

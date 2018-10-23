@@ -1,0 +1,107 @@
+FileAST: 
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: str
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['short']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['short']
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ch, [], [], []
+            TypeDecl: ch, []
+              IdentifierType: ['short']
+          Decl: sl, [], [], []
+            TypeDecl: sl, []
+              IdentifierType: ['short']
+          Decl: sr, [], [], []
+            TypeDecl: sr, []
+              IdentifierType: ['short']
+          Decl: tl, [], [], []
+            TypeDecl: tl, []
+              IdentifierType: ['short']
+          Decl: tr, [], [], []
+            TypeDecl: tr, []
+              IdentifierType: ['short']
+        TypeDecl: bar, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ch, [], [], []
+            TypeDecl: ch, []
+              IdentifierType: ['short']
+          Decl: pi, [], [], []
+            PtrDecl: []
+              TypeDecl: pi, []
+                IdentifierType: ['S']
+          Decl: nc, [], [], []
+            TypeDecl: nc, []
+              IdentifierType: ['short']
+          Decl: po, [], [], []
+            PtrDecl: []
+              TypeDecl: po, []
+                IdentifierType: ['S']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: clo, [], [], []
+        TypeDecl: clo, []
+          IdentifierType: ['short']
+      Decl: chi, [], [], []
+        TypeDecl: chi, []
+          IdentifierType: ['short']
+      Decl: lo, [], [], []
+        TypeDecl: lo, []
+          IdentifierType: ['short']
+      Decl: hi, [], [], []
+        TypeDecl: hi, []
+          IdentifierType: ['short']
+      Assignment: =
+        StructRef: ->
+          ID: po
+          ID: x
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: ch
+            ID: clo
+            ID: chi
+            StructRef: .
+              ArrayRef: 
+                ID: pi
+                ID: lo
+              ID: x
+            StructRef: .
+              ArrayRef: 
+                ID: pi
+                ID: hi
+              ID: x
+      Assignment: =
+        StructRef: ->
+          ID: po
+          ID: y
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: ch
+            ID: clo
+            ID: chi
+            StructRef: .
+              ArrayRef: 
+                ID: pi
+                ID: lo
+              ID: y
+            StructRef: .
+              ArrayRef: 
+                ID: pi
+                ID: hi
+              ID: y

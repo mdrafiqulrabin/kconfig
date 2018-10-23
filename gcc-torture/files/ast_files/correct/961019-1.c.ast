@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: _hex_value, [], [], []
+    ArrayDecl: []
+      TypeDecl: _hex_value, []
+        IdentifierType: ['char']
+      Constant: int, 256
+  FuncDef: 
+    Decl: hex_init, [], [], []
+      FuncDecl: 
+        TypeDecl: hex_init, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: _hex_value
+            ID: i
+          Constant: int, 99
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: _hex_value
+            BinaryOp: +
+              Constant: char, '0'
+              ID: i
+          ID: i

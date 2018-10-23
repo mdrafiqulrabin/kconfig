@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'int']
+            Constant: int, 1
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['signed', 'int']
+            UnaryOp: -
+              Constant: int, 2147483648
+        FuncCall: 
+          ID: printf
+          ExprList: 
+            Constant: string, "true\n"

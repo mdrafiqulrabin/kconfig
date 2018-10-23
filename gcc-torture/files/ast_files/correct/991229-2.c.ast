@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: update, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                IdentifierType: ['double']
+        TypeDecl: update, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+      Compound: 
+        Decl: y1, [], ['register'], []
+          TypeDecl: y1, []
+            IdentifierType: ['double']
+        Assignment: =
+          ID: y1
+          BinaryOp: -
+            ArrayRef: 
+              ID: r
+              Constant: int, 4
+            ArrayRef: 
+              ID: r
+              Constant: int, 11

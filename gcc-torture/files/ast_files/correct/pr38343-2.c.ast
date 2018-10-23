@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: s, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: s, []
+        Struct: S
+          Decl: f, [], [], []
+            ArrayDecl: []
+              TypeDecl: f, []
+                IdentifierType: ['char']
+              Constant: int, 6
+    InitList: 
+      InitList: 
+        Constant: string, "01000"
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_stpcpy
+          ExprList: 
+            StructRef: .
+              ArrayRef: 
+                ID: s
+                Constant: int, 0
+              ID: f
+            Constant: string, "S0022"

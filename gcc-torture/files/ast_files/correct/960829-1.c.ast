@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: g
+        ExprList: 
+          Constant: int, 0
+          Constant: float, 0.0
+          Constant: float, 0.0
+          Constant: float, 0.0
+          Constant: float, 0.0

@@ -1,0 +1,36 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                Struct: A
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], ['static'], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 30
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Assignment: =
+        StructRef: ->
+          ID: a
+          ID: a
+        ID: c
+      Assignment: =
+        ID: x
+        StructRef: ->
+          ID: a
+          ID: a
+      Return: 
+        ID: x

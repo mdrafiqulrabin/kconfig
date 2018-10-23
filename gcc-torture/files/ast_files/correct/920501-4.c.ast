@@ -1,0 +1,202 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r0, [], [], []
+        ArrayDecl: []
+          TypeDecl: r0, []
+            IdentifierType: ['int']
+          Constant: int, 8186
+      Decl: r1, [], [], []
+        ArrayDecl: []
+          TypeDecl: r1, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: r2, [], [], []
+        ArrayDecl: []
+          TypeDecl: r2, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: bitm0, [], [], []
+        ArrayDecl: []
+          TypeDecl: bitm0, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: bitm1, [], [], []
+        ArrayDecl: []
+          TypeDecl: bitm1, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: bitm2, [], [], []
+        ArrayDecl: []
+          TypeDecl: bitm2, []
+            IdentifierType: ['int']
+          Constant: int, 2
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: m_max, [], [], []
+        TypeDecl: m_max, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: fm, [], [], []
+        TypeDecl: fm, []
+          IdentifierType: ['double']
+      Decl: ft, [], [], []
+        TypeDecl: ft, []
+          IdentifierType: ['double']
+      While: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: ==
+              BinaryOp: %
+                ID: m
+                Constant: int, 4
+              Constant: int, 2
+            UnaryOp: ++
+              ID: m
+          If: 
+            BinaryOp: &&
+              BinaryOp: !=
+                ID: m_max
+                Constant: int, 0
+              BinaryOp: >
+                ID: m
+                ID: m_max
+            Break: 
+          Assignment: =
+            ID: fm
+            ID: m
+          Assignment: =
+            ArrayRef: 
+              ID: r0
+              Assignment: =
+                ID: k
+                Constant: int, 1
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: bitm0
+              Constant: int, 0
+            Constant: int, 0
+          While: 
+            BinaryOp: ==
+              BinaryOp: %
+                ID: n
+                ID: f
+              Constant: int, 0
+            Compound: 
+              While: 
+                BinaryOp: &&
+                  BinaryOp: !=
+                    ID: ft
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: ft
+                    ID: fm
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      ID: bitm1
+                      ID: i
+                    Constant: int, 0
+                  Assignment: =
+                    ArrayRef: 
+                      ID: r1
+                      ID: i
+                    Constant: int, 0
+              While: 
+                BinaryOp: &&
+                  BinaryOp: !=
+                    ArrayRef: 
+                      ID: r0
+                      ID: i
+                    Constant: int, 0
+                  BinaryOp: !=
+                    ArrayRef: 
+                      ID: r1
+                      ID: i
+                    Constant: int, 0
+                Compound: 
+                  If: 
+                    BinaryOp: <
+                      ArrayRef: 
+                        ID: r0
+                        ID: i
+                      ArrayRef: 
+                        ID: r1
+                        ID: i
+                    Compound: 
+                      Assignment: =
+                        ArrayRef: 
+                          ID: bitm2
+                          ID: k
+                        ArrayRef: 
+                          ID: bitm0
+                          ID: i
+                      Assignment: =
+                        ArrayRef: 
+                          ID: r2
+                          UnaryOp: p++
+                            ID: k
+                        Constant: int, 0
+                    If: 
+                      BinaryOp: >
+                        ArrayRef: 
+                          ID: r0
+                          ID: i
+                        ArrayRef: 
+                          ID: r1
+                          ID: j
+                      Compound: 
+                        Assignment: =
+                          ArrayRef: 
+                            ID: bitm2
+                            ID: k
+                          ArrayRef: 
+                            ID: bitm1
+                            ID: j
+                        Assignment: =
+                          ArrayRef: 
+                            ID: r2
+                            UnaryOp: p++
+                              ID: k
+                          ArrayRef: 
+                            ID: r1
+                            UnaryOp: p++
+                              ID: j
+                      Compound: 
+                        Assignment: =
+                          ArrayRef: 
+                            ID: bitm1
+                            ID: k
+                          ArrayRef: 
+                            ID: bitm0
+                            ID: i
+                        Assignment: =
+                          ArrayRef: 
+                            ID: r2
+                            UnaryOp: p++
+                              ID: k
+                          ArrayRef: 
+                            ID: r0
+                            UnaryOp: p++
+                              ID: i

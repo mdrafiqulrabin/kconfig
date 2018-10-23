@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: u
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  Typedef: uu, [], ['typedef']
+    TypeDecl: uu, []
+      Union: u
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Union: u
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['uu']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              Union: u
+          ID: b
+      Assignment: =
+        ID: a
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['uu']
+          ID: b
+      Assignment: =
+        ID: b
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              Union: u
+          ID: a
+      Assignment: =
+        ID: b
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['uu']
+          ID: a

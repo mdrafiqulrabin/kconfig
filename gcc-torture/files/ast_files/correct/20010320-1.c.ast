@@ -1,0 +1,119 @@
+FileAST: 
+  Typedef: asection, [], ['typedef']
+    TypeDecl: asection, []
+      Struct: sec
+        Decl: name, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: name, ['const']
+              IdentifierType: ['char']
+        Decl: id, [], [], []
+          TypeDecl: id, []
+            IdentifierType: ['int']
+        Decl: index, [], [], []
+          TypeDecl: index, []
+            IdentifierType: ['int']
+        Decl: next, [], [], []
+          PtrDecl: []
+            TypeDecl: next, []
+              Struct: sec
+        Decl: flags, [], [], []
+          TypeDecl: flags, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: user_set_vma, [], [], []
+          TypeDecl: user_set_vma, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+        Decl: reloc_done, [], [], []
+          TypeDecl: reloc_done, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+        Decl: linker_mark, [], [], []
+          TypeDecl: linker_mark, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+        Decl: gc_mark, [], [], []
+          TypeDecl: gc_mark, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+        Decl: segment_mark, [], [], []
+          TypeDecl: segment_mark, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+        Decl: vma, [], [], []
+          TypeDecl: vma, []
+            IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: pe_print_pdata, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: section, [], [], []
+            PtrDecl: []
+              TypeDecl: section, []
+                IdentifierType: ['asection']
+        TypeDecl: pe_print_pdata, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      Decl: start, [], [], []
+        TypeDecl: start, []
+          IdentifierType: ['unsigned', 'long', 'long']
+        Constant: int, 0
+      Decl: stop, [], [], []
+        TypeDecl: stop, []
+          IdentifierType: ['unsigned', 'long', 'long']
+        Constant: int, 0
+      Decl: onaline, [], [], []
+        TypeDecl: onaline, []
+          IdentifierType: ['int']
+        BinaryOp: *
+          Constant: int, 3
+          Constant: int, 8
+      For: 
+        Assignment: =
+          ID: i
+          ID: start
+        BinaryOp: <
+          ID: i
+          ID: stop
+        Assignment: +=
+          ID: i
+          ID: onaline
+        Compound: 
+          If: 
+            BinaryOp: >
+              BinaryOp: +
+                ID: i
+                BinaryOp: *
+                  Constant: int, 3
+                  Constant: int, 8
+              ID: stop
+            Break: 
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long']
+                BinaryOp: &
+                  BinaryOp: >>
+                    BinaryOp: +
+                      ID: i
+                      StructRef: ->
+                        ID: section
+                        ID: vma
+                    Constant: int, 32
+                  Constant: int, 0xffffffff
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long']
+                BinaryOp: &
+                  BinaryOp: +
+                    ID: i
+                    StructRef: ->
+                      ID: section
+                      ID: vma
+                  Constant: int, 0xffffffff

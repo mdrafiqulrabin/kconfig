@@ -1,0 +1,48 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: align_g, ['const'], ['static'], []
+        ArrayDecl: []
+          TypeDecl: align_g, ['const']
+            IdentifierType: ['int']
+        InitList: 
+          Constant: int, 1
+          Constant: int, 2
+          Constant: int, 4
+          Constant: int, 8
+          Constant: int, 16
+      Decl: buf, [], [], []
+        PtrDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: val, ['volatile'], [], []
+        TypeDecl: val, ['volatile']
+          IdentifierType: ['long', 'double']
+        Constant: int, 0
+      Assignment: =
+        ID: val
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['long', 'double']
+            BinaryOp: +
+              ID: buf
+              ArrayRef: 
+                ID: align_g
+                ID: i
+      Return: 
+        Constant: int, 0

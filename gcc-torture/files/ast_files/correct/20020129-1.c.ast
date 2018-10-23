@@ -1,0 +1,55 @@
+FileAST: 
+  Typedef: A, [], ['typedef']
+    TypeDecl: A, []
+      Struct: None
+        Decl: a, [], [], []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['long', 'long']
+            Constant: int, 10
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['A']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Typedef: B, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        TypeDecl: B, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], ['static'], []
+        TypeDecl: a, []
+          IdentifierType: ['A']
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['B']
+            UnaryOp: &
+              ID: a
+        ExprList: 
+          Constant: int, 1

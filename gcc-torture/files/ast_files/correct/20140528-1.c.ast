@@ -1,0 +1,43 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: flags, [], [], []
+            TypeDecl: flags, []
+              IdentifierType: ['unsigned']
+          Decl: capabilities, [], [], []
+            TypeDecl: capabilities, []
+              IdentifierType: ['unsigned']
+        TypeDecl: f, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Decl: gfp_mask, [], [], []
+        TypeDecl: gfp_mask, []
+          IdentifierType: ['unsigned']
+      Decl: gfp_notmask, [], [], []
+        TypeDecl: gfp_notmask, []
+          IdentifierType: ['unsigned']
+        Constant: int, 0
+      Assignment: =
+        ID: gfp_mask
+        BinaryOp: &
+          ID: flags
+          BinaryOp: -
+            BinaryOp: <<
+              Constant: int, 1
+              Constant: int, 25
+            Constant: int, 1
+      If: 
+        UnaryOp: !
+          BinaryOp: &
+            ID: capabilities
+            Constant: int, 0x00000001
+        Assignment: |=
+          ID: gfp_mask
+          Constant: int, 0x1000000u
+      Return: 
+        BinaryOp: &
+          ID: gfp_mask
+          UnaryOp: ~
+            ID: gfp_notmask

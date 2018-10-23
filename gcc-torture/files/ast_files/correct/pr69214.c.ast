@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: __setjmp, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: __setjmp, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      FuncCall: 
+        ID: bar
+      If: 
+        FuncCall: 
+          ID: __setjmp
+          ExprList: 
+            ID: p
+        Return: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+        ID: d
+      Assignment: =
+        ID: d
+        Constant: int, 8
+      If: 
+        UnaryOp: !
+          ID: a
+        FuncCall: 
+          ID: bar

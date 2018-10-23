@@ -1,0 +1,115 @@
+FileAST: 
+  Decl: f1, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+      TypeDecl: f1, []
+        IdentifierType: ['int']
+  Decl: f2, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: f2, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: s
+      Decl: field1, [], [], []
+        TypeDecl: field1, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: field2, [], [], []
+        TypeDecl: field2, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: get_globals, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: get_globals, []
+            Struct: s
+    Compound: 
+      Decl: r, [], [], []
+        PtrDecl: []
+          TypeDecl: r, []
+            Struct: s
+      Decl: rr, [], [], []
+        PtrDecl: []
+          TypeDecl: rr, []
+            IdentifierType: ['void']
+      If: 
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            UnaryOp: &
+              ID: rr
+        Return: 
+          Constant: int, 0
+      Assignment: =
+        ID: r
+        ID: rr
+      If: 
+        UnaryOp: !
+          ID: r
+        Compound: 
+          Decl: t, [], ['extern'], []
+            TypeDecl: t, []
+              Struct: s
+          Assignment: =
+            ID: r
+            UnaryOp: &
+              ID: t
+      Assignment: =
+        StructRef: ->
+          ID: r
+          ID: field1
+        Constant: int, 1
+      Return: 
+        ID: r
+  FuncDef: 
+    Decl: atexit_common, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dso, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: dso, ['const']
+                IdentifierType: ['void']
+        TypeDecl: atexit_common, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        PtrDecl: []
+          TypeDecl: g, []
+            Struct: s
+        FuncCall: 
+          ID: get_globals
+      If: 
+        UnaryOp: !
+          ID: g
+        Return: 
+      If: 
+        StructRef: ->
+          ID: g
+          ID: field1
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: g
+              ID: field2
+            Constant: int, 0
+          FuncCall: 
+            ID: f2
+            ExprList: 
+              ID: g
+        FuncCall: 
+          ID: f2
+          ExprList: 
+            ID: g

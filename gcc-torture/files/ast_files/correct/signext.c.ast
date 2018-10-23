@@ -1,0 +1,93 @@
+FileAST: 
+  FuncDef: 
+    Decl: longprint, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: x
+        TypeDecl: longprint, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, " %d, %d\n"
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            BinaryOp: >>
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'long', 'long']
+                ID: x
+              Constant: int, 32
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            ID: x
+    Decl: x, [], [], []
+      TypeDecl: x, []
+        IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: k_min, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+          ID: qa
+          ID: d
+        TypeDecl: k_min, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['long', 'long']
+      If: 
+        BinaryOp: >=
+          ID: s
+          ID: d
+        Assignment: -=
+          ID: s
+          ID: d
+      Assignment: =
+        ID: x
+        BinaryOp: %
+          BinaryOp: +
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long', 'long']
+              BinaryOp: %
+                BinaryOp: *
+                  Constant: int, 8
+                  ID: s
+                Constant: int, 3
+            ID: qa
+          ID: d
+      FuncCall: 
+        ID: longprint
+        ExprList: 
+          ID: x
+    Decl: d, [], [], []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: k_min
+        ExprList: 
+          Constant: int, 100003
+          UnaryOp: -
+            Constant: int, 600017
+          Constant: int, 3
+      Return: 
+        Constant: int, 0

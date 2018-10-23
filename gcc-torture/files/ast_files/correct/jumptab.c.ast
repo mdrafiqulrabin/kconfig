@@ -1,0 +1,53 @@
+FileAST: 
+  FuncDef: 
+    Decl: jumptab, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: jumptab, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Switch: 
+        ID: a
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ID: b
+              Constant: int, 6
+            Break: 
+          Case: 
+            Constant: int, 1
+            Assignment: =
+              ID: b
+              Constant: int, 5
+            Break: 
+          Case: 
+            Constant: int, 2
+            Assignment: =
+              ID: b
+              Constant: int, 4
+            Break: 
+          Case: 
+            Constant: int, 3
+            Assignment: =
+              ID: b
+              Constant: int, 3
+            Break: 
+          Case: 
+            Constant: int, 4
+            Assignment: =
+              ID: b
+              Constant: int, 2
+            Break: 
+          Case: 
+            Constant: int, 5
+            Assignment: =
+              ID: b
+              Constant: int, 1
+            Break: 
+      Return: 
+        ID: b

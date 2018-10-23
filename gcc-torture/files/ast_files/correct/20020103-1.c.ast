@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: A
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: e
+        FuncCall: 
+          ID: foo
+      Assignment: =
+        ID: e
+        BinaryOp: /
+          ID: e
+          StructRef: ->
+            ID: x
+            ID: b
+      If: 
+        BinaryOp: <
+          ID: e
+          Constant: int, 1
+        Assignment: =
+          ID: e
+          Constant: int, 1
+      Assignment: =
+        ID: f
+        BinaryOp: /
+          BinaryOp: +
+            StructRef: ->
+              ID: x
+              ID: a
+            StructRef: ->
+              ID: x
+              ID: c
+          ID: e
+      If: 
+        BinaryOp: <
+          ID: f
+          StructRef: ->
+            ID: x
+            ID: d
+        Assignment: -=
+          StructRef: ->
+            ID: x
+            ID: d
+          BinaryOp: /
+            BinaryOp: <<
+              Constant: int, 1
+              Constant: int, 16
+            Constant: int, 8

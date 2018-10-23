@@ -1,0 +1,32 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            ArrayDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+        InitList: 
+          TernaryOp: 
+            FuncCall: 
+              ID: __builtin_constant_p
+              ExprList: 
+                ID: argc
+            Constant: int, 1
+            Constant: int, 0
+      Return: 
+        ArrayRef: 
+          ID: a
+          Constant: int, 0

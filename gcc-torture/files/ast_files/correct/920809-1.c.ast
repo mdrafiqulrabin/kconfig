@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: x
+          ID: y
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: x
+          UnaryOp: &
+            ID: y
+          Constant: int, 8192

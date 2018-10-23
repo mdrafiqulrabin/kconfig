@@ -1,0 +1,65 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: f, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            ParamList: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long']
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            TypeDecl: f, []
+              IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['long']
+        BinaryOp: *
+          StructRef: ->
+            ID: x
+            ID: a
+          Constant: int, 50
+      Assignment: /=
+        ID: c
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['long']
+          StructRef: ->
+            ID: x
+            ID: b
+      Assignment: *=
+        ID: c
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['long']
+          StructRef: ->
+            ID: x
+            ID: b
+      FuncCall: 
+        StructRef: ->
+          ID: x
+          ID: f
+        ExprList: 
+          ID: c
+          Constant: int, 0

@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: m, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: m, []
+        IdentifierType: ['char']
+    Constant: string, "%s%u.msg"
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['short']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: x
+          Constant: int, 0
+        Compound: 
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: y
+              ID: m
+          Assignment: =
+            ID: z
+            Constant: int, 1
+        If: 
+          BinaryOp: ==
+            ID: x
+            Constant: int, 1
+          Assignment: =
+            ID: z
+            Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: y
+          ID: m
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: z
+          Constant: string, "%d"

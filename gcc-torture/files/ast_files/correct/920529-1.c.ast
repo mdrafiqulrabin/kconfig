@@ -1,0 +1,78 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: m
+          ID: n
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: acc, [], [], []
+        TypeDecl: acc, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: qn, [], [], []
+        TypeDecl: qn, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: abort
+      Assignment: =
+        ID: acc
+        ArrayRef: 
+          ID: a
+          BinaryOp: -
+            ID: m
+            Constant: int, 1
+      Assignment: +=
+        ID: a
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: j
+          BinaryOp: -
+            ID: qn
+            Constant: int, 1
+        BinaryOp: >=
+          ID: j
+          Constant: int, 0
+        Assignment: =
+          ID: j
+          BinaryOp: -
+            ID: j
+            Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: acc
+            BinaryOp: |
+              BinaryOp: <<
+                ID: acc
+                Constant: int, 16
+              ArrayRef: 
+                ID: a
+                ID: j
+          Assignment: =
+            ID: acc
+            BinaryOp: %
+              ID: acc
+              UnaryOp: *
+                ID: b
+      Return: 
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'short']
+    Decl: b, [], [], []
+      PtrDecl: []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'short']
+    Decl: m, [], [], []
+      TypeDecl: m, []
+        IdentifierType: ['int']
+    Decl: n, [], [], []
+      TypeDecl: n, []
+        IdentifierType: ['int']

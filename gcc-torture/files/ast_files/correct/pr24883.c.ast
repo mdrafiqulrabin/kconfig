@@ -1,0 +1,126 @@
+FileAST: 
+  Typedef: rec_stl, [], ['typedef']
+    TypeDecl: rec_stl, []
+      Struct: _rec_stl
+  Decl: None, [], [], []
+    Struct: _rec_stl
+      Decl: strs, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: strs, []
+              IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: orec_str_list, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: count, [], [], []
+            TypeDecl: count, []
+              IdentifierType: ['int']
+        TypeDecl: orec_str_list, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: stl, [], [], []
+        PtrDecl: []
+          TypeDecl: stl, []
+            IdentifierType: ['rec_stl']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: li, [], [], []
+        TypeDecl: li, []
+          IdentifierType: ['int']
+      Decl: lj, [], [], []
+        TypeDecl: lj, []
+          IdentifierType: ['int']
+      Decl: ci, [], [], []
+        TypeDecl: ci, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: cj, [], [], []
+        TypeDecl: cj, []
+          IdentifierType: ['unsigned', 'char']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: count
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              BinaryOp: +
+                ID: i
+                Constant: int, 1
+            BinaryOp: <
+              ID: j
+              ID: count
+            UnaryOp: p++
+              ID: j
+            Compound: 
+              Assignment: =
+                ID: cj
+                TernaryOp: 
+                  BinaryOp: >
+                    ID: lj
+                    Constant: int, 2
+                  ArrayRef: 
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: stl
+                        ID: strs
+                      ID: j
+                    Constant: int, 0
+                  BinaryOp: &
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['long']
+                      ArrayRef: 
+                        StructRef: ->
+                          ID: stl
+                          ID: strs
+                        ID: j
+                    Constant: int, 0xff
+              If: 
+                BinaryOp: ||
+                  BinaryOp: &&
+                    BinaryOp: >=
+                      ID: count
+                      Constant: int, 16
+                    BinaryOp: <
+                      ID: cj
+                      ID: ci
+                  BinaryOp: &&
+                    BinaryOp: ==
+                      ID: cj
+                      ID: ci
+                    BinaryOp: >
+                      ID: lj
+                      ID: li
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: stl
+                        ID: strs
+                      ID: j
+                    ArrayRef: 
+                      StructRef: ->
+                        ID: stl
+                        ID: strs
+                      ID: i
+                  Assignment: ^=
+                    ID: ci
+                    ID: cj
+                  Assignment: ^=
+                    ID: cj
+                    ID: ci
+                  Assignment: ^=
+                    ID: ci
+                    ID: cj

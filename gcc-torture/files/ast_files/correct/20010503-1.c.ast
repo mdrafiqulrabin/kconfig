@@ -1,0 +1,55 @@
+FileAST: 
+  Decl: f1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: f1, []
+        IdentifierType: ['void']
+  Decl: f2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f2, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              IdentifierType: ['int']
+          Decl: xx, [], [], []
+            TypeDecl: xx, []
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: type
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            ID: xx
+        FuncCall: 
+          ID: f2
+          ExprList: 
+            ID: type
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, [], [], []
+            TypeDecl: type, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: type
+          Constant: float, 1.0

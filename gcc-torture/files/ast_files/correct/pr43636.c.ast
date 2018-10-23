@@ -1,0 +1,38 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+  Decl: b, [], ['extern'], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: b, []
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: foo, []
+            IdentifierType: ['char']
+    Compound: 
+      Assignment: =
+        ID: x
+        FuncCall: 
+          ID: __builtin_stpcpy
+          ExprList: 
+            ID: x
+            ArrayRef: 
+              ID: b
+              ArrayRef: 
+                ID: a
+                ID: y
+      Return: 
+        ID: x

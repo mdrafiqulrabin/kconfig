@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        Struct: None
+          Decl: a, [], [], []
+            ArrayDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['char']
+              Constant: int, 5
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      If: 
+        ArrayRef: 
+          StructRef: ->
+            ID: p
+            ID: a
+          UnaryOp: -
+            ID: i
+        Return: 
+          Constant: int, 1

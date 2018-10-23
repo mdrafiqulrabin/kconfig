@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: java_double_finite, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: d
+        TypeDecl: java_double_finite, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ip, [], [], []
+        PtrDecl: []
+          TypeDecl: ip, []
+            IdentifierType: ['long', 'long']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['long', 'long']
+          UnaryOp: &
+            ID: d
+      Return: 
+        BinaryOp: !=
+          BinaryOp: &
+            UnaryOp: *
+              ID: ip
+            Constant: int, 0x7ff0000000000000LL
+          Constant: int, 0x7ff0000000000000LL
+    Decl: d, [], [], []
+      TypeDecl: d, []
+        IdentifierType: ['double']

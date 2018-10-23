@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: None
+      EnumeratorList: 
+        Enumerator: e0
+        Enumerator: e1
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['int']
+    InitList: 
+      NamedInitializer: 
+        Constant: int, 0
+        ID: e0
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        Constant: int, 1
+        Compound: 
+          Case: 
+            ID: e0
+          Case: 
+            ID: e1
+            Break: 

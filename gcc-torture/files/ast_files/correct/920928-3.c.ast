@@ -1,0 +1,56 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: phaseone, [], [], []
+            TypeDecl: phaseone, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Typedef: FILE, [], ['typedef']
+        TypeDecl: FILE, []
+          Struct: None
+            Decl: p, [], [], []
+              PtrDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['unsigned', 'char']
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['FILE']
+          Constant: int, 2
+      Decl: xchr, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: xchr, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 2
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: for_end, [], [], []
+        TypeDecl: for_end, []
+          IdentifierType: ['int']
+      If: 
+        ID: phaseone
+        Compound: 
+          If: 
+            BinaryOp: <=
+              ID: j
+              ID: for_end
+            DoWhile: 
+              BinaryOp: <
+                UnaryOp: p++
+                  ID: j
+                Constant: int, 10
+              Assignment: =
+                UnaryOp: *
+                  StructRef: .
+                    ArrayRef: 
+                      ID: b
+                      Constant: int, 1
+                    ID: p
+                ArrayRef: 
+                  ID: xchr
+                  ID: j

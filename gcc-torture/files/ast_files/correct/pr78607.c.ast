@@ -1,0 +1,26 @@
+FileAST: 
+  FuncDef: 
+    Decl: rc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cx, [], [], []
+            TypeDecl: cx, []
+              IdentifierType: ['int']
+        TypeDecl: rc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mq, [], [], []
+        TypeDecl: mq, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            ID: mq
+            Constant: int, 0
+          BinaryOp: !=
+            BinaryOp: /
+              ID: cx
+              Constant: int, 0
+            Constant: int, 0
+        For: 
+          Compound: 

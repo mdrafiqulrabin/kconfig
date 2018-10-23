@@ -1,0 +1,9 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Return: 
+        Constant: float, 1.1e10

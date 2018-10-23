@@ -1,0 +1,38 @@
+FileAST: 
+  FuncDef: 
+    Decl: whichtable, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: pfmt, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: pfmt, []
+                  IdentifierType: ['char']
+        TypeDecl: whichtable, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: --
+        UnaryOp: *
+          ID: pfmt
+  FuncDef: 
+    Decl: prepare_s, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fmt, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: fmt, ['const']
+                IdentifierType: ['char']
+        TypeDecl: prepare_s, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: whichtable
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+            UnaryOp: &
+              ID: fmt

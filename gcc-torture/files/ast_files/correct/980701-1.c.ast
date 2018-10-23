@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func, []
+          IdentifierType: ['short']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned', 'char']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['unsigned', 'char']
+      Return: 
+        BinaryOp: |
+          ID: y
+          BinaryOp: <<
+            ID: x
+            Constant: int, 8

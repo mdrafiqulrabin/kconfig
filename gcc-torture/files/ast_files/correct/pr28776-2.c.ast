@@ -1,0 +1,118 @@
+FileAST: 
+  Typedef: RangeCoder, [], ['typedef']
+    TypeDecl: RangeCoder, []
+      Struct: RangeCoder
+        Decl: one_state, [], [], []
+          ArrayDecl: []
+            TypeDecl: one_state, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 256
+  FuncDef: 
+    Decl: put_rac, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['RangeCoder']
+          Decl: state, [], [], []
+            PtrDecl: ['const']
+              TypeDecl: state, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: put_rac, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: state
+        ArrayRef: 
+          StructRef: ->
+            ID: c
+            ID: one_state
+          UnaryOp: *
+            ID: state
+  Typedef: PlaneContext, [], ['typedef']
+    TypeDecl: PlaneContext, []
+      Struct: PlaneContext
+        Decl: state, [], [], []
+          PtrDecl: []
+            ArrayDecl: []
+              TypeDecl: state, []
+                IdentifierType: ['unsigned']
+              Constant: int, 32
+  FuncDef: 
+    Decl: put_symbol, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['RangeCoder']
+          Decl: state, [], [], []
+            PtrDecl: []
+              TypeDecl: state, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: put_symbol, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: e, ['const'], [], []
+        TypeDecl: e, ['const']
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: put_rac
+        ExprList: 
+          ID: c
+          ID: state
+      For: 
+        Assignment: =
+          ID: i
+          BinaryOp: -
+            ID: e
+            Constant: int, 1
+        BinaryOp: >=
+          ID: i
+          Constant: int, 0
+        UnaryOp: p--
+          ID: i
+        FuncCall: 
+          ID: put_rac
+          ExprList: 
+            ID: c
+            BinaryOp: +
+              BinaryOp: +
+                ID: state
+                Constant: int, 22
+              ID: i
+  FuncDef: 
+    Decl: encode_line, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: encode_line, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: ['const']
+          TypeDecl: p, []
+            IdentifierType: ['PlaneContext']
+      Decl: c, [], [], []
+        PtrDecl: ['const']
+          TypeDecl: c, []
+            IdentifierType: ['RangeCoder']
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      FuncCall: 
+        ID: put_symbol
+        ExprList: 
+          ID: c
+          ArrayRef: 
+            StructRef: ->
+              ID: p
+              ID: state
+            ID: a

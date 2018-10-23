@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['_Complex', 'float']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['_Complex', 'float']
+        ID: __FLT_MAX__
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          ID: __FLT_MAX__
+          ID: a

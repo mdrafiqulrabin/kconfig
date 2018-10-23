@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['long', 'long']
+          Constant: int, 24
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['long', 'long']
+          Constant: int, 40
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: v
+          ID: y
+        Constant: int, 0

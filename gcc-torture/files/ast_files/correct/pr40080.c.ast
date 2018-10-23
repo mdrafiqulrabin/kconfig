@@ -1,0 +1,160 @@
+FileAST: 
+  Decl: ff, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: ff, []
+          IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: lpgl
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: lpgl
+  Decl: None, [], [], []
+    Struct: lpgd
+      Decl: first, [], [], []
+        PtrDecl: []
+          TypeDecl: first, []
+            Struct: lpgl
+  Typedef: xfn, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        TypeDecl: xfn, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: xDP_IF_EnumGroupsInGroup, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['void']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: fn, [], [], []
+            TypeDecl: fn, []
+              IdentifierType: ['xfn']
+        TypeDecl: xDP_IF_EnumGroupsInGroup, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: lpGData, [], [], []
+        PtrDecl: []
+          TypeDecl: lpGData, []
+            Struct: lpgd
+      Decl: lpGList, [], [], []
+        PtrDecl: []
+          TypeDecl: lpGList, []
+            Struct: lpgl
+      If: 
+        BinaryOp: ==
+          Assignment: =
+            ID: lpGData
+            FuncCall: 
+              ID: ff
+              ExprList: 
+                ID: a
+                ID: b
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Return: 
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: lpGData
+            ID: first
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Return: 
+      Assignment: =
+        ID: lpGList
+        StructRef: ->
+          ID: lpGData
+          ID: first
+      For: 
+        Compound: 
+          If: 
+            UnaryOp: !
+              FuncCall: 
+                UnaryOp: *
+                  ID: fn
+            Return: 
+          If: 
+            BinaryOp: ==
+              StructRef: ->
+                ID: lpGList
+                ID: next
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+            Break: 
+          Assignment: =
+            ID: lpGList
+            StructRef: ->
+              ID: lpGList
+              ID: next
+      Return: 
+  FuncDef: 
+    Decl: xcbDeletePlayerFromAllGroups, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: xcbDeletePlayerFromAllGroups, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: xDP_IF_EnumGroupsInGroup
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          Constant: int, 0
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: xDP_IF_EnumGroups, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fn, [], [], []
+            TypeDecl: fn, []
+              IdentifierType: ['xfn']
+        TypeDecl: xDP_IF_EnumGroups, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: xDP_IF_EnumGroupsInGroup
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+          ID: fn
+  FuncDef: 
+    Decl: xDP_IF_DestroyPlayer, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: xDP_IF_DestroyPlayer, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: xDP_IF_EnumGroups
+        ExprList: 
+          ID: xcbDeletePlayerFromAllGroups
+  Decl: foo, [], [], []
+    PtrDecl: []
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+    ID: xDP_IF_DestroyPlayer

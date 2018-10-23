@@ -1,0 +1,29 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: strcmp
+          ExprList: 
+            ID: a
+            Constant: string, "-"
+      While: 
+        BinaryOp: <
+          FuncCall: 
+            ID: vfork
+          Constant: int, 0
+        EmptyStatement: 
+      Return: 
+        ID: d
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['char']

@@ -1,0 +1,58 @@
+FileAST: 
+  FuncDef: 
+    Decl: m32, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: m32, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: m16, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: m16, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['short']
+  FuncDef: 
+    Decl: m8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: m8, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+        ArrayRef: 
+          ID: a
+          Constant: int, 0
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['char']

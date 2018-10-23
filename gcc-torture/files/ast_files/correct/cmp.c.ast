@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: fooalign
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  Decl: None, [], [], []
+    Union: fooround
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['long']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: extra, [], [], []
+        TypeDecl: extra, []
+          IdentifierType: ['int']
+        Constant: int, 4
+      If: 
+        BinaryOp: <
+          ID: extra
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Union: fooround
+        Assignment: =
+          ID: extra
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                Union: fooround
+      Return: 
+        ID: extra

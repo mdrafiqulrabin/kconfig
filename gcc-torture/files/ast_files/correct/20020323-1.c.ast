@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: a0, [], [], []
+        PtrDecl: []
+          TypeDecl: a0, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: a1, [], [], []
+        PtrDecl: []
+          TypeDecl: a1, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: a2, [], [], []
+        TypeDecl: a2, []
+          IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: A
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          Struct: A
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'int']
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: <
+              ID: x
+              UnaryOp: -
+                Constant: int, 128
+            BinaryOp: >
+              ID: x
+              Constant: int, 255
+          BinaryOp: ==
+            ID: x
+            UnaryOp: -
+              Constant: int, 1
+        Return: 
+          Constant: int, 26
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: a0
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+          UnaryOp: &
+            ID: b
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: a1
+        BinaryOp: +
+          StructRef: .
+            ID: a
+            ID: a0
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: a2
+        Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      Return: 
+        ID: b

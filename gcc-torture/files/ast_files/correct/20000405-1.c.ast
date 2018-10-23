@@ -1,0 +1,20 @@
+FileAST: 
+  Decl: bar, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: bar, ['const']
+        IdentifierType: ['double']
+    InitList: 
+      Constant: int, 0
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: bar
+          ID: j

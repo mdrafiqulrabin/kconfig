@@ -1,0 +1,312 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: r
+      Decl: d1, [], [], []
+        TypeDecl: d1, []
+          IdentifierType: ['int']
+      Decl: d2, [], [], []
+        TypeDecl: d2, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: km
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: f1
+      Decl: fn, [], [], []
+        PtrDecl: []
+          TypeDecl: fn, []
+            IdentifierType: ['char']
+      Decl: fd, [], [], []
+        PtrDecl: []
+          TypeDecl: fd, []
+            IdentifierType: ['char']
+      Decl: fs, [], [], []
+        PtrDecl: []
+          TypeDecl: fs, []
+            IdentifierType: ['char']
+      Decl: ic, [], [], []
+        PtrDecl: []
+          TypeDecl: ic, []
+            IdentifierType: ['char']
+      Decl: ff, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            TypeDecl: ff, []
+              IdentifierType: ['void']
+  Decl: g, [], [], []
+    FuncDecl: 
+      TypeDecl: g, []
+        IdentifierType: ['int']
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['int']
+  Decl: bs, [], [], []
+    PtrDecl: []
+      TypeDecl: bs, []
+        Struct: r
+  Decl: bv, [], [], []
+    TypeDecl: bv, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    FuncDecl: 
+      TypeDecl: b, []
+        IdentifierType: ['void']
+  Decl: w, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: w, []
+          IdentifierType: ['char']
+  Decl: q, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: q, []
+          Struct: km
+  Decl: mns, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: mns, []
+          IdentifierType: ['char']
+  Decl: nm, [], [], []
+    TypeDecl: nm, []
+      IdentifierType: ['int']
+  Decl: z, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: z, []
+          Struct: f1
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: km, [], [], []
+            PtrDecl: []
+              TypeDecl: km, []
+                IdentifierType: ['char']
+          Decl: h, [], [], []
+            PtrDecl: []
+              TypeDecl: h, []
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: t, [], [], []
+        PtrDecl: []
+          TypeDecl: t, []
+            Struct: f1
+      Decl: map, [], [], []
+        TypeDecl: map, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: midn
+          ExprList: 
+            ID: km
+            FuncCall: 
+              ID: strlen
+              ExprList: 
+                ID: km
+      Decl: V, [], [], []
+        TypeDecl: V, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          Struct: r
+      Decl: cm, [], [], []
+        PtrDecl: []
+          TypeDecl: cm, []
+            Struct: f1
+      If: 
+        UnaryOp: !
+          FuncCall: 
+            ID: g
+            ExprList: 
+              UnaryOp: &
+                ID: V
+              UnaryOp: &
+                ID: cm
+              ID: h
+              FuncCall: 
+                ID: strlen
+                ExprList: 
+                  ID: h
+        Compound: 
+          Assignment: =
+            ID: c
+            BinaryOp: -
+              ID: cm
+              ArrayRef: 
+                ID: z
+                ID: V
+          Goto: L
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        BinaryOp: <
+          ID: c
+          ID: nm
+        UnaryOp: p++
+          ID: c
+        If: 
+          UnaryOp: !
+            FuncCall: 
+              ID: strcmp
+              ExprList: 
+                ID: h
+                ArrayRef: 
+                  ID: mns
+                  ID: c
+          Compound: 
+            Assignment: =
+              ID: V
+              UnaryOp: -
+                Constant: int, 1
+            Goto: L
+      For: 
+        Assignment: =
+          ID: c
+          Constant: int, 0
+        BinaryOp: <
+          ID: c
+          ID: y
+        UnaryOp: p++
+          ID: c
+        Compound: 
+          If: 
+            UnaryOp: !
+              FuncCall: 
+                ID: memcmp
+                ExprList: 
+                  UnaryOp: &
+                    ArrayRef: 
+                      ID: bs
+                      ID: c
+                  UnaryOp: &
+                    ID: r
+                  Constant: int, 8
+            Goto: L
+      Assignment: =
+        ID: h
+        FuncCall: 
+          ID: w
+          ExprList: 
+            UnaryOp: &
+              ID: r
+      If: 
+        UnaryOp: !
+          ID: bv
+        Compound: 
+          Assignment: =
+            ID: bs
+            FuncCall: 
+              ID: g
+              ExprList: 
+                Constant: int, 8
+          Assignment: =
+            ID: t
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    Struct: f1
+              FuncCall: 
+                ID: g
+                ExprList: 
+                  Constant: int, 20
+        Compound: 
+          Assignment: =
+            ID: bs
+            FuncCall: 
+              ID: g
+              ExprList: 
+                ID: bs
+                BinaryOp: *
+                  ID: y
+                  Constant: int, 8
+          Assignment: =
+            ArrayRef: 
+              ID: z
+              ID: bv
+            FuncCall: 
+              ID: cr
+              ExprList: 
+                ArrayRef: 
+                  ID: z
+                  ID: bv
+                BinaryOp: *
+                  BinaryOp: +
+                    Constant: int, 1
+                    ID: y
+                  Constant: int, 20
+          Assignment: =
+            ID: t
+            UnaryOp: &
+              ArrayRef: 
+                ArrayRef: 
+                  ID: z
+                  ID: bv
+                BinaryOp: -
+                  ID: y
+                  Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          ID: bs
+          BinaryOp: -
+            ID: y
+            Constant: int, 1
+        ID: r
+      Assignment: =
+        ArrayRef: 
+          StructRef: ->
+            ID: t
+            ID: fs
+          Constant: int, 0
+        FuncCall: 
+          ID: sp
+          ExprList: 
+            BinaryOp: -
+              ID: y
+              Constant: int, 1
+      Assignment: =
+        ArrayRef: 
+          StructRef: ->
+            ID: t
+            ID: fs
+          Constant: int, 1
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: t
+          ID: ic
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: t
+          ID: fd
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: t
+          ID: fn
+        FuncCall: 
+          ID: cs
+          ExprList: 
+            ID: h
+      Assignment: =
+        StructRef: ->
+          ID: t
+          ID: ff
+        ID: b
+      Label: L
+        FuncCall: 
+          ID: g
+          ExprList: 
+            ArrayRef: 
+              ID: q
+              ID: map
+            ID: V
+            ID: c

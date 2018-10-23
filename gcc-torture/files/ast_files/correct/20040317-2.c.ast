@@ -1,0 +1,106 @@
+FileAST: 
+  Typedef: ScaleWidget, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: ScaleWidget, []
+        Struct: _ScaleRec
+  Typedef: Table, [], ['typedef']
+    TypeDecl: Table, []
+      Struct: None
+        Decl: x, [], [], []
+          PtrDecl: []
+            TypeDecl: x, []
+              IdentifierType: ['short']
+        Decl: width, [], [], []
+          PtrDecl: []
+            TypeDecl: width, []
+              IdentifierType: ['unsigned', 'short']
+  Typedef: ScalePart, [], ['typedef']
+    TypeDecl: ScalePart, []
+      Struct: None
+        Decl: table, [], [], []
+          TypeDecl: table, []
+            IdentifierType: ['Table']
+  Typedef: ScaleRec, [], ['typedef']
+    TypeDecl: ScaleRec, []
+      Struct: _ScaleRec
+        Decl: scale, [], [], []
+          TypeDecl: scale, []
+            IdentifierType: ['ScalePart']
+  FuncDef: 
+    Decl: FindPixel, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: sw, [], [], []
+            TypeDecl: sw, []
+              IdentifierType: ['ScaleWidget']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['short']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['short']
+          Decl: img_x, [], [], []
+            PtrDecl: []
+              TypeDecl: img_x, []
+                IdentifierType: ['short']
+          Decl: img_y, [], [], []
+            PtrDecl: []
+              TypeDecl: img_y, []
+                IdentifierType: ['short']
+          Decl: img_pixel, [], [], []
+            PtrDecl: []
+              TypeDecl: img_pixel, []
+                IdentifierType: ['unsigned', 'long']
+        TypeDecl: FindPixel, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <
+          BinaryOp: +
+            ArrayRef: 
+              StructRef: .
+                StructRef: .
+                  StructRef: ->
+                    ID: sw
+                    ID: scale
+                  ID: table
+                ID: x
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                UnaryOp: *
+                  ID: img_x
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              ArrayRef: 
+                StructRef: .
+                  StructRef: .
+                    StructRef: ->
+                      ID: sw
+                      ID: scale
+                    ID: table
+                  ID: width
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  UnaryOp: *
+                    ID: img_x
+          ID: x
+        Compound: 
+          UnaryOp: ++
+            UnaryOp: *
+              ID: img_x
+          Return: 
+            FuncCall: 
+              ID: FindPixel
+              ExprList: 
+                ID: sw
+                ID: x
+                ID: y
+                ID: img_x
+                ID: img_y
+                ID: img_pixel

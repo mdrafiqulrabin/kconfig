@@ -1,0 +1,125 @@
+FileAST: 
+  Typedef: FUNC_P, [], ['typedef']
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'short']
+      TypeDecl: FUNC_P, []
+        IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: crashIt, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: id, [], [], []
+            TypeDecl: id, []
+              IdentifierType: ['int']
+          Decl: func, [], [], []
+            PtrDecl: []
+              TypeDecl: func, []
+                IdentifierType: ['FUNC_P']
+          Decl: funcparm, [], [], []
+            PtrDecl: []
+              TypeDecl: funcparm, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: crashIt, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: buff, [], [], []
+        ArrayDecl: []
+          TypeDecl: buff, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 5
+      Decl: reverse, [], [], []
+        ArrayDecl: []
+          TypeDecl: reverse, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 4
+      Decl: bp, [], [], []
+        PtrDecl: []
+          TypeDecl: bp, []
+            IdentifierType: ['unsigned', 'char']
+        ID: buff
+      Decl: rp, [], [], []
+        PtrDecl: []
+          TypeDecl: rp, []
+            IdentifierType: ['unsigned', 'char']
+        ID: reverse
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['unsigned', 'short', 'int']
+        Constant: int, 0
+      Decl: cnt, [], [], []
+        TypeDecl: cnt, []
+          IdentifierType: ['unsigned', 'short']
+      While: 
+        BinaryOp: >
+          ID: id
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: rp
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              BinaryOp: &
+                ID: id
+                Constant: int, 0x7F
+          Assignment: >>=
+            ID: id
+            Constant: int, 7
+          UnaryOp: p++
+            ID: count
+      Assignment: =
+        ID: cnt
+        BinaryOp: +
+          ID: count
+          Constant: int, 1
+      While: 
+        BinaryOp: >
+          UnaryOp: p--
+            ID: count
+          Constant: int, 1
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: bp
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              BinaryOp: |
+                UnaryOp: *
+                  UnaryOp: --
+                    ID: rp
+                Constant: int, 0x80
+      Assignment: =
+        UnaryOp: *
+          UnaryOp: p++
+            ID: bp
+        UnaryOp: *
+          UnaryOp: --
+            ID: rp
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          UnaryOp: *
+            ID: func
+          ExprList: 
+            ID: funcparm
+            ID: buff
+            ID: cnt

@@ -1,0 +1,100 @@
+FileAST: 
+  Decl: flags, [], ['extern'], []
+    TypeDecl: flags, []
+      IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: r
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['int']
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: home, [], [], []
+            PtrDecl: []
+              TypeDecl: home, []
+                Struct: r
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: regno, [], [], []
+        TypeDecl: regno, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: home
+            ID: code
+          Constant: int, 0
+        Assignment: =
+          ID: regno
+          StructRef: ->
+            ID: home
+            ID: val
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: home
+            ID: code
+          Constant: int, 1
+        FuncCall: 
+          ID: bar
+        If: 
+          BinaryOp: >=
+            ID: regno
+            Constant: int, 0
+          Assignment: =
+            ID: n
+            TernaryOp: 
+              BinaryOp: ==
+                ID: regno
+                Constant: int, 16
+              Constant: int, 16
+              TernaryOp: 
+                BinaryOp: -
+                  ID: regno
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'long', 'long']
+                    TernaryOp: 
+                      BinaryOp: !=
+                        ID: flags
+                        Constant: int, 0
+                      Constant: int, 63
+                      Constant: int, 15
+                BinaryOp: -
+                  ID: regno
+                  Constant: int, 128
+                UnaryOp: -
+                  Constant: int, 1
+      FuncCall: 
+        ID: baz
+      Return: 
+        ID: n

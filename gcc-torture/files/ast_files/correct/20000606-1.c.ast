@@ -1,0 +1,27 @@
+FileAST: 
+  Typedef: foo, [], ['typedef']
+    TypeDecl: foo, []
+      Struct: _foo
+  Decl: bar, [], ['extern'], []
+    TypeDecl: bar, []
+      IdentifierType: ['foo']
+  Decl: None, [], [], []
+    Struct: _foo
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: bar
+          ID: a
+        Constant: int, 0

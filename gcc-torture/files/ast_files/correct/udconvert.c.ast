@@ -1,0 +1,85 @@
+FileAST: 
+  FuncDef: 
+    Decl: unsigned_to_double1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: u
+        TypeDecl: unsigned_to_double1, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+      Assignment: =
+        ID: d
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          ID: u
+      Return: 
+        TernaryOp: 
+          BinaryOp: <
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              ID: u
+            Constant: int, 0
+          BinaryOp: +
+            ID: d
+            Constant: float, 4294967296.0
+          ID: d
+    Decl: u, [], [], []
+      TypeDecl: u, []
+        IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: unsigned_to_double2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: u
+        TypeDecl: unsigned_to_double2, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['double']
+      Assignment: -=
+        ID: u
+        Constant: int, 2147483648
+      Assignment: =
+        ID: d
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          ID: u
+      Return: 
+        BinaryOp: +
+          ID: d
+          Constant: float, 2147483648.0
+    Decl: u, [], [], []
+      TypeDecl: u, []
+        IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: double_to_unsigned, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: d
+        TypeDecl: double_to_unsigned, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: +=
+        ID: d
+        Constant: float, 2147483648.0
+      Return: 
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ID: d
+          Constant: int, 2147483648
+    Decl: d, [], [], []
+      TypeDecl: d, []
+        IdentifierType: ['double']

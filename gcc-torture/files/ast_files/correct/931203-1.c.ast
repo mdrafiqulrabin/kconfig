@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: v, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: i
+        TypeDecl: v, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          UnaryOp: p++
+            ID: a
+          ID: i
+        Constant: int, 0
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned']
+    Decl: i, [], [], []
+      TypeDecl: i, []
+        IdentifierType: ['unsigned']

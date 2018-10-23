@@ -1,0 +1,76 @@
+FileAST: 
+  Typedef: FILE, [], ['typedef']
+    TypeDecl: FILE, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+  Decl: fputs, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['FILE']
+      TypeDecl: fputs, []
+        IdentifierType: ['void']
+  Decl: mView, [], [], []
+    TypeDecl: mView, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['FILE']
+          Decl: aIndent, [], [], []
+            TypeDecl: aIndent, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          Constant: int, 0
+          ID: mView
+        Compound: 
+          UnaryOp: p++
+            ID: aIndent
+          UnaryOp: p--
+            ID: aIndent
+          Compound: 
+            Decl: __t, [], [], []
+              TypeDecl: __t, []
+                IdentifierType: ['int']
+              ID: aIndent
+            While: 
+              BinaryOp: >=
+                UnaryOp: --
+                  ID: __t
+                Constant: int, 0
+              FuncCall: 
+                ID: fputs
+                ExprList: 
+                  Constant: string, "  "
+                  ID: out
+      Compound: 
+        Decl: __t, [], [], []
+          TypeDecl: __t, []
+            IdentifierType: ['int']
+          ID: aIndent
+        While: 
+          BinaryOp: >=
+            UnaryOp: --
+              ID: __t
+            Constant: int, 0
+          FuncCall: 
+            ID: fputs
+            ExprList: 
+              Constant: string, "  "
+              ID: out
