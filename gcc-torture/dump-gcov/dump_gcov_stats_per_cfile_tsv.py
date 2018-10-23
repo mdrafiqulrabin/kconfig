@@ -2,6 +2,7 @@
 # Run: /Users/mdrafiqulrabin/Desktop/Rabin/gcov/my-run
 # sample: "/Users/mdrafiqulrabin/Desktop/Rabin/gcov/sample-c/"
 # C-file: "/Users/mdrafiqulrabin/Desktop/Rabin/gcov/c_files_wc/"
+# output_files: x-axis: gcov files and y-axis: line number
 
 import sys, os, json, time
 from subprocess import Popen, PIPE
@@ -65,11 +66,11 @@ def getTsvData(gcov_f, gcov_s):
             tsv_line += line_covered_binary
     return tsv_line
 
-def saveToFile(c_file, json_data):
-    c_file = output_folder + c_file.split(".c")[0] + "-gcov.txt"
-    with open (c_file, 'a') as file:
-        file.write(json_data)
-        file.write('\n')
+def saveToFile(out_file, tmp_data):
+    out_file = output_folder + out_file.split(".c")[0] + "-gcov.tsv"
+    with open (out_file, 'a') as fout:
+        fout.write(tmp_data)
+        fout.write('\n')
 
 ### main ###
 
