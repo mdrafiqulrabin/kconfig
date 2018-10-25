@@ -82,8 +82,6 @@ rmBuildFiles()
 all_c_files = os.listdir(path_c_files)
 for c_file in all_c_files:
     if (not c_file.endswith(".c")): continue
-    if (not c_file.endswith("pr58088.c")): continue
-    print "pr58088.c"
     
     cmd = path_gcc_bin + "gcc -c " + path_c_files + c_file
     voidRunShell(cmd) #[*.o in current directory and *.gcda in ~/bin/gcc4.8-bin/bin/gcc]
@@ -102,9 +100,9 @@ for c_file in all_c_files:
         saveToFile(c_file, getTsvData(gcov_file, gcov_stats))
         print ("Done: " + c_file + "-" + gcov_file)
     
-    #rmBuildFiles()
+    rmBuildFiles()
     print ("Done: " + c_file + "...")
 
 
-#rmBuildFiles()
+rmBuildFiles()
 print "Done: all..."
