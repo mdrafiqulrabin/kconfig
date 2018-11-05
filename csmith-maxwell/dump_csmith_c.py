@@ -10,8 +10,8 @@ out_gcc_my = "out_gcc_my.txt"
 out_gcc_48 = "out_gcc_48.txt"
 
 path_csmith  = "/Users/mdrafiqulrabin/bin/csmith-bin/bin/csmith"
-path_gcc_my = "gcc -c -w " + out_csmith_c
-path_gcc_48 = "/Users/mdrafiqulrabin/bin/gcc4.8-bin/bin/gcc -c -w " + out_csmith_c
+path_gcc_my = "gcc -c -w -O3 " + out_csmith_c
+path_gcc_48 = "/Users/mdrafiqulrabin/bin/gcc4.8-bin/bin/gcc -c -w -O3 " + out_csmith_c
 
 include_csmith_header_l = "#include \"csmith.h\""
 include_csmith_header_f = "#include \"/Users/mdrafiqulrabin/bin/csmith-bin/include/csmith-2.3.0/csmith.h\""
@@ -60,21 +60,29 @@ print "Start: ..."
 
 #os.remove(output_cfile) if os.path.exists(output_cfile) else None
 
-#create sample CSmith c program
-c_program = run_shell(path_csmith, 1) #1=out
-c_program = getCsmithCode(c_program)
-saveToFile(out_csmith_c, c_program)
+count_itr = 0
+while (1):
+    count_itr += 1
+    print "count_itr = ", count_itr
+    
+    #create sample CSmith c program
+    c_program = run_shell(path_csmith, 1) #1=out
+    c_program = getCsmithCode(c_program)
+    saveToFile(out_csmith_c, c_program)
 
-#compile with my gcc
-errMsg = run_shell(path_gcc_my, 2) #2=err
-errMsg = getPlainText(errMsg)
-print "errMsg(my): ", errMsg
-saveToFile(out_gcc_my, errMsg)
+    #compile with gcc main
+    errMsg1 = run_shell(path_gcc_my, 2) #2=err
+    errMsg1 = getPlainText(errMsg1)
 
-#compile with my gcc
-errMsg = run_shell(path_gcc_48, 2) #2=err
-errMsg = getPlainText(errMsg)
-print "errMsg(48): ", errMsg
-saveToFile(out_gcc_48, errMsg)
+    #compile with gcc 48
+    errMsg2 = run_shell(path_gcc_48, 2) #2=err
+    errMsg2 = getPlainText(errMsg2)
+
+    if (len(errMsg1)>0 or len(errMsg2)>0):
+        print "errMsg(my): ", errMsg1
+        saveToFile(out_gcc_my, errMsg1)
+        print "errMsg(48): ", errMsg2
+        saveToFile(out_gcc_48, errMsg2)
+        break
 
 print "Done: ..."
