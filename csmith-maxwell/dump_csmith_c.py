@@ -10,11 +10,9 @@ out_gcc_my = "out_gcc_my.txt"
 out_gcc_48 = "out_gcc_48.txt"
 
 path_csmith  = "/Users/mdrafiqulrabin/bin/csmith-bin/bin/csmith"
-path_gcc_my = "gcc -c -w -O3 " + out_csmith_c
-path_gcc_48 = "/Users/mdrafiqulrabin/bin/gcc4.8-bin/bin/gcc -c -w -O3 " + out_csmith_c
-
-include_csmith_header_l = "#include \"csmith.h\""
-include_csmith_header_f = "#include \"/Users/mdrafiqulrabin/bin/csmith-bin/include/csmith-2.3.0/csmith.h\""
+path_csmith_header = "/Users/mdrafiqulrabin/bin/csmith-bin/include/csmith-2.3.0"
+path_gcc_my = "gcc -c -w -O3 -I" + path_csmith_header + " " + out_csmith_c
+path_gcc_48 = "/Users/mdrafiqulrabin/bin/gcc4.8-bin/bin/gcc -c -w -O3 -I" + path_csmith_header + " " + out_csmith_c
 
 known_gcc_warning_kern = "gcc: warning: couldn’t understand kern.osversion"
 
@@ -38,8 +36,6 @@ def run_shell(cmd, std_flag):
 def getCsmithCode(obj):
     code = ""
     for x in obj:
-        if x.startswith(include_csmith_header_l):
-            x = x.replace(include_csmith_header_l, include_csmith_header_f)
         code += x
     return code
 
