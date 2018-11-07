@@ -15,8 +15,8 @@
     #Step-01: [csmith_bug1.sh ]
 
     #!/bin/bash
-    gcc -c csmith_bug1.c &&\
-    ! gcc -c -O3 csmith_bug1.c
+    gcc -c -w csmith_bug1.c &&\
+    ! gcc -c -w -O3 csmith_bug1.c
 
     #Step-02: [$]
 
