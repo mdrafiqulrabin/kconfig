@@ -7,7 +7,6 @@
  * Seed:      821936712447664471
  */
 
-//#include "/Users/mdrafiqulrabin/bin/csmith-bin/include/csmith-2.3.0/csmith.h"
 #include "csmith.h"
 
 static long __undefined;
