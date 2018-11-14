@@ -21,25 +21,23 @@ def getSingleVec():
     return single_vec
 
 def drawHistogramXY(data):
-    bins = np.linspace(math.ceil(min(data)), math.floor(max(data)), fixedBinSize)
-    plt.hist(data, bins=bins, alpha=0.5)
+    plt.hist(data, bins=fixedBinSize, alpha=0.5)
     plt.xlim([min(data)-5, max(data)+5])
-
-    plt.title('Histogram XY (bin=100)')
-    plt.xlabel('x = how many times a line is covered')
-    plt.ylabel('y = total count in the bin range')
-
+    
+    plt.title('Histogram XY')
+    plt.xlabel('x = Number of Test Cases')
+    plt.ylabel('y = Number of Statements')
+    
     #plt.show()
     plt.savefig(hg_out_file_xy, bbox_inches='tight')
 
 def drawHistogramYX(data):
-    bins = np.linspace(math.ceil(min(data)), math.floor(max(data)), fixedBinSize)
-    plt.hist(data, bins=bins, alpha=0.5, orientation='horizontal')
+    plt.hist(data, bins=fixedBinSize, alpha=0.5, orientation='horizontal')
     plt.ylim([min(data)-5, max(data)+5])
     
-    plt.title('Histogram YX (bin=100)')
-    plt.ylabel('y = how many times a line is covered')
-    plt.xlabel('x = total count in the bin range')
+    plt.title('Histogram YX')
+    plt.ylabel('y = Number of Test Cases')
+    plt.xlabel('x = Number of Statements')
     
     #plt.show()
     plt.savefig(hg_out_file_yx, bbox_inches='tight')
