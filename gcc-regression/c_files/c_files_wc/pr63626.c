@@ -1,0 +1,9 @@
+ 
+ 
+ 
+
+ 
+
+inline int foo (void);  
+ 
+

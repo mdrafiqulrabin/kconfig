@@ -1,0 +1,34 @@
+ 
+ 
+ 
+ 
+ 
+ 
+
+struct S { int a, b, c, d, e; };
+struct S t;
+__thread struct S s;
+
+__attribute__((used, noinline, noclone)) void
+foo (int *x, int *y)
+{
+  asm volatile ("" : : "g" (x), "g" (y) : "memory");
+  if (*x != 1 || *y != 2)
+    __builtin_abort ();
+}
+
+__attribute__((used, noinline, noclone)) void
+bar (void)
+{
+  foo (&t.c, &s.c);
+}
+
+int
+main ()
+{
+  t.c = 1;
+  s.c = 2;
+  bar ();
+  return 0;
+}
+
